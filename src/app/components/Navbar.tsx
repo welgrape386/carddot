@@ -32,7 +32,7 @@ export function Navbar() {
               <CreditCard className="w-4 h-4" style={{ color: "#FEFEFE" }} />
             </div>
             <span
-              className="text-lg font-black tracking-tight"
+              className="text-lg font-normal tracking-tight"
               style={{ color: "#FEFEFE" }}
             >
               카드닷
@@ -45,7 +45,7 @@ export function Navbar() {
               <Link
                 key={link.href}
                 to={link.href}
-                className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${
+                className={`px-4 py-2 rounded-lg text-sm font-normal transition-all ${
                   isActive(link.href)
                     ? "text-[#FEFEFE]"
                     : "hover:text-[#FEFEFE]"
@@ -104,7 +104,7 @@ export function Navbar() {
                     />
                   </div>
                   <span
-                    className="text-sm font-bold"
+                    className="text-sm font-normal"
                     style={{ color: "#FEFEFE" }}
                   >
                     마이페이지
@@ -115,7 +115,7 @@ export function Navbar() {
               <>
                 <Link
                   to="/login"
-                  className="px-4 py-2 text-sm font-bold rounded-lg border transition-all"
+                  className="px-4 py-2 text-sm font-normal rounded-lg border transition-all"
                   style={{
                     color: "#FEFEFE",
                     borderColor: "rgba(254,254,254,0.4)",
@@ -132,7 +132,7 @@ export function Navbar() {
                 </Link>
                 <Link
                   to="/signup"
-                  className="px-4 py-2 text-sm font-bold rounded-lg transition-all"
+                  className="px-4 py-2 text-sm font-normal rounded-lg transition-all"
                   style={{ backgroundColor: "#FEFEFE", color: "#4E40EF" }}
                   onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.9")}
                   onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
@@ -172,7 +172,7 @@ export function Navbar() {
               key={link.href}
               to={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block px-4 py-2.5 rounded-lg text-sm font-bold transition-all"
+              className="block px-4 py-2.5 rounded-lg text-sm font-normal transition-all"
               style={
                 isActive(link.href)
                   ? {
@@ -191,14 +191,14 @@ export function Navbar() {
           >
             <Link
               to="/login"
-              className="flex-1 text-center py-2 text-sm font-bold rounded-lg border"
+              className="flex-1 text-center py-2 text-sm font-normal rounded-lg border"
               style={{ color: "#FEFEFE", borderColor: "rgba(254,254,254,0.4)" }}
             >
               로그인
             </Link>
             <Link
               to="/signup"
-              className="flex-1 text-center py-2 text-sm font-bold rounded-lg"
+              className="flex-1 text-center py-2 text-sm font-normal rounded-lg"
               style={{ backgroundColor: "#FEFEFE", color: "#4E40EF" }}
             >
               회원가입
