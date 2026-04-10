@@ -28,7 +28,7 @@ CREATE TABLE card (
     card_type VARCHAR(10) NOT NULL,                                -- 카드 종류 (신용/체크)
     network VARCHAR(50),                                           -- 결제 네트워크 (VISA, Master, AMEX 등)
     has_transport BOOLEAN NOT NULL DEFAULT FALSE,                  -- 후불교통카드 기능 여부
-    is_domestic_only BOOLEAN NOT NULL DEFAULT FALSE,               -- 국내 전용 카드 여부
+    is_domestic_foreign BOOLEAN NOT NULL DEFAULT FALSE,            -- 국내해외겸용 여부 (True: 해외사용 가능)
     annual_fee_dom_basic INT NOT NULL DEFAULT 0,                   -- 국내 일반 연회비 (원)
     annual_fee_dom_premium INT NOT NULL DEFAULT 0,                 -- 국내 프리미엄 연회비 (원)
     annual_fee_for_basic INT NOT NULL DEFAULT 0,                   -- 해외 일반 연회비 (원)
