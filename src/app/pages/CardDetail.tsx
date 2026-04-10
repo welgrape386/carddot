@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useState, useMemo } from "react";
 import { useParams, Link, useSearchParams } from "react-router";
 import {
   Star,
@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { cards } from "../data/mockData";
 import { CardVisual } from "../components/CardVisual";
+import { useAuth } from "../context/AuthContext";
 
 const categoryBenefitMap: Record<string, string[]> = {
   온라인쇼핑: ["쇼핑"],
@@ -51,6 +52,7 @@ function isBenefitMatched(benefitCategory: string, selectedCategory: string) {
 export function CardDetail() {
   const { id } = useParams();
   const [searchParams] = useSearchParams();
+  const { addRecentlyViewed } = useAuth();
 
   const card = cards.find((c) => c.id === Number(id)) || cards[0];
   const [favorite, setFavorite] = useState(false);
@@ -61,6 +63,11 @@ export function CardDetail() {
   const selectedCategories = (
     searchParams.get("benefits")?.split(",").filter(Boolean) || []
   ).map((v) => decodeURIComponent(v));
+
+  // 최근 본 카드 기록
+  useState(() => {
+    addRecentlyViewed(card.id);
+  });
 
   const benefitTypeLabel: Record<
     string,

@@ -24,66 +24,25 @@ const NAVBAR_H = 64;
 const AVAILABLE_ISSUERS = ["삼성카드", "신한카드", "현대카드", "KB국민카드"];
 
 const benefitCategories = [
-  {
-    key: "온라인쇼핑",
-    icon: "🛒",
-    group: "쇼핑",
-    desc: "지마켓, 쿠팡, 11번가 등",
-  },
+  { key: "온라인쇼핑", icon: "🛒", group: "쇼핑", desc: "지마켓, 쿠팡, 11번가 등" },
   { key: "패션/뷰티", icon: "👗", group: "쇼핑", desc: "올리브영, 스파브랜드" },
   { key: "슈퍼마켓/생활잡화", icon: "🏬", group: "쇼핑", desc: "" },
-  {
-    key: "백화점/아울렛",
-    icon: "🏪",
-    group: "쇼핑",
-    desc: "백화점, 아울렛, 면세점",
-  },
-
+  { key: "백화점/아울렛", icon: "🏪", group: "쇼핑", desc: "백화점, 아울렛, 면세점" },
   { key: "대중교통/택시", icon: "🚌", group: "교통", desc: "버스, 기차, 택시" },
-  {
-    key: "자동차/주유",
-    icon: "⛽",
-    group: "교통",
-    desc: "자동차 정비, 하이패스",
-  },
-
+  { key: "자동차/주유", icon: "⛽", group: "교통", desc: "자동차 정비, 하이패스" },
   { key: "반려동물", icon: "🐾", group: "라이프", desc: "" },
   { key: "구독/스트리밍", icon: "📺", group: "라이프", desc: "" },
-  {
-    key: "레저/스포츠",
-    icon: "⛳",
-    group: "라이프",
-    desc: "골프, 게임, 경기관람, 피트니스",
-  },
+  { key: "레저/스포츠", icon: "⛳", group: "라이프", desc: "골프, 게임, 경기관람, 피트니스" },
   { key: "페이/간편결제", icon: "📲", group: "라이프", desc: "" },
-  {
-    key: "문화/엔터",
-    icon: "🎬",
-    group: "라이프",
-    desc: "영화, 놀이공원, 공연",
-  },
-
-  {
-    key: "생활비",
-    icon: "📱",
-    group: "생활비",
-    desc: "통신, 보험, 공과금, 금융수수료, 렌탈/자동납부",
-  },
-
+  { key: "문화/엔터", icon: "🎬", group: "라이프", desc: "영화, 놀이공원, 공연" },
+  { key: "생활비", icon: "📱", group: "생활비", desc: "통신, 보험, 공과금, 금융수수료, 렌탈/자동납부" },
   { key: "편의점", icon: "🏪", group: "음식", desc: "" },
   { key: "커피/카페/베이커리", icon: "☕", group: "음식", desc: "" },
-  {
-    key: "배달",
-    icon: "🍕",
-    group: "음식",
-    desc: "배민, 요기요, 쿠팡이츠, 땡겨요",
-  },
+  { key: "배달", icon: "🍕", group: "음식", desc: "배민, 요기요, 쿠팡이츠, 땡겨요" },
   { key: "외식", icon: "🍽️", group: "음식", desc: "아웃백, 레스토랑 등" },
-
   { key: "여행/숙박", icon: "🏨", group: "여행", desc: "렌터카 포함" },
   { key: "항공", icon: "✈️", group: "여행", desc: "공항라운지, 마일리지" },
   { key: "해외", icon: "🌏", group: "여행", desc: "직구, 현지, 외화 결제" },
-
   { key: "교육/육아", icon: "📚", group: "기타", desc: "학원, 서점, 육아용품" },
   { key: "의료", icon: "🏥", group: "기타", desc: "병원, 약국" },
 ];
@@ -111,10 +70,8 @@ const spendingOptions = [
 
 const sortOptions = [
   { value: "popular", label: "인기순", icon: "none" },
-  { value: "rate_desc", label: "할인율 높은순", icon: "up" },
-  { value: "rate_asc", label: "할인율 낮은순", icon: "down" },
-  { value: "benefit_desc", label: "혜택 높은순", icon: "up" },
-  { value: "benefit_asc", label: "혜택 낮은순", icon: "down" },
+  { value: "benefit_desc", label: "혜택 많은 순", icon: "up" },
+  { value: "benefit_asc", label: "혜택 적은 순", icon: "down" },
 ];
 
 /* ───────── 혜택 매핑 ───────── */
@@ -170,10 +127,6 @@ function matchesCategories(
   return selected.every((cat) => getCategoryBenefit(card, cat) !== null);
 }
 
-function getMaxRate(card: (typeof cards)[0]) {
-  return Math.max(...card.benefits.map((b) => b.discountRate), 0);
-}
-
 const typeLabel: Record<string, string> = {
   discount: "할인",
   cashback: "캐시백",
@@ -208,6 +161,7 @@ export function CardList() {
   const [spendingOption, setSpendingOption] = useState(spendingOptions[0]);
   const [sort, setSort] = useState("popular");
   const [eventOnly, setEventOnly] = useState(false);
+  const [transitOnly, setTransitOnly] = useState(false);
 
   /* UI 상태 */
   const [showDetail, setShowDetail] = useState(false);
@@ -221,6 +175,7 @@ export function CardList() {
   const detailBarRef = useRef<HTMLDivElement>(null);
   const [topBarHeight, setTopBarHeight] = useState(80);
   const [detailBarHeight, setDetailBarHeight] = useState(0);
+  const wasAutoHiddenRef = useRef(false);
 
   useEffect(() => {
     const el = topBarRef.current;
@@ -248,14 +203,18 @@ export function CardList() {
       const y = window.scrollY;
       setShowScrollTop(y > 400);
 
-      if (!showDetail) {
-        lastY = y;
-        return;
-      }
-
-      if (y > lastY + 4) {
+      // 스크롤 내리면 상세 필터 자동 닫기
+      if (showDetail && y > lastY + 4) {
+        wasAutoHiddenRef.current = true;
         setDetailVisible(false);
         setShowDetail(false);
+      }
+
+      // 맨 위로 올라오면 상세 필터 자동 열기 (자동으로 닫혔던 경우)
+      if (y < 30 && wasAutoHiddenRef.current) {
+        wasAutoHiddenRef.current = false;
+        setShowDetail(true);
+        setDetailVisible(true);
       }
 
       lastY = y;
@@ -294,6 +253,7 @@ export function CardList() {
     setFeeOption(feeOptions[0]);
     setSpendingOption(spendingOptions[0]);
     setEventOnly(false);
+    setTransitOnly(false);
   }, []);
 
   const resetDetailFilters = () => {
@@ -302,6 +262,7 @@ export function CardList() {
     setFeeOption(feeOptions[0]);
     setSpendingOption(spendingOptions[0]);
     setEventOnly(false);
+    setTransitOnly(false);
   };
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -320,9 +281,8 @@ export function CardList() {
         : c.minSpending <= spendingOption.max,
     )
     .filter((c) => !eventOnly || c.eventBenefits.length > 0)
+    .filter((c) => !transitOnly || c.tags.includes("교통카드"))
     .sort((a, b) => {
-      if (sort === "rate_desc") return getMaxRate(b) - getMaxRate(a);
-      if (sort === "rate_asc") return getMaxRate(a) - getMaxRate(b);
       if (sort === "benefit_desc") return b.maxBenefit - a.maxBenefit;
       if (sort === "benefit_asc") return a.maxBenefit - b.maxBenefit;
       return a.popularity - b.popularity;
@@ -333,7 +293,8 @@ export function CardList() {
     selectedIssuers.length > 0 ||
     feeOption.label !== "전체" ||
     spendingOption.label !== "전체" ||
-    eventOnly;
+    eventOnly ||
+    transitOnly;
 
   const hasAnyFilter = selectedCategories.length > 0 || hasDetailFilter;
   const benefitsQuery = selectedCategories.join(",");
@@ -386,6 +347,7 @@ export function CardList() {
                 if (showDetail) {
                   setShowDetail(false);
                   setDetailVisible(false);
+                  wasAutoHiddenRef.current = false;
                 } else {
                   setShowDetail(true);
                   setDetailVisible(true);
@@ -409,6 +371,7 @@ export function CardList() {
                     feeOption.label !== "전체" ? 1 : 0,
                     spendingOption.label !== "전체" ? 1 : 0,
                     eventOnly ? 1 : 0,
+                    transitOnly ? 1 : 0,
                   ].reduce((a, b) => a + b, 0)}
                 </span>
               )}
@@ -555,6 +518,26 @@ export function CardList() {
                   </div>
                   이벤트 카드 포함
                 </button>
+
+                <button
+                  onClick={() => setTransitOnly((v) => !v)}
+                  className={`flex items-center gap-2 px-3 py-1.5 rounded-xl border text-xs font-normal transition-all ${
+                    transitOnly
+                      ? "bg-[#6667AA]/8 border-[#6667AA] text-[#6667AA]"
+                      : "border-gray-200 text-gray-600 hover:bg-gray-50"
+                  }`}
+                >
+                  <div
+                    className={`w-4 h-4 rounded border-2 flex items-center justify-center flex-shrink-0 transition-all ${
+                      transitOnly
+                        ? "bg-[#6667AA] border-[#6667AA]"
+                        : "border-gray-300"
+                    }`}
+                  >
+                    {transitOnly && <Check className="w-2.5 h-2.5 text-white" />}
+                  </div>
+                  교통카드 기능 포함
+                </button>
               </div>
 
               {hasDetailFilter && (
@@ -681,6 +664,15 @@ export function CardList() {
                     <span className="flex items-center gap-1 px-2.5 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-normal">
                       이벤트 카드 포함
                       <button onClick={() => setEventOnly(false)}>
+                        <X className="w-3 h-3" />
+                      </button>
+                    </span>
+                  )}
+
+                  {transitOnly && (
+                    <span className="flex items-center gap-1 px-2.5 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-normal">
+                      교통카드 기능 포함
+                      <button onClick={() => setTransitOnly(false)}>
                         <X className="w-3 h-3" />
                       </button>
                     </span>

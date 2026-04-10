@@ -105,7 +105,7 @@ export function Home() {
           <div className="flex-1 max-w-xl">
             <div className="inline-flex items-center gap-2 bg-[#1B3D7B]/8 text-[#1B3D7B] px-3 py-1.5 rounded-full text-sm font-normal mb-6">
               <Zap className="w-3.5 h-3.5" />
-              2025년 3월 최신 카드 정보 업데이트
+              2026년 4월 최신 카드 정보 업데이트
             </div>
 
             <h1 className="text-4xl text-gray-900 mb-5 leading-tight font-normal">
@@ -140,7 +140,11 @@ export function Home() {
           {/* Hero 카드 애니메이션 */}
           <div className="hidden lg:flex flex-1 justify-center items-center">
             <div ref={heroCardRef} className="relative w-96 h-72">
-              {cards.slice(0, 3).map((card, i) => {
+              {[
+                cards.find(c => c.id === 7)!,   // 현대카드 M — 미드나잇 인디고
+                cards.find(c => c.id === 18)!,  // KB국민 다담카드 — 딥 앰버
+                cards.find(c => c.id === 2)!,   // 신한 Deep Dream — 딥 버건디
+              ].map((card, i) => {
                 const spreadPos = [
                   { top: 140, left: 0, rotate: 10 },
                   { top: 95, left: 65, rotate: 40 },
@@ -231,10 +235,10 @@ export function Home() {
               <Crown className="w-5 h-5 text-yellow-500" />
               <div>
                 <h2 className="text-xl text-gray-900 font-normal">
-                  카드사별 이번 달 랭킹
+                  카드사별 이번 달 TOP 5
                 </h2>
                 <p className="text-gray-500 text-sm font-normal mt-0.5">
-                  삼성 · 신한 · 현대 · 국민카드 기준 TOP 5
+                  삼성 · 신한 · 현대 · 국민카드 기준 인기 카드
                 </p>
               </div>
             </div>
@@ -461,7 +465,7 @@ export function Home() {
             </div>
 
             <p className="text-gray-400 text-xs font-normal">
-              © 2025 카드닷. 본 서비스는 금융상품 비교 정보 제공 목적으로
+              © 2026 카드닷. 본 서비스는 금융상품 비교 정보 제공 목적으로
               운영됩니다.
             </p>
           </div>
