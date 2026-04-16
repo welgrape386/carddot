@@ -1,5 +1,5 @@
 -- =============================================
--- 카드 혜택 데이터베이스 스키마
+-- 카드 혜택 데이터베이스 스키마 (v2)
 -- 순수 테이블 생성 SQL
 -- =============================================
 
@@ -9,7 +9,6 @@ CREATE TABLE users (
     email VARCHAR(255) NOT NULL UNIQUE,                            -- 로그인/알림용 이메일 (중복 불가)
     password VARCHAR(255) NOT NULL,                                -- 암호화된 비밀번호 (bcrypt 등으로 해싱)
     name VARCHAR(50) NOT NULL,                                     -- 사용자 실명
-    nickname VARCHAR(50),                                          -- 앱 내 닉네임 (선택)
     phone_number VARCHAR(20),                                      -- 휴대폰 번호 (선택)
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP        -- 가입 일시
 );
@@ -100,6 +99,7 @@ CREATE TABLE favorite (
 );
 
 -- 8. user_activity (사용자 활동 이력 테이블)
+-- 명세서의 "최근 본 카드", "최근 비교한 카드" 기능 지원
 CREATE TABLE user_activity (
     activity_id SERIAL PRIMARY KEY,                                -- 활동 고유 번호 (자동 증가)
     user_id INT NOT NULL REFERENCES users(user_id),                -- 활동한 사용자 (FK)
