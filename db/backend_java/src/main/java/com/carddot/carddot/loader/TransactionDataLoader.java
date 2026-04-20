@@ -75,7 +75,7 @@ public class TransactionDataLoader implements ApplicationRunner {
         Random random = new Random();
         String[] merchantNames = merchantMap.keySet().toArray(new String[0]);
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 30; i++) {
             String merchantName = merchantNames[random.nextInt(merchantNames.length)];
 
             Transaction tx = new Transaction();
@@ -84,10 +84,18 @@ public class TransactionDataLoader implements ApplicationRunner {
             tx.setMerchantName(merchantName);
             tx.setCategoryId(merchantMap.get(merchantName));
             tx.setAmount((random.nextInt(50) + 1) * 1000);
-            tx.setApprovedAt(LocalDateTime.now().minusDays(random.nextInt(30)));
+
+            //기간 조정
+            tx.setApprovedAt(LocalDateTime.now().minusDays(random.nextInt(180)));
+            // ✅ 기간 직접 지정 방식
+            // LocalDateTime start = LocalDateTime.of(2025, 1, 1, 0, 0);   // 시작일 (년, 월, 일, 시, 분)
+            // LocalDateTime end = LocalDateTime.of(2025, 12, 31, 23, 59); // 종료일 (년, 월, 일, 시, 분)
+            // long seconds = java.time.temporal.ChronoUnit.SECONDS.between(start, end); // 시작~종료 사이 총 초(seconds) 계산
+            // tx.setApprovedAt(start.plusSeconds((long)(random.nextDouble() * seconds))); // 총 초 중 랜덤 값 더해서 날짜 생성
+
             transactionRepository.save(tx);
         }
 
-        System.out.println("✅ 결제 더미 데이터 10개 생성 완료!");
+        System.out.println("✅ 결제 더미 데이터 생성 완료!");
     }
 }
