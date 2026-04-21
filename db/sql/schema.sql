@@ -39,8 +39,8 @@ CREATE TABLE card (
     link_url VARCHAR(500),                                         -- 카드사 상세페이지 URL
     view_count INT NOT NULL DEFAULT 0,                             -- 앱 내 조회수 (인기순 정렬용)
     click_count INT NOT NULL DEFAULT 0,                            -- 카드사 URL 클릭수 (랭킹용 )
-    total_max_benefit INT DEFAULT 0                                -- 월 최대 혜택 금액 (원)
-    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,       -- 최종 정보 갱신 일시
+    total_max_benefit INT DEFAULT 0,                               -- 월 최대 혜택 금액 (원)
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP        -- 최종 정보 갱신 일시
 );
 
 -- 4. benefit (카드 상세 혜택 테이블)
@@ -48,9 +48,11 @@ CREATE TABLE benefit (
     benefit_id       SERIAL          PRIMARY KEY,                  -- 혜택 고유 번호 (자동 증가)
     card_id          VARCHAR(50)     NOT NULL REFERENCES card(card_id), -- 어느 카드의 혜택인지 (FK)
     category_id      INT             REFERENCES category(category_id),  -- 혜택 카테고리 (FK, NULL 허용)
-    benefit_group    VARCHAR(100)    NOT NULL,                     -- 혜택 그룹명
+    row_type         VARCHAR(20)     NOT NULL,                     -- 주요혜택 | 상세혜택
+    benefit_group    VARCHAR(100)    NOT NULL,                     -- 혜택 그룹명 (팝업 h1)
     benefit_type     VARCHAR(50),                                  -- 포인트적립 | 캐시백 | 할인 | 면제 | 서비스
-    benefit_title    VARCHAR(255),                                 -- 혜택 소제목 (예: 건당 3만원 미만)
+    benefit_title    VARCHAR(255),                                 -- 혜택 소제목
+    benefit_summary  TEXT,                                         -- 혜택 요약 (크롤링 원문)
     benefit_content  TEXT,                                         -- 혜택 상세 내용 (원문)
     benefit_value    DECIMAL(10,2),                                -- 혜택 수치 (예: 0.70, 500.00)
     benefit_unit     VARCHAR(20),                                  -- % | 원 | 포인트 | 마일
@@ -63,31 +65,35 @@ CREATE TABLE benefit (
     max_count        INT,                                          -- 월 최대 혜택 횟수 (NULL=제한없음)
     max_limit        INT,                                          -- 월 최대 혜택 한도 수치
     max_limit_unit   VARCHAR(20),                                  -- 포인트 | 원 | 회
-    benefit_notes    TEXT                                          -- 혜택 관련 유의사항
 );
 
--- 5. card_event (카드 이벤트 테이블)
+-- 5. notice (유의사항 통합 테이블)
+-- 조회 예시
+--   카드 유의사항  : WHERE card_id = 'ME4' AND notice_type = 'card'
+--   혜택 유의사항  : WHERE card_id = 'ME4' AND notice_type = 'benefit'
+--                    AND benefit_group = 'M포인트 적립' AND benefit_title = '기본 혜택'
+CREATE TABLE notice (
+    notice_id        SERIAL          PRIMARY KEY,                  -- 유의사항 고유 번호 (자동 증가)
+    card_id          VARCHAR(50)     NOT NULL REFERENCES card(card_id), -- 어느 카드의 유의사항인지 (FK)
+    notice_type      VARCHAR(10)     NOT NULL,                     -- 'card' | 'benefit'
+    notice_category  VARCHAR(100),                                 -- 유의사항 대분류 (card 타입: 카드 이용 유의사항 등)
+    sub_category     VARCHAR(100),                                 -- 유의사항 소분류 (card 타입: 해외 결제 이용 안내 등)
+    benefit_group    VARCHAR(100),                                 -- 혜택 그룹명 (benefit 타입: benefit 테이블과 매핑)
+    benefit_title    VARCHAR(255),                                 -- 혜택 소제목 (benefit 타입: benefit 테이블과 매핑)
+    notice_content   TEXT            NOT NULL,                     -- 유의사항 원문 내용 (한 줄씩)
+);
+
+-- 6. card_event (카드 이벤트 테이블)
 CREATE TABLE card_event (
-    event_id SERIAL PRIMARY KEY,                                   -- 이벤트 고유 번호 (자동 증가)
-    card_id VARCHAR(50) NOT NULL REFERENCES card(card_id),         -- 어느 카드의 이벤트인지 (FK)
-    event_title VARCHAR(255) NOT NULL,                             -- 이벤트 제목
-    start_date DATE,                                               -- 이벤트 시작일
-    end_date DATE,                                                 -- 이벤트 종료일
-    event_type VARCHAR(50),                                        -- 이벤트 유형 (캐시백, 할인, 포인트적립 등)
-    section VARCHAR(100),                                          -- 이벤트 섹션/분류 (이벤트 요약 | 참여방법 | 유의사항 등)
-    event_link VARCHAR(500),                                       -- 이벤트 상세페이지 URL
-    event_content TEXT,                                            -- 이벤트 상세 내용
-    event_notes TEXT,                                              -- 이벤트 유의사항
-);
-
--- 6. card_notice (카드 유의사항 테이블)
-CREATE TABLE card_notice (
-    notice_id SERIAL PRIMARY KEY,                                  -- 유의사항 고유 번호 (자동 증가)
-    card_id VARCHAR(50) NOT NULL REFERENCES card(card_id),         -- 어느 카드의 유의사항인지 (FK)
-    notice_category VARCHAR(100),                                  -- 유의사항 대분류 (예: 필수안내사항)
-    sub_category VARCHAR(100),                                     -- 유의사항 소분류
-    notice_content TEXT NOT NULL,                                  -- 유의사항 원문 내용
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP                 -- 최종 갱신 일시
+    event_id           SERIAL          PRIMARY KEY,                -- 이벤트 고유 번호 (자동 증가)
+    card_id            VARCHAR(50)     NOT NULL REFERENCES card(card_id), -- 어느 카드의 이벤트인지 (FK)
+    event_title        VARCHAR(255)    NOT NULL,                   -- 이벤트 제목
+    event_link         VARCHAR(500),                               -- 이벤트 상세페이지 URL
+    start_date         DATE,                                       -- 이벤트 시작일
+    end_date           DATE,                                       -- 이벤트 종료일
+    event_type         VARCHAR(50),                                -- 캐시백 | 포인트 | 할인 | 서비스 | 기타
+    section            VARCHAR(100),                               -- 이벤트 섹션 (혜택 | 기간 | 신청방법 | 확인해 주세요 등)
+    event_content      TEXT,                                       -- 이벤트 상세 내용 (한 줄씩)
 );
 
 -- 7. favorite (즐겨찾기 테이블)
