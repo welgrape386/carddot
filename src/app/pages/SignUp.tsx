@@ -186,8 +186,16 @@ export function SignUp() {
                       <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                       <input
                         type="tel"
-                        value={form.phone}
-                        onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                        value={(() => {
+                          const nums = form.phone.replace(/[^0-9]/g, '');
+                          if (nums.length <= 3) return nums;
+                          if (nums.length <= 7) return `${nums.slice(0, 3)}-${nums.slice(3)}`;
+                          return `${nums.slice(0, 3)}-${nums.slice(3, 7)}-${nums.slice(7, 11)}`;
+                        })()}
+                        onChange={(e) => {
+                          const value = e.target.value.replace(/[^0-9]/g, '');
+                          setForm({ ...form, phone: value });
+                        }}
                         placeholder="010-0000-0000"
                         className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#6667AA] focus:ring-1 focus:ring-[#6667AA]/20 transition-all"
                       />
