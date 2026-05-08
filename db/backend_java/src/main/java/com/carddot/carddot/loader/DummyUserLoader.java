@@ -5,6 +5,8 @@ import com.carddot.carddot.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.core.annotation.Order;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
@@ -14,14 +16,16 @@ import java.util.Random;
 
 @Component
 @RequiredArgsConstructor
+@Order(2)
 public class DummyUserLoader implements ApplicationRunner {
 
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        if (userRepository.count() > 0) {
+        if (userRepository.count() > 1) {
             System.out.println("✅ 유저 더미 데이터 이미 존재 - 스킵");
             return;
         }
@@ -33,18 +37,17 @@ public class DummyUserLoader implements ApplicationRunner {
         Random random = new Random();
         List<User> users = new ArrayList<>();
 
-        for (int i = 1; i <= 50; i++) {
+        for (int i = 2; i <= 51; i++) {
             String lastName = lastNames[random.nextInt(lastNames.length)];
             String firstName = firstNames[random.nextInt(firstNames.length)];
 
-            // 010-XXXX-XXXX 랜덤 생성
             String phone = "010-" +
                     String.format("%04d", random.nextInt(10000)) + "-" +
                     String.format("%04d", random.nextInt(10000));
 
             User user = new User();
             user.setEmail("user" + i + "@carddot.com");
-            user.setPassword("password" + i + "!");   // password1! ~ password50!
+            user.setPassword(passwordEncoder.encode("password" + i + "!"));
             user.setName(lastName + firstName);
             user.setPhoneNumber(phone);
             user.setCreatedAt(LocalDateTime.now());

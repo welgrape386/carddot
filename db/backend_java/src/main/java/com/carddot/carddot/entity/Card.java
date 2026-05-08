@@ -51,7 +51,7 @@ public class Card {
     @Column(name = "min_performance", nullable = false)
     private Integer minPerformance = 0;
 
-    @Column(name = "annual_fee_notes", length = 255)
+    @Column(name = "annual_fee_notes", columnDefinition = "TEXT")
     private String annualFeeNotes;
 
     @Column(name = "summary", columnDefinition = "TEXT")

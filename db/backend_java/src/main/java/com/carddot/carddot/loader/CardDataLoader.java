@@ -23,22 +23,32 @@ public class CardDataLoader implements ApplicationRunner {
 
     private final CardRepository cardRepository;
 
+    private final String[] CSV_FILES = {
+            "data/hd_card_info.csv",
+            "data/shinhan_info.csv",
+            "data/samsung_info.csv"
+    };
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
+        for (String csvFile : CSV_FILES) {
+            loadCards(csvFile);
+        }
+        System.out.println("✅ 전체 카드 데이터 CSV 로딩 완료!");
+    }
 
-        if (cardRepository.count() > 0) {
-            System.out.println("✅ 카드 데이터 이미 존재 - 스킵");
+    private void loadCards(String csvFile) throws Exception {
+        ClassPathResource resource = new ClassPathResource(csvFile);
+        if (!resource.exists()) {
+            System.out.println("❌ 파일 없음 - 스킵: " + csvFile);
             return;
         }
 
-        ClassPathResource resource = new ClassPathResource("data/신한카드_전체_기본정보.csv");
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(resource.getInputStream(), StandardCharsets.UTF_8)
         );
 
-        // 헤더 읽어서 컬럼명 → 인덱스 매핑
         String headerLine = reader.readLine().replace("\uFEFF", "");
-        System.out.println("헤더 확인: " + headerLine);
         String[] headers = headerLine.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
         Map<String, Integer> headerMap = new HashMap<>();
         for (int i = 0; i < headers.length; i++) {
@@ -49,8 +59,16 @@ public class CardDataLoader implements ApplicationRunner {
         while ((line = reader.readLine()) != null) {
             String[] cols = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
 
+            String cardId = getString(cols, headerMap, "card_id");
+            if (cardId == null) continue;
+
+            if (cardRepository.existsById(cardId)) {
+                System.out.println("⏭ 이미 존재하는 카드 스킵: " + cardId);
+                continue;
+            }
+
             Card card = new Card();
-            card.setCardId(getString(cols, headerMap, "card_id"));
+            card.setCardId(cardId);
             card.setCompany(getString(cols, headerMap, "company"));
             card.setCardName(getString(cols, headerMap, "card_name"));
             card.setCardType(getString(cols, headerMap, "card_type"));
@@ -61,6 +79,7 @@ public class CardDataLoader implements ApplicationRunner {
             card.setAnnualFeeDomPremium(getInt(cols, headerMap, "annual_fee_dom_premium"));
             card.setAnnualFeeForBasic(getInt(cols, headerMap, "annual_fee_for_basic"));
             card.setAnnualFeeForPremium(getInt(cols, headerMap, "annual_fee_for_premium"));
+            card.setAnnualFeeNotes(getString(cols, headerMap, "annual_fee_notes"));  // 추가
             card.setMinPerformance(getInt(cols, headerMap, "min_performance"));
             card.setSummary(getString(cols, headerMap, "summary"));
             card.setImageUrl(getString(cols, headerMap, "image_url"));
@@ -72,21 +91,23 @@ public class CardDataLoader implements ApplicationRunner {
             card.setUpdatedAt(LocalDateTime.now());
 
             cardRepository.save(card);
+            System.out.println("✅ 카드 추가: " + cardId);
         }
 
         reader.close();
-        System.out.println("✅ 카드 데이터 CSV 로딩 완료!");
+        System.out.println("✅ " + csvFile + " 로딩 완료!");
     }
 
-    // 컬럼명으로 문자열 값 가져오기
     private String getString(String[] cols, Map<String, Integer> headerMap, String colName) {
         Integer idx = headerMap.get(colName);
         if (idx == null || idx >= cols.length) return null;
         String val = cols[idx].trim();
+        if (val.startsWith("\"") && val.endsWith("\"")) {
+            val = val.substring(1, val.length() - 1).trim();
+        }
         return val.isEmpty() ? null : val;
     }
 
-    // 컬럼명으로 정수 값 가져오기
     private int getInt(String[] cols, Map<String, Integer> headerMap, String colName) {
         try {
             return (int) Double.parseDouble(getString(cols, headerMap, colName));
@@ -95,7 +116,6 @@ public class CardDataLoader implements ApplicationRunner {
         }
     }
 
-    // 컬럼명으로 boolean 값 가져오기
     private boolean getBool(String[] cols, Map<String, Integer> headerMap, String colName) {
         String val = getString(cols, headerMap, colName);
         return "true".equalsIgnoreCase(val);
