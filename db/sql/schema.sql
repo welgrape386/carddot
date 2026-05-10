@@ -50,7 +50,7 @@ CREATE TABLE benefit (
     category_id      INT             REFERENCES category(category_id),  -- 혜택 카테고리 (FK, NULL 허용)
     row_type         VARCHAR(20)     NOT NULL,                     -- 주요혜택 | 상세혜택
     benefit_group    VARCHAR(100)    NOT NULL,                     -- 혜택 그룹명 (팝업 h1)
-    benefit_type     VARCHAR(50),                                  -- 포인트적립 | 캐시백 | 할인 | 면제 | 서비스
+    benefit_type     VARCHAR(50),                                  -- 포인트 | 캐시백 | 할인 | 마일리지 | 서비스
     benefit_title    VARCHAR(255),                                 -- 혜택 소제목
     benefit_summary  TEXT,                                         -- 혜택 요약 (크롤링 원문)
     benefit_content  TEXT,                                         -- 혜택 상세 내용 (원문)
