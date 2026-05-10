@@ -9,7 +9,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.cors.CorsConfiguration;
 
-import java.util.Collections;
+import java.util.Arrays;
 
 @Configuration
 @EnableWebSecurity
@@ -23,23 +23,27 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-            // 1. CSRF 비활성화 (최신 람다식 문법)
             .csrf(AbstractHttpConfigurer::disable)
-            
-            // 2. CORS 설정 (리액트 3000번 포트 허용)
+
             .cors(cors -> cors.configurationSource(request -> {
                 CorsConfiguration config = new CorsConfiguration();
-                config.setAllowedOrigins(Collections.singletonList("http://localhost:3000"));
-                config.setAllowedMethods(Collections.singletonList("*"));
-                config.setAllowedHeaders(Collections.singletonList("*"));
+
+                config.setAllowedOrigins(Arrays.asList(
+                        "http://localhost:3000",
+                        "http://localhost:5173"
+                ));
+
+                config.setAllowedMethods(Arrays.asList("*"));
+                config.setAllowedHeaders(Arrays.asList("*"));
+                config.setAllowCredentials(true);
+
                 return config;
             }))
-            
-            // 3. 요청 권한 설정 (일단 모든 API 접근 허용)
+
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/**").permitAll()
             );
-            
+
         return http.build();
     }
 }
