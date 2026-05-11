@@ -37,8 +37,8 @@ CREATE TABLE card (
     has_cashback BOOLEAN NOT NULL DEFAULT FALSE,                   -- 캐시백 이벤트 진행 중 여부
     image_url VARCHAR(500),                                        -- 카드 이미지 URL
     link_url VARCHAR(500),                                         -- 카드사 상세페이지 URL
-    view_count INT NOT NULL DEFAULT 0,                             -- 앱 내 조회수 (인기순 정렬용)
-    click_count INT NOT NULL DEFAULT 0,                            -- 카드사 URL 클릭수 (랭킹용 )
+    detail_count INT NOT NULL DEFAULT 0,                           -- 앱 내 조회수 (인기순 정렬용)
+    url_count INT NOT NULL DEFAULT 0,                              -- 카드사 URL 클릭수 (랭킹용 )
     total_max_benefit INT DEFAULT 0,                               -- 월 최대 혜택 금액 (원)
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP        -- 최종 정보 갱신 일시
 );
