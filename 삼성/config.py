@@ -20,16 +20,12 @@ CARD_COMPANY = "삼성"
 BROWSER_HEADLESS = True
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 
-# ── 전역 시퀀스 (notice_id, benefit_id)
-NOTICE_ID_SEQ = count(1)
-BENEFIT_SEQ   = count(1)
-
 # ── 카테고리 데이터
 CATEGORY_DATA = [
     {"category_id": 1,  "category_name": "온라인쇼핑",          "category_list": ["온라인쇼핑", "삼성카드 쇼핑", "G마켓", "옥션", "11번가", "인터파크", "쿠팡", "티몬", "위메프", "SSG.COM", "롯데ON", "마켓컬리", "오아시스마켓"]},
     {"category_id": 2,  "category_name": "패션/뷰티",            "category_list": ["패션", "뷰티", "올리브영", "유니클로", "자라", "H&M", "8SECONDS"]},
     {"category_id": 3,  "category_name": "슈퍼마켓/생활잡화",    "category_list": ["슈퍼마켓", "생활잡화", "이마트", "트레이더스", "롯데마트", "홈플러스", "에브리데이", "빅마켓", "다이소"]},
-    {"category_id": 4,  "category_name": "백화점/아울렛/면세점", "category_list": ["백화점", "아울렛", "면세점", "신세계", "롯데", "현대", "갤러리아", "동아", "대구백화점", "AK플라자", "NC 대전 유성점", "NC 대전유성점", "신세계사이먼 프리미엄 아울렛", "현대프리미엄아울렛"]},
+    {"category_id": 4,  "category_name": "백화점/아울렛/면세점", "category_list": ["백화점", "아울렛", "면세점", "신세계", "롯데백화점", "롯데아울렛", "현대백화점", "현대프리미엄아울렛", "갤러리아", "동아", "대구백화점", "AK플라자", "NC 대전 유성점", "NC 대전유성점", "신세계사이먼 프리미엄 아울렛"]},
     {"category_id": 5,  "category_name": "대중교통/택시",        "category_list": ["대중교통", "택시"]},
     {"category_id": 6,  "category_name": "자동차/주유",          "category_list": ["자동차", "주유", "SK에너지", "GS칼텍스", "현대오일뱅크", "S-OIL"]},
     {"category_id": 7,  "category_name": "반려동물",             "category_list": ["반려동물"]},

@@ -29,7 +29,7 @@ def _iter_lines(el) -> list[str]:
 def _extract_card_id(card: dict, crawl_result: dict) -> str:
     url = crawl_result.get("url", "") or card.get("url", "")
     m = re.search(r"/(\d+_\d+)\.html", url)
-    return f"SHC_{m.group(1) if m else 'UNKNOWN'}"
+    return m.group(1) if m else "UNKNOWN"
 
 
 def _korean_to_int(s: str):
@@ -100,8 +100,6 @@ def _remove_condition_text(text: str) -> str:
 
 
 def _extract_min_amount(text: str):
-    if m := re.search(r"전월\s*이용\s*금액\s*(\d+)만원\s*이상", text):
-        return int(m.group(1)) * 10000
     if m := re.search(r"건당\s*(\d+)만원\s*이상", text):
         return int(m.group(1)) * 10000
     if m := re.search(r"건당\s*(\d+)천원\s*이상", text):
@@ -257,7 +255,6 @@ def _make_row(
     혜택조건: str = "",
     row_type: str = "benefit",
     benefit_summary: str = "",
-    benefit_main_title: str = "",
 ) -> dict:
 
     카테고리_list = get_categories(섹션, 제목, 상세내용)
@@ -275,7 +272,6 @@ def _make_row(
     max_limit, max_limit_unit = _extract_max_limit(상세내용)
     perf_min, perf_max = _extract_performance_range(혜택조건)
 
-    # performance 미추출 시 benefit_content에서 보조 추출
     if not perf_min and not perf_max and 상세내용:
         for pattern in [
             r"전월\s*(?:\([^)]+\)\s*)?(?:국내\s*)?이용금액\s*(\d+만원\s*이상(?:\s*\d+만원\s*미만)?)",
@@ -290,13 +286,12 @@ def _make_row(
                     perf_min, perf_max = perf_min_new, perf_max_new
                     break
 
-    if row_type in ("유의사항", "연회비"):
+    if row_type == "유의사항" or 섹션 == "연회비":
         카테고리_list = []
         benefit_type = on_offline = ""
         value = unit = target = excluded = max_limit = max_limit_unit = max_count = min_amount = None
-        if row_type == "연회비":
-            perf_min = perf_max = None
-            혜택조건 = ""
+        perf_min = perf_max = None
+        혜택조건 = ""
 
     category    = ", ".join(카테고리_list)
     category_id = ", ".join(CATEGORY_ID_MAP.get(c, "") for c in 카테고리_list if CATEGORY_ID_MAP.get(c))
@@ -312,7 +307,7 @@ def _make_row(
         "row_type":           row_type,
         "benefit_group":      섹션,
         "benefit_title":      제목,
-        "benefit_summary":            benefit_summary,
+        "benefit_summary":    benefit_summary,
         "benefit_content":    상세내용,
         "category":           category,
         "category_id":        category_id,
@@ -330,7 +325,6 @@ def _make_row(
         "max_limit":          max_limit,
         "max_limit_unit":     max_limit_unit,
         "updated_at":         date.today().isoformat(),
-        "benefit_main_title": benefit_main_title,
     }
 
 
@@ -397,7 +391,6 @@ def _parse_table(table_el, card_id, 섹션, 제목, 소제목, summary="", row_t
                 r = _make_row(card_id, 섹션, 제목, 소제목, "", f"{row.iloc[0]}: {row[col_header]}", str(col_header), row_type, summary)
                 rows.append(r)
     else:
-        # rowspan 공통값 추출
         common_parts = {
             h: vals[0]
             for col_idx, h in enumerate(headers[1:], 1)
@@ -495,20 +488,14 @@ def _parse_slide(slide_el, card_id: str, tab_title: str = "") -> list:
                     next_h4    = inner_h4s[i + 1] if i + 1 < len(inner_h4s) else None
                     sibs       = [s for s in h4.find_next_siblings() if not (next_h4 and s == next_h4)]
                     for sib in sibs:
-                        for r in _parse_slide_element(sib, card_id, benefit_group, current_h4, current_h3):
-                            r["benefit_main_title"] = tab_title
-                            rows.append(r)
+                        rows.extend(_parse_slide_element(sib, card_id, benefit_group, current_h4, current_h3))
             else:
                 current_h4 = _clean(inner_h4s[0].get_text())
-                for r in _parse_slide_element(el_copy, card_id, benefit_group, current_h4, current_h3):
-                    r["benefit_main_title"] = tab_title
-                    rows.append(r)
+                rows.extend(_parse_slide_element(el_copy, card_id, benefit_group, current_h4, current_h3))
             continue
 
         제목 = current_h4 if current_h4 else current_h3
-        for r in _parse_slide_element(el, card_id, benefit_group, 제목, current_h3):
-            r["benefit_main_title"] = tab_title
-            rows.append(r)
+        rows.extend(_parse_slide_element(el, card_id, benefit_group, 제목, current_h3))
 
     return rows
 
@@ -598,9 +585,9 @@ def parse_card_info(card: dict, crawl_result: dict) -> dict:
 
     # 네트워크
     network = ", ".join(
-        n for n, kws in {"VISA": ["VISA"], "Master": ["Master"], "AMEX": ["AMEX"]}.items()
+        n for n, kws in {"VISA": ["VISA"], "Mastercard": ["Master"], "AMEX": ["AMEX"]}.items()
         if any(k in body_text for k in kws)
-    ) or "Local"
+    ) or "Local Master"
 
     # 후불교통카드
     transport_texts = re.findall(r"후불교통카드[^\n]{0,20}", body_text)
@@ -661,7 +648,7 @@ def parse_benefits(card: dict, crawl_result: dict) -> list:
     # 주요혜택 (탭 요약)
     for tab_title, lines in _parse_main_summary(soup).items():
         for line in (lines or [""]):
-            rows.append(_make_row(card_id, tab_title, tab_title, "", "", line, "", "주요혜택", "", tab_title))
+            rows.append(_make_row(card_id, tab_title, tab_title, "", "", line, "", "주요혜택", ""))
 
     # 탭 타이틀 순서
     tab_titles_sorted = [
@@ -680,7 +667,7 @@ def parse_benefits(card: dict, crawl_result: dict) -> list:
     # 연회비
     lines, *_ = _parse_annual_fee_table(crawl_result)
     for line in lines:
-        rows.append(_make_row(card_id, "연회비", "연회비", "연회비", "", line, "", "연회비", line, "연회비"))
+        rows.append(_make_row(card_id, "연회비", "연회비", "연회비", "", line, "", "상세혜택", line))
 
     return rows
 
