@@ -29,9 +29,17 @@ public class SecurityConfig {
             // 2. CORS 설정 (리액트 3000번 포트 허용)
             .cors(cors -> cors.configurationSource(request -> {
                 CorsConfiguration config = new CorsConfiguration();
-                config.setAllowedOrigins(Collections.singletonList("http://localhost:3000"));
+                config.setAllowedOrigins(java.util.Arrays.asList(
+                		"http://localhost:3000",
+                		"https://carddot.vercel.app"
+                		));
                 config.setAllowedMethods(Collections.singletonList("*"));
                 config.setAllowedHeaders(Collections.singletonList("*"));
+                
+                // 필요 시 주석 해제
+                // config.setAllowCredentials(true);
+                // config.addExposedHeader("Authorization");
+                
                 return config;
             }))
             
