@@ -1,10 +1,10 @@
-package com.example.demo;
+package com.carddot.carddot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CardLoginApplicationTests {
+class CarddotApplicationTests {
 
 	@Test
 	void contextLoads() {

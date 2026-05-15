@@ -13,26 +13,57 @@ export function Login() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
+  const handleLogin = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setError("");
 
-    if (!email.trim()) {
-      setError("이메일을 입력해주세요.");
-      return;
-    }
-    if (!password.trim()) {
-      setError("비밀번호를 입력해주세요.");
-      return;
-    }
+  if (!email.trim()) {
+    setError("이메일을 입력해주세요.");
+    return;
+  }
 
+  if (!password.trim()) {
+    setError("비밀번호를 입력해주세요.");
+    return;
+  }
+
+  try {
     setLoading(true);
-    // 현재는 어떤 이메일/비밀번호든 로그인 허용 (추후 DB 연결 예정)
-    setTimeout(() => {
-      login(email);
-      navigate("/mypage");
-    }, 600);
-  };
+
+    const response = await fetch("http://localhost:8080/api/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    });
+
+    const data = await response.text();
+
+    if (!response.ok) {
+      setError(data);
+      return;
+    }
+
+    // JWT 토큰 저장
+    const token = response.headers.get("Authorization");
+
+    if (token) {
+      localStorage.setItem("token", token);
+    }
+
+    login(email);
+    navigate("/mypage");
+
+  } catch (err) {
+    setError("서버 연결 실패");
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] flex items-center justify-center py-12 px-4">

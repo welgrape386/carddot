@@ -63,18 +63,53 @@ export function SignUp() {
     if (validateStep1()) setStep(2);
   };
 
-  const handleSubmit = () => {
-    if (!agreed.terms || !agreed.privacy) {
-      setErrors({ agree: "필수 약관에 동의해주세요." });
+  const handleSubmit = async () => {
+  if (!agreed.terms || !agreed.privacy) {
+    setErrors({ agree: "필수 약관에 동의해주세요." });
+    return;
+  }
+
+  try {
+    setLoading(true);
+
+    const response = await fetch("http://localhost:8080/api/auth/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        phoneNumber: form.phone,
+        password: form.password,
+        passwordConfirm: form.passwordConfirm,
+      }),
+    });
+
+    const data = await response.text();
+
+    if (!response.ok) {
+      setErrors({ server: data });
       return;
     }
-    setLoading(true);
-    setTimeout(() => {
-      updateUserInfo({ name: form.name, email: form.email, phone: form.phone });
-      login(form.email);
-      navigate("/mypage");
-    }, 700);
-  };
+
+    // 회원가입 성공 후 자동 로그인
+    login(form.email);
+
+    updateUserInfo({
+      name: form.name,
+      email: form.email,
+      phone: form.phone,
+    });
+
+    navigate("/mypage");
+
+  } catch (err) {
+    setErrors({ server: "서버 연결 실패" });
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] flex items-center justify-center py-12 px-4">
@@ -186,8 +221,16 @@ export function SignUp() {
                       <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                       <input
                         type="tel"
-                        value={form.phone}
-                        onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                        value={(() => {
+                          const nums = form.phone.replace(/[^0-9]/g, '');
+                          if (nums.length <= 3) return nums;
+                          if (nums.length <= 7) return `${nums.slice(0, 3)}-${nums.slice(3)}`;
+                          return `${nums.slice(0, 3)}-${nums.slice(3, 7)}-${nums.slice(7, 11)}`;
+                        })()}
+                        onChange={(e) => {
+                          const value = e.target.value.replace(/[^0-9]/g, '');
+                          setForm({ ...form, phone: value });
+                        }}
                         placeholder="010-0000-0000"
                         className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#6667AA] focus:ring-1 focus:ring-[#6667AA]/20 transition-all"
                       />
