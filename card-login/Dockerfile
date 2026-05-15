@@ -1,5 +1,5 @@
 # 1단계: 빌드 환경 (Java 17)
-FROM openjdk:17-jdk-slim AS build
+FROM eclipse-temurin:17-jdk AS build
 WORKDIR /app
 
 # Maven 실행 파일과 소스코드 복사
@@ -13,7 +13,7 @@ RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
 
 # 2단계: 실행 환경
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jre
 WORKDIR /app
 
 # 빌드된 jar 파일 복사
