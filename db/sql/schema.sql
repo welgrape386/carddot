@@ -52,7 +52,6 @@ CREATE TABLE benefit (
     benefit_group    VARCHAR(100)    NOT NULL,                     -- 혜택 그룹명 (팝업 h1)
     benefit_type     VARCHAR(50),                                  -- 포인트 | 캐시백 | 할인 | 마일리지 | 서비스
     benefit_title    VARCHAR(255),                                 -- 혜택 소제목
-    benefit_summary  TEXT,                                         -- 혜택 요약 (크롤링 원문)
     benefit_content  TEXT,                                         -- 혜택 상세 내용 (원문)
     benefit_value    DECIMAL(10,2),                                -- 혜택 수치 (예: 0.70, 500.00)
     benefit_unit     VARCHAR(20),                                  -- % | 원 | 포인트 | 마일

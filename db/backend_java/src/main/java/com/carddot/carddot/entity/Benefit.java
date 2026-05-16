@@ -29,9 +29,6 @@ public class Benefit {
     @Column(name = "benefit_title")
     private String benefitTitle;
 
-    @Column(name = "benefit_summary", columnDefinition = "TEXT")
-    private String benefitSummary;
-
     @Column(name = "on_offline")
     private String onOffline;
 
