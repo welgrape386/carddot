@@ -20,33 +20,16 @@ import java.util.Map;
 
 @Component
 @RequiredArgsConstructor
-@Order(3)
+@Order(2)
 public class BenefitDataLoader implements ApplicationRunner {
 
     private final BenefitRepository benefitRepository;
     private final BenefitCategoryRepository benefitCategoryRepository;
 
-    private final String[] CSV_FILES = {
-            "data/hd_card_benefit.csv",
-            "data/shinhan_benefit.csv",
-            "data/samsung_benefit.csv"
-    };
-
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        for (String csvFile : CSV_FILES) {
-            loadBenefits(csvFile);
-        }
-        System.out.println("✅ 전체 혜택 데이터 CSV 로딩 완료!");
-    }
 
-    private void loadBenefits(String csvFile) throws Exception {
-        ClassPathResource resource = new ClassPathResource(csvFile);
-        if (!resource.exists()) {
-            System.out.println("❌ 파일 없음 - 스킵: " + csvFile);
-            return;
-        }
-
+        ClassPathResource resource = new ClassPathResource("data/hd_card_benefit.csv");
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(resource.getInputStream(), StandardCharsets.UTF_8)
         );
@@ -63,8 +46,8 @@ public class BenefitDataLoader implements ApplicationRunner {
             String[] cols = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
 
             String benefitId = getString(cols, headerMap, "benefit_id");
-            if (benefitId == null) continue;
 
+            // 이미 있으면 스킵
             if (benefitRepository.existsById(benefitId)) {
                 System.out.println("⏭ 이미 존재하는 혜택 스킵: " + benefitId);
                 continue;
@@ -76,7 +59,6 @@ public class BenefitDataLoader implements ApplicationRunner {
             benefit.setRowType(getString(cols, headerMap, "row_type"));
             benefit.setBenefitGroup(getString(cols, headerMap, "benefit_group"));
             benefit.setBenefitTitle(getString(cols, headerMap, "benefit_title"));
-            benefit.setBenefitSummary(getString(cols, headerMap, "benefit_summary"));
             benefit.setOnOffline(getString(cols, headerMap, "on_offline"));
             benefit.setBenefitType(getString(cols, headerMap, "benefit_type"));
             benefit.setBenefitValue(getBigDecimal(cols, headerMap, "benefit_value"));
@@ -89,10 +71,13 @@ public class BenefitDataLoader implements ApplicationRunner {
             benefit.setMaxCount(getIntOrNull(cols, headerMap, "max_count"));
             benefit.setMaxLimit(getIntOrNull(cols, headerMap, "max_limit"));
             benefit.setMaxLimitUnit(getString(cols, headerMap, "max_limit_unit"));
+            benefit.setGroupMaxLimit(getIntOrNull(cols, headerMap, "group_max_limit"));
+            benefit.setGroupMaxLimitUnit(getString(cols, headerMap, "group_max_limit_unit"));
             benefit.setBenefitContent(getString(cols, headerMap, "benefit_content"));
 
             benefitRepository.save(benefit);
 
+            // benefit_category 저장 (category_id가 "1, 16, 19" 형태)
             String categoryIdStr = getString(cols, headerMap, "category_id");
             if (categoryIdStr != null && !categoryIdStr.isBlank()) {
                 String[] categoryIds = categoryIdStr.split(",");
@@ -111,7 +96,7 @@ public class BenefitDataLoader implements ApplicationRunner {
         }
 
         reader.close();
-        System.out.println("✅ " + csvFile + " 로딩 완료!");
+        System.out.println("✅ 혜택 데이터 CSV 로딩 완료!");
     }
 
     private String getString(String[] cols, Map<String, Integer> headerMap, String colName) {

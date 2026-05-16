@@ -64,6 +64,8 @@ CREATE TABLE benefit (
     max_count        INT,                                          -- 월 최대 혜택 횟수 (NULL=제한없음)
     max_limit        INT,                                          -- 월 최대 혜택 한도 수치
     max_limit_unit   VARCHAR(20),                                  -- 포인트 | 원 | 회
+    group_max_limit      INT,                                      -- 같은 benefit_group 내 통합 월 한도 수치 (NULL=통합한도없음)
+    group_max_limit_unit VARCHAR(20)                               -- 통합 월 한도 단위 (원 | 포인트)
 );
 
 -- 5. notice (유의사항 통합 테이블)
