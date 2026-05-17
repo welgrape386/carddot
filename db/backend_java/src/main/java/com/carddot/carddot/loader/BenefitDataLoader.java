@@ -26,13 +26,30 @@ public class BenefitDataLoader implements ApplicationRunner {
     private final BenefitRepository benefitRepository;
     private final BenefitCategoryRepository benefitCategoryRepository;
 
+
+    private final String[] CSV_FILES = {
+            "data/hd_card_benefit.csv",
+            "data/shinhan_benefit.csv",
+            "data/samsung_benefit.csv"
+    };
     @Override
     public void run(ApplicationArguments args) throws Exception {
+        for (String csvFile : CSV_FILES) {
+            loadBenefits(csvFile);
+        }
+        System.out.println("✅ 전체 혜택 데이터 CSV 로딩 완료!");
+    }
 
-        ClassPathResource resource = new ClassPathResource("data/hd_card_benefit.csv");
-        BufferedReader reader = new BufferedReader(
-                new InputStreamReader(resource.getInputStream(), StandardCharsets.UTF_8)
-        );
+        private void loadBenefits(String csvFile) throws Exception {
+            ClassPathResource resource = new ClassPathResource(csvFile);
+            if (!resource.exists()) {
+                System.out.println("❌ 파일 없음 - 스킵: " + csvFile);
+                return;
+            }
+
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(resource.getInputStream(), StandardCharsets.UTF_8)
+            );
 
         String headerLine = reader.readLine().replace("\uFEFF", "");
         String[] headers = headerLine.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);

@@ -85,8 +85,8 @@ public class CardDataLoader implements ApplicationRunner {
             card.setImageUrl(getString(cols, headerMap, "image_url"));
             card.setLinkUrl(getString(cols, headerMap, "link_url"));
             card.setHasCashback(getBool(cols, headerMap, "has_cashback"));
-            card.setViewCount(0);
-            card.setClickCount(0);
+            card.setDetailCount(0);
+            card.setUrlCount(0);
             card.setTotalMaxBenefit(0);
             card.setUpdatedAt(LocalDateTime.now());
 
