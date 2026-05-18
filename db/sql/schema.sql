@@ -68,7 +68,16 @@ CREATE TABLE benefit (
     group_max_limit_unit VARCHAR(20)                               -- 통합 월 한도 단위 (원 | 포인트)
 );
 
--- 5. notice (유의사항 통합 테이블)
+-- 5. benefit_category (혜택-카테고리 매핑 테이블)
+-- benefit과 category의 다대다 관계를 처리하는 중간 테이블
+-- 하나의 혜택에 여러개의 카테고리가 있어서 따로 분리 함 
+CREATE TABLE benefit_category (
+    benefit_id       VARCHAR(50)     NOT NULL REFERENCES benefit(benefit_id), -- 혜택 (FK)
+    category_id      INT             NOT NULL REFERENCES category(category_id), -- 카테고리 (FK)
+    PRIMARY KEY (benefit_id, category_id)
+);
+
+-- 6. notice (유의사항 통합 테이블)
 -- 조회 예시
 --   카드 유의사항  : WHERE card_id = 'ME4' AND notice_type = 'card'
 --   혜택 유의사항  : WHERE card_id = 'ME4' AND notice_type = 'benefit'
@@ -84,7 +93,7 @@ CREATE TABLE notice (
     notice_content   TEXT            NOT NULL,                     -- 유의사항 원문 내용 (한 줄씩)
 );
 
--- 6. card_event (카드 이벤트 테이블)
+-- -. card_event (카드 이벤트 테이블)
 CREATE TABLE card_event (
     event_id           SERIAL          PRIMARY KEY,                -- 이벤트 고유 번호 (자동 증가)
     card_id            VARCHAR(50)     NOT NULL REFERENCES card(card_id), -- 어느 카드의 이벤트인지 (FK)
@@ -97,7 +106,7 @@ CREATE TABLE card_event (
     event_content      TEXT,                                       -- 이벤트 상세 내용 (한 줄씩)
 );
 
--- 7. favorite (즐겨찾기 테이블)
+-- 8. favorite (즐겨찾기 테이블)
 CREATE TABLE favorite (
     favorite_id SERIAL PRIMARY KEY,                                -- 즐겨찾기 고유 번호 (자동 증가)
     user_id INT NOT NULL REFERENCES users(user_id),                -- 즐겨찾기한 사용자 (FK)
@@ -105,7 +114,7 @@ CREATE TABLE favorite (
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP        -- 즐겨찾기 등록 일시
 );
 
--- 8. user_activity (사용자 활동 이력 테이블)
+-- 9. user_activity (사용자 활동 이력 테이블)
 -- 명세서의 "최근 본 카드", "최근 비교한 카드" 기능 지원
 CREATE TABLE user_activity (
     activity_id SERIAL PRIMARY KEY,                                -- 활동 고유 번호 (자동 증가)
@@ -115,7 +124,7 @@ CREATE TABLE user_activity (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP                 -- 활동 발생 일시
 );
 
--- 9. transactions (사용자 지출 내역 테이블)
+-- 10. transactions (사용자 지출 내역 테이블)
 CREATE TABLE transactions (
     transaction_id SERIAL PRIMARY KEY,                             -- 결제 건별 고유 번호 (자동 증가)
     user_id INT NOT NULL REFERENCES users(user_id),                -- 결제한 사용자 (FK)
