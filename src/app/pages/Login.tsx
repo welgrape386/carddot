@@ -29,33 +29,35 @@ export function Login() {
   }
 
   try {
-    setLoading(true);
+  setLoading(true);
 
-    const loginData = {
-      email,
-      password,
-    };
+  const loginData = {
+    email,
+    password,
+  };
 
-    const response = await api.post(
-      "/api/auth/login",
-      loginData
-    );
+  console.log(loginData);
 
-    // JWT 토큰 저장
-    const token = response.headers.authorization;
+  const response = await api.post(
+    "/api/auth/login",
+    loginData
+  );
 
-    if (token) {
-      localStorage.setItem("token", token);
-    }
+  const token = response.headers.authorization;
 
-    login(email);
-    navigate("/mypage");
-
-  } catch (err) {
-    setError("서버 연결 실패");
-  } finally {
-    setLoading(false);
+  if (token) {
+    localStorage.setItem("token", token);
   }
+
+  login(email);
+  navigate("/mypage");
+
+} catch (err: any) {
+  console.log(err.response?.data);
+  setError(err.response?.data || "로그인 실패");
+} finally {
+  setLoading(false);
+}
 };
 
   return (
