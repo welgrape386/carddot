@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { Eye, EyeOff, CreditCard, Lock, Mail } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
+import { api } from "../../api/axios";
 
 export function Login() {
   const navigate = useNavigate();
@@ -30,26 +31,18 @@ export function Login() {
   try {
     setLoading(true);
 
-    const response = await fetch("http://localhost:8080/api/auth/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-    });
+    const loginData = {
+      email,
+      password,
+    };
 
-    const data = await response.text();
-
-    if (!response.ok) {
-      setError(data);
-      return;
-    }
+    const response = await api.post(
+      "/api/auth/login",
+      loginData
+    );
 
     // JWT 토큰 저장
-    const token = response.headers.get("Authorization");
+    const token = response.headers.authorization;
 
     if (token) {
       localStorage.setItem("token", token);
