@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { getCards } from "../../api/card";
+import { CardListItem } from "../../types/card";
 import { Link, useSearchParams } from "react-router";
 import {
   Heart,
@@ -14,8 +15,9 @@ import {
   ArrowUpDown,
   Sparkles,
 } from "lucide-react";
-import { cards } from "../data/mockData";
 import { CardVisual } from "../components/CardVisual";
+import { useState, useEffect, useRef, useCallback } from "react";
+
 
 /* ───────── 상수 ───────── */
 const NAVBAR_H = 64;
@@ -99,34 +101,6 @@ const categoryBenefitMap: Record<string, string[]> = {
   의료: ["의료", "병원", "약국"],
 };
 
-function getCategoryBenefit(
-  card: (typeof cards)[0],
-  category: string,
-): { rate: number; type: string } | null {
-  const mapped = categoryBenefitMap[category] ?? [category];
-  if (!mapped.length) return null;
-
-  const matched = card.benefits.filter((b) =>
-    mapped.some((m) => b.category.toLowerCase().includes(m.toLowerCase())),
-  );
-
-  if (!matched.length) return null;
-
-  const best = matched.reduce((a, b) =>
-    a.discountRate >= b.discountRate ? a : b,
-  );
-
-  return { rate: best.discountRate, type: best.type };
-}
-
-function matchesCategories(
-  card: (typeof cards)[0],
-  selected: string[],
-): boolean {
-  if (!selected.length) return true;
-  return selected.every((cat) => getCategoryBenefit(card, cat) !== null);
-}
-
 const typeLabel: Record<string, string> = {
   discount: "할인",
   cashback: "캐시백",
@@ -135,6 +109,9 @@ const typeLabel: Record<string, string> = {
 };
 
 export function CardList() {
+  const [cards, setCards] = useState<CardListItem[]>([]);
+  const [loading, setLoading] = useState(true);
+
   const [searchParams] = useSearchParams();
 
   const initialBenefits = (
@@ -169,13 +146,28 @@ export function CardList() {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   const [favorites, setFavorites] = useState<number[]>([1, 3, 5]);
-  const [compareList, setCompareList] = useState<number[]>([]);
+  const [compareList, setCompareList] = useState<string[]>([]);
 
   const topBarRef = useRef<HTMLDivElement>(null);
   const detailBarRef = useRef<HTMLDivElement>(null);
   const [topBarHeight, setTopBarHeight] = useState(80);
   const [detailBarHeight, setDetailBarHeight] = useState(0);
   const wasAutoHiddenRef = useRef(false);
+
+  useEffect(() => {
+  const fetchCards = async () => {
+    try {
+      const data = await getCards();
+      setCards(data);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  fetchCards();
+}, []);
 
   useEffect(() => {
     const el = topBarRef.current;
@@ -239,7 +231,7 @@ export function CardList() {
       prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id],
     );
 
-  const toggleCompare = (id: number) =>
+  const toggleCompare = (id: string) =>
     setCompareList((prev) => {
       if (prev.includes(id)) return prev.filter((c) => c !== id);
       if (prev.length >= 3) return prev;
@@ -267,26 +259,7 @@ export function CardList() {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  const filteredCards = cards
-    .filter((c) => AVAILABLE_ISSUERS.includes(c.issuer))
-    .filter((c) => cardType === "all" || c.type === cardType)
-    .filter((c) => matchesCategories(c, selectedCategories))
-    .filter(
-      (c) => !selectedIssuers.length || selectedIssuers.includes(c.issuer),
-    )
-    .filter((c) => c.annualFee >= feeOption.min && c.annualFee <= feeOption.max)
-    .filter((c) =>
-      spendingOption.label === "전체"
-        ? true
-        : c.minSpending <= spendingOption.max,
-    )
-    .filter((c) => !eventOnly || c.eventBenefits.length > 0)
-    .filter((c) => !transitOnly || c.tags.includes("교통카드"))
-    .sort((a, b) => {
-      if (sort === "benefit_desc") return b.maxBenefit - a.maxBenefit;
-      if (sort === "benefit_asc") return a.maxBenefit - b.maxBenefit;
-      return a.popularity - b.popularity;
-    });
+  const filteredCards = cards;
 
   const hasDetailFilter =
     cardType !== "all" ||
@@ -693,284 +666,52 @@ export function CardList() {
         }}
       />
 
-      <div className="max-w-[1280px] mx-auto px-6 py-6">
-        {filteredCards.length > 0 ? (
-          <div className="grid grid-cols-4 gap-4">
-            {filteredCards.map((card) => {
-              const selectedBenefits = selectedCategories
-                .map((cat) => {
-                  const b = getCategoryBenefit(card, cat);
-                  return b ? { cat, rate: b.rate, type: b.type } : null;
-                })
-                .filter(Boolean) as {
-                cat: string;
-                rate: number;
-                type: string;
-              }[];
+      {cards.map((card) => (
+  <div
+    key={card.cardId}
+    className="bg-white rounded-2xl border p-5 shadow-sm"
+  >
+    <div className="text-sm text-gray-400 mb-1">
+      {card.company}
+    </div>
 
-              const missingCats = selectedCategories.filter(
-                (cat) => !selectedBenefits.find((b) => b.cat === cat),
-              );
+    <h2 className="text-lg font-semibold mb-3">
+      {card.cardName}
+    </h2>
 
-              const detailLink =
-                benefitsQuery.length > 0
-                  ? `/cards/${card.id}?benefits=${encodeURIComponent(benefitsQuery)}`
-                  : `/cards/${card.id}`;
-
-              return (
-                <div
-                  key={card.id}
-                  className="bg-white rounded-2xl border border-[#6667AA]/20 shadow-md overflow-hidden hover:shadow-md hover:border-[#6667AA]/20 transition-all group flex flex-col"
-                >
-                  <div className="bg-gray-50/70 p-5 flex flex-col items-center justify-center">
-                    <div className="flex flex-col items-center gap-2">
-                      <CardVisual card={card} size="md" />
-                      <div className="flex gap-1 flex-wrap justify-center">
-                        <span
-                          className={`text-[9px] font-normal px-1.5 py-0.5 rounded ${
-                            card.type === "credit"
-                              ? "bg-blue-50 text-blue-600"
-                              : "bg-purple-50 text-purple-600"
-                          }`}
-                        >
-                          {card.type === "credit" ? "신용" : "체크"}
-                        </span>
-                        {card.tags.slice(0, 1).map((tag) => (
-                          <span
-                            key={tag}
-                            className="text-[9px] font-normal bg-[#6667AA]/8 text-[#6667AA] px-1.5 py-0.5 rounded"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="p-4 flex flex-col flex-1">
-                    <div className="text-[10px] text-gray-400 font-normal mb-0.5">
-                      {card.issuer}
-                    </div>
-
-                    <h3 className="text-sm font-normal text-gray-900 mb-3 group-hover:text-[#6667AA] transition-colors leading-snug">
-                      {card.name}
-                    </h3>
-
-                    {selectedCategories.length > 0 && (
-                      <div className="mb-3 rounded-xl border overflow-hidden">
-                        {selectedBenefits.length > 0 && (
-                          <div className="bg-[#6667AA]/4 border-b border-[#6667AA]/8 px-3 pt-2.5 pb-2">
-                            <div className="text-[9px] text-[#6667AA] font-normal mb-1.5 uppercase tracking-wide">
-                              선택 혜택
-                            </div>
-                            <div className="space-y-1.5">
-                              {selectedBenefits.map(({ cat, rate, type }) => {
-                                const catInfo = benefitCategories.find(
-                                  (c) => c.key === cat,
-                                );
-
-                                return (
-                                  <div
-                                    key={cat}
-                                    className="flex items-center justify-between"
-                                  >
-                                    <div className="flex items-center gap-1 text-xs text-gray-600 font-normal">
-                                      <span className="text-sm leading-none">
-                                        {catInfo?.icon}
-                                      </span>
-                                      <span>{cat}</span>
-                                    </div>
-
-                                    <div className="flex items-center gap-1">
-                                      <span className="text-base font-normal text-[#6667AA] leading-none">
-                                        {rate}%
-                                      </span>
-                                      <span
-                                        className={`text-[9px] font-normal px-1 py-0.5 rounded leading-none ${
-                                          type === "cashback"
-                                            ? "bg-green-50 text-green-600"
-                                            : type === "point"
-                                              ? "bg-purple-50 text-purple-600"
-                                              : "bg-blue-50 text-blue-600"
-                                        }`}
-                                      >
-                                        {typeLabel[type]}
-                                      </span>
-                                    </div>
-                                  </div>
-                                );
-                              })}
-                            </div>
-                          </div>
-                        )}
-
-                        {missingCats.length > 0 && (
-                          <div className="bg-gray-50 px-3 pt-2 pb-2">
-                            {missingCats.map((cat) => {
-                              const catInfo = benefitCategories.find(
-                                (c) => c.key === cat,
-                              );
-
-                              return (
-                                <div
-                                  key={cat}
-                                  className="flex items-center justify-between py-0.5"
-                                >
-                                  <div className="flex items-center gap-1 text-xs text-gray-400 font-normal">
-                                    <span className="text-sm leading-none opacity-50">
-                                      {catInfo?.icon}
-                                    </span>
-                                    <span>{cat}</span>
-                                  </div>
-                                  <span className="text-[10px] text-gray-300 font-normal">
-                                    혜택 없음
-                                  </span>
-                                </div>
-                              );
-                            })}
-                          </div>
-                        )}
-                      </div>
-                    )}
-
-                    <div className="space-y-1.5 mb-3">
-                      <div className="flex items-center justify-between text-xs">
-                        <span className="text-gray-400 font-normal">
-                          연회비
-                        </span>
-                        <span
-                          className={`font-normal ${
-                            card.annualFee === 0
-                              ? "text-green-600"
-                              : "text-gray-900"
-                          }`}
-                        >
-                          {card.annualFee === 0
-                            ? "무료"
-                            : `${card.annualFee.toLocaleString()}원`}
-                        </span>
-                      </div>
-
-                      <div className="flex items-center justify-between text-xs">
-                        <span className="text-gray-400 font-normal">
-                          전월실적
-                        </span>
-                        <span className="font-normal text-gray-900">
-                          {card.minSpending === 0
-                            ? "무실적"
-                            : `${(card.minSpending / 10000).toFixed(0)}만원`}
-                        </span>
-                      </div>
-
-                      <div className="flex items-center justify-between text-xs">
-                        <span className="text-gray-400 font-normal">
-                          월 최대 혜택
-                        </span>
-                        <span className="font-normal text-[#6667AA]">
-                          {(card.maxBenefit / 10000).toFixed(0)}만원
-                        </span>
-                      </div>
-                    </div>
-
-                    {selectedCategories.length === 0 && (
-                      <div className="mb-3 pb-3 border-b border-gray-50">
-                        <div className="text-[10px] text-gray-400 font-normal mb-1.5">
-                          대표 혜택
-                        </div>
-                        <div className="space-y-1">
-                          {card.benefits.slice(0, 2).map((b, i) => (
-                            <div
-                              key={i}
-                              className="flex items-center gap-1.5 text-xs text-gray-600 font-normal"
-                            >
-                              <span>{b.icon}</span>
-                              <span className="flex-1">{b.category}</span>
-                              <span className="font-normal text-[#6667AA]">
-                                {b.discountRate}%
-                              </span>
-                              <span className="text-gray-400 text-[10px]">
-                                {b.type === "cashback"
-                                  ? "캐시백"
-                                  : b.type === "point"
-                                    ? "적립"
-                                    : "할인"}
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {card.eventBenefits.length > 0 && (
-                      <div className="mb-4">
-                        <div className="bg-amber-50 border border-amber-100 rounded-lg px-2.5 py-1.5 flex items-start gap-1.5">
-                          <Sparkles className="w-3.5 h-3.5 text-amber-500 mt-0.5 flex-shrink-0" />
-                          <span className="text-[10px] text-amber-700 font-normal leading-snug">
-                            {card.eventBenefits[0]}
-                          </span>
-                        </div>
-                      </div>
-                    )}
-
-                    <div className="mt-auto pt-3 border-t border-gray-50 flex items-center justify-between px-3">
-                      <Link
-                        to={detailLink}
-                        className="text-xs px-3 py-1.5 text-white rounded-lg hover:opacity-90 transition-all font-normal"
-                        style={{ backgroundColor: "#6667AA" }}
-                      >
-                        상세보기
-                      </Link>
-
-                      <div className="flex items-center gap-2">
-                        <button
-                          onClick={() => toggleFavorite(card.id)}
-                          className={`p-1.5 rounded-lg border transition-all ${
-                            favorites.includes(card.id)
-                              ? "text-red-500 bg-red-50 border-red-100"
-                              : "text-gray-300 border-gray-200 hover:text-gray-500 hover:bg-gray-50"
-                          }`}
-                        >
-                          <Heart
-                            className={`w-4 h-4 ${favorites.includes(card.id) ? "fill-red-500" : ""}`}
-                          />
-                        </button>
-
-                        <button
-                          onClick={() => toggleCompare(card.id)}
-                          className={`p-1.5 rounded-lg border transition-all ${
-                            compareList.includes(card.id)
-                              ? "text-[#6667AA] bg-indigo-50 border-indigo-100"
-                              : "text-gray-300 border-gray-200 hover:text-gray-500 hover:bg-gray-50"
-                          }`}
-                        >
-                          <GitCompare className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        ) : (
-          <div className="text-center py-24">
-            <div className="text-5xl mb-4">🔍</div>
-            <p className="text-gray-600 font-normal mb-1">
-              조건에 맞는 카드가 없어요
-            </p>
-            <p className="text-gray-400 text-sm font-normal mb-5">
-              혜택 선택이나 상세 필터를 조정해보세요
-            </p>
-            <button
-              onClick={resetAll}
-              className="px-5 py-2.5 text-white rounded-xl text-sm font-normal hover:opacity-90 transition-all"
-              style={{ backgroundColor: "#6667AA" }}
-            >
-              필터 전체 초기화
-            </button>
-          </div>
-        )}
+    <div className="space-y-2 text-sm">
+      <div>
+        카드 종류: {card.cardType}
       </div>
+
+      <div>
+        연회비:{" "}
+        {card.annualFee === 0
+          ? "무료"
+          : `${card.annualFee.toLocaleString()}원`}
+      </div>
+
+      <div>
+        전월 실적:{" "}
+        {card.minPerformance === 0
+          ? "무실적"
+          : `${card.minPerformance.toLocaleString()}원`}
+      </div>
+
+      <div>
+        최대 혜택:
+        {" "}
+        {card.totalMaxBenefit
+          ? `${card.totalMaxBenefit.toLocaleString()}원`
+          : "정보 없음"}
+      </div>
+    </div>
+
+    <p className="mt-4 text-sm text-gray-600">
+      {card.summary}
+    </p>
+  </div>
+))}
 
       {compareList.length > 0 && (
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
@@ -988,13 +729,13 @@ export function CardList() {
 
             <div className="flex gap-2">
               {compareList.map((id) => {
-                const card = cards.find((c) => c.id === id);
+                const card = cards.find((c) => c.cardId === id);
                 return card ? (
                   <div
                     key={id}
                     className="flex items-center gap-1 bg-white/10 text-white text-xs px-2 py-1 rounded-lg font-normal"
                   >
-                    {card.name.split(" ").slice(-1)[0]}
+                    {card.cardName.split(" ").slice(-1)[0]}
                     <button
                       onClick={() => toggleCompare(id)}
                       className="ml-1 text-white/60 hover:text-white"
