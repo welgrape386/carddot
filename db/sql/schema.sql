@@ -47,7 +47,6 @@ CREATE TABLE card (
 CREATE TABLE benefit (
     benefit_id       SERIAL          PRIMARY KEY,                  -- 혜택 고유 번호 (자동 증가)
     card_id          VARCHAR(50)     NOT NULL REFERENCES card(card_id), -- 어느 카드의 혜택인지 (FK)
-    category_id      INT             REFERENCES category(category_id),  -- 혜택 카테고리 (FK, NULL 허용)
     row_type         VARCHAR(20)     NOT NULL,                     -- 주요혜택 | 상세혜택
     benefit_group    VARCHAR(100)    NOT NULL,                     -- 혜택 그룹명 (팝업 h1)
     benefit_type     VARCHAR(50),                                  -- 포인트 | 캐시백 | 할인 | 마일리지 | 서비스
