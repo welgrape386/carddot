@@ -60,10 +60,10 @@ public class Card {
     @Column(name = "link_url", length = 500)
     private String linkUrl;
 
-    @Column(name = "view_count", nullable = false)
+    @Column(name = "detail_count", nullable = false)
     private int viewCount = 0;
 
-    @Column(name = "click_count", nullable = false)
+    @Column(name = "url_count", nullable = false)
     private int clickCount = 0;
 
     @Column(name = "total_max_benefit")
@@ -95,5 +95,5 @@ public class Card {
     public int getViewCount() { return viewCount; }
     public int getClickCount() { return clickCount; }
     public Integer getTotalMaxBenefit() { return totalMaxBenefit; }
-    public LocalDateTime getUpdatedAt() { return updatedAt; }
+    // public LocalDateTime getUpdatedAt() { return updatedAt; }
 }

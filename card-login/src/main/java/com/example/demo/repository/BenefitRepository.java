@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface BenefitRepository extends JpaRepository<Benefit, Long> {
+public interface BenefitRepository extends JpaRepository<Benefit, String> {
     // 특정 카드(cardId)에 해당하는 혜택(Benefit)들을 리스트로 다 찾아줘~~
     List<Benefit> findByCardId(String cardId);
 }
