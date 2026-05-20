@@ -31,3 +31,18 @@ export interface CardDetailItem {
   totalMaxBenefit: number | null;
   benefits: BenefitDetail[];
 }
+
+export interface CardScore {
+  practicality: number;
+  annualFee: number;
+  performance: number;
+  diversity: number;
+  limit: number;
+}
+
+export type PersonaType =
+  | "STUDENT"
+  | "SINGLE"
+  | "WORKER"
+  | "FAMILY"
+  | "SENIOR";
