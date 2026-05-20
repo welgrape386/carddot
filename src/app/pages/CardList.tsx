@@ -752,52 +752,97 @@ export function CardList() {
         }}
       />
 
-      {cards.map((card) => (
-  <div
-    key={card.cardId}
-    className="bg-white rounded-2xl border p-5 shadow-sm"
-  >
-    <div className="text-sm text-gray-400 mb-1">
-      {card.company}
-    </div>
+<div className="max-w-[1280px] mx-auto px-6 pb-20">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {cards.map((card) => {
+        const summaryItems = card.summary
+          ? card.summary.split("/").map((item) => item.trim()).filter(Boolean)
+          : [];
 
-    <h2 className="text-lg font-semibold mb-3">
-      {card.cardName}
-    </h2>
+          return (
+            <div
+              key={card.cardId}
+              className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden hover:shadow-md transition-all"
+            >
+              {/* 카드 이미지 영역 */}
+              <div className="flex justify-center pt-5 pb-4">
+                <div className="w-24 h-36 rounded-2xl bg-black shadow-md flex flex-col justify-between p-3 text-white">
+                  <div className="text-[10px] opacity-70">{card.company}카드</div>
+                  <div className="text-sm font-semibold leading-tight line-clamp-3">
+                    {card.cardName}
+                  </div>
+                  <div className="text-[10px] opacity-70">{card.cardType}</div>
+                </div>
+              </div>
 
-    <div className="space-y-2 text-sm">
-      <div>
-        카드 종류: {card.cardType}
+              {/* 카드 정보 영역 */}
+              <div className="px-4 pb-4">
+                <div className="flex items-center gap-1.5 mb-2">
+                  <span className="px-2 py-0.5 rounded-md bg-[#EEF2FF] text-[#6667AA] text-[10px]">
+                    {card.cardType}
+                  </span>
+
+                  {card.hasEvent && (
+                    <span className="px-2 py-0.5 rounded-md bg-orange-50 text-orange-500 text-[10px]">
+                      이벤트
+                    </span>
+                  )}
+                </div>
+
+                <div className="text-xs text-gray-400 mb-1">
+                  {card.company}카드
+                </div>
+
+                <h2 className="text-base font-semibold text-gray-900 mb-4 line-clamp-1">
+                  {card.cardName}
+                </h2>
+
+                <div className="space-y-2 text-sm">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400">연회비</span>
+                    <span className="font-semibold text-emerald-500">
+                      {card.annualFee === 0
+                        ? "무료"
+                        : `${card.annualFee.toLocaleString()}원`}
+                    </span>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400">전월실적</span>
+                    <span className="font-semibold text-gray-900">
+                      {card.minPerformance === 0
+                        ? "무실적"
+                        : `${(card.minPerformance / 10000).toLocaleString()}만원`}
+                    </span>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400">월 최대 혜택</span>
+                    <span className="font-semibold text-[#6667AA]">
+                      {card.totalMaxBenefit
+                        ? `${card.totalMaxBenefit.toLocaleString()}원`
+                        : "정보 없음"}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="mt-4 pt-4 border-t border-gray-100">
+                  <div className="text-xs text-gray-400 mb-2">대표 혜택</div>
+
+                  <div className="space-y-1.5">
+                    {summaryItems.slice(0, 3).map((benefit, index) => (
+                      <div key={index} className="text-xs text-gray-700 leading-relaxed">
+                        {benefit}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
-
-      <div>
-        연회비:{" "}
-        {card.annualFee === 0
-          ? "무료"
-          : `${card.annualFee.toLocaleString()}원`}
-      </div>
-
-      <div>
-        전월 실적:{" "}
-        {card.minPerformance === 0
-          ? "무실적"
-          : `${card.minPerformance.toLocaleString()}원`}
-      </div>
-
-      <div>
-        최대 혜택:
-        {" "}
-        {card.totalMaxBenefit
-          ? `${card.totalMaxBenefit.toLocaleString()}원`
-          : "정보 없음"}
-      </div>
-    </div>
-
-    <p className="mt-4 text-sm text-gray-600">
-      {card.summary}
-    </p>
-  </div>
-))}
+</div>
 
       {compareList.length > 0 && (
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
