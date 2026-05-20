@@ -56,6 +56,7 @@ CREATE TABLE benefit (
     on_offline       VARCHAR(10),                                  -- Online | Offline | Both
     target_merchants   TEXT,                                       -- 적용 가맹점 목록 (쉼표 구분)
     excluded_merchants TEXT,                                       -- 제외 가맹점 목록 (쉼표 구분)
+    performance_level    TEXT,                                     -- 전월 실적 구간 텍스트 (예: "30만원 이상 50만원 미만")
     performance_min  INT             DEFAULT 0,                    -- 이용금액 구간 하한
     performance_max  INT,                                          -- 이용금액 구간 상한 (NULL=상한없음)
     min_amount       INT,                                          -- 건당 최소 결제금액 (NULL=제한없음)

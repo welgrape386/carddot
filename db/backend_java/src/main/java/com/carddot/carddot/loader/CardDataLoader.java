@@ -87,7 +87,6 @@ public class CardDataLoader implements ApplicationRunner {
             card.setHasCashback(getBool(cols, headerMap, "has_cashback"));
             card.setDetailCount(0);
             card.setUrlCount(0);
-            card.setTotalMaxBenefit(0);
             card.setUpdatedAt(LocalDateTime.now());
 
             cardRepository.save(card);

@@ -58,18 +58,32 @@ public class BenefitDataLoader implements ApplicationRunner {
             headerMap.put(headers[i].trim(), i);
         }
 
-        String line;
-        while ((line = reader.readLine()) != null) {
-            String[] cols = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] cols = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
 
-            String benefitId = getString(cols, headerMap, "benefit_id");
+                String benefitId = getString(cols, headerMap, "benefit_id");
+                if (benefitId == null) continue; // 안전장치 추가
 
-            // 이미 있으면 스킵
-            if (benefitRepository.existsById(benefitId)) {
-                System.out.println("⏭ 이미 존재하는 혜택 스킵: " + benefitId);
-                continue;
-            }
+                // CSV에서 새로 추가된 performance_level 값을 읽어옵니다.
+                String performanceLevelVal = getString(cols, headerMap, "performance_level");
 
+                // 💡 [핵심 수정] 이미 존재하는 데이터인지 확인합니다.
+                if (benefitRepository.existsById(benefitId)) {
+                    // 기존 데이터를 DB에서 찾아옵니다.
+                    Benefit existingBenefit = benefitRepository.findById(benefitId).orElse(null);
+
+                    if (existingBenefit != null) {
+                        // performance_level 값만 추가로 쏙 넣어줍니다.
+                        existingBenefit.setPerformanceLevel(performanceLevelVal);
+                        benefitRepository.save(existingBenefit);
+                        System.out.println("🔄 기존 혜택 실적구간 업데이트 완료: " + benefitId);
+                    }
+
+                    // ⚠️ 중요: 기존 데이터의 경우 benefit_category는 이미 저장되어 있을 테니
+                    // 아래 새로 만들기 로직으로 가지 않고 여기서 루프를 마무리(continue)합니다.
+                    continue;
+                }
             Benefit benefit = new Benefit();
             benefit.setBenefitId(benefitId);
             benefit.setCardId(getString(cols, headerMap, "card_id"));
@@ -91,7 +105,7 @@ public class BenefitDataLoader implements ApplicationRunner {
             benefit.setGroupMaxLimit(getIntOrNull(cols, headerMap, "group_max_limit"));
             benefit.setGroupMaxLimitUnit(getString(cols, headerMap, "group_max_limit_unit"));
             benefit.setBenefitContent(getString(cols, headerMap, "benefit_content"));
-
+            benefit.setPerformanceLevel(performanceLevelVal);
             benefitRepository.save(benefit);
 
             // benefit_category 저장 (category_id가 "1, 16, 19" 형태)

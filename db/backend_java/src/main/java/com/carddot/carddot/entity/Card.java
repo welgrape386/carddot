@@ -72,9 +72,6 @@ public class Card {
     @Column(name = "url_count", nullable = false)
     private Integer urlCount = 0;
 
-    @Column(name = "total_max_benefit")
-    private Integer totalMaxBenefit = 0;
-
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
 }

@@ -76,4 +76,7 @@ public class Benefit {
 
     @Column(name = "benefit_content", columnDefinition = "TEXT")
     private String benefitContent;
+
+    @Column(name = "performance_level", columnDefinition = "TEXT")
+    private String performanceLevel;
 }
