@@ -101,6 +101,32 @@ const categoryBenefitMap: Record<string, string[]> = {
   의료: ["의료", "병원", "약국"],
 };
 
+function getCategoryBenefit(
+  card: CardListItem,
+  category: string,
+): { rate: number; type: string } | null {
+  const benefits = card.categoryBenefits ?? [];
+  const mapped = categoryBenefitMap[category] ?? [category];
+
+  if (!mapped.length || benefits.length === 0) return null;
+
+  const matched = benefits.find((text) =>
+    mapped.some((m) => text.toLowerCase().includes(m.toLowerCase())),
+  );
+
+  if (!matched) return null;
+
+  return { rate: 0, type: "special" };
+}
+
+function matchesCategories(
+  card: CardListItem,
+  selected: string[],
+): boolean {
+  if (!selected.length) return true;
+  return selected.every((cat) => getCategoryBenefit(card, cat) !== null);
+}
+
 const typeLabel: Record<string, string> = {
   discount: "할인",
   cashback: "캐시백",
@@ -145,7 +171,7 @@ export function CardList() {
   const [detailVisible, setDetailVisible] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
-  const [favorites, setFavorites] = useState<number[]>([1, 3, 5]);
+  const [favorites, setFavorites] = useState<string[]>([]);
   const [compareList, setCompareList] = useState<string[]>([]);
 
   const topBarRef = useRef<HTMLDivElement>(null);
@@ -226,7 +252,7 @@ export function CardList() {
       prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name],
     );
 
-  const toggleFavorite = (id: number) =>
+  const toggleFavorite = (id: string) =>
     setFavorites((prev) =>
       prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id],
     );
@@ -259,7 +285,67 @@ export function CardList() {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  const filteredCards = cards;
+  const filteredCards = cards
+  .filter((card) => {
+    // 카드 종류 필터
+    if (cardType === "credit" && card.cardType !== "신용") return false;
+    if (cardType === "debit" && card.cardType !== "체크") return false;
+
+    // 카드사 필터
+    if (
+      selectedIssuers.length > 0 &&
+      !selectedIssuers.includes(card.company)
+    ) {
+      return false;
+    }
+
+    // 연회비 필터
+    if (card.annualFee < feeOption.min || card.annualFee > feeOption.max) {
+      return false;
+    }
+
+    // 전월 실적 필터
+    if (card.minPerformance > spendingOption.max) {
+  return false;
+} {
+      return false;
+    }
+
+    // 이벤트 필터
+    if (eventOnly && !card.hasEvent) return false;
+
+    // 교통카드 필터는 현재 /api/cards 응답에 hasTransport가 없어서 일단 제외
+    // if (transitOnly && !card.hasTransport) return false;
+
+    // 카테고리 필터
+    if (
+      selectedCategories.length > 0 &&
+      !matchesCategories(card, selectedCategories)
+    ) {
+      return false;
+    }
+
+    return true;
+  })
+  .sort((a, b) => {
+    if (sort === "benefit_desc") {
+      return (b.totalMaxBenefit ?? 0) - (a.totalMaxBenefit ?? 0);
+    }
+
+    if (sort === "benefit_asc") {
+      return (a.totalMaxBenefit ?? 0) - (b.totalMaxBenefit ?? 0);
+    }
+
+    if (sort === "fee_asc") {
+      return a.annualFee - b.annualFee;
+    }
+
+    if (sort === "performance_asc") {
+      return a.minPerformance - b.minPerformance;
+    }
+
+    return 0;
+  });
 
   const hasDetailFilter =
     cardType !== "all" ||
