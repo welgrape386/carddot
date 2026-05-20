@@ -15,7 +15,6 @@ import {
   ArrowUpDown,
   Sparkles,
 } from "lucide-react";
-import { CardVisual } from "../components/CardVisual";
 import { useState, useEffect, useRef, useCallback } from "react";
 
 
@@ -23,7 +22,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 const NAVBAR_H = 64;
 
 // 서비스 대상 카드사 고정
-const AVAILABLE_ISSUERS = ["삼성카드", "신한카드", "현대카드", "KB국민카드"];
+const AVAILABLE_ISSUERS = ["삼성", "신한", "현대", "국민"];
 
 const benefitCategories = [
   { key: "온라인쇼핑", icon: "🛒", group: "쇼핑", desc: "지마켓, 쿠팡, 11번가 등" },
@@ -101,30 +100,21 @@ const categoryBenefitMap: Record<string, string[]> = {
   의료: ["의료", "병원", "약국"],
 };
 
-function getCategoryBenefit(
-  card: CardListItem,
-  category: string,
-): { rate: number; type: string } | null {
-  const benefits = card.categoryBenefits ?? [];
-  const mapped = categoryBenefitMap[category] ?? [category];
-
-  if (!mapped.length || benefits.length === 0) return null;
-
-  const matched = benefits.find((text) =>
-    mapped.some((m) => text.toLowerCase().includes(m.toLowerCase())),
-  );
-
-  if (!matched) return null;
-
-  return { rate: 0, type: "special" };
-}
-
 function matchesCategories(
   card: CardListItem,
   selected: string[],
 ): boolean {
   if (!selected.length) return true;
-  return selected.every((cat) => getCategoryBenefit(card, cat) !== null);
+
+  return selected.every((cat) => {
+    const keywords = categoryBenefitMap[cat] ?? [cat];
+
+    if (!keywords.length) return false;
+
+    return keywords.some((keyword) =>
+      card.summary?.toLowerCase().includes(keyword.toLowerCase()),
+    );
+  });
 }
 
 const typeLabel: Record<string, string> = {
@@ -306,27 +296,18 @@ export function CardList() {
 
     // 전월 실적 필터
     if (card.minPerformance > spendingOption.max) {
-  return false;
-} {
       return false;
     }
 
-    // 이벤트 필터
-    if (eventOnly && !card.hasEvent) return false;
-
-    // 교통카드 필터는 현재 /api/cards 응답에 hasTransport가 없어서 일단 제외
-    // if (transitOnly && !card.hasTransport) return false;
-
-    // 카테고리 필터
-    if (
-      selectedCategories.length > 0 &&
-      !matchesCategories(card, selectedCategories)
-    ) {
+    // 혜택 카테고리 필터
+    if (!matchesCategories(card, selectedCategories)) {
       return false;
     }
 
     return true;
+
   })
+
   .sort((a, b) => {
     if (sort === "benefit_desc") {
       return (b.totalMaxBenefit ?? 0) - (a.totalMaxBenefit ?? 0);
@@ -487,11 +468,11 @@ export function CardList() {
               </span>
               <div className="flex flex-wrap gap-1.5">
                 {issuers.map((issuer) => {
-                  const selected = selectedIssuers.includes(issuer.name);
+                  const selected = selectedIssuers.includes(issuer.short);
                   return (
                     <button
                       key={issuer.name}
-                      onClick={() => toggleIssuer(issuer.name)}
+                      onClick={() => toggleIssuer(issuer.short)}
                       className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg border text-xs font-normal transition-all ${
                         selected
                           ? "border-[#6667AA] bg-[#6667AA]/8 text-[#6667AA]"
@@ -502,7 +483,7 @@ export function CardList() {
                         className="w-2 h-2 rounded-full"
                         style={{ backgroundColor: issuer.color }}
                       />
-                      {issuer.short}
+                      {issuer.name}
                       {selected && <Check className="w-3 h-3" />}
                     </button>
                   );
@@ -754,7 +735,7 @@ export function CardList() {
 
 <div className="max-w-[1280px] mx-auto px-6 pb-20">
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-    {cards.map((card) => {
+    {filteredCards.map((card) => {
       const summaryItems = card.summary
         ? card.summary.split("/").map((item) => item.trim()).filter(Boolean)
         : [];
@@ -789,12 +770,12 @@ export function CardList() {
       <div className="flex gap-1 flex-wrap justify-center">
         <span
           className={`text-[9px] font-normal px-1.5 py-0.5 rounded ${
-            card.cardType === "신용카드"
+            card.cardType === "신용"
               ? "bg-blue-50 text-blue-600"
               : "bg-purple-50 text-purple-600"
           }`}
         >
-          {card.cardType === "신용카드" ? "신용" : "체크"}
+          {card.cardType === "신용" ? "신용" : "체크"}
         </span>
 
         {card.hasEvent && (
@@ -806,118 +787,98 @@ export function CardList() {
     </div>
 
     {/* 카드 정보 영역 */}
-    <div className="p-4 flex flex-col flex-1">
-      <div className="text-[10px] text-gray-400 font-normal mb-0.5">
-        {card.company}카드
-      </div>
+<div className="px-4 pb-4">
+  <div className="flex items-center gap-1.5 mb-2">
+    <span className="px-2 py-0.5 rounded-md bg-[#EEF2FF] text-[#6667AA] text-[10px]">
+      {card.cardType}
+    </span>
 
-      <h3 className="text-sm font-normal text-gray-900 mb-3 group-hover:text-[#6667AA] transition-colors leading-snug line-clamp-1">
-        {card.cardName}
-      </h3>
+    {card.hasEvent && (
+      <span className="px-2 py-0.5 rounded-md bg-orange-50 text-orange-500 text-[10px]">
+        이벤트
+      </span>
+    )}
+  </div>
 
-      {/* 대표 혜택 */}
-      <div className="mb-3 pb-3 border-b border-gray-50">
-        <div className="text-[10px] text-gray-400 font-normal mb-1.5">
-          대표 혜택
-        </div>
+  <div className="text-xs text-gray-400 mb-1">
+    {card.company}카드
+  </div>
 
-        <div className="space-y-1">
-          {summaryItems.slice(0, 2).map((benefit, index) => (
-            <div
-              key={index}
-              className="flex items-center gap-1.5 text-xs text-gray-600 font-normal"
-            >
-              <span className="flex-1 truncate">{benefit}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+  <h2 className="text-base font-semibold text-gray-900 mb-4 line-clamp-1">
+    {card.cardName}
+  </h2>
 
-      {/* 기본 정보 */}
-      <div className="space-y-1.5 mb-3">
-        <div className="flex items-center justify-between text-xs">
-          <span className="text-gray-400 font-normal">연회비</span>
-          <span
-            className={`font-normal ${
-              card.annualFee === 0 ? "text-green-600" : "text-gray-900"
-            }`}
-          >
-            {card.annualFee === 0
-              ? "무료"
-              : `${card.annualFee.toLocaleString()}원`}
-          </span>
-        </div>
-
-        <div className="flex items-center justify-between text-xs">
-          <span className="text-gray-400 font-normal">전월실적</span>
-          <span className="font-normal text-gray-900">
-            {card.minPerformance === 0
-              ? "무실적"
-              : `${(card.minPerformance / 10000).toLocaleString()}만원`}
-          </span>
-        </div>
-
-        <div className="flex items-center justify-between text-xs">
-          <span className="text-gray-400 font-normal">월 최대 혜택</span>
-          <span className="font-normal text-[#6667AA]">
-            {card.totalMaxBenefit
-              ? `${card.totalMaxBenefit.toLocaleString()}원`
-              : "정보 없음"}
-          </span>
-        </div>
-      </div>
-
-      {/* 이벤트 혜택 */}
-      {card.hasEvent && (
-        <div className="mb-3">
-          <div className="bg-amber-50 border border-amber-100 rounded-lg px-2.5 py-1.5 flex items-start gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-amber-500 mt-0.5 flex-shrink-0" />
-            <span className="text-[10px] text-amber-700 font-normal leading-snug">
-              진행 중인 이벤트 혜택이 있어요
-            </span>
-          </div>
-        </div>
-      )}
-
-      {/* 버튼 영역 */}
-      <div className="flex items-center justify-between mt-auto pt-3 px-3 border-t border-gray-50">
-        <div className="flex items-center gap-1.5">
-          <button
-            onClick={() => toggleFavorite(card.cardId)}
-            className={`p-1.5 rounded-lg border hover:bg-gray-50 transition-all ${
-              favorites.includes(card.cardId)
-                ? "text-red-500 bg-red-50 border-red-100"
-                : "text-gray-300 border-gray-200"
-            }`}
-          >
-            <Heart
-              className={`w-4 h-4 ${
-                favorites.includes(card.cardId) ? "fill-red-500" : ""
-              }`}
-            />
-          </button>
-
-          <button
-            onClick={() => toggleCompare(card.cardId)}
-            className={`p-1.5 rounded-lg border hover:bg-gray-50 transition-all ${
-              compareList.includes(card.cardId)
-                ? "text-[#6667AA] bg-indigo-50 border-indigo-100"
-                : "text-gray-300 border-gray-200"
-            }`}
-          >
-            <GitCompare className="w-4 h-4" />
-          </button>
-        </div>
-
-        <Link
-          to={`/cards/${card.cardId}`}
-          className="text-xs font-normal px-3 py-1.5 text-white rounded-lg hover:opacity-90 transition-all"
-          style={{ backgroundColor: "#6667AA" }}
-        >
-          상세보기
-        </Link>
-      </div>
+  {/* 금액 정보 */}
+  <div className="space-y-2 text-sm">
+    <div className="flex items-center justify-between">
+      <span className="text-gray-400">연회비</span>
+      <span className="font-semibold text-emerald-500">
+        {card.annualFee === 0
+          ? "무료"
+          : `${card.annualFee.toLocaleString()}원`}
+      </span>
     </div>
+
+    <div className="flex items-center justify-between">
+      <span className="text-gray-400">전월실적</span>
+      <span className="font-semibold text-gray-900">
+        {card.minPerformance === 0
+          ? "무실적"
+          : `${(card.minPerformance / 10000).toLocaleString()}만원`}
+      </span>
+    </div>
+
+    <div className="flex items-center justify-between">
+      <span className="text-gray-400">월 최대 혜택</span>
+      <span className="font-semibold text-[#6667AA]">
+        {card.totalMaxBenefit
+          ? `${card.totalMaxBenefit.toLocaleString()}원`
+          : "정보 없음"}
+      </span>
+    </div>
+  </div>
+
+  {/* 대표 혜택 */}
+  <div className="mt-4 pt-4 border-t border-gray-100">
+    <div className="text-xs text-gray-400 mb-2">대표 혜택</div>
+
+    <div className="space-y-1.5 min-h-[54px]">
+      {summaryItems.slice(0, 3).map((benefit, index) => (
+        <div key={index} className="text-xs text-gray-700 leading-relaxed line-clamp-1">
+          {benefit}
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {/* 버튼 영역 */}
+  <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+    <Link
+      to={`/cards/${card.cardId}`}
+      className="px-3 py-1.5 rounded-xl border border-gray-200 text-xs text-gray-600 hover:border-[#6667AA] hover:text-[#6667AA] transition-all"
+    >
+      상세보기
+    </Link>
+
+    <div className="flex items-center gap-1.5">
+      <button
+        type="button"
+        onClick={() => toggleFavorite(card.cardId)}
+        className="px-3 py-1.5 rounded-xl border border-gray-200 text-xs text-gray-500 hover:border-red-200 hover:text-red-500 transition-all"
+      >
+        찜
+      </button>
+
+      <button
+        type="button"
+        onClick={() => toggleCompare(card.cardId)}
+        className="px-3 py-1.5 rounded-xl border border-gray-200 text-xs text-gray-500 hover:border-[#6667AA] hover:text-[#6667AA] transition-all"
+      >
+        비교
+      </button>
+    </div>
+  </div>
+</div>
   </div>
 );
         })}
