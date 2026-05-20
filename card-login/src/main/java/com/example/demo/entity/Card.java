@@ -66,9 +66,6 @@ public class Card {
     @Column(name = "url_count", nullable = false)
     private int clickCount = 0;
 
-    @Column(name = "total_max_benefit")
-    private Integer totalMaxBenefit = 0;
-
     @CreationTimestamp
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
@@ -94,6 +91,5 @@ public class Card {
     public String getLinkUrl() { return linkUrl; }
     public int getViewCount() { return viewCount; }
     public int getClickCount() { return clickCount; }
-    public Integer getTotalMaxBenefit() { return totalMaxBenefit; }
     // public LocalDateTime getUpdatedAt() { return updatedAt; }
 }

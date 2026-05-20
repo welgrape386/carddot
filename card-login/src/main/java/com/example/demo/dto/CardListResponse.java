@@ -18,7 +18,7 @@ public class CardListResponse {
 
     // 생성자 (기본 정보 초기화용)
     public CardListResponse(String cardId, String company, String cardName, String cardType, 
-                            int annualFee, int minPerformance, Integer totalMaxBenefit, 
+                            int annualFee, int minPerformance, 
                             String summary, boolean hasEvent) {
         this.cardId = cardId;
         this.company = company;
@@ -26,7 +26,6 @@ public class CardListResponse {
         this.cardType = cardType;
         this.annualFee = annualFee;
         this.minPerformance = minPerformance;
-        this.totalMaxBenefit = totalMaxBenefit;
         this.summary = summary;
         this.hasEvent = hasEvent;
     }

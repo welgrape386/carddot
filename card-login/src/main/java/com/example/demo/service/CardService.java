@@ -32,7 +32,7 @@ public class CardService {
                 .map(card -> new CardListResponse(
                         card.getCardId(), card.getCompany(), card.getCardName(),
                         card.getCardType(), card.getAnnualFeeDomBasic(), 
-                        card.getMinPerformance(), card.getTotalMaxBenefit(),
+                        card.getMinPerformance(),
                         card.getSummary(), card.isHasCashback()
                 ))
                 .collect(Collectors.toList());
@@ -74,7 +74,7 @@ public class CardService {
                 card.getCardId(), card.getCardName(), card.getCompany(),
                 card.getCardType(), card.getNetwork(), card.getAnnualFeeDomBasic(),
                 card.getAnnualFeeForBasic(), card.getMinPerformance(),
-                card.getTotalMaxBenefit(), benefitDtos
+                benefitDtos
         );
     }
 }
