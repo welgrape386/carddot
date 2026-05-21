@@ -748,12 +748,14 @@ export function CardList() {
     {/* 1. 카드 이미지 영역 */}
 <div className="bg-gray-50/70 p-5 flex flex-col items-center">
   {card.imageUrl ? (
-  <img
-    src={card.imageUrl}
-    alt={card.cardName}
-    className="w-36 h-24 object-contain rotate-90 drop-shadow-md"
-    loading="lazy"
-  />
+  <div className="w-36 h-24 flex items-center justify-center">
+    <img
+      src={card.imageUrl}
+      alt={card.cardName}
+      className="max-w-full max-h-full object-contain drop-shadow-md"
+      loading="lazy"
+    />
+  </div>
 ) : (
   <div className="w-36 h-24 rounded-2xl bg-black shadow-md flex flex-col justify-between p-3 text-white">
     <div className="text-[10px] opacity-70">{card.company}카드</div>

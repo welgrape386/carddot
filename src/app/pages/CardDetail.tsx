@@ -286,38 +286,40 @@ export function CardDetail() {
   <div className="flex gap-8 items-start">
     <div className="flex flex-col items-center gap-4">
       {card.imageUrl ? (
-  <img
-    src={card.imageUrl}
-    alt={card.cardName}
-    className="w-56 h-36 object-contain rotate-90 drop-shadow-md"
-    loading="lazy"
+  <div className="w-72 h-[172px] flex items-center justify-center flex-shrink-0">
+    <img
+      src={card.imageUrl}
+      alt={card.cardName}
+      className="max-w-full max-h-full object-contain drop-shadow-md"
+      loading="lazy"
+    />
+  </div>
+) : (
+  <CardVisual
+    card={{
+      id: 1,
+      name: card.cardName,
+      issuer: `${card.company}카드`,
+      type: card.cardType === "신용" ? "credit" : "debit",
+      network: normalizeNetwork(card.network),
+      annualFee: card.annualFeeDomBasic,
+      minSpending: card.minPerformance,
+      maxBenefit: card.totalMaxBenefit ?? 0,
+      rating: 0,
+      reviews: 0,
+      popularity: 0,
+      rank: 0,
+      views: 0,
+      clicks: 0,
+      tags: [],
+      color: "#111827",
+      gradient: "linear-gradient(135deg, #111827 0%, #374151 100%)",
+      benefits: [],
+      eventBenefits: [],
+    }}
+    size="lg"
   />
-    ) : (
-        <CardVisual
-          card={{
-            id: 1,
-            name: card.cardName,
-            issuer: `${card.company}카드`,
-            type: card.cardType === "신용" ? "credit" : "debit",
-            network: normalizeNetwork(card.network),
-            annualFee: card.annualFeeDomBasic,
-            minSpending: card.minPerformance,
-            maxBenefit: card.totalMaxBenefit ?? 0,
-            rating: 0,
-            reviews: 0,
-            popularity: 0,
-            rank: 0,
-            views: 0,
-            clicks: 0,
-            tags: [],
-            color: "#111827",
-            gradient: "linear-gradient(135deg, #111827 0%, #374151 100%)",
-            benefits: [],
-            eventBenefits: [],
-          }}
-          size="lg"
-        />
-      )}
+)}
 
                   <div className="flex gap-2">
                     <button
