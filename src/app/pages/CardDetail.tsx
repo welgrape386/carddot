@@ -286,13 +286,13 @@ export function CardDetail() {
   <div className="flex gap-8 items-start">
     <div className="flex flex-col items-center gap-4">
       {card.imageUrl ? (
-        <img
-          src={card.imageUrl}
-          alt={card.cardName}
-          className="h-56 w-auto object-contain drop-shadow-md"
-          loading="lazy"
-        />
-      ) : (
+  <img
+    src={card.imageUrl}
+    alt={card.cardName}
+    className="w-56 h-36 object-contain rotate-90 drop-shadow-md"
+    loading="lazy"
+  />
+    ) : (
         <CardVisual
           card={{
             id: 1,
