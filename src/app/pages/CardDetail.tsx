@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useParams, Link, useSearchParams } from "react-router";
 import {
   Star,
@@ -12,9 +12,9 @@ import {
   Share2,
   ExternalLink,
 } from "lucide-react";
-import { cards } from "../data/mockData";
+import { getCardDetail, getCardScores } from "../../api/card";
+import { CardDetailItem, CardScore, PersonaType } from "../../types/card";
 import { CardVisual } from "../components/CardVisual";
-import { useAuth } from "../context/AuthContext";
 
 const categoryBenefitMap: Record<string, string[]> = {
   온라인쇼핑: ["쇼핑"],
@@ -51,10 +51,14 @@ function isBenefitMatched(benefitCategory: string, selectedCategory: string) {
 
 export function CardDetail() {
   const { id } = useParams();
+  const cardId = id;
   const [searchParams] = useSearchParams();
-  const { addRecentlyViewed } = useAuth();
 
-  const card = cards.find((c) => c.id === Number(id)) || cards[0];
+  const [card, setCard] = useState<CardDetailItem | null>(null);
+  //const [scores, setScores] = useState<CardScore | null>(null);
+  //const [personaType, setPersonaType] = useState<PersonaType>("STUDENT");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [favorite, setFavorite] = useState(false);
   const [activeSection, setActiveSection] = useState<
     "benefits" | "conditions" | "events"
@@ -65,47 +69,92 @@ export function CardDetail() {
   ).map((v) => decodeURIComponent(v));
 
   // 최근 본 카드 기록
-  useState(() => {
-    addRecentlyViewed(card.id);
-  });
+  useEffect(() => {
+  const fetchCardDetail = async () => {
+    if (!cardId) return;
 
-  const benefitTypeLabel: Record<
-    string,
-    { label: string; color: string; bg: string }
-  > = {
-    discount: { label: "할인", color: "text-blue-600", bg: "bg-blue-50" },
-    cashback: { label: "캐시백", color: "text-green-600", bg: "bg-green-50" },
-    point: { label: "포인트", color: "text-purple-600", bg: "bg-purple-50" },
+    try {
+      setLoading(true);
+      setError(null);
+
+      const detailData = await getCardDetail(cardId);
+      setCard(detailData);
+
+      //const scoreData = await getCardScores(cardId, personaType);
+      //setScores(scoreData);
+
+      //addRecentlyViewed(cardId);
+    } catch (error) {
+      console.error(error);
+      setError("카드 상세 정보를 불러오지 못했습니다.");
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const typeLabel = card.type === "credit" ? "신용카드" : "체크카드";
+  fetchCardDetail();
+}, [cardId]);
+
+  const typeLabel = card?.cardType === "신용" ? "신용카드" : "체크카드";
+
+  const normalizeNetwork = (
+  network: string | null | undefined,
+): "VISA" | "Mastercard" | "BC" | "신한" => {
+  if (network === "VISA") return "VISA";
+  if (network === "Mastercard") return "Mastercard";
+  if (network === "BC") return "BC";
+  if (network === "신한") return "신한";
+
+  return "VISA";
+};
 
   const orderedBenefits = useMemo(() => {
-    if (selectedCategories.length === 0) return card.benefits;
+  if (!card?.benefits) return [];
 
-    const prioritized = [...card.benefits].sort((a, b) => {
-      const aMatched = selectedCategories.some((cat) =>
-        isBenefitMatched(a.category, cat),
-      );
-      const bMatched = selectedCategories.some((cat) =>
-        isBenefitMatched(b.category, cat),
-      );
+  if (selectedCategories.length === 0) return card.benefits;
 
-      if (aMatched && !bMatched) return -1;
-      if (!aMatched && bMatched) return 1;
-      return 0;
-    });
+  const prioritized = [...card.benefits].sort((a, b) => {
+    const aMatched = selectedCategories.some((cat) =>
+      isBenefitMatched(a.categoryName, cat),
+    );
 
-    return prioritized;
-  }, [card.benefits, selectedCategories]);
+    const bMatched = selectedCategories.some((cat) =>
+      isBenefitMatched(b.categoryName, cat),
+    );
+
+    if (aMatched && !bMatched) return -1;
+    if (!aMatched && bMatched) return 1;
+    return 0;
+  });
+
+  return prioritized;
+}, [card, selectedCategories]);
 
   const matchedSelectedCategories = selectedCategories.filter((selected) =>
-    card.benefits.some((benefit) =>
-      isBenefitMatched(benefit.category, selected),
-    ),
-  );
+  card?.benefits?.some((benefit) =>
+    isBenefitMatched(benefit.categoryName, selected),
+  ),
+);
 
+const eventBenefits: string[] = [];
+
+if (loading) {
   return (
+    <div className="bg-[#F8FAFC] min-h-screen p-10 text-sm text-gray-500">
+      카드 상세 정보를 불러오는 중...
+    </div>
+  );
+}
+
+if (error || !card) {
+  return (
+    <div className="bg-[#F8FAFC] min-h-screen p-10 text-sm text-gray-500">
+      카드 상세 정보를 불러오지 못했습니다.
+    </div>
+  );
+}
+
+return (
     <div className="bg-[#F8FAFC] min-h-screen">
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-100">
@@ -119,7 +168,7 @@ export function CardDetail() {
               카드 조회
             </Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-gray-700">{card.name}</span>
+            <span className="text-gray-700">{card.cardName}</span>
           </div>
         </div>
       </div>
@@ -132,7 +181,30 @@ export function CardDetail() {
             <div className="bg-white rounded-2xl border border-gray-100 p-8">
               <div className="flex gap-8 items-start">
                 <div className="flex flex-col items-center gap-4">
-                  <CardVisual card={card} size="lg" />
+                  <CardVisual
+  card={{
+    id: 1,
+    name: card.cardName,
+    issuer: `${card.company}카드`,
+    type: card.cardType === "신용" ? "credit" : "debit",
+    network: normalizeNetwork(card.network),
+    annualFee: card.annualFeeDomBasic,
+    minSpending: card.minPerformance,
+    maxBenefit: card.totalMaxBenefit ?? 0,
+    rating: 0,
+    reviews: 0,
+    popularity: 0,
+    rank: 0,
+    views: 0,
+    clicks: 0,
+    tags: [],
+    color: "#111827",
+    gradient: "linear-gradient(135deg, #111827 0%, #374151 100%)",
+    benefits: [],
+    eventBenefits: [],
+  }}
+  size="lg"
+/>
 
                   <div className="flex gap-2">
                     <button
@@ -152,10 +224,10 @@ export function CardDetail() {
                     <Link
                       to={
                         selectedCategories.length > 0
-                          ? `/compare?cards=${card.id}&benefits=${encodeURIComponent(
+                          ? `/compare?cards=${card.cardId}&benefits=${encodeURIComponent(
                               selectedCategories.join(","),
                             )}`
-                          : `/compare?cards=${card.id}`
+                          : `/compare?cards=${card.cardId}`
                       }
                       className="flex items-center gap-1.5 px-4 py-2 rounded-xl border border-gray-200 text-sm font-normal text-gray-600 hover:border-[#1B3D7B] hover:text-[#1B3D7B] transition-all"
                     >
@@ -171,10 +243,10 @@ export function CardDetail() {
 
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-sm text-gray-500">{card.issuer}</span>
+                    <span className="text-sm text-gray-500">{card.company}카드</span>
                     <span
                       className={`text-xs px-2 py-0.5 rounded font-normal ${
-                        card.type === "credit"
+                        card.cardType === "신용"
                           ? "bg-blue-50 text-blue-600"
                           : "bg-purple-50 text-purple-600"
                       }`}
@@ -186,26 +258,22 @@ export function CardDetail() {
                     </span>
                   </div>
 
-                  <h1 className="text-2xl text-gray-900 mb-3">{card.name}</h1>
+                  <h1 className="text-2xl text-gray-900 mb-3">{card.cardName}</h1>
 
                   <div className="flex items-center gap-3 mb-5">
                     <div className="flex items-center gap-1">
                       {[1, 2, 3, 4, 5].map((i) => (
                         <Star
                           key={i}
-                          className={`w-4 h-4 ${
-                            i <= Math.round(card.rating)
-                              ? "text-yellow-400 fill-yellow-400"
-                              : "text-gray-200 fill-gray-200"
-                          }`}
+                          className="w-4 h-4 text-gray-200"
                         />
                       ))}
                     </div>
                     <span className="text-gray-900 font-normal">
-                      {card.rating}
+                      평점 정보 없음
                     </span>
                     <span className="text-gray-400 text-sm">
-                      ({card.reviews.toLocaleString()}개 리뷰)
+                      리뷰 정보 없음
                     </span>
                   </div>
 
@@ -214,22 +282,24 @@ export function CardDetail() {
                       {
                         label: "연회비",
                         value:
-                          card.annualFee === 0
+                          card.annualFeeDomBasic === 0
                             ? "없음"
-                            : `${card.annualFee.toLocaleString()}원`,
-                        highlight: card.annualFee === 0,
+                            : `${card.annualFeeDomBasic.toLocaleString()}원`,
+                        highlight: card.annualFeeDomBasic === 0,
                       },
                       {
                         label: "전월실적",
                         value:
-                          card.minSpending === 0
+                          card.minPerformance === 0
                             ? "무실적"
-                            : `${(card.minSpending / 10000).toFixed(0)}만원 이상`,
-                        highlight: card.minSpending === 0,
+                            : `${(card.minPerformance / 10000).toFixed(0)}만원 이상`,
+                        highlight: card.minPerformance === 0,
                       },
                       {
                         label: "월 최대 혜택",
-                        value: `${(card.maxBenefit / 10000).toFixed(0)}만원`,
+                        value: card.totalMaxBenefit
+                          ? `${(card.totalMaxBenefit / 10000).toFixed(0)}만원`
+                          : "정보 없음",
                         highlight: false,
                       },
                     ].map((spec) => (
@@ -251,17 +321,6 @@ export function CardDetail() {
                     ))}
                   </div>
 
-                  <div className="flex flex-wrap gap-1.5 mb-5">
-                    {card.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs bg-[#1B3D7B]/8 text-[#1B3D7B] px-2.5 py-1 rounded-full font-normal"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
                   {matchedSelectedCategories.length > 0 && (
                     <div className="p-4 rounded-xl border border-[#6667AA]/15 bg-[#6667AA]/5">
                       <div className="text-xs text-[#6667AA] font-normal mb-2">
@@ -280,7 +339,7 @@ export function CardDetail() {
                     </div>
                   )}
 
-                  {card.eventBenefits.length > 0 && (
+                  {eventBenefits.length > 0 && (
                     <div className="p-3 mt-4 bg-orange-50 border border-orange-100 rounded-xl">
                       <div className="flex items-center gap-2 mb-1">
                         <TrendingUp className="w-3.5 h-3.5 text-orange-500" />
@@ -288,7 +347,7 @@ export function CardDetail() {
                           이벤트 혜택
                         </span>
                       </div>
-                      {card.eventBenefits.map((e, i) => (
+                      {eventBenefits.map((e, i) => (
                         <p key={i} className="text-xs text-orange-700">
                           {e}
                         </p>
@@ -327,7 +386,7 @@ export function CardDetail() {
                     <div className="grid grid-cols-3 gap-3 mb-6">
                       {orderedBenefits.slice(0, 3).map((b, i) => {
                         const highlighted = selectedCategories.some((cat) =>
-                          isBenefitMatched(b.category, cat),
+                          isBenefitMatched(b.categoryName, cat),
                         );
 
                         return (
@@ -339,18 +398,16 @@ export function CardDetail() {
                                 : "border-gray-100 hover:border-[#1B3D7B]/20"
                             }`}
                           >
-                            <div className="text-2xl mb-2">{b.icon}</div>
-                            <div className="text-xs text-gray-500 mb-1">
-                              {b.category}
-                            </div>
-                            <div className="font-normal text-[#1B3D7B]">
-                              {b.discountRate}%
-                            </div>
-                            <div
-                              className={`inline-flex mt-1 text-[10px] px-1.5 py-0.5 rounded font-normal ${benefitTypeLabel[b.type].bg} ${benefitTypeLabel[b.type].color}`}
-                            >
-                              {benefitTypeLabel[b.type].label}
-                            </div>
+                            <div className="text-2xl mb-2">💳</div>
+                              <div className="text-xs text-gray-500 mb-1">
+                                {b.categoryName}
+                              </div>
+                              <div className="font-normal text-[#1B3D7B]">
+                                {b.benefitValueText || "정보 없음"}
+                              </div>
+                              <div className="inline-flex mt-1 text-[10px] px-1.5 py-0.5 rounded font-normal bg-blue-50 text-blue-600">
+                                혜택
+                              </div>
                           </div>
                         );
                       })}
@@ -380,7 +437,7 @@ export function CardDetail() {
                         <tbody>
                           {orderedBenefits.map((b, i) => {
                             const highlighted = selectedCategories.some((cat) =>
-                              isBenefitMatched(b.category, cat),
+                              isBenefitMatched(b.categoryName, cat),
                             );
 
                             return (
@@ -394,11 +451,11 @@ export function CardDetail() {
                               >
                                 <td className="px-4 py-4 align-top">
                                   <div className="flex items-center gap-2">
-                                    <span>{b.icon}</span>
-                                    <div>
-                                      <div className="text-gray-900 font-normal">
-                                        {b.category}
-                                      </div>
+                                    <span>💳</span>
+                                      <div>
+                                        <div className="text-gray-900 font-normal">
+                                          {b.categoryName}
+                                        </div>
                                       {highlighted && (
                                         <div className="text-[10px] text-[#6667AA] mt-1">
                                           선택 혜택 우선 노출
@@ -410,33 +467,25 @@ export function CardDetail() {
 
                                 <td className="px-4 py-4 align-top">
                                   <div className="text-xs text-gray-700 leading-relaxed">
-                                    {b.description}
+                                    {b.benefitContent}
                                   </div>
                                 </td>
 
                                 <td className="px-4 py-4 text-center align-top">
-                                  <span
-                                    className={`text-sm font-normal ${
-                                      b.type === "cashback"
-                                        ? "text-green-600"
-                                        : b.type === "point"
-                                          ? "text-purple-600"
-                                          : "text-[#1B3D7B]"
-                                    }`}
-                                  >
-                                    {b.discountRate}%
+                                  <span className="text-sm font-normal text-[#1B3D7B]">
+                                    {b.benefitValueText || "정보 없음"}
                                   </span>
                                 </td>
 
                                 <td className="px-4 py-4 text-center align-top">
                                   <span className="text-sm font-normal text-gray-900">
-                                    {b.maxMonthly.toLocaleString()}원
+                                    {b.maxLimit ? `${b.maxLimit.toLocaleString()}원` : "정보 없음"}
                                   </span>
                                 </td>
 
                                 <td className="px-4 py-4 align-top">
                                   <span className="text-xs text-gray-500 bg-gray-100 px-2 py-0.5 rounded">
-                                    {b.condition}
+                                    {"조건 정보 없음"}
                                   </span>
                                 </td>
                               </tr>
@@ -512,9 +561,9 @@ export function CardDetail() {
 
                 {activeSection === "events" && (
                   <div className="space-y-3">
-                    {card.eventBenefits.length > 0 ? (
+                    {eventBenefits.length > 0 ? (
                       <>
-                        {card.eventBenefits.map((evt, i) => (
+                        {eventBenefits.map((evt, i) => (
                           <div
                             key={i}
                             className="p-4 bg-orange-50 border border-orange-100 rounded-xl flex items-start gap-3"
@@ -554,10 +603,15 @@ export function CardDetail() {
           <div className="space-y-4">
             <div className="bg-[#1B3D7B] rounded-2xl p-5 sticky top-24">
               <p className="text-white/80 text-xs mb-2">바로 발급 신청</p>
-              <h3 className="text-white font-normal mb-3">{card.name}</h3>
-              <button className="w-full py-2.5 bg-[#0ABFA3] text-white rounded-xl text-sm font-normal hover:bg-[#099d86] transition-all flex items-center justify-center gap-2">
+              <h3 className="text-white font-normal mb-3">{card.cardName}</h3>
+              <a
+                href={card.linkUrl ?? "#"}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full py-2.5 bg-[#0ABFA3] text-white rounded-xl text-sm font-normal hover:bg-[#099d86] transition-all flex items-center justify-center gap-2"
+              >
                 발급 신청하기 <ExternalLink className="w-3.5 h-3.5" />
-              </button>
+              </a>
               <p className="text-white/40 text-[10px] mt-2 text-center">
                 카드사 공식 페이지로 이동합니다
               </p>

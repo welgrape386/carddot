@@ -30,6 +30,7 @@ export interface CardDetailItem {
   minPerformance: number;
   totalMaxBenefit: number | null;
   benefits: BenefitDetail[];
+  linkUrl?: string | null;
 }
 
 export interface CardScore {
