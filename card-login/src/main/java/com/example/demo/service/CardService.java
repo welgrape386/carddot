@@ -24,7 +24,7 @@ public class CardService {
         this.benefitRepository = benefitRepository;
     }
 
-    // [기존 업무] 1. 전체 카드 조회
+    // 1. 전체 카드 조회
     @Transactional(readOnly = true)
     public List<CardListResponse> getAllCards() {
         List<Card> cards = cardRepository.findAll();
@@ -32,13 +32,14 @@ public class CardService {
                 .map(card -> new CardListResponse(
                         card.getCardId(), card.getCompany(), card.getCardName(),
                         card.getCardType(), card.getAnnualFeeDomBasic(), 
-                        card.getMinPerformance(), card.getTotalMaxBenefit(),
-                        card.getSummary(), card.isHasCashback()
+                        card.getMinPerformance(),
+                        card.getSummary(), card.isHasCashback(),
+                        card.getImageUrl(), card.isHasTransport()
                 ))
                 .collect(Collectors.toList());
     }
 
-    // [새로운 업무] 2. 특정 카드 상세 조회
+    // 2. 특정 카드 상세 조회
     @Transactional(readOnly = true)
     public CardDetailResponse getCardDetail(String cardId) {
         // 1. 카드 기본 정보 가져오기 (없으면 에러 던짐)
@@ -51,8 +52,10 @@ public class CardService {
         // 3. 혜택 엔티티(Entity)를 혜택 DTO로 변환
         List<CardDetailResponse.BenefitDetailDto> benefitDtos = benefits.stream()
                 .map(b -> {
-                    // 카테고리가 NULL일 경우 예외처리 ("기타"로 묶음)
-                    String categoryName = (b.getCategory() != null) ? b.getCategory().getCategoryName() : "기타";
+                    // 카테고리 리스트 중 첫 번째 카테고리의 이름을 가져오되, 비어있으면 "기타"
+                    String categoryName = (b.getCategories() != null && !b.getCategories().isEmpty()) 
+                                          ? b.getCategories().get(0).getCategoryName() 
+                                          : "기타";
                     
                     // 수치(10)와 단위(%)를 합쳐서 "10%" 형태의 텍스트로 만듦
                     String valueText = (b.getBenefitValue() != null ? b.getBenefitValue().toString() : "") 
@@ -72,7 +75,7 @@ public class CardService {
                 card.getCardId(), card.getCardName(), card.getCompany(),
                 card.getCardType(), card.getNetwork(), card.getAnnualFeeDomBasic(),
                 card.getAnnualFeeForBasic(), card.getMinPerformance(),
-                card.getTotalMaxBenefit(), benefitDtos
+                benefitDtos
         );
     }
 }
