@@ -9,6 +9,8 @@ export interface CardListItem {
   summary: string;
   hasEvent: boolean;
   categoryBenefits: string[] | null;
+  imageUrl?: string | null;
+  hasTransport: boolean;
 }
 
 export interface BenefitDetail {
@@ -31,6 +33,8 @@ export interface CardDetailItem {
   totalMaxBenefit: number | null;
   benefits: BenefitDetail[];
   linkUrl?: string | null;
+  imageUrl?: string | null;
+  hasTransport: boolean;
 }
 
 export interface CardScore {

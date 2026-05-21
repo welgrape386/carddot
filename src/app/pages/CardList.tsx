@@ -275,36 +275,39 @@ export function CardList() {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  const filteredCards = cards
-  .filter((card) => {
-    if (cardType === "credit" && card.cardType !== "신용") return false;
-    if (cardType === "debit" && card.cardType !== "체크") return false;
+  const filteredCards = cards.filter((card) => {
+  if (cardType === "credit" && card.cardType !== "신용") return false;
+  if (cardType === "debit" && card.cardType !== "체크") return false;
 
-    if (
-      selectedIssuers.length > 0 &&
-      !selectedIssuers.includes(card.company)
-    ) {
-      return false;
-    }
+  if (
+    selectedIssuers.length > 0 &&
+    !selectedIssuers.includes(card.company)
+  ) {
+    return false;
+  }
 
-    if (card.annualFee < feeOption.min || card.annualFee > feeOption.max) {
-      return false;
-    }
+  if (card.annualFee < feeOption.min || card.annualFee > feeOption.max) {
+    return false;
+  }
 
-    if (card.minPerformance > spendingOption.max) {
-      return false;
-    }
+  if (card.minPerformance > spendingOption.max) {
+    return false;
+  }
 
-    if (!matchesCategories(card, selectedCategories)) {
-      return false;
-    }
+  if (eventOnly && !card.hasEvent) {
+    return false;
+  }
 
-    if (eventOnly && !card.hasEvent) {
-      return false;
-    }
+  if (transitOnly && !card.hasTransport) {
+    return false;
+  }
 
-    return true;
-  })
+  if (!matchesCategories(card, selectedCategories)) {
+    return false;
+  }
+
+  return true;
+})
   .sort((a, b) => {
     const aBenefitCount = a.summary
       ? a.summary.split("/").filter((item) => item.trim()).length
@@ -743,28 +746,43 @@ export function CardList() {
     className="group bg-white rounded-2xl border border-[#6667AA]/20 shadow-md hover:shadow-md overflow-hidden flex flex-col"
   >
     {/* 1. 카드 이미지 영역 */}
-    <div className="bg-gray-50/70 p-5 flex flex-col items-center">
-      <div className="w-24 h-36 rounded-2xl bg-black shadow-md flex flex-col justify-between p-3 text-white">
-        <div className="text-[10px] opacity-70">{card.company}카드</div>
-        <div className="text-sm font-normal leading-tight line-clamp-3">
-          {card.cardName}
-        </div>
-        <div className="text-[10px] opacity-70">{card.cardType}</div>
+<div className="bg-gray-50/70 p-5 flex flex-col items-center">
+  {card.imageUrl ? (
+    <img
+      src={card.imageUrl}
+      alt={card.cardName}
+      className="h-36 w-auto object-contain drop-shadow-md"
+      loading="lazy"
+    />
+  ) : (
+    <div className="w-24 h-36 rounded-2xl bg-black shadow-md flex flex-col justify-between p-3 text-white">
+      <div className="text-[10px] opacity-70">{card.company}카드</div>
+      <div className="text-sm font-normal leading-tight line-clamp-3">
+        {card.cardName}
       </div>
-
-      {/* 신용/체크 표시 */}
-      <div className="flex gap-1 flex-wrap justify-center mt-2">
-        <span
-          className={`text-[9px] font-normal px-1.5 py-0.5 rounded ${
-            card.cardType === "신용"
-              ? "bg-blue-50 text-blue-600"
-              : "bg-purple-50 text-purple-600"
-          }`}
-        >
-          {card.cardType}
-        </span>
-      </div>
+      <div className="text-[10px] opacity-70">{card.cardType}</div>
     </div>
+  )}
+
+  {/* 신용/체크 + 교통 표시 */}
+  <div className="flex gap-1 flex-wrap justify-center mt-2">
+    <span
+      className={`text-[9px] font-normal px-1.5 py-0.5 rounded ${
+        card.cardType === "신용"
+          ? "bg-blue-50 text-blue-600"
+          : "bg-purple-50 text-purple-600"
+      }`}
+    >
+      {card.cardType}
+    </span>
+
+    {card.hasTransport && (
+      <span className="text-[9px] font-normal px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-600">
+        교통
+      </span>
+    )}
+  </div>
+</div>
 
     {/* 2. 카드 정보 영역 */}
     <div className="p-3 flex flex-col flex-1">

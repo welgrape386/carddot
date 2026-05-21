@@ -283,32 +283,41 @@ export function CardDetail() {
 
             {/* Hero */}
             <div className="bg-white rounded-2xl border border-gray-100 p-8">
-              <div className="flex gap-8 items-start">
-                <div className="flex flex-col items-center gap-4">
-                  <CardVisual
-                    card={{
-                      id: 1,
-                      name: card.cardName,
-                      issuer: `${card.company}카드`,
-                      type: card.cardType === "신용" ? "credit" : "debit",
-                      network: normalizeNetwork(card.network),
-                      annualFee: card.annualFeeDomBasic,
-                      minSpending: card.minPerformance,
-                      maxBenefit: card.totalMaxBenefit ?? 0,
-                      rating: 0,
-                      reviews: 0,
-                      popularity: 0,
-                      rank: 0,
-                      views: 0,
-                      clicks: 0,
-                      tags: [],
-                      color: "#111827",
-                      gradient: "linear-gradient(135deg, #111827 0%, #374151 100%)",
-                      benefits: [],
-                      eventBenefits: [],
-                    }}
-                    size="lg"
-                  />
+  <div className="flex gap-8 items-start">
+    <div className="flex flex-col items-center gap-4">
+      {card.imageUrl ? (
+        <img
+          src={card.imageUrl}
+          alt={card.cardName}
+          className="h-56 w-auto object-contain drop-shadow-md"
+          loading="lazy"
+        />
+      ) : (
+        <CardVisual
+          card={{
+            id: 1,
+            name: card.cardName,
+            issuer: `${card.company}카드`,
+            type: card.cardType === "신용" ? "credit" : "debit",
+            network: normalizeNetwork(card.network),
+            annualFee: card.annualFeeDomBasic,
+            minSpending: card.minPerformance,
+            maxBenefit: card.totalMaxBenefit ?? 0,
+            rating: 0,
+            reviews: 0,
+            popularity: 0,
+            rank: 0,
+            views: 0,
+            clicks: 0,
+            tags: [],
+            color: "#111827",
+            gradient: "linear-gradient(135deg, #111827 0%, #374151 100%)",
+            benefits: [],
+            eventBenefits: [],
+          }}
+          size="lg"
+        />
+      )}
 
                   <div className="flex gap-2">
                     <button
