@@ -33,7 +33,8 @@ public class CardService {
                         card.getCardId(), card.getCompany(), card.getCardName(),
                         card.getCardType(), card.getAnnualFeeDomBasic(), 
                         card.getMinPerformance(),
-                        card.getSummary(), card.isHasCashback()
+                        card.getSummary(), card.isHasCashback(),
+                        card.getImageUrl(), card.isHasTransport()
                 ))
                 .collect(Collectors.toList());
     }

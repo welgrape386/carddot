@@ -12,6 +12,8 @@ public class CardListResponse {
     private Integer totalMaxBenefit;
     private String summary;
     private boolean hasEvent;
+    private String imageUrl;
+    private boolean hasTransport;
     
     // 사용자가 선택한 카테고리의 혜택 수치들 (["스타벅스 5%", "대중교통 10%"])
     private List<String> categoryBenefits;
@@ -19,7 +21,8 @@ public class CardListResponse {
     // 생성자 (기본 정보 초기화용)
     public CardListResponse(String cardId, String company, String cardName, String cardType, 
                             int annualFee, int minPerformance, 
-                            String summary, boolean hasEvent) {
+                            String summary, boolean hasEvent,
+                            String imageUrl, boolean hasTransport) {
         this.cardId = cardId;
         this.company = company;
         this.cardName = cardName;
@@ -28,6 +31,8 @@ public class CardListResponse {
         this.minPerformance = minPerformance;
         this.summary = summary;
         this.hasEvent = hasEvent;
+        this.imageUrl = imageUrl;
+        this.hasTransport = hasTransport;
     }
 
     // Getter 및 Setter (카테고리 혜택 세팅용)
@@ -40,6 +45,8 @@ public class CardListResponse {
     public Integer getTotalMaxBenefit() { return totalMaxBenefit; }
     public String getSummary() { return summary; }
     public boolean isHasEvent() { return hasEvent; }
+    public String getImageUrl() { return imageUrl; }
+    public boolean isHasTransport() { return hasTransport; }
     
     public List<String> getCategoryBenefits() { return categoryBenefits; }
     public void setCategoryBenefits(List<String> categoryBenefits) { 
