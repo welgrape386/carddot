@@ -1,10 +1,14 @@
 package com.example.demo.controller;
 
+import com.example.demo.dto.CardCompareResponse;
 import com.example.demo.dto.CardDetailResponse;
 import com.example.demo.dto.CardListResponse;
 import com.example.demo.service.CardService;
 import com.example.demo.dto.CardScoreResponse;
+import com.example.demo.dto.CardSearchResponse;
+import com.example.demo.security.JwtTokenProvider;
 import com.example.demo.service.CardScoreService;
+import com.example.demo.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,16 +16,21 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/cards")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3000", "https://carddot.vercel.app"})
 public class CardController {
 
     private final CardService cardService;
     private final CardScoreService cardScoreService;
+    private final UserService userService;
+    private final JwtTokenProvider jwtTokenProvider;
 
  // 생성자
-    public CardController(CardService cardService, CardScoreService cardScoreService) {
+    public CardController(CardService cardService, CardScoreService cardScoreService,
+    		UserService userService, JwtTokenProvider jwtTokenProvider) {
         this.cardService = cardService;
         this.cardScoreService = cardScoreService;
+        this.userService = userService;
+        this.jwtTokenProvider = jwtTokenProvider;
     }
 
     // 메인 화면 리스트 조회: GET /api/cards
@@ -67,5 +76,26 @@ public class CardController {
             e.printStackTrace();
             return ResponseEntity.internalServerError().body("서버 500 에러 발생 원인: " + e.getMessage());
         }
+    }
+    
+    // 비교: GET /api/cards/compare?ids=card1,card2,card3&personaType=STUDENT)
+    @GetMapping("/compare")
+    public ResponseEntity<?> compareCards(
+            @RequestParam List<String> ids,
+            @RequestParam(defaultValue = "STUDENT") String personaType) {
+        try {
+            List<CardCompareResponse> result = cardService.compareCards(ids, personaType);
+            return ResponseEntity.ok(result);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+    
+    // 비교 - 카드 검색 팝업: GET /api/cards/search?keyword=신한
+    @GetMapping("/search")
+    public ResponseEntity<List<CardSearchResponse>> searchCards(
+            @RequestParam(required = false) String keyword) {
+        List<CardSearchResponse> result = cardService.searchCards(keyword);
+        return ResponseEntity.ok(result);
     }
 }
