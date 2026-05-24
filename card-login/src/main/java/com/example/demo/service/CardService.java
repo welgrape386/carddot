@@ -79,6 +79,7 @@ public class CardService {
                 card.getCardId(), card.getCardName(), card.getCompany(),
                 card.getCardType(), card.getNetwork(), card.getAnnualFeeDomBasic(),
                 card.getAnnualFeeForBasic(), card.getMinPerformance(),
+                card.getImageUrl(),
                 benefitDtos
         );
     }

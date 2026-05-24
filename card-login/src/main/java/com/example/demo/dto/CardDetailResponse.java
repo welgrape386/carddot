@@ -11,13 +11,14 @@ public class CardDetailResponse {
     private int annualFeeDomBasic;
     private int annualFeeForBasic;
     private int minPerformance;
+    private String imageUrl;
     
     // 혜택 상세 리스트
     private List<BenefitDetailDto> benefits;
 
     public CardDetailResponse(String cardId, String cardName, String company, String cardType, 
                               String network, int annualFeeDomBasic, int annualFeeForBasic, 
-                              int minPerformance, List<BenefitDetailDto> benefits) {
+                              int minPerformance, String imageUrl, List<BenefitDetailDto> benefits) {
         this.cardId = cardId;
         this.cardName = cardName;
         this.company = company;
@@ -26,6 +27,7 @@ public class CardDetailResponse {
         this.annualFeeDomBasic = annualFeeDomBasic;
         this.annualFeeForBasic = annualFeeForBasic;
         this.minPerformance = minPerformance;
+        this.imageUrl = imageUrl;
         this.benefits = benefits;
     }
 
@@ -63,5 +65,6 @@ public class CardDetailResponse {
     public int getAnnualFeeDomBasic() { return annualFeeDomBasic; }
     public int getAnnualFeeForBasic() { return annualFeeForBasic; }
     public int getMinPerformance() { return minPerformance; }
+    public String getImageUrl() { return imageUrl; }
     public List<BenefitDetailDto> getBenefits() { return benefits; }
 }
