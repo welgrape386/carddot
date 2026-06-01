@@ -20,12 +20,14 @@ public class CardService {
     private final CardRepository cardRepository;
     private final BenefitRepository benefitRepository;
     private final CardScoreService cardScoreService;
+    private final BenefitEngineService benefitEngineService;
 
-    // 생성자를 통해 2명의 조수(Repository)를 모두 주입받음
-    public CardService(CardRepository cardRepository, BenefitRepository benefitRepository, CardScoreService cardScoreService) {
+    // 생성자를 통해 조수(Repository)를 모두 주입받음
+    public CardService(CardRepository cardRepository, BenefitRepository benefitRepository, CardScoreService cardScoreService, BenefitEngineService benefitEngineService) {
         this.cardRepository = cardRepository;
         this.benefitRepository = benefitRepository;
         this.cardScoreService = cardScoreService;
+        this.benefitEngineService = benefitEngineService;
     }
 
     // 1. 전체 카드 조회
@@ -64,13 +66,21 @@ public class CardService {
                     // 수치(10)와 단위(%)를 합쳐서 "10%" 형태의 텍스트로 만듦
                     String valueText = (b.getBenefitValue() != null ? b.getBenefitValue().toString() : "") 
                                      + (b.getBenefitUnit() != null ? b.getBenefitUnit() : "");
+                    
+                    // 실질 할인율 실시간 계산
+                    CalculationResult calcResult = benefitEngineService.calculateEffectiveRate(b, card.getCompany());
+                    String effectiveRateText = calcResult.getRate().doubleValue() > 0 
+                                               ? calcResult.getRate().toString() + "%" : "-";
+                    String effectiveBasis = calcResult.getBasis();
 
                     return new CardDetailResponse.BenefitDetailDto(
                             categoryName,
                             b.getBenefitTitle(),
                             b.getBenefitContent(),
                             valueText,
-                            b.getMaxLimit()
+                            b.getMaxLimit(),
+                            effectiveRateText,
+                            effectiveBasis
                     );
                 }).collect(Collectors.toList());
 
@@ -109,8 +119,16 @@ public class CardService {
                 String valueText = (b.getBenefitValue() != null ? b.getBenefitValue().toString() : "") 
                                  + (b.getBenefitUnit() != null ? b.getBenefitUnit() : "");
                 
+             // 실질 할인율 실시간 계산
+                CalculationResult calcResult = benefitEngineService.calculateEffectiveRate(b, card.getCompany());
+                String effectiveRateText = calcResult.getRate().doubleValue() > 0 
+                                           ? calcResult.getRate().toString() + "%" : "-";
+                String effectiveBasis = calcResult.getBasis();
+                
                 return new BenefitCompareDto(
-                        categoryName, b.getBenefitType(), valueText, b.getBenefitTitle(), b.getBenefitContent()
+                        categoryName, b.getBenefitType(), valueText, b.getBenefitTitle(), b.getBenefitContent(),
+                        effectiveRateText,
+                        effectiveBasis
                 );
             }).collect(Collectors.toList());
 

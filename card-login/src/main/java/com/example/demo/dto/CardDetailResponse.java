@@ -38,22 +38,31 @@ public class CardDetailResponse {
         private String benefitContent;
         private String benefitValueText; // 혜택 수치랑 단위 합친 거
         private Integer maxLimit;
+        
+        // 실질 할인율, 환산 근거
+        private String effectiveRateText;
+        private String effectiveBasis;
 
         public BenefitDetailDto(String categoryName, String benefitTitle, String benefitContent, 
-                                String benefitValueText, Integer maxLimit) {
+                                String benefitValueText, Integer maxLimit,
+                                String effectiveRateText, String effectiveBasis) {
             this.categoryName = categoryName;
             this.benefitTitle = benefitTitle;
             this.benefitContent = benefitContent;
             this.benefitValueText = benefitValueText;
             this.maxLimit = maxLimit;
+            this.effectiveRateText = effectiveRateText;
+            this.effectiveBasis = effectiveBasis;
         }
 
-        // 프론트엔드가 JSON 파싱하려면 Getter 필수
+        // Getter
         public String getCategoryName() { return categoryName; }
         public String getBenefitTitle() { return benefitTitle; }
         public String getBenefitContent() { return benefitContent; }
         public String getBenefitValueText() { return benefitValueText; }
         public Integer getMaxLimit() { return maxLimit; }
+        public String getEffectiveRateText() { return effectiveRateText; }
+        public String getEffectiveBasis() { return effectiveBasis; }
     }
 
     // CardDetailResponse의 Getter
