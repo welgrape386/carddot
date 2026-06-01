@@ -11,6 +11,7 @@ import com.example.demo.service.CardScoreService;
 import com.example.demo.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import jakarta.servlet.http.HttpServletRequest;
 
 import java.util.List;
 
@@ -81,9 +82,21 @@ public class CardController {
     // 비교: GET /api/cards/compare?ids=card1,card2,card3&personaType=STUDENT)
     @GetMapping("/compare")
     public ResponseEntity<?> compareCards(
+    		HttpServletRequest request,
             @RequestParam List<String> ids,
             @RequestParam(defaultValue = "STUDENT") String personaType) {
         try {
+        	// 토큰 있다면 '최근 비교한 카드'에 기록
+        	String bearerToken = request.getHeader("Authorization");
+            if (bearerToken != null && bearerToken.startsWith("Bearer ")) {
+                String token = bearerToken.substring(7);
+                if (jwtTokenProvider.validateToken(token)) {
+                    String email = jwtTokenProvider.getLoginId(token);
+                    userService.recordCardCompare(email, ids); // 기록 저장
+                }
+            }
+        	
+            // 기존 비교 응답 로직
             List<CardCompareResponse> result = cardService.compareCards(ids, personaType);
             return ResponseEntity.ok(result);
         } catch (IllegalArgumentException e) {

@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.dto.PasswordUpdateRequest;
 import com.example.demo.dto.RecentCardResponse;
 import com.example.demo.dto.UserProfileUpdateRequest;
+import com.example.demo.dto.RecentCompareResponse;
 import com.example.demo.security.JwtTokenProvider;
 import com.example.demo.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
@@ -67,6 +68,18 @@ public class UserController {
             String email = getEmailFromToken(httpServletRequest);
             List<RecentCardResponse> recentCards = userService.getRecentCards(email);
             return ResponseEntity.ok(recentCards);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+    
+    // 최근 비교한 카드 10가지 조회 API
+    @GetMapping("/recent-compares")
+    public ResponseEntity<?> getRecentCompares(HttpServletRequest request) {
+        try {
+            String email = getEmailFromToken(request);
+            List<RecentCompareResponse> result = userService.getRecentCompares(email);
+            return ResponseEntity.ok(result);
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
