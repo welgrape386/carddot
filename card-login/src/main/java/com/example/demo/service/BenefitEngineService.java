@@ -136,7 +136,7 @@ public class BenefitEngineService {
         }
 
         // 2순위: content 텍스트 파싱
-        CalculationResult contentResult = parseContentRatio(benefit.getBenefitContent(), ptRate);
+        CalculationResult contentResult = parseContentRatio(benefit.getUiContent(), ptRate);
         if (contentResult.getRate().doubleValue() > 0) {
             return contentResult;
         }
