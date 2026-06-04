@@ -17,6 +17,7 @@ public class CardDetailResponse {
     private int annualFeeForPremium;
     private int minPerformance;
     private String linkUrl;
+    private String imageUrl;
     
     // 하단 탭 3개
     private List<BenefitDto> benefits;
@@ -26,7 +27,7 @@ public class CardDetailResponse {
     public CardDetailResponse(String cardId, String company, String cardType, String network, 
             String cardName, boolean hasTransport, int annualFeeDomBasic, 
             int annualFeeDomPremium, int annualFeeForBasic, int annualFeeForPremium, 
-            int minPerformance, String linkUrl, 
+            int minPerformance, String linkUrl, String imageUrl,
             List<BenefitDto> benefits, List<NoticeDto> notices, List<EventDto> events) {
     	this.cardId = cardId;
     	this.company = company;
@@ -40,6 +41,7 @@ public class CardDetailResponse {
     	this.annualFeeForPremium = annualFeeForPremium;
     	this.minPerformance = minPerformance;
     	this.linkUrl = linkUrl;
+    	this.imageUrl = imageUrl;
     	this.benefits = benefits;
     	this.notices = notices;
     	this.events = events;
@@ -54,9 +56,16 @@ public class CardDetailResponse {
         private String effectiveRateText;
         private BigDecimal benefitValue;
         private String benefitUnit;
+        private Integer maxLimit;
+        private String maxLimitUnit;
+        private Integer groupMaxLimit;
+        private String groupMaxLimitUnit;
 
         public BenefitDto(String categoryName, String targetMerchants, String uiTitle, 
-                          String uiContent, String effectiveRateText, BigDecimal benefitValue, String benefitUnit) {
+                          String uiContent, String effectiveRateText,
+                          BigDecimal benefitValue, String benefitUnit,
+                          Integer maxLimit, String maxLimitUnit,
+                          Integer groupMaxLimit, String groupMaxLimitUnit) {
             this.categoryName = categoryName;
             this.targetMerchants = targetMerchants;
             this.uiTitle = uiTitle;
@@ -64,6 +73,10 @@ public class CardDetailResponse {
             this.effectiveRateText = effectiveRateText;
             this.benefitValue = benefitValue;
             this.benefitUnit = benefitUnit;
+            this.maxLimit = maxLimit;
+            this.maxLimitUnit = maxLimitUnit;
+            this.groupMaxLimit = groupMaxLimit;
+            this.groupMaxLimitUnit = groupMaxLimitUnit;
         }
         // Getter
         public String getCategoryName() { return categoryName; }
@@ -73,6 +86,10 @@ public class CardDetailResponse {
         public String getEffectiveRateText() { return effectiveRateText; }
         public BigDecimal getBenefitValue() { return benefitValue; }
         public String getBenefitUnit() { return benefitUnit; }
+        public Integer getMaxLimit() { return maxLimit; }
+        public String getMaxLimitUnit() { return maxLimitUnit; }
+        public Integer getGroupMaxLimit() { return groupMaxLimit; }
+        public String getGroupMaxLimitUnit() { return groupMaxLimitUnit; }
     }
     
     // 탭2: 유의사항
@@ -128,6 +145,7 @@ public class CardDetailResponse {
     public int getAnnualFeeForPremium() { return annualFeeForPremium; }
     public int getMinPerformance() { return minPerformance; }
     public String getLinkUrl() { return linkUrl; }
+    public String getImageUrl() { return imageUrl; }
     public List<BenefitDto> getBenefits() { return benefits; }
     public List<NoticeDto> getNotices() { return notices; }
     public List<EventDto> getEvents() { return events; }

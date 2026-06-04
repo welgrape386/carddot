@@ -91,7 +91,11 @@ public class CardService {
                             b.getUiContent(),
                             effectiveRateText,
                             b.getBenefitValue(),
-                            b.getBenefitUnit()
+                            b.getBenefitUnit(),
+                            b.getMaxLimit(),
+                            b.getMaxLimitUnit(),
+                            b.getGroupMaxLimit(),
+                            b.getGroupMaxLimitUnit()
                     );
                 }).collect(Collectors.toList());
         
@@ -114,7 +118,7 @@ public class CardService {
         		card.getCardId(), card.getCompany(), card.getCardType(), card.getNetwork(),
                 card.getCardName(), card.isHasTransport(), card.getAnnualFeeDomBasic(),
                 card.getAnnualFeeDomPremium(), card.getAnnualFeeForBasic(), card.getAnnualFeeForPremium(),
-                card.getMinPerformance(), card.getLinkUrl(),
+                card.getMinPerformance(), card.getLinkUrl(), card.getImageUrl(),
                 benefitDtos, noticeDtos, eventDtos
         );
     }

@@ -56,6 +56,15 @@ public class Benefit {
 
     @Column(name = "max_limit")
     private Integer maxLimit;
+    
+    @Column(name = "max_limit_unit", length = 20)
+    private String maxLimitUnit;
+
+    @Column(name = "group_max_limit")
+    private Integer groupMaxLimit;
+
+    @Column(name = "group_max_limit_unit", length = 20)
+    private String groupMaxLimitUnit;
 
     // Getter
     public String getBenefitId() { return benefitId; }
@@ -72,4 +81,7 @@ public class Benefit {
     public Integer getPerformanceMin() { return performanceMin; }
     public Integer getPerformanceMax() { return performanceMax; }
     public Integer getMaxLimit() { return maxLimit; }
+    public String getMaxLimitUnit() { return maxLimitUnit; }
+    public Integer getGroupMaxLimit() { return groupMaxLimit; }
+    public String getGroupMaxLimitUnit() { return groupMaxLimitUnit; }
 }
