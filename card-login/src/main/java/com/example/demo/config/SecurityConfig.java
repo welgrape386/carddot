@@ -38,7 +38,7 @@ public class SecurityConfig {
                 
                 // 필요 시 주석 해제
                 // config.setAllowCredentials(true);
-                // config.addExposedHeader("Authorization");
+                config.addExposedHeader("Authorization");
                 
                 return config;
             }))
