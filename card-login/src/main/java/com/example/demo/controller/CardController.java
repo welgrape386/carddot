@@ -3,12 +3,16 @@ package com.example.demo.controller;
 import com.example.demo.dto.CardCompareResponse;
 import com.example.demo.dto.CardDetailResponse;
 import com.example.demo.dto.CardListResponse;
+import com.example.demo.dto.CardFilterRequest;
+import com.example.demo.entity.VCardList;
 import com.example.demo.service.CardService;
+import com.example.demo.service.CardFilterService;
 import com.example.demo.dto.CardScoreResponse;
 import com.example.demo.dto.CardSearchResponse;
 import com.example.demo.security.JwtTokenProvider;
 import com.example.demo.service.CardScoreService;
 import com.example.demo.service.UserService;
+import com.example.demo.repository.CardStatsRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import jakarta.servlet.http.HttpServletRequest;
@@ -24,14 +28,19 @@ public class CardController {
     private final CardScoreService cardScoreService;
     private final UserService userService;
     private final JwtTokenProvider jwtTokenProvider;
+    private final CardFilterService cardFilterService;
+    private final CardStatsRepository cardStatsRepository;
 
  // 생성자
     public CardController(CardService cardService, CardScoreService cardScoreService,
-    		UserService userService, JwtTokenProvider jwtTokenProvider) {
+    		UserService userService, JwtTokenProvider jwtTokenProvider,
+    		CardFilterService cardFilterService, CardStatsRepository cardStatsRepository) {
         this.cardService = cardService;
         this.cardScoreService = cardScoreService;
         this.userService = userService;
         this.jwtTokenProvider = jwtTokenProvider;
+        this.cardFilterService = cardFilterService;
+        this.cardStatsRepository = cardStatsRepository;
     }
 
     // 메인 화면 리스트 조회: GET /api/cards
@@ -110,5 +119,19 @@ public class CardController {
             @RequestParam(required = false) String keyword) {
         List<CardSearchResponse> result = cardService.searchCards(keyword);
         return ResponseEntity.ok(result);
+    }
+    
+    // 조회 - 상세 필터 및 정렬: POST /api/cards/filter
+    @PostMapping("/filter")
+    public ResponseEntity<List<VCardList>> filterCards(@RequestBody CardFilterRequest request) {
+        List<VCardList> filteredCards = cardFilterService.searchCards(request);
+        return ResponseEntity.ok(filteredCards);
+    }
+    
+    // 조회 - 카드 상세 url 조회수: POST /api/cards/cardId/click-url
+    @PostMapping("/{cardId}/click-url")
+    public ResponseEntity<Void> incrementUrlClick(@PathVariable String cardId) {
+        cardStatsRepository.incrementUrlClick(cardId);
+        return ResponseEntity.ok().build();
     }
 }

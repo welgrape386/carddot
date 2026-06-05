@@ -60,12 +60,6 @@ public class Card {
     @Column(name = "link_url", length = 500)
     private String linkUrl;
 
-    @Column(name = "detail_count", nullable = false)
-    private int viewCount = 0;
-
-    @Column(name = "url_count", nullable = false)
-    private int clickCount = 0;
-
     @CreationTimestamp
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
@@ -89,7 +83,5 @@ public class Card {
     public boolean isHasCashback() { return hasCashback; }
     public String getImageUrl() { return imageUrl; }
     public String getLinkUrl() { return linkUrl; }
-    public int getViewCount() { return viewCount; }
-    public int getClickCount() { return clickCount; }
     // public LocalDateTime getUpdatedAt() { return updatedAt; }
 }

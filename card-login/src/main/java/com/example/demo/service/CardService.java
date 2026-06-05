@@ -9,6 +9,7 @@ import com.example.demo.repository.BenefitRepository;
 import com.example.demo.repository.CardRepository;
 import com.example.demo.repository.NoticeRepository;
 import com.example.demo.repository.CardEventRepository;
+import com.example.demo.repository.CardStatsRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,17 +27,21 @@ public class CardService {
     
     private final CardScoreService cardScoreService;
     private final BenefitEngineService benefitEngineService;
+    
+    private final CardStatsRepository cardStatsRepository;
 
     // 생성자를 통해 조수(Repository)를 모두 주입받음
     public CardService(CardRepository cardRepository, BenefitRepository benefitRepository,
     		NoticeRepository noticeRepository, CardEventRepository cardEventRepository,
-    		CardScoreService cardScoreService, BenefitEngineService benefitEngineService) {
+    		CardScoreService cardScoreService, BenefitEngineService benefitEngineService,
+    		CardStatsRepository cardStatsRepository) {
         this.cardRepository = cardRepository;
         this.benefitRepository = benefitRepository;
         this.noticeRepository = noticeRepository;
         this.cardEventRepository = cardEventRepository;
         this.cardScoreService = cardScoreService;
         this.benefitEngineService = benefitEngineService;
+        this.cardStatsRepository = cardStatsRepository;
     }
 
     // 1. 전체 카드 조회
@@ -56,11 +61,14 @@ public class CardService {
     }
 
     // 2. 특정 카드 상세 조회
-    @Transactional(readOnly = true)
+    @Transactional
     public CardDetailResponse getCardDetail(String cardId) {
         // 1. 카드 기본 정보 가져오기 (없으면 에러 던짐)
         Card card = cardRepository.findById(cardId)
                 .orElseThrow(() -> new IllegalArgumentException("해당 카드를 찾을 수 없습니다."));
+        
+        // 카드 찾으면 클릭 수 + 1
+        cardStatsRepository.incrementDetailClick(cardId);
         
         // A. 주요 혜택 매핑
         // 2. 이 카드에 속한 혜택 목록 가져오기
