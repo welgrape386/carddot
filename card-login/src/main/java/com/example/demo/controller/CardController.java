@@ -9,6 +9,9 @@ import com.example.demo.service.CardService;
 import com.example.demo.service.CardFilterService;
 import com.example.demo.dto.CardScoreResponse;
 import com.example.demo.dto.CardSearchResponse;
+import com.example.demo.dto.RankingFilterRequest;
+import com.example.demo.dto.CardRankingResponse;
+import com.example.demo.service.CardRankingService;
 import com.example.demo.security.JwtTokenProvider;
 import com.example.demo.service.CardScoreService;
 import com.example.demo.service.UserService;
@@ -30,17 +33,20 @@ public class CardController {
     private final JwtTokenProvider jwtTokenProvider;
     private final CardFilterService cardFilterService;
     private final CardStatsRepository cardStatsRepository;
+    private final CardRankingService cardRankingService;
 
  // 생성자
     public CardController(CardService cardService, CardScoreService cardScoreService,
     		UserService userService, JwtTokenProvider jwtTokenProvider,
-    		CardFilterService cardFilterService, CardStatsRepository cardStatsRepository) {
+    		CardFilterService cardFilterService, CardStatsRepository cardStatsRepository,
+    		CardRankingService cardRankingService) {
         this.cardService = cardService;
         this.cardScoreService = cardScoreService;
         this.userService = userService;
         this.jwtTokenProvider = jwtTokenProvider;
         this.cardFilterService = cardFilterService;
         this.cardStatsRepository = cardStatsRepository;
+        this.cardRankingService = cardRankingService;
     }
 
     // 메인 화면 리스트 조회: GET /api/cards
@@ -133,5 +139,12 @@ public class CardController {
     public ResponseEntity<Void> incrementUrlClick(@PathVariable String cardId) {
         cardStatsRepository.incrementUrlClick(cardId);
         return ResponseEntity.ok().build();
+    }
+    
+    // 랭킹: POST /api/cards/ranking
+    @PostMapping("/ranking")
+    public ResponseEntity<List<CardRankingResponse>> getCardRanking(@RequestBody RankingFilterRequest request) {
+        List<CardRankingResponse> rankingResult = cardRankingService.getCardRanking(request);
+        return ResponseEntity.ok(rankingResult);
     }
 }

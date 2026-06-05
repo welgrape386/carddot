@@ -28,6 +28,15 @@ public class VCardList {
 
     @Column(name = "annual_fee_dom_basic")
     private int annualFeeDomBasic;
+    
+    @Column(name = "annual_fee_dom_premium")
+    private int annualFeeDomPremium;
+    
+    @Column(name = "annual_fee_for_basic")
+    private int annualFeeForBasic;
+    
+    @Column(name = "annual_fee_for_premium")
+    private int annualFeeForPremium;
 
     @Column(name = "min_performance")
     private int minPerformance;
@@ -43,6 +52,15 @@ public class VCardList {
 
     @Column(name = "benefit_count") 
     private Integer benefitCount; // 혜택 개수
+    
+    @Column(name = "summary")
+    private String summary;
+
+    @Column(name = "detail_click")
+    private int detailClick;
+
+    @Column(name = "url_click")
+    private int urlClick;
 
     // Getters
     public String getCardId() { return cardId; }
@@ -51,9 +69,15 @@ public class VCardList {
     public String getCardType() { return cardType; }
     public boolean isHasTransport() { return hasTransport; }
     public int getAnnualFeeDomBasic() { return annualFeeDomBasic; }
+    public int getAnnualFeeDomPremium() { return annualFeeDomPremium; }
+    public int getAnnualFeeForBasic() { return annualFeeForBasic; }
+    public int getAnnualFeeForPremium() { return annualFeeForPremium; }
     public int getMinPerformance() { return minPerformance; }
     public boolean isHasCashback() { return hasCashback; }
     public String getImageUrl() { return imageUrl; }
     public int getTotalScore() { return totalScore; }
     public Integer getBenefitCount() { return benefitCount; }
+    public String getSummary() { return summary; }
+    public int getDetailClick() { return detailClick; }
+    public int getUrlClick() { return urlClick; }
 }
