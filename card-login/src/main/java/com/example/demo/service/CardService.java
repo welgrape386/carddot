@@ -116,10 +116,19 @@ public class CardService {
         // C. 이벤트 매핑
         List<CardEvent> events = cardEventRepository.findByCardId(cardId);
         List<CardDetailResponse.EventDto> eventDtos = events.stream()
-                .map(e -> new CardDetailResponse.EventDto(
-                        e.getEventTitle(), e.getSection(), e.getEventContent(), 
-                        e.getEventLink(), e.getStartDate(), e.getEndDate()
-                )).collect(Collectors.toList());
+                .map(e -> {
+                	String startDateStr = (e.getStartDate() != null) ? e.getStartDate().toString() : "";
+                    String endDateStr = (e.getEndDate() != null) ? e.getEndDate().toString() : "";
+                    
+                    return new CardDetailResponse.EventDto(
+                    		e.getEventTitle(), 
+                            e.getSection(), 
+                            e.getEventContent(), 
+                            e.getEventLink(), 
+                            startDateStr,
+                            endDateStr
+                    		);
+                }).collect(Collectors.toList());
         
         // 4. 최종 응답 DTO로 조립해서 반환
         return new CardDetailResponse(

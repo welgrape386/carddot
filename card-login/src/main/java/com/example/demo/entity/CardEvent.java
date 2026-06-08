@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "card_event")
@@ -27,10 +28,10 @@ public class CardEvent {
     private String eventLink;
 
     @Column(name = "start_date")
-    private String startDate;
+    private LocalDate startDate;
 
     @Column(name = "end_date")
-    private String endDate;
+    private LocalDate endDate;
 
     // 기본 생성자
     public CardEvent() {}
@@ -42,6 +43,6 @@ public class CardEvent {
     public String getSection() { return section; }
     public String getEventContent() { return eventContent; }
     public String getEventLink() { return eventLink; }
-    public String getStartDate() { return startDate; }
-    public String getEndDate() { return endDate; }
+    public LocalDate getStartDate() { return startDate; }
+    public LocalDate getEndDate() { return endDate; }
 }
