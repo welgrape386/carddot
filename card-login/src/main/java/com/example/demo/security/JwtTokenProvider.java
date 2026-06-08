@@ -2,16 +2,23 @@ package com.example.demo.security;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import java.nio.charset.StandardCharsets;
 import java.security.Key;
 import java.util.Date;
 
 @Component
 public class JwtTokenProvider {
-    // 보안을 위한 비밀키 (실제 서비스에선 더 길고 복잡해야 함)
-    private final Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
+    // 보안을 위한 비밀키
+    private final Key key;
     private final long tokenValidityInMilliseconds = 3600000; // 1시간 유지
 
+    public JwtTokenProvider(@Value("${jwt.secret}") String secretKey) {
+        // 문자를 바이트로 변환해서 안전한 암호화 키 생성
+        this.key = Keys.hmacShaKeyFor(secretKey.getBytes(StandardCharsets.UTF_8));
+    }
+    
     // 토큰 생성
     public String createToken(String loginId) {
         Date now = new Date();

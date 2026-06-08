@@ -43,9 +43,11 @@ public class SecurityConfig {
                 return config;
             }))
             
-            // 3. 요청 권한 설정 (일단 모든 API 접근 허용)
+            // 3. 요청 권한 설정
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/**").permitAll()
+            		.requestMatchers("/api/auth/**", "/api/cards/**").permitAll()
+            		.anyRequest().authenticated()
+                // .requestMatchers("/**").permitAll()
             );
             
         return http.build();
