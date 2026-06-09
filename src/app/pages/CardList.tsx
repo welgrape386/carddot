@@ -1,0 +1,995 @@
+import {
+  getCards,
+  getCardDetail,
+  filterCards,
+} from "../../api/card";
+import { CardListItem } from "../../types/card";
+import { Link, useSearchParams } from "react-router";
+import { useQueryClient } from "@tanstack/react-query";
+import {
+  Heart,
+  GitCompare,
+  X,
+  Check,
+  TrendingUp,
+  TrendingDown,
+  SlidersHorizontal,
+  ChevronDown,
+  ChevronUp,
+  ArrowUp,
+  ArrowUpDown,
+  Sparkles,
+  Search,
+} from "lucide-react";
+import { useState, useEffect, useRef, useCallback } from "react";
+
+
+/* ───────── 상수 ───────── */
+const NAVBAR_H = 64;
+
+// 서비스 대상 카드사 고정
+const AVAILABLE_ISSUERS = ["삼성", "신한", "현대", "국민"];
+
+const benefitCategories = [
+  { key: "온라인쇼핑", icon: "🛒", group: "쇼핑", desc: "지마켓, 쿠팡, 11번가 등" },
+  { key: "패션/뷰티", icon: "👗", group: "쇼핑", desc: "올리브영, 스파브랜드" },
+  { key: "슈퍼마켓/생활잡화", icon: "🏬", group: "쇼핑", desc: "" },
+  { key: "백화점/아울렛", icon: "🏪", group: "쇼핑", desc: "백화점, 아울렛, 면세점" },
+  { key: "대중교통/택시", icon: "🚌", group: "교통", desc: "버스, 기차, 택시" },
+  { key: "자동차/주유", icon: "⛽", group: "교통", desc: "자동차 정비, 하이패스" },
+  { key: "반려동물", icon: "🐾", group: "라이프", desc: "" },
+  { key: "구독/스트리밍", icon: "📺", group: "라이프", desc: "" },
+  { key: "레저/스포츠", icon: "⛳", group: "라이프", desc: "골프, 게임, 경기관람, 피트니스" },
+  { key: "페이/간편결제", icon: "📲", group: "라이프", desc: "" },
+  { key: "문화/엔터", icon: "🎬", group: "라이프", desc: "영화, 놀이공원, 공연" },
+  { key: "생활비", icon: "📱", group: "생활비", desc: "통신, 보험, 공과금, 금융수수료, 렌탈/자동납부" },
+  { key: "편의점", icon: "🏪", group: "음식", desc: "" },
+  { key: "커피/카페/베이커리", icon: "☕", group: "음식", desc: "" },
+  { key: "배달", icon: "🍕", group: "음식", desc: "배민, 요기요, 쿠팡이츠, 땡겨요" },
+  { key: "외식", icon: "🍽️", group: "음식", desc: "아웃백, 레스토랑 등" },
+  { key: "여행/숙박", icon: "🏨", group: "여행", desc: "렌터카 포함" },
+  { key: "항공", icon: "✈️", group: "여행", desc: "공항라운지, 마일리지" },
+  { key: "해외", icon: "🌏", group: "여행", desc: "직구, 현지, 외화 결제" },
+  { key: "교육/육아", icon: "📚", group: "기타", desc: "학원, 서점, 육아용품" },
+  { key: "의료", icon: "🏥", group: "기타", desc: "병원, 약국" },
+];
+
+const issuers = [
+  { name: "삼성카드", short: "삼성", color: "#1428A0" },
+  { name: "신한카드", short: "신한", color: "#c0392b" },
+  { name: "현대카드", short: "현대", color: "#1E1E1E" },
+  { name: "KB국민카드", short: "국민", color: "#F5A200" },
+];
+
+const feeOptions = [
+  { label: "전체", min: 0, max: 999999 },
+  { label: "~1만원", min: 1, max: 10000 },
+  { label: "~3만원", min: 1, max: 30000 },
+  { label: "~10만원", min: 1, max: 100000 },
+  { label: "10만원~", min: 100001, max: 999999 },
+];
+
+const spendingOptions = [
+  { label: "전체", max: 9999999 },
+  { label: "~30만원", max: 300000 },
+  { label: "~50만원", max: 500000 },
+];
+
+const sortOptions = [
+  { value: "popular", label: "인기순", icon: "none" },
+  { value: "benefit_desc", label: "혜택 많은 순", icon: "up" },
+  { value: "benefit_asc", label: "혜택 적은 순", icon: "down" },
+];
+
+/* ───────── 혜택 매핑 ───────── */
+
+export function CardList() {
+  const queryClient = useQueryClient()
+  const [loading, setLoading] = useState(true);
+  const [searchParams] = useSearchParams();
+  const [cards, setCards] = useState<CardListItem[]>([]);
+  const initialBenefits = (
+    searchParams.get("benefits") ||
+    searchParams.get("benefit") ||
+    ""
+  )
+    .split(",")
+    .map((v) => decodeURIComponent(v).trim())
+    .filter(Boolean);
+
+  const initialIssuer = decodeURIComponent(
+    searchParams.get("issuer") || "",
+  ).trim();
+
+  /* 필터 상태 */
+  const [selectedCategories, setSelectedCategories] =
+    useState<string[]>(initialBenefits);
+  const [cardType, setCardType] = useState<"all" | "credit" | "debit">("all");
+  const [selectedIssuers, setSelectedIssuers] = useState<string[]>(
+    AVAILABLE_ISSUERS.includes(initialIssuer) ? [initialIssuer] : [],
+  );
+  const [feeOption, setFeeOption] = useState(feeOptions[0]);
+  const [spendingOption, setSpendingOption] = useState(spendingOptions[0]);
+  const [sort, setSort] = useState("popular");
+  const [eventOnly, setEventOnly] = useState(false);
+  const [transitOnly, setTransitOnly] = useState(false);
+  const [cardNameQuery, setCardNameQuery] = useState("");
+
+  /* UI 상태 */
+  const [showDetail, setShowDetail] = useState(false);
+  const [detailVisible, setDetailVisible] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  const [favorites, setFavorites] = useState<string[]>([]);
+  const [compareList, setCompareList] = useState<string[]>([]);
+
+  const topBarRef = useRef<HTMLDivElement>(null);
+  const detailBarRef = useRef<HTMLDivElement>(null);
+  const [topBarHeight, setTopBarHeight] = useState(80);
+  const [detailBarHeight, setDetailBarHeight] = useState(0);
+  const wasAutoHiddenRef = useRef(false);
+
+  useEffect(() => {
+    const fetchCards = async () => {
+      try {
+        const data = await getCards();
+        setCards(data);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCards();
+  }, []);
+
+  useEffect(() => {
+    const fetchFilteredCards = async () => {
+      try {
+        const result = await filterCards({
+          cardType:
+            cardType === "all"
+              ? "전체"
+              : cardType === "credit"
+              ? "신용"
+              : "체크",
+
+          company:
+            selectedIssuers.length === 1
+              ? selectedIssuers[0].replace("카드", "")
+              : "전체",
+
+          annualFee: feeOption.label,
+
+          minPerformance: spendingOption.label,
+
+          hasEvent: eventOnly,
+
+          hasTransport: transitOnly,
+
+          sort:
+            sort === "benefit_desc"
+              ? "혜택많은순"
+              : sort === "benefit_asc"
+              ? "혜택적은순"
+              : "인기순",
+        });
+
+        setCards(result);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchFilteredCards();
+  }, [
+    cardType,
+    selectedIssuers,
+    feeOption,
+    spendingOption,
+    eventOnly,
+    transitOnly,
+    sort,
+  ]);
+
+  const filteredCards = cards.filter((card) => {
+    if (
+      selectedIssuers.length > 0 &&
+      !selectedIssuers.includes(card.company)
+    ) {
+      return false;
+    }
+  
+    const normalizedCardNameQuery = cardNameQuery
+      .trim()
+      .toLowerCase();
+
+    if (
+      normalizedCardNameQuery &&
+      !card.cardName.toLowerCase().includes(normalizedCardNameQuery)
+    ) {
+      return false;
+    }
+
+    return true;
+  });
+
+  useEffect(() => {
+    const el = topBarRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver(() => setTopBarHeight(el.offsetHeight));
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const el = detailBarRef.current;
+    if (!el) {
+      setDetailBarHeight(0);
+      return;
+    }
+    const ro = new ResizeObserver(() => setDetailBarHeight(el.offsetHeight));
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [showDetail]);
+
+  useEffect(() => {
+    let lastY = window.scrollY;
+
+    const onScroll = () => {
+      const y = window.scrollY;
+      setShowScrollTop(y > 400);
+
+      // 스크롤 내리면 상세 필터 자동 닫기
+      if (showDetail && y > lastY + 4) {
+        wasAutoHiddenRef.current = true;
+        setDetailVisible(false);
+        setShowDetail(false);
+      }
+
+      // 맨 위로 올라오면 상세 필터 자동 열기 (자동으로 닫혔던 경우)
+      if (y < 30 && wasAutoHiddenRef.current) {
+        wasAutoHiddenRef.current = false;
+        setShowDetail(true);
+        setDetailVisible(true);
+      }
+
+      lastY = y;
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [showDetail]);
+
+  const toggleCategory = (key: string) =>
+    setSelectedCategories((prev) =>
+      prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key],
+    );
+
+  const toggleIssuer = (name: string) =>
+    setSelectedIssuers((prev) =>
+      prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name],
+    );
+
+  const toggleFavorite = (id: string) =>
+    setFavorites((prev) =>
+      prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id],
+    );
+
+  const toggleCompare = (id: string) =>
+    setCompareList((prev) => {
+      if (prev.includes(id)) return prev.filter((c) => c !== id);
+      if (prev.length >= 3) return prev;
+      return [...prev, id];
+    });
+
+
+  const resetAll = useCallback(() => {
+    setSelectedCategories([]);
+    setCardType("all");
+    setSelectedIssuers([]);
+    setFeeOption(feeOptions[0]);
+    setSpendingOption(spendingOptions[0]);
+    setEventOnly(false);
+    setTransitOnly(false);
+    setCardNameQuery("");
+  }, []);
+
+  const prefetchCardDetail = (cardId: string) => {
+    queryClient.prefetchQuery({
+      queryKey: ["cardDetail", String(cardId)],
+      queryFn: () => getCardDetail(String(cardId)),
+      staleTime: 0,
+    });
+  };
+  const resetDetailFilters = () => {
+    setCardType("all");
+    setSelectedIssuers([]);
+    setFeeOption(feeOptions[0]);
+    setSpendingOption(spendingOptions[0]);
+    setEventOnly(false);
+    setTransitOnly(false);
+    setCardNameQuery("");
+  };
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+  const hasDetailFilter =
+    cardNameQuery.trim() !== "" ||
+    cardType !== "all" ||
+    selectedIssuers.length > 0 ||
+    feeOption.label !== "전체" ||
+    spendingOption.label !== "전체" ||
+    eventOnly ||
+    transitOnly;
+
+  const hasAnyFilter = selectedCategories.length > 0 || hasDetailFilter;
+  const benefitsQuery = selectedCategories.join(",");
+
+  return (
+    <div className="bg-[#F8FAFC] min-h-screen">
+      {/* 혜택 선택 바: 항상 고정 */}
+      <div
+        ref={topBarRef}
+        className="fixed left-0 right-0 z-40 bg-white border-b border-gray-200 shadow-sm"
+        style={{ top: NAVBAR_H }}
+      >
+        <div className="max-w-[1280px] mx-auto px-6">
+          <div className="py-3 flex items-start justify-between gap-3">
+            <div className="flex flex-wrap gap-1.5 flex-1">
+              <button
+                onClick={() => setSelectedCategories([])}
+                className={`flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-normal transition-all border ${
+                  selectedCategories.length === 0
+                    ? "bg-[#6667AA] text-white border-[#6667AA]"
+                    : "text-gray-500 border-gray-200 hover:bg-gray-50"
+                }`}
+              >
+                전체
+              </button>
+
+              {benefitCategories.map((cat) => {
+                const selected = selectedCategories.includes(cat.key);
+                return (
+                  <button
+                    key={cat.key}
+                    onClick={() => toggleCategory(cat.key)}
+                    className={`flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-normal transition-all border ${
+                      selected
+                        ? "bg-[#6667AA] text-white border-[#6667AA]"
+                        : "text-gray-600 border-gray-200 hover:bg-gray-50"
+                    }`}
+                    title={cat.desc || undefined}
+                  >
+                    <span>{cat.icon}</span>
+                    {cat.key}
+                    {selected && <X className="w-3 h-3 ml-0.5" />}
+                  </button>
+                );
+              })}
+            </div>
+
+            <button
+              onClick={() => {
+                if (showDetail) {
+                  setShowDetail(false);
+                  setDetailVisible(false);
+                  wasAutoHiddenRef.current = false;
+                } else {
+                  setShowDetail(true);
+                  setDetailVisible(true);
+                }
+              }}
+              className={`flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-normal border transition-all ${
+                hasDetailFilter
+                  ? "bg-orange-50 border-orange-300 text-orange-600"
+                  : showDetail
+                    ? "bg-gray-100 border-gray-300 text-gray-700"
+                    : "border-gray-200 text-gray-500 hover:bg-gray-50"
+              }`}
+            >
+              <SlidersHorizontal className="w-3.5 h-3.5" />
+              상세 필터
+              {hasDetailFilter && (
+                <span className="bg-orange-500 text-white text-[9px] font-normal px-1 py-0.5 rounded-full leading-none">
+                  {[
+                    cardNameQuery.trim() !== "" ? 1 : 0,
+                    cardType !== "all" ? 1 : 0,
+                    selectedIssuers.length,
+                    feeOption.label !== "전체" ? 1 : 0,
+                    spendingOption.label !== "전체" ? 1 : 0,
+                    eventOnly ? 1 : 0,
+                    transitOnly ? 1 : 0,
+                  ].reduce((a, b) => a + b, 0)}
+                </span>
+              )}
+              {showDetail ? (
+                <ChevronUp className="w-3.5 h-3.5" />
+              ) : (
+                <ChevronDown className="w-3.5 h-3.5" />
+              )}
+            </button>
+            <div className="flex items-center gap-2 bg-white border border-gray-200 rounded-xl px-3 py-2 min-w-[240px]">
+              <Search className="w-4 h-4 text-gray-400 flex-shrink-0" />
+              <input
+                type="text"
+                value={cardNameQuery}
+                onChange={(e) => setCardNameQuery(e.target.value)}
+                placeholder="카드 이름 검색"
+                className="w-full bg-transparent outline-none text-sm text-gray-700 placeholder-gray-400"
+              />
+              {cardNameQuery && (
+                <button
+                  type="button"
+                  onClick={() => setCardNameQuery("")}
+                  className="text-gray-400 hover:text-gray-600"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 상세 필터 + 정렬 바 */}
+      <div
+        ref={detailBarRef}
+        className="fixed left-0 right-0 z-30 bg-white border-b border-gray-200 shadow-sm transition-transform duration-300"
+        style={{
+          top: NAVBAR_H + topBarHeight,
+          transform:
+            showDetail && detailVisible ? "translateY(0)" : "translateY(-110%)",
+        }}
+      >
+        <div className="max-w-[1280px] mx-auto px-6">
+          <div className="py-3 space-y-3">
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-normal text-gray-400 w-20 flex-shrink-0">
+                카드 종류
+              </span>
+              <div className="flex rounded-xl overflow-hidden border border-gray-200">
+                {(["all", "credit", "debit"] as const).map((t) => (
+                  <button
+                    key={t}
+                    onClick={() => setCardType(t)}
+                    className={`px-4 py-1.5 text-xs font-normal transition-all ${
+                      cardType === t
+                        ? "bg-[#6667AA] text-white"
+                        : "text-gray-500 hover:bg-gray-50"
+                    }`}
+                  >
+                    {t === "all"
+                      ? "전체"
+                      : t === "credit"
+                        ? "신용카드"
+                        : "체크카드"}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-normal text-gray-400 w-20 flex-shrink-0">
+                카드사
+              </span>
+              <div className="flex flex-wrap gap-1.5">
+                {issuers.map((issuer) => {
+                  const selected = selectedIssuers.includes(issuer.short);
+                  return (
+                    <button
+                      key={issuer.name}
+                      onClick={() => toggleIssuer(issuer.short)}
+                      className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg border text-xs font-normal transition-all ${
+                        selected
+                          ? "border-[#6667AA] bg-[#6667AA]/8 text-[#6667AA]"
+                          : "border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-50"
+                      }`}
+                    >
+                      <div
+                        className="w-2 h-2 rounded-full"
+                        style={{ backgroundColor: issuer.color }}
+                      />
+                      {issuer.name}
+                      {selected && <Check className="w-3 h-3" />}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-normal text-gray-400 w-20 flex-shrink-0">
+                연회비
+              </span>
+              <div className="flex gap-1 flex-wrap">
+                {feeOptions.map((opt) => (
+                  <button
+                    key={opt.label}
+                    onClick={() => setFeeOption(opt)}
+                    className={`px-2.5 py-1 rounded-lg text-xs font-normal transition-all ${
+                      feeOption.label === opt.label
+                        ? "bg-[#6667AA] text-white"
+                        : "text-gray-500 hover:bg-gray-100 border border-gray-200"
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-normal text-gray-400 w-20 flex-shrink-0">
+                전월실적
+              </span>
+              <div className="flex gap-1 flex-wrap">
+                {spendingOptions.map((opt) => (
+                  <button
+                    key={opt.label}
+                    onClick={() => setSpendingOption(opt)}
+                    className={`px-2.5 py-1 rounded-lg text-xs font-normal transition-all ${
+                      spendingOption.label === opt.label
+                        ? "bg-[#6667AA] text-white"
+                        : "text-gray-500 hover:bg-gray-100 border border-gray-200"
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-normal text-gray-400 w-20 flex-shrink-0">
+                추가 조건
+              </span>
+
+              <div className="flex flex-wrap gap-2">
+                <button
+                  onClick={() => setEventOnly((v) => !v)}
+                  className={`flex items-center gap-2 px-3 py-1.5 rounded-xl border text-xs font-normal transition-all ${
+                    eventOnly
+                      ? "bg-[#6667AA]/8 border-[#6667AA] text-[#6667AA]"
+                      : "border-gray-200 text-gray-600 hover:bg-gray-50"
+                  }`}
+                >
+                  <div
+                    className={`w-4 h-4 rounded border-2 flex items-center justify-center flex-shrink-0 transition-all ${
+                      eventOnly
+                        ? "bg-[#6667AA] border-[#6667AA]"
+                        : "border-gray-300"
+                    }`}
+                  >
+                    {eventOnly && <Check className="w-2.5 h-2.5 text-white" />}
+                  </div>
+                  이벤트 카드 포함
+                </button>
+
+                <button
+                  onClick={() => setTransitOnly((v) => !v)}
+                  className={`flex items-center gap-2 px-3 py-1.5 rounded-xl border text-xs font-normal transition-all ${
+                    transitOnly
+                      ? "bg-[#6667AA]/8 border-[#6667AA] text-[#6667AA]"
+                      : "border-gray-200 text-gray-600 hover:bg-gray-50"
+                  }`}
+                >
+                  <div
+                    className={`w-4 h-4 rounded border-2 flex items-center justify-center flex-shrink-0 transition-all ${
+                      transitOnly
+                        ? "bg-[#6667AA] border-[#6667AA]"
+                        : "border-gray-300"
+                    }`}
+                  >
+                    {transitOnly && <Check className="w-2.5 h-2.5 text-white" />}
+                  </div>
+                  교통카드 기능 포함
+                </button>
+              </div>
+
+              {hasDetailFilter && (
+                <button
+                  onClick={resetDetailFilters}
+                  className="ml-auto flex items-center gap-1 text-xs text-red-400 hover:text-red-600 font-normal transition-colors"
+                >
+                  <X className="w-3 h-3" /> 상세 필터 초기화
+                </button>
+              )}
+            </div>
+
+            <div className="border-t border-gray-100 pt-3 flex items-center gap-3">
+              <div className="w-20 flex-shrink-0 flex items-center gap-1.5 text-xs font-normal text-gray-400">
+                <ArrowUpDown className="w-3.5 h-3.5" /> 정렬
+              </div>
+
+              <div className="flex items-center gap-1.5 flex-1 flex-wrap">
+                {sortOptions.map((opt) => (
+                  <button
+                    key={opt.value}
+                    onClick={() => setSort(opt.value)}
+                    className={`flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-normal transition-all ${
+                      sort === opt.value
+                        ? "bg-[#6667AA] text-white"
+                        : "text-gray-500 hover:bg-gray-100 bg-white border border-gray-200"
+                    }`}
+                  >
+                    {opt.icon === "up" && <TrendingUp className="w-3 h-3" />}
+                    {opt.icon === "down" && (
+                      <TrendingDown className="w-3 h-3" />
+                    )}
+                    {opt.icon === "none" && (
+                      <SlidersHorizontal className="w-3 h-3" />
+                    )}
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
+
+              <div className="flex items-center gap-2">
+                {hasAnyFilter && (
+                  <button
+                    onClick={resetAll}
+                    className="flex items-center gap-1 text-xs text-gray-400 hover:text-red-500 font-normal transition-colors"
+                  >
+                    <X className="w-3 h-3" /> 전체 초기화
+                  </button>
+                )}
+                <span className="text-xs text-gray-500 font-normal">
+                  총{" "}
+                  <span className="text-[#6667AA] font-normal">
+                    {filteredCards.length}
+                  </span>
+                  개
+                </span>
+              </div>
+            </div>
+
+            {hasAnyFilter && (
+              <div className="border-t border-gray-100 pt-4 mt-1">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="text-xs font-normal text-gray-400">
+                    적용 필터:
+                  </span>
+
+                  {selectedCategories.map((cat) => (
+                    <span
+                      key={cat}
+                      className="flex items-center gap-1 px-2.5 py-1 bg-[#6667AA] text-white rounded-full text-xs font-normal"
+                    >
+                      {benefitCategories.find((c) => c.key === cat)?.icon} {cat}
+                      <button
+                        onClick={() => toggleCategory(cat)}
+                        className="ml-0.5 opacity-70 hover:opacity-100"
+                      >
+                        <X className="w-3 h-3" />
+                      </button>
+                    </span>
+                  ))}
+
+                  {cardType !== "all" && (
+                    <span className="flex items-center gap-1 px-2.5 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-normal">
+                      {cardType === "credit" ? "신용카드" : "체크카드"}
+                      <button onClick={() => setCardType("all")}>
+                        <X className="w-3 h-3" />
+                      </button>
+                    </span>
+                  )}
+
+                  {selectedIssuers.map((issuer) => (
+                    <span
+                      key={issuer}
+                      className="flex items-center gap-1 px-2.5 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-normal"
+                    >
+                      {issuer}
+                      <button onClick={() => toggleIssuer(issuer)}>
+                        <X className="w-3 h-3" />
+                      </button>
+                    </span>
+                  ))}
+
+                  {feeOption.label !== "전체" && (
+                    <span className="flex items-center gap-1 px-2.5 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-normal">
+                      연회비 {feeOption.label}
+                      <button onClick={() => setFeeOption(feeOptions[0])}>
+                        <X className="w-3 h-3" />
+                      </button>
+                    </span>
+                  )}
+
+                  {spendingOption.label !== "전체" && (
+                    <span className="flex items-center gap-1 px-2.5 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-normal">
+                      전월실적 {spendingOption.label}
+                      <button
+                        onClick={() => setSpendingOption(spendingOptions[0])}
+                      >
+                        <X className="w-3 h-3" />
+                      </button>
+                    </span>
+                  )}
+
+                  {eventOnly && (
+                    <span className="flex items-center gap-1 px-2.5 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-normal">
+                      이벤트 카드 포함
+                      <button onClick={() => setEventOnly(false)}>
+                        <X className="w-3 h-3" />
+                      </button>
+                    </span>
+                  )}
+
+                  {transitOnly && (
+                    <span className="flex items-center gap-1 px-2.5 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-normal">
+                      교통카드 기능 포함
+                      <button onClick={() => setTransitOnly(false)}>
+                        <X className="w-3 h-3" />
+                      </button>
+                    </span>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+
+      <div
+        style={{
+          paddingTop:
+            NAVBAR_H +
+            topBarHeight +
+            (showDetail && detailVisible ? detailBarHeight : 0),
+        }}
+      />
+
+<div className="max-w-[1280px] mx-auto px-6 pb-20">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    {filteredCards.map((card) => {
+      const summaryItems = card.summary
+        ? card.summary.split("/").map((item) => item.trim()).filter(Boolean)
+        : [];
+
+        const isVerticalCard =
+          card.company?.includes("삼성") ||
+          card.company?.includes("현대");
+          
+          return (
+  <div
+    key={card.cardId}
+    className="group bg-white rounded-2xl border border-[#6667AA]/20 shadow-md hover:shadow-md overflow-hidden flex flex-col"
+  >
+    {/* 1. 카드 이미지 영역 */}
+    <div className="bg-gray-50/70 p-5 flex flex-col items-center">
+      {card.imageUrl ? (
+      <div className="w-36 h-24 flex items-center justify-center overflow-hidden">
+        <img
+          src={card.imageUrl}
+          alt={card.cardName}
+          loading="lazy"
+          style={{
+            transform: isVerticalCard ? "rotate(-90deg)" : "none",
+            height: isVerticalCard ? "120px" : "auto",
+            width: isVerticalCard ? "auto" : "100%",
+            objectFit: "contain",
+          }}
+          className="drop-shadow-md"
+        />
+      </div>
+    ) : (
+      <div className="w-36 h-24 rounded-2xl bg-black shadow-md flex flex-col justify-between p-3 text-white">
+        <div className="text-[10px] opacity-70">{card.company}카드</div>
+        <div className="text-sm font-normal leading-tight line-clamp-2">
+          {card.cardName}
+        </div>
+        <div className="text-[10px] opacity-70">{card.cardType}</div>
+      </div>
+    )}
+
+      {/* 신용/체크 + 교통 표시 */}
+      <div className="flex gap-1 flex-wrap justify-center mt-2">
+        <span
+          className={`text-[9px] font-normal px-1.5 py-0.5 rounded ${
+            card.cardType === "신용"
+              ? "bg-blue-50 text-blue-600"
+              : "bg-purple-50 text-purple-600"
+          }`}
+        >
+          {card.cardType}
+        </span>
+
+        {card.hasTransport && (
+          <span className="text-[9px] font-normal px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-600">
+            교통
+          </span>
+        )}
+      </div>
+    </div>
+
+    {/* 2. 카드 정보 영역 */}
+    <div className="p-3 flex flex-col flex-1">
+      <div className="text-[10px] text-gray-400 font-normal mb-0.5">
+        {card.company}카드
+      </div>
+
+      <h3 className="text-sm font-normal text-gray-900 mb-3 group-hover:text-[#6667AA] transition-colors leading-snug line-clamp-1">
+        {card.cardName}
+      </h3>
+
+      {/* 연회비 / 전월실적 / 월 최대 혜택 */}
+      <div className="space-y-1.5 text-xs font-normal mb-3">
+        <div className="flex items-center justify-between">
+          <span className="text-gray-400">연회비</span>
+          <span
+            className={
+              card.annualFee === 0
+                ? "font-normal text-green-600"
+                : "font-normal text-gray-900"
+            }
+          >
+            {card.annualFee === 0
+              ? "무료"
+              : `${(card.annualFee ?? 0).toLocaleString()}원`}
+          </span>
+        </div>
+
+        <div className="flex items-center justify-between">
+          <span className="text-gray-400">전월실적</span>
+          <span className="font-normal text-gray-900">
+            {card.minPerformance === 0
+              ? "무실적"
+              : `${((card.minPerformance ?? 0) / 10000).toLocaleString()}만원`}
+          </span>
+        </div>
+
+        <div className="flex items-center justify-between">
+          <span className="text-gray-400">월 최대 혜택</span>
+          <span className="font-normal text-[#6667AA]">
+            {card.totalMaxBenefit
+              ? `${(card.totalMaxBenefit ?? 0).toLocaleString()}원`
+              : "정보 없음"}
+          </span>
+        </div>
+      </div>
+
+      {/* 대표 혜택 - 금액 정보 아래 */}
+      <div className="mb-3 pb-3 border-b border-gray-50">
+        <div className="text-[10px] font-normal text-gray-400 mb-1.5">
+          대표 혜택
+        </div>
+
+        <div className="space-y-1">
+          {summaryItems.slice(0, 2).map((benefit, index) => (
+            <div
+              key={index}
+              className="flex items-start gap-1.5 text-xs font-normal text-gray-600"
+            >
+              <span className="text-[#6667AA]">•</span>
+              <span className="line-clamp-1">{benefit}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* 이벤트 혜택 */}
+      {card.hasEvent && (
+        <div className="mb-3 flex items-center gap-1.5 bg-amber-50 border border-amber-100 rounded-lg px-2.5 py-1.5">
+          <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+          <span className="text-[10px] text-amber-700 font-normal">
+            이벤트 혜택 있음
+          </span>
+        </div>
+      )}
+
+      {/* 버튼 영역 */}
+      <div className="mt-auto pt-3 border-t border-gray-50 flex items-center justify-between">
+        <Link
+          to={`/cards/${encodeURIComponent(card.cardId)}`}
+          onMouseEnter={() => prefetchCardDetail(card.cardId)}
+          onFocus={() => prefetchCardDetail(card.cardId)}
+          className="text-xs font-normal bg-[#6667AA] text-white px-3 py-1.5 rounded-lg hover:opacity-90"
+        >
+          상세보기
+        </Link>
+
+        <div className="flex items-center gap-1.5">
+          <button
+            type="button"
+            onClick={() => toggleFavorite(card.cardId)}
+            className={`p-1.5 rounded-lg border hover:bg-gray-50 ${
+              favorites.includes(card.cardId)
+                ? "text-red-500 bg-red-50 border-red-100"
+                : "text-gray-300 border-gray-200"
+            }`}
+          >
+            <Heart
+              className={`w-4 h-4 ${
+                favorites.includes(card.cardId) ? "fill-red-500" : ""
+              }`}
+            />
+          </button>
+
+          <button
+            type="button"
+            onClick={() => toggleCompare(card.cardId)}
+            className={`p-1.5 rounded-lg border hover:bg-gray-50 ${
+              compareList.includes(card.cardId)
+                ? "text-[#6667AA] bg-indigo-50 border-indigo-100"
+                : "text-gray-300 border-gray-200"
+            }`}
+          >
+            <GitCompare className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+        })}
+       </div>
+</div>
+
+      {compareList.length > 0 && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+          <div
+            className="rounded-2xl shadow-xl px-6 py-3.5 flex items-center gap-4"
+            style={{ backgroundColor: "#6667AA" }}
+          >
+            <div className="flex items-center gap-2">
+              <GitCompare className="w-4 h-4 text-white" />
+              <span className="text-white text-sm font-normal">비교 중</span>
+              <span className="bg-white/20 text-white text-xs px-2 py-0.5 rounded-full font-normal">
+                {compareList.length}/3
+              </span>
+            </div>
+
+            <div className="flex gap-2">
+              {compareList.map((id) => {
+                const card = cards.find((c) => c.cardId === id);
+                return card ? (
+                  <div
+                    key={id}
+                    className="flex items-center gap-1 bg-white/10 text-white text-xs px-2 py-1 rounded-lg font-normal"
+                  >
+                    {card.cardName.split(" ").slice(-1)[0]}
+                    <button
+                      onClick={() => toggleCompare(id)}
+                      className="ml-1 text-white/60 hover:text-white"
+                    >
+                      <X className="w-3 h-3" />
+                    </button>
+                  </div>
+                ) : null;
+              })}
+            </div>
+
+            <Link
+              to={
+                benefitsQuery.length > 0
+                  ? `/compare?cards=${compareList.join(",")}&benefits=${encodeURIComponent(
+                      benefitsQuery,
+                    )}`
+                  : `/compare?cards=${compareList.join(",")}`
+              }
+              className="px-4 py-2 bg-[#0ABFA3] text-white rounded-xl text-sm font-normal hover:bg-[#099d86] transition-all"
+            >
+              비교하기
+            </Link>
+          </div>
+        </div>
+      )}
+
+      <button
+        onClick={scrollToTop}
+        className={`fixed right-6 z-50 w-11 h-11 text-white rounded-2xl shadow-lg flex items-center justify-center hover:opacity-90 transition-all duration-300 ${
+          showScrollTop
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-4 pointer-events-none"
+        }`}
+        style={{
+          bottom: compareList.length > 0 ? "88px" : "24px",
+          backgroundColor: "#6667AA",
+        }}
+        aria-label="맨 위로"
+      >
+        <ArrowUp className="w-5 h-5" />
+      </button>
+    </div>
+  );
+}
