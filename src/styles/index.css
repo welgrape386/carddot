@@ -1,0 +1,46 @@
+@import "./fonts.css";
+@import "./tailwind.css";
+@import "./theme.css";
+
+.benefit-html-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+}
+
+.benefit-html-content th,
+.benefit-html-content td {
+  border: 1px solid #d1d5db;
+  padding: 8px;
+  text-align: center;
+}
+
+.benefit-html-content th {
+  background-color: #f8fafc;
+  font-weight: 600;
+}
+
+.benefit-html-content tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.notice-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+
+.notice-table th,
+.notice-table td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.notice-table th {
+  background: #f8fafc;
+  color: #475569;
+}
+
+.notice-table {
+  overflow-x: auto;
+}
