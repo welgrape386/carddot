@@ -472,7 +472,7 @@ return (
   <div className="bg-white border-b border-gray-300">
     <div className="max-w-[1280px] mx-auto px-6 py-3">
       <div className="flex items-center gap-2 text-xs text-gray-400">
-        <Link to="/" className="hover:text-[#1B3D7B]">
+        <Link to="|" className="hover:text-[#1B3D7B]">
         홈
         </Link>
         <ChevronRight className="w-3 h-3" />
