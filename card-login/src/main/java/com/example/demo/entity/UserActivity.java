@@ -22,7 +22,7 @@ public class UserActivity {
     private Card card;
 
     @Column(name = "type", length = 50)
-    private String type; // "VIEW", "FAVORITE" 등
+    private String type; // "RECENT", "FAVORITE" 등
 
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
@@ -35,6 +35,19 @@ public class UserActivity {
         this.card = card;
         this.type = type;
     }
+    
+    public Integer getActivityId() { return activityId; }
+    public void setActivityId(Integer activityId) { this.activityId = activityId; }
+
+    public User getUser() { return user; }
+    public void setUser(User user) { this.user = user; }
+
     public Card getCard() { return card; }
+    public void setCard(Card card) { this.card = card; }
+
     public String getType() { return type; }
+    public void setType(String type) { this.type = type; }
+
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 }

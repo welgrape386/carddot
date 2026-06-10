@@ -5,11 +5,16 @@ import com.example.demo.entity.Benefit;
 import com.example.demo.entity.Card;
 import com.example.demo.entity.Notice;
 import com.example.demo.entity.CardEvent;
+import com.example.demo.entity.UserActivity;
 import com.example.demo.repository.BenefitRepository;
 import com.example.demo.repository.CardRepository;
 import com.example.demo.repository.NoticeRepository;
 import com.example.demo.repository.CardEventRepository;
 import com.example.demo.repository.CardStatsRepository;
+import com.example.demo.repository.UserRepository;
+import com.example.demo.repository.UserActivityRepository;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -29,12 +34,16 @@ public class CardService {
     private final BenefitEngineService benefitEngineService;
     
     private final CardStatsRepository cardStatsRepository;
+    
+    private final UserRepository userRepository;
+    private final UserActivityRepository userActivityRepository;
 
     // 생성자를 통해 조수(Repository)를 모두 주입받음
     public CardService(CardRepository cardRepository, BenefitRepository benefitRepository,
     		NoticeRepository noticeRepository, CardEventRepository cardEventRepository,
     		CardScoreService cardScoreService, BenefitEngineService benefitEngineService,
-    		CardStatsRepository cardStatsRepository) {
+    		CardStatsRepository cardStatsRepository, UserRepository userRepository,
+    		UserActivityRepository userActivityRepository) {
         this.cardRepository = cardRepository;
         this.benefitRepository = benefitRepository;
         this.noticeRepository = noticeRepository;
@@ -42,6 +51,8 @@ public class CardService {
         this.cardScoreService = cardScoreService;
         this.benefitEngineService = benefitEngineService;
         this.cardStatsRepository = cardStatsRepository;
+        this.userRepository = userRepository;
+        this.userActivityRepository = userActivityRepository;
     }
 
     // 1. 전체 카드 조회
@@ -69,6 +80,25 @@ public class CardService {
         
         // 카드 찾으면 클릭 수 + 1
         cardStatsRepository.incrementDetailClick(cardId);
+        
+        // 최근 본 카드 이력 저장
+        // 인증 정보 확인
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        // 회원이면
+        if (auth != null && auth.isAuthenticated() && !auth.getPrincipal().equals("anonymousUser")) {
+            String loginEmail = (String) auth.getPrincipal(); // JWT에서 꺼낸 이메일
+            
+            // 이메일로 유저의 DB PK(user_id) 찾아옴
+            userRepository.findByEmail(loginEmail).ifPresent(user -> {
+                UserActivity activity = new UserActivity();
+                activity.setUser(user); // 유저 ID 세팅
+                activity.setCard(card); // 지금 보고 있는 카드 ID 세팅
+                activity.setType("RECENT"); // 타입은 "RECENT" 고정
+                // createdAt은 DB 디폴트 설정에 의해 알아서 현재 시간으로 들어감
+                
+                userActivityRepository.save(activity); // DB에 저장
+            });
+        }
         
         // A. 주요 혜택 매핑
         // 2. 이 카드에 속한 혜택 목록 가져오기
