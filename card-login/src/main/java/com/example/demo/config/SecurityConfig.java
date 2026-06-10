@@ -8,12 +8,22 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import java.util.Collections;
+
+import com.example.demo.security.JwtTokenProvider;
+import com.example.demo.security.JwtAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+	
+	private final JwtTokenProvider jwtTokenProvider;
+
+    public SecurityConfig(JwtTokenProvider jwtTokenProvider) {
+        this.jwtTokenProvider = jwtTokenProvider;
+    }
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
@@ -48,7 +58,9 @@ public class SecurityConfig {
             		.requestMatchers("/api/auth/**", "/api/cards/**", "/error").permitAll()
             		.anyRequest().authenticated()
                 // .requestMatchers("/**").permitAll()
-            );
+            )
+            
+            .addFilterBefore(new JwtAuthenticationFilter(jwtTokenProvider), UsernamePasswordAuthenticationFilter.class);
             
         return http.build();
     }
