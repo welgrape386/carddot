@@ -278,20 +278,65 @@ function EditProfile() {
   const [pwSaved, setPwSaved] = useState(false);
   const [pwError, setPwError] = useState("");
 
-  const handleSave = () => {
-    updateUserInfo({ name: form.name, email: form.email, phone: form.phone });
-    setSaved(true);
-    setTimeout(() => setSaved(false), 2000);
+  const handleSave = async () => {
+    try {
+      await api.put("/api/users/profile", {
+        name: form.name,
+        email: form.email,
+        phoneNumber: form.phone,
+      });
+
+      updateUserInfo({
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+      });
+
+      setSaved(true);
+      setTimeout(() => setSaved(false), 2000);
+    } catch (error) {
+      console.error(error);
+      alert("개인정보 수정에 실패했습니다.");
+    }
   };
 
-  const handlePwSave = () => {
+  const handlePwSave = async () => {
     setPwError("");
-    if (!pwForm.current) { setPwError("현재 비밀번호를 입력해주세요."); return; }
-    if (pwForm.next.length < 8) { setPwError("새 비밀번호를 8자 이상 입력해주세요."); return; }
-    if (pwForm.next !== pwForm.confirm) { setPwError("새 비밀번호가 일치하지 않습니다."); return; }
-    setPwSaved(true);
-    setPwForm({ current: "", next: "", confirm: "" });
-    setTimeout(() => setPwSaved(false), 2000);
+
+    if (!pwForm.current) {
+      setPwError("현재 비밀번호를 입력해주세요.");
+      return;
+    }
+
+    if (pwForm.next.length < 8) {
+      setPwError("새 비밀번호를 8자 이상 입력해주세요.");
+      return;
+    }
+
+    if (pwForm.next !== pwForm.confirm) {
+      setPwError("새 비밀번호가 일치하지 않습니다.");
+      return;
+    }
+
+    try {
+      await api.put("/api/users/password", {
+        currentPassword: pwForm.current,
+        newPassword: pwForm.next,
+        newPasswordConfirm: pwForm.confirm,
+      });
+
+      setPwSaved(true);
+      setPwForm({
+        current: "",
+        next: "",
+        confirm: "",
+      });
+
+      setTimeout(() => setPwSaved(false), 2000);
+    } catch (error) {
+      console.error(error);
+      setPwError("비밀번호 변경에 실패했습니다.");
+    }
   };
 
   const fields = [
