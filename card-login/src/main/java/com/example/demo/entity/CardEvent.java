@@ -8,9 +8,8 @@ import java.time.LocalDate;
 public class CardEvent {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "event_id")
-    private Integer eventId;
+    private String eventId;
 
     @Column(name = "card_id")
     private String cardId;
@@ -37,7 +36,7 @@ public class CardEvent {
     public CardEvent() {}
 
     // Getters
-    public Integer getEventId() { return eventId; }
+    public String getEventId() { return eventId; }
     public String getCardId() { return cardId; }
     public String getEventTitle() { return eventTitle; }
     public String getSection() { return section; }
