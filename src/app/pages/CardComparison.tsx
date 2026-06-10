@@ -504,7 +504,7 @@ const sortedSelectedIds = useMemo(() => [...selectedIds].sort(), [selectedIds]);
   } = useQuery({
     queryKey: ["cardCompare", sortedSelectedIds, selectedPersona],
     queryFn: () => compareCards(sortedSelectedIds, selectedPersona as PersonaType),
-    enabled: sortedSelectedIds.length >= 1,
+    enabled: sortedSelectedIds.length >= 2
   });
 
   const selectedCards = compareApiCards;
