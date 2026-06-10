@@ -119,3 +119,11 @@ export const filterCards = async (filters: any) => {
       }))
     : [];
 };
+
+export const getRecentCards = async () => {
+  const response = await api.get("/api/users/recent-cards");
+
+  console.log("recent cards", response.data);
+
+  return response.data;
+};

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { api } from "../../api/axios";
+import { useQuery } from "@tanstack/react-query";
+import { getRecentCards } from "../../api/card";
 import {
   User,
   Mail,
@@ -21,8 +23,6 @@ import {
   AlertCircle,
 } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
-import { cards } from "../data/mockData";
-import { CardVisual } from "../components/CardVisual";
 
 // ── 가상 카드 내역 데이터 ──────────────────────────
 const mockCardHistory = [
@@ -403,69 +403,62 @@ function EditProfile() {
   );
 }
 
-// ── 최근 본 카드 섹션 ──────────────────────────────
 function RecentlyViewed() {
-  const { recentlyViewedIds } = useAuth();
-  const viewedCards = recentlyViewedIds
-    .map((id) => cards.find((c) => c.id === id))
-    .filter(Boolean) as typeof cards;
+  const { data: viewedCards = [], isLoading } = useQuery({
+    queryKey: ["recentCards"],
+    queryFn: getRecentCards,
+  });
+
+  if (isLoading) {
+    return (
+      <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
+        최근 본 카드를 불러오는 중...
+      </div>
+    );
+  }
 
   return (
     <div>
       <div className="mb-6">
         <h2 className="text-xl text-gray-900 mb-1">최근 본 카드</h2>
         <p className="text-sm text-gray-500 font-normal">
-          최근 확인한 카드 목록입니다 (최대 10개)
+          최근 조회한 카드 목록입니다
         </p>
       </div>
 
       {viewedCards.length === 0 ? (
-        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-12 flex flex-col items-center gap-3 text-center">
-          <div
-            className="w-14 h-14 rounded-2xl flex items-center justify-center"
-            style={{ backgroundColor: "rgba(102,103,170,0.08)" }}
-          >
-            <Clock className="w-7 h-7" style={{ color: "#6667AA" }} />
-          </div>
-          <p className="text-gray-500 font-normal text-sm">아직 본 카드가 없습니다</p>
-          <Link
-            to="/cards"
-            className="text-sm font-normal hover:underline flex items-center gap-1"
-            style={{ color: "#6667AA" }}
-          >
-            카드 둘러보기 <ChevronRight className="w-4 h-4" />
-          </Link>
+        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-12 text-center">
+          <p className="text-gray-500 text-sm">
+            최근 본 카드가 없습니다
+          </p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {viewedCards.map((card) => (
+        <div className="space-y-4">
+          {viewedCards.map((card: any) => (
             <Link
-              key={card.id}
-              to={`/cards/${card.id}`}
-              className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4 flex items-center gap-4 hover:border-[#6667AA]/30 hover:shadow-md transition-all group"
+              key={card.cardId}
+              to={`/cards/${card.cardId}`}
+              className="block bg-white rounded-2xl border border-gray-100 shadow-sm p-5 hover:border-[#6667AA]/30 transition-all"
             >
-              <CardVisual card={card} size="md" />
-              <div className="flex-1 min-w-0">
-                <div className="text-xs text-gray-400 font-normal mb-0.5">{card.issuer}</div>
-                <div className="text-sm font-normal text-gray-900 truncate leading-snug mb-1.5">
-                  {card.name}
+              <div className="flex items-center gap-4">
+                <img
+                  src={card.imageUrl}
+                  alt={card.cardName}
+                  className="w-16 h-10 object-contain"
+                />
+
+                <div className="flex-1">
+                  <div className="text-xs text-gray-400 font-normal mb-1">
+                    {card.company}
+                  </div>
+
+                  <div className="text-sm text-gray-900 font-normal">
+                    {card.cardName}
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-xs text-gray-400 font-normal">
-                    연회비{" "}
-                    <span className={card.annualFee === 0 ? "text-green-600" : "text-gray-600"}>
-                      {card.annualFee === 0 ? "무료" : `${card.annualFee.toLocaleString()}원`}
-                    </span>
-                  </span>
-                  <span className="text-gray-200">·</span>
-                  <span className="text-xs font-normal" style={{ color: "#6667AA" }}>
-                    월최대 {(card.maxBenefit / 10000).toFixed(0)}만원
-                  </span>
-                </div>
+
+                <ChevronRight className="w-4 h-4 text-gray-300" />
               </div>
-              <ChevronRight
-                className="w-4 h-4 text-gray-300 flex-shrink-0 group-hover:text-[#6667AA] transition-colors"
-              />
             </Link>
           ))}
         </div>
