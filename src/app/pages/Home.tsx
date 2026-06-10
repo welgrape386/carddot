@@ -391,11 +391,21 @@ export function Home() {
                       )}
                     </div>
 
-                    <div className="flex-shrink-0">
+                    <div
+                      className={`flex-shrink-0 flex items-center justify-center ${
+                        activeIssuer === "KB국민카드"
+                          ? "w-[64px] h-[40px]"
+                          : "w-[40px] h-[64px]"
+                      }`}
+                    >
                       <img
                         src={card.imageUrl}
                         alt={card.cardName}
-                        className="w-16 h-10 object-contain"
+                        className={`w-full h-full object-contain ${
+                          activeIssuer === "KB국민카드"
+                            ? "rotate-90"
+                            : ""
+                        }`}
                       />
                     </div>
 
