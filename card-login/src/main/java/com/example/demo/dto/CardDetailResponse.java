@@ -60,12 +60,14 @@ public class CardDetailResponse {
         private String maxLimitUnit;
         private Integer groupMaxLimit;
         private String groupMaxLimitUnit;
+        private String effectiveBasis;
 
         public BenefitDto(String categoryName, String targetMerchants, String uiTitle, 
                           String uiContent, String effectiveRateText,
                           BigDecimal benefitValue, String benefitUnit,
                           Integer maxLimit, String maxLimitUnit,
-                          Integer groupMaxLimit, String groupMaxLimitUnit) {
+                          Integer groupMaxLimit, String groupMaxLimitUnit,
+                          String effectiveBasis) {
             this.categoryName = categoryName;
             this.targetMerchants = targetMerchants;
             this.uiTitle = uiTitle;
@@ -77,6 +79,7 @@ public class CardDetailResponse {
             this.maxLimitUnit = maxLimitUnit;
             this.groupMaxLimit = groupMaxLimit;
             this.groupMaxLimitUnit = groupMaxLimitUnit;
+            this.effectiveBasis = effectiveBasis;
         }
         // Getter
         public String getCategoryName() { return categoryName; }
@@ -90,6 +93,7 @@ public class CardDetailResponse {
         public String getMaxLimitUnit() { return maxLimitUnit; }
         public Integer getGroupMaxLimit() { return groupMaxLimit; }
         public String getGroupMaxLimitUnit() { return groupMaxLimitUnit; }
+        public String getEffectiveBasis() { return effectiveBasis; }
     }
     
     // 탭2: 유의사항

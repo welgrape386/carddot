@@ -103,7 +103,8 @@ public class CardService {
                             b.getMaxLimit(),
                             b.getMaxLimitUnit(),
                             b.getGroupMaxLimit(),
-                            b.getGroupMaxLimitUnit()
+                            b.getGroupMaxLimitUnit(),
+                            effectiveBasis
                     );
                 }).collect(Collectors.toList());
         

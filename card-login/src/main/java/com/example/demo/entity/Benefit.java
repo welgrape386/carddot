@@ -14,7 +14,7 @@ public class Benefit {
 
     @Column(name = "card_id", nullable = false)
     private String cardId;
-
+    
  // 다대다 매핑: benefit_category 중간 테이블을 통해 카테고리 목록을 가져옴
     @ManyToMany
     @JoinTable(
@@ -23,19 +23,13 @@ public class Benefit {
         inverseJoinColumns = @JoinColumn(name = "category_id")
     )
     private List<Category> categories = new ArrayList<>();
-
+    
     @Column(name = "row_type", nullable = false, length = 20)
     private String rowType;
-
+    
     @Column(name = "benefit_type", length = 50)
     private String benefitType;
-
-    @Column(name = "ui_title")
-    private String uiTitle;
-
-    @Column(name = "ui_content", columnDefinition = "TEXT")
-    private String uiContent;
-
+    
     @Column(name = "benefit_value")
     private BigDecimal benefitValue;
 
@@ -65,6 +59,18 @@ public class Benefit {
 
     @Column(name = "group_max_limit_unit", length = 20)
     private String groupMaxLimitUnit;
+    
+    @Column(name = "unit_amount")
+    private Integer unitAmount;
+
+    @Column(name = "ui_title")
+    private String uiTitle;
+
+    @Column(name = "ui_content", columnDefinition = "TEXT")
+    private String uiContent;
+    
+    @Column(name = "benefit_group", length = 10)
+    private String benefitGroup;
 
     // Getter
     public String getBenefitId() { return benefitId; }
@@ -72,8 +78,6 @@ public class Benefit {
     public List<Category> getCategories() { return categories; }
     public String getRowType() { return rowType; }
     public String getBenefitType() { return benefitType; }
-    public String getUiTitle() { return uiTitle; }
-    public String getUiContent() { return uiContent; }
     public BigDecimal getBenefitValue() { return benefitValue; }
     public String getBenefitUnit() { return benefitUnit; }
     // public String getOnOffline() { return onOffline; }
@@ -84,4 +88,8 @@ public class Benefit {
     public String getMaxLimitUnit() { return maxLimitUnit; }
     public Integer getGroupMaxLimit() { return groupMaxLimit; }
     public String getGroupMaxLimitUnit() { return groupMaxLimitUnit; }
+    public Integer getUnitAmount() { return unitAmount; }
+    public String getUiTitle() { return uiTitle; }
+    public String getUiContent() { return uiContent; }
+    public String getBenefitGroup() { return benefitGroup; }
 }
