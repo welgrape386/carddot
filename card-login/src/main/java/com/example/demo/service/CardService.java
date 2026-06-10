@@ -112,9 +112,10 @@ public class CardService {
                                           ? b.getCategories().get(0).getCategoryName() 
                                           : "기타";
                     
+                    // 더 이상 안 쓰는 변수
                     // 수치(10)와 단위(%)를 합쳐서 "10%" 형태의 텍스트로 만듦
-                    String valueText = (b.getBenefitValue() != null ? b.getBenefitValue().toString() : "") 
-                                     + (b.getBenefitUnit() != null ? b.getBenefitUnit() : "");
+                    // String valueText = (b.getBenefitValue() != null ? b.getBenefitValue().toString() : "") 
+                    //                  + (b.getBenefitUnit() != null ? b.getBenefitUnit() : "");
                     
                     // 실질 할인율 실시간 계산
                     CalculationResult calcResult = benefitEngineService.calculateEffectiveRate(b, card.getCompany());
