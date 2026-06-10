@@ -28,10 +28,10 @@ public class CardEvent {
     private String eventLink;
 
     @Column(name = "start_date")
-    private LocalDate startDate;
+    private String startDate;
 
     @Column(name = "end_date")
-    private LocalDate endDate;
+    private String endDate;
 
     // 기본 생성자
     public CardEvent() {}
@@ -43,6 +43,8 @@ public class CardEvent {
     public String getSection() { return section; }
     public String getEventContent() { return eventContent; }
     public String getEventLink() { return eventLink; }
-    public LocalDate getStartDate() { return startDate; }
-    public LocalDate getEndDate() { return endDate; }
+    public String getStartDate() { return startDate; }
+    public void setStartDate(String startDate) { this.startDate = startDate; }
+    public String getEndDate() { return endDate; }
+    public void setEndDate(String endDate) { this.endDate = endDate; }
 }

@@ -117,8 +117,8 @@ public class CardService {
         List<CardEvent> events = cardEventRepository.findByCardId(cardId);
         List<CardDetailResponse.EventDto> eventDtos = events.stream()
                 .map(e -> {
-                	String startDateStr = (e.getStartDate() != null) ? e.getStartDate().toString() : "";
-                    String endDateStr = (e.getEndDate() != null) ? e.getEndDate().toString() : "";
+                	String startDateStr = (e.getStartDate() != null) ? e.getStartDate() : "";
+                    String endDateStr = (e.getEndDate() != null) ? e.getEndDate() : "";
                     
                     return new CardDetailResponse.EventDto(
                     		e.getEventTitle(), 
