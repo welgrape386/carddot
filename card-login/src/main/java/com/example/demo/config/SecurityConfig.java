@@ -45,7 +45,7 @@ public class SecurityConfig {
             
             // 3. 요청 권한 설정
             .authorizeHttpRequests(auth -> auth
-            		.requestMatchers("/api/auth/**", "/api/cards/**").permitAll()
+            		.requestMatchers("/api/auth/**", "/api/cards/**", "/error").permitAll()
             		.anyRequest().authenticated()
                 // .requestMatchers("/**").permitAll()
             );
