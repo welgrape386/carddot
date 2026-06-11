@@ -1,0 +1,112 @@
+﻿card_id,company,card_name,card_type,network,is_domestic_foreign,has_transport,annual_fee_dom_basic,annual_fee_dom_premium,annual_fee_for_basic,annual_fee_for_premium,annual_fee_notes,min_performance,summary,image_url,link_url,has_cashback,fee_content,updated_at
+FCDY,현대,현대카드 Teens,신용,Local,False,True,2000,0,0,0,"(기본연회비 0원 + 제휴연회비 2,000원)",100000,청소년이 자주 쓰는 4개 영역 2% 청구 할인 | 만 12세 이상부터 만 18세까지 신청 가능,https://www.hyundaicard.com/img/com/card/card_FCDY_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=FCDY,True,,2026-06-03 14:51:41
+TO,현대,the Orange,신용,VISA,True,True,200000,0,200000,0,"(기본연회비 50,000원 + 제휴연회비 150,000원)
+가족카드 50,000원(기본연회비 0원 + 제휴연회비 50,000원)",500000,매년 15만 바우처 제공 | 온라인몰·다이닝·웰니스·테크 10% 적립,https://www.hyundaicard.com/img/com/card/card_TO_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=TO,False,,2026-06-03 14:51:47
+HDSHE2,현대,현대홈쇼핑 현대카드 Edition2,신용,VISA,True,True,20000,0,20000,0,"(기본연회비 10,000원 + 제휴연회비 10,000원)
+가족 카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",400000,현대홈쇼핑 Hmall 7% 청구 할인 | 그 외 국내외 가맹점 1% 적립금 적립,https://www.hyundaicard.com/img/com/card/card_HDSHE2_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=HDSHE2,True,,2026-06-03 14:53:27
+TBE4,현대,the Black,신용,VISA,True,True,3000000,0,3000000,0,"(기본연회비 1,000,000원 + 제휴연회비 2,000,000원)
+가족카드 1,000,000원(기본연회비 0원 + 제휴연회비 1,000,000원)",500000,단 1,000명에게 선사하는 VVIP카드 | 바우처 200만원 상당제공 | 마티나 골드 라운지무료이용,https://www.hyundaicard.com/img/com/card/card_TBE4_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=TBE4,False,,2026-06-03 14:53:59
+TPE4,현대,the Purple,신용,VISA,True,True,1000000,0,1000000,0,"(기본연회비 300,000원 + 제휴연회비 700,000원)
+가족카드 350,000원(기본연회비 0원 + 제휴연회비 350,000원)",500000,국내 Luxury/Gourmet 영역에서 사용하는 바우처 | 대한항공 마일리지와 M포인트 중 선택 적립,https://www.hyundaicard.com/img/com/card/card_TPE4_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=TPE4,False,,2026-06-03 14:55:28
+TPIE2,현대,the Pink Edition2,신용,VISA,True,True,150000,0,150000,0,"(기본연회비 50,000원 + 제휴연회비 100,000원)
+가족카드 50,000원(기본연회비 0원 + 제휴연회비 50,000원)",500000,"연간 최대 100만 | the Pink 바우처 교환 | 프리미엄 쇼핑 영역 5% 적립 | 공항 라운지, 발레파킹 무료",https://www.hyundaicard.com/img/com/card/card_TPIE2_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=TPIE2,False,,2026-06-03 15:04:16
+SPM,현대,현대카드 Summit,신용,VISA,True,True,200000,0,200000,0,"(기본연회비 50,000원 + 제휴연회비 150,000원)
+가족 카드 50,000원(기본연회비 0원 + 제휴연회비 50,000원)",500000,국내외 가맹점 1.5% 적립 | 교육·병원·여행·골프 5% 적립 | 백화점·호텔·여행 15만원 바우처 제공,https://www.hyundaicard.com/img/com/card/card_SPM_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=SPM,False,,2026-06-03 15:06:33
+MPE4,현대,현대카드MM,신용,"VISA,AMEX",True,True,70000,0,70000,0,"(기본연회비 20,000원 + 제휴연회비 50,000원)
+가족카드 20,000원",500000,국내외 가맹점 1.5% 적립 | 온라인쇼핑·외식·해외 10% 적립 | 최대 50만 M포인트 긴급적립 | (선지급 포인트 서비스),https://www.hyundaicard.com/img/com/card/card_MPE4_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MPE4,False,,2026-06-03 15:19:22
+XCUT,현대,현대카드 X Cut,신용,"VISA,AMEX",True,True,30000,0,30000,0,"(기본연회비 10,000원 + 제휴연회비 20,000원)
+가족카드 10,000원(기본연회비 0원 + 제휴연회비 10,000원)",1000000,뷰티/생활/패션·배달 앱·편의점 5% 할인 | 국내외 가맹점 1% 할인 | 최대 50만 긴급할인 | (선지급 포인트 서비스),https://www.hyundaicard.com/img/com/card/card_XCUT_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=XCUT,True,,2026-06-03 15:21:09
+XSAV,현대,현대카드 X Save,신용,"VISA,AMEX",True,True,30000,0,30000,0,"(기본연회비 10,000원 + 제휴연회비 20,000원)
+가족카드 10,000원(기본연회비 0원 + 제휴연회비 10,000원)",1000000,온라인몰·교육·병원 5% 할인 | 국내외 가맹점 1% 할인 | 최대 50만 긴급할인 | (선지급 포인트 서비스),https://www.hyundaicard.com/img/com/card/card_XSAV_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=XSAV,True,,2026-06-03 15:21:40
+ZRUP,현대,현대카드 ZERO Up,신용,"VISA,AMEX",True,True,30000,0,30000,0,"(기본연회비 10,000원 + 제휴연회비 20,000원)
+가족카드 10,000원(기본연회비 0원 + 제휴연회비 10,000원)",0,온라인몰·대형마트·교육·주유·이동통신 요금 1.6% 할인 | 국내외 가맹점 0.8% 할인 | 최대 50만 긴급할인 | (선지급 포인트 서비스),https://www.hyundaicard.com/img/com/card/card_ZRUP_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=ZRUP,True,,2026-06-03 15:24:14
+MZROE3,현대,현대카드ZERO Edition3(포인트형),신용,"VISA,AMEX",True,True,15000,0,15000,0,"(기본연회비 10,000원 + 제휴연회비 5,000원)
+가족카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",0,국내외 가맹점 1.2% M포인트 적립 | 최대 50만 M포인트 긴급적립 | (선지급 포인트 서비스),https://www.hyundaicard.com/img/com/card/card_MZROE3_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MZROE3,True,,2026-06-03 15:24:45
+ZROE3,현대,현대카드ZERO Edition3(할인형),신용,"VISA,AMEX",True,True,15000,0,15000,0,"(기본연회비 10,000원 + 제휴연회비 5,000원)
+가족카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",0,국내외 가맹점 0.8% 할인 | 최대 50만 긴급할인 | (선지급 포인트 서비스),https://www.hyundaicard.com/img/com/card/card_ZROE3_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=ZROE3,True,,2026-06-03 15:26:07
+AMPTE2,현대,American ExpressThe Platinum Card®Edition2,신용,AMEX,True,True,1000000,0,1000000,0,"(기본연회비 300,000원 + 제휴연회비 700,000원)
+가족카드 200,000원(기본연회비 0원 + 제휴연회비 200,000원)",500000,1,000원당 1~5 멤버십 리워즈적립 | 연간 보너스 85만원 상당바우처 제공 | 공항라운지 연 10회 무료 이용,https://www.hyundaicard.com/img/com/card/card_AMPTE2_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=AMPTE2,False,,2026-06-03 15:26:40
+AMGLE2,현대,American Express®Gold Card Edition2,신용,AMEX,True,True,300000,0,300000,0,"(기본연회비 100,000원 + 제휴연회비 200,000원)
+가족카드 100,000원(기본연회비 0원 + 제휴연회비 100,000원)",500000,바우처 연간 25만원상당 | 전 세계 공항라운지 연 10회무료 이용 | 멤버십리워즈(MR) 최대 3MR적립,https://www.hyundaicard.com/img/com/card/card_AMGLE2_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=AMGLE2,False,,2026-06-03 15:28:48
+AMGRE2,현대,American Express®Green Card Edition2,신용,AMEX,True,True,150000,0,150000,0,"(기본연회비 50,000원 + 제휴연회비 100,000원)
+가족카드 50,000원(기본연회비 0원 + 제휴연회비 50,000원)",500000,바우처 연간 12만원상당| 전 세계 공항라운지 연 5회무료 이용 | 멤버십리워즈(MR) 최대 2MR적립,https://www.hyundaicard.com/img/com/card/card_AMGRE2_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=AMGRE2,False,,2026-06-03 15:30:44
+NVE2,현대,네이버 현대카드 Edition2,신용,"VISA,AMEX",True,True,20000,0,20000,0,"(기본연회비 10,000원 + 제휴연회비 10,000원)",500000,네이버 최대 7% 적립 | 그 외 국내외 가맹점 0.7% 적립,https://www.hyundaicard.com/img/com/card/card_NVE2_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=NVE2,False,,2026-06-05
+OLVYHC,현대,올리브영 현대카드,신용,"VISA,AMEX",True,True,30000,0,30000,0,"(기본연회비 10,000원 + 제휴연회비 20,000원)
+가족카드 10,000원(기본연회비 0원 + 제휴연회비 10,000원)",400000,올리브영에서 최대 5% | 그 외 국내외 가맹점에서 1% | 리워드 적용금액 산정 | 누적 1천원 당 리워드 1매 | (전월 이용 금액 40만원 이상 시),https://www.hyundaicard.com/img/com/card/card_OLVYHC_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=OLVYHC,False,,2026-06-03 15:33:01
+NXNX,현대,넥슨 현대카드 Edition2,신용,"Mastercard,AMEX",True,True,20000,0,20000,0,"(기본연회비 10,000원 + 제휴연회비 10,000원)
+가족 카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",200000,마비노기 모바일팩 100원당 | 1 넥슨 현대카드 M캐시 적립 | 넥슨팩 10% | 넥슨 현대카드 포인트2 적립,https://www.hyundaicard.com/img/com/card/card_NXNX_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=NXNX,True,,2026-06-03 15:33:30
+GEPHC,현대,에너지플러스 현대카드,신용,"VISA,AMEX",True,True,10000,0,10000,0,"(기본연회비 5,000원 + 제휴연회비 5,000원)
+가족 카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",400000,내 주변 5km 최저가 주유 | GS칼텍스 앱 결제 추가 5% 할인 | 주차·세차·정비 5% 할인,https://www.hyundaicard.com/img/com/card/card_GEPHC_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=GEPHC,True,,2026-06-03 15:34:14
+TGE3,현대,the Green Edition3,신용,VISA,True,True,150000,0,150000,0,"(기본연회비 50,000원 + 제휴연회비 100,000원)
+가족카드 50,000원(기본연회비 0원 + 제휴연회비 50,000원)",500000,"연간 최대 100만 | the Green 바우처 교환 | 여행·해외 영역 5% 적립 | 공항 라운지, 발레파킹 무료",https://www.hyundaicard.com/img/com/card/card_TGE3_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=TGE3,False,,2026-06-03 16:00:36
+ZWE2,현대,현대카드Z work Edition2,신용,"VISA,AMEX",True,True,20000,0,20000,0,"(기본연회비 10,000원 + 제휴연회비 10,000원)
+가족카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",500000,출퇴근 영역 10% 할인 | ①온라인 쇼핑몰 ②편의점 | ③커피전문점 ④대중교통 ⑤도서 | K-패스 또는 후불형 기후동행카드 신청 가능,https://www.hyundaicard.com/img/com/card/card_ZWE2_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=ZWE2,True,,2026-06-03 16:03:56
+ZOE2,현대,현대카드Z play,신용,"VISA,AMEX",True,True,20000,0,20000,0,"(기본연회비 10,000원 + 제휴연회비 10,000원)
+가족카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",500000,플레이 영역 10% 할인 | ①온라인 쇼핑몰 ②일반음식점 | ③영화 ④해외 가맹점 ⑤디지털 콘텐츠 서비스,https://www.hyundaicard.com/img/com/card/card_ZOE2_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=ZOE2,True,,2026-06-03 16:05:36
+ESPE3,현대,SmileCard Edition3,신용,"VISA,AMEX",True,True,20000,0,20000,0,"(기본연회비 10,000원 + 제휴연회비 10,000원)",300000,어디서든 최대 2% 적립,https://www.hyundaicard.com/img/com/card/card_ESPE3_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=ESPE3,False,,2026-06-03 16:25:22
+NOLHC,현대,NOL 카드,신용,"VISA,AMEX",True,True,20000,0,20000,0,"(기본연회비 10,000원 + 제휴연회비 10,000원)
+가족 카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",400000,NOL·NOL 인터파크(NOL 인터파크투어/NOL 티켓)· | 트리플 10% 적립 | 커피·영화·해외 등 10% 적립 | 국내 공항 라운지 무료 이용,https://www.hyundaicard.com/img/com/card/card_NOLHC_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=NOLHC,False,,2026-06-03 16:28:42
+CWYHC,현대,코웨이 현대카드,신용,VISA,True,True,20000,0,20000,0,"(기본연회비 10,000원 + 제휴연회비 10,000원)
+가족 카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",400000,렌탈/구독료 정기결제 | 최대 1만 6천원 청구 할인,https://www.hyundaicard.com/img/com/card/card_CWYHC_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=CWYHC,True,,2026-06-03 16:32:19
+LGEHC,현대,LG전자 현대카드,신용,VISA,True,True,20000,0,20000,0,"(기본연회비 10,000원 + 제휴연회비 10,000원)
+가족 카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",400000,렌탈/구독료 정기결제 | 최대 1만 6천원 청구 할인,https://www.hyundaicard.com/img/com/card/card_LGEHC_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=LGEHC,True,,2026-06-03 16:32:36
+SKIHC,현대,SK인텔릭스 현대카드,신용,VISA,True,True,20000,0,20000,0,"(기본연회비 10,000원 + 제휴연회비 10,000원)
+가족 카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",400000,렌탈/구독료 정기결제 | 최대 1만 6천원 청구 할인,https://www.hyundaicard.com/img/com/card/card_SKIHC_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=SKIHC,True,,2026-06-03 16:32:54
+CCKHC,현대,쿠쿠 현대카드,신용,VISA,True,True,20000,0,20000,0,"(기본연회비 10,000원 + 제휴연회비 10,000원)
+가족 카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",400000,렌탈/구독료 정기결제 | 최대 1만 6천원 청구 할인,https://www.hyundaicard.com/img/com/card/card_CCKHC_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=CCKHC,True,,2026-06-03 16:33:11
+CHHHC,현대,청호나이스 현대카드,신용,VISA,True,True,20000,0,20000,0,"(기본연회비 10,000원 + 제휴연회비 10,000원)
+가족 카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",400000,렌탈/구독료 정기결제 | 최대 1만 6천원 청구 할인,https://www.hyundaicard.com/img/com/card/card_CHHHC_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=CHHHC,True,,2026-06-03 16:33:29
+MCWYE3,현대,coway-현대카드M Edition3,신용,VISA,True,True,30000,0,30000,0,"(기본연회비 10,000원 + 제휴연회비 20,000원)
+가족카드 10,000원",500000,렌탈 요금 최대 2만원 할인,https://www.hyundaicard.com/img/com/card/card_MCWYE3_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MCWYE3,True,,2026-06-03 16:33:46
+MIMB,현대,iM뱅크-현대카드M,신용,VISA,True,True,30000,0,30000,0,"(기본연회비 10,000원 + 제휴연회비 20,000원)
+가족 카드 10,000원(기본연회비 0원 + 제휴연회비 10,000원)",500000,국내외 가맹점 1.5% 적립 | 온라인몰·외식·해외 5% 적립 | 최대 50만 M포인트 긴급적립 | (선지급 포인트 서비스),https://www.hyundaicard.com/img/com/card/card_MIMB_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MIMB,False,,2026-06-03 16:38:42
+SLHC,현대,현대 햇살론카드,신용,Local,False,True,10000,0,0,0,"(기본연회비 10,000원 + 제휴연회비 0원)",300000,생활 편의 영역 1% 할인 | 그 외 가맹점 0.5% 할인,https://www.hyundaicard.com/img/com/card/card_SLHC_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=SLHC,True,,2026-06-03 16:42:14
+CCA,현대,현대카드 체크(Apple Pay Rewards),체크,VISA,True,True,5000,0,5000,0,"(기본연회비 5,000원 + 제휴연회비 0원)",300000,Apple Pay 결제 시 10% 캐시백,https://www.hyundaicard.com/img/com/card/card_CCA_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=CCA,True,,2026-06-03 16:44:08
+CCDH,현대,현대카드 하이브리드(캐시백형),체크,VISA,True,True,5000,0,5000,0,"(기본연회비 5,000원 + 제휴연회비 0원)",300000,외식·배달앱·편의점 3% | 국내외 가맹점 0.3% 캐시백 | 체크와 신용을 둘다 담은 카드,https://www.hyundaicard.com/img/com/card/card_CCDH_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=CCDH,True,,2026-06-03 16:46:00
+CCAH,현대,현대카드 하이브리드(Apple Pay Rewards),체크,VISA,True,True,5000,0,5000,0,"(기본연회비 5,000원 + 제휴연회비 0원)",300000,Apple Pay 결제 시 10% 캐시백 | 체크와 신용을 둘다 담은 카드,https://www.hyundaicard.com/img/com/card/card_CCAH_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=CCAH,True,,2026-06-03 16:46:45
+ME4,현대,현대카드M,신용,"VISA,AMEX",True,True,30000,0,30000,0,"(기본연회비 10,000원 + 제휴연회비 20,000원)
+가족카드 10,000원",500000,국내외 가맹점 1.5% 적립 | 온라인쇼핑·외식·해외 5% 적립 | 최대 50만 M포인트 긴급적립 | (선지급 포인트 서비스),https://www.hyundaicard.com/img/com/card/card_ME4_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=ME4,False,,2026-06-03 16:47:33
+XPE4,현대,현대카드X,신용,"VISA,AMEX",True,True,50000,0,50000,0,"(기본연회비 20,000원 + 제휴연회비 30,000원)
+가족카드 20,000원(기본연회비 0원 + 제휴연회비 20,000원)",500000,국내외 가맹점 1% 할인 | 연간 최대 10만원 캐시백 | 최대 50만 긴급할인 | (선지급 포인트 서비스),https://www.hyundaicard.com/img/com/card/card_XPE4_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=XPE4,True,,2026-06-03 16:48:54
+TRE6,현대,the Red,신용,VISA,True,True,300000,0,300000,0,"(기본연회비 100,000원 + 제휴연회비 200,000원)
+가족카드 100,000원(기본연회비 0원 + 제휴연회비 100,000원)",500000,연간 30만 바우처 제공 | M포인트 또는 마일리지 적립,https://www.hyundaicard.com/img/com/card/card_TRE6_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=TRE6,False,,2026-06-04 03:38:25
+MXBE2,현대,현대카드 MX Black Edition2,신용,VISA,True,True,200000,0,200000,0,"(기본연회비 50,000원 + 제휴연회비 150,000원)
+가족카드 50,000원(기본연회비 0원 + 제휴연회비 50,000원)",500000,M의 적립과 X의 할인을 동시에 | 국내외 가맹점 1% 적립 | 일상생활 5개 영역 10% 할인,https://www.hyundaicard.com/img/com/card/card_MXBE2_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MXBE2,False,,2026-06-04 03:40:44
+BTCP,현대,현대카드 Boutique - Copper,신용,"VISA,AMEX",True,True,80000,0,80000,0,"(기본연회비 20,000원 + 제휴연회비 60,000원)
+가족카드 20,000원(기본연회비 0원 + 제휴연회비 20,000원)",500000,온라인몰·배달 앱·편의점·대중교통 5% 적립 | 호텔·여행·다이닝 5만 크레딧 제공 | 국내외 가맹점 1.5% 적립,https://www.hyundaicard.com/img/com/card/card_BTCP_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=BTCP,False,,2026-06-04 03:42:48
+BTST,현대,현대카드 Boutique - Satin,신용,"VISA,AMEX",True,True,80000,0,80000,0,"(기본연회비 20,000원 + 제휴연회비 60,000원)
+가족카드 20,000원(기본연회비 0원 + 제휴연회비 20,000원)",500000,온라인몰·드럭스토어·커피전문점·대중교통 5% 적립 | 호텔·여행·다이닝 5만 크레딧 제공 | 국내외 가맹점 1.5% 적립,https://www.hyundaicard.com/img/com/card/card_BTST_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=BTST,False,,2026-06-04 03:47:28
+BTMCE,현대,현대카드 Summit CE,신용,"VISA,AMEX",True,True,80000,0,80000,0,"(기본연회비 20,000원 + 제휴연회비 60,000원)
+가족카드 20,000원(기본연회비 0원 + 제휴연회비 20,000원)",500000,교육·병원·여행·골프 5% 적립 | 백화점·주유·다이닝 5만 크레딧 제공 | 국내외 가맹점 1.5% 적립,https://www.hyundaicard.com/img/com/card/card_BTMCE_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=BTMCE,False,,2026-06-04 03:49:49
+ZWK,현대,현대카드Z everyday,신용,"VISA,AMEX",True,True,20000,0,20000,0,"(기본연회비 10,000원 + 제휴연회비 10,000원)
+가족 카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",500000,9개 영역 매일 5% | 외식·주유·마트는 주말 2배 | 매년 최대 60만원까지 할인,https://www.hyundaicard.com/img/com/card/card_ZWK_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=ZWK,True,,2026-06-04 03:51:40
+ZFE2,현대,현대카드Z family Edition2,신용,"VISA,AMEX",True,True,20000,0,20000,0,"(기본연회비 10,000원 + 제휴연회비 10,000원)
+가족카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",500000,가족소비 영역 10% 청구 할인 | ①온라인 쇼핑몰 ②병원·약국 | ③학원 ④주유 ⑤생활 요금 정기 결제,https://www.hyundaicard.com/img/com/card/card_ZFE2_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=ZFE2,True,,2026-06-04 03:51:56
+SCHC,현대,쏘카카드,신용,VISA,True,True,10000,0,10000,0,"(기본연회비 10,000원 + 제휴연회비 0원)",300000,쏘카 앱에서 최대 3% 적립 | 외식·커피·영화·대중교통 등 | 최대 3% 적립 | 그 외 가맹점 1% 적립 | (당월 이용금액 30만원 이상 시),https://www.hyundaicard.com/img/com/card/card_SCHC_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=SCHC,False,,2026-06-04 03:56:42
+MDBI,현대,DB손해보험 현대카드,신용,VISA,True,True,30000,0,30000,0,"(기본연회비 10,000원 + 제휴연회비 20,000원)
+가족 카드 10,000원(기본연회비 0원 + 제휴연회비 10,000원)",500000,전월 이용 금액 50만/100만원 이상 시 | 국내외 가맹점 최대 1만 7천원 청구 할인 | 또는 0.5% M포인트 적립,https://www.hyundaicard.com/img/com/card/card_MDBI_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MDBI,True,,2026-06-04 04:04:12
+MHMFI,현대,현대해상 현대카드,신용,VISA,True,True,30000,0,30000,0,"(기본연회비 10,000원 + 제휴연회비 20,000원)
+가족 카드 10,000원(기본연회비 0원 + 제휴연회비 10,000원)",500000,전월 이용 금액 50만/100만원 이상 시 | 국내외 가맹점 최대 1만 7천원 청구 할인 | 또는 0.5% M포인트 적립,https://www.hyundaicard.com/img/com/card/card_MHMFI_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MHMFI,True,,2026-06-04 04:05:24
+HCH,현대,현대카드H,신용,"VISA,AMEX",True,True,15000,0,15000,0,"(기본연회비 10,000원 + 제휴연회비 5,000원)
+가족 카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",400000,교육·병원 10% | 정기결제 5% | 매년 최대 60만원까지 할인,https://www.hyundaicard.com/img/com/card/card_HCH_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=HCH,True,,2026-06-04 04:06:47
+HCO,현대,현대카드O,신용,"VISA,AMEX",True,True,15000,0,15000,0,"(기본연회비 10,000원 + 제휴연회비 5,000원)
+가족 카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",400000,주유소 어디서나 10% | 정기결제 5% | 매년 최대 60만원까지 할인,https://www.hyundaicard.com/img/com/card/card_HCO_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=HCO,True,,2026-06-04 04:07:03
+HCT,현대,현대카드T,신용,VISA,True,True,15000,0,15000,0,"(기본연회비 10,000원 + 제휴연회비 5,000원)
+가족 카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",0,"실적·한도 제한 없이 | 해외 2%, 국내 0.7% | 해외결제수수료 100% 할인",https://www.hyundaicard.com/img/com/card/card_HCT_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=HCT,True,,2026-06-04 04:07:36
+TRSTE2,현대,the Red Stripe Edition2,신용,VISA,True,True,500000,0,500000,0,"(기본연회비 150,000원 + 제휴연회비 350,000원)
+가족카드 150,000원(기본연회비 0원 + 제휴연회비 150,000원)",500000,연간 최대 80만 바우처 제공 | M포인트 또는 마일리지 적립,https://www.hyundaicard.com/img/com/card/card_TRSTE2_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=TRSTE2,False,,2026-06-04 06:01:22
+BTVV,현대,현대카드 Boutique - Velvet,신용,"VISA,AMEX",True,True,80000,0,80000,0,"(기본연회비 20,000원 + 제휴연회비 60,000원)
+가족카드 20,000원(기본연회비 0원 + 제휴연회비 20,000원)",500000,온라인몰·백화점·대형마트·교육 5% 적립 | 호텔·여행·다이닝 5만 크레딧 제공 | 국내외 가맹점 1.5% 적립,https://www.hyundaicard.com/img/com/card/card_BTVV_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=BTVV,False,,2026-06-04 06:02:43
+SGE2,현대,SSG.COM카드 Edition2,신용,VISA,True,True,10000,0,10000,0,"(기본연회비 10,000원 + 제휴연회비 0원)",300000,SSG MONEY 최대 7% 적립 | 매달 SSG MONEY 3,900원 제공,https://www.hyundaicard.com/img/com/card/card_SGE2_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=SGE2,False,,2026-06-04 06:05:05
+YSHC,현대,예스24 현대카드,신용,VISA,True,True,10000,0,10000,0,"(기본연회비 10,000원 + 제휴연회비 0원)",0,YES24 최대 3% 적립 | 그 외 가맹점 1% 적립,https://www.hyundaicard.com/img/com/card/card_YSHC_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=YSHC,False,,2026-06-04 06:05:35
+CCM,현대,현대카드 체크(포인트형),체크,VISA,True,True,5000,0,5000,0,"(기본연회비 5,000원 + 제휴연회비 0원)",300000,외식·배달앱·편의점 5% | 국내외 가맹점 0.5% 적립,https://www.hyundaicard.com/img/com/card/card_CCM_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=CCM,False,,2026-06-04 06:05:36
+CCD,현대,현대카드 체크(캐시백형),체크,VISA,True,True,5000,0,5000,0,"(기본연회비 5,000원 + 제휴연회비 0원)",300000,외식·배달앱·편의점 3% | 국내외 가맹점 0.3% 캐시백,https://www.hyundaicard.com/img/com/card/card_CCD_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=CCD,True,,2026-06-04 06:06:43
+CCMH,현대,현대카드 하이브리드(포인트형),체크,VISA,True,True,5000,0,5000,0,"(기본연회비 5,000원 + 제휴연회비 0원)",300000,외식·배달앱·편의점 5% | 국내외 가맹점 0.5% 적립 | 체크와 신용을 둘다 담은 카드,https://www.hyundaicard.com/img/com/card/card_CCMH_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=CCMH,False,,2026-06-04 06:07:01
+HCD,현대,현대카드D,신용,"VISA,AMEX",True,True,15000,0,15000,0,"(기본연회비 10,000원 + 제휴연회비 5,000원)
+가족 카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",400000,외식·배달앱 10% | 카페·편의점·대중교통 5% | 매년 최대 60만원까지 할인,https://www.hyundaicard.com/img/com/card/card_HCD_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=HCD,True,,2026-06-04 06:18:58
+HCS,현대,현대카드S,신용,"VISA,AMEX",True,True,15000,0,15000,0,"(기본연회비 10,000원 + 제휴연회비 5,000원)
+가족 카드 5,000원(기본연회비 0원 + 제휴연회비 5,000원)",400000,온·오프라인 쇼핑 10% | 카페·편의점·대중교통 5% | 매년 최대 60만원까지 할인,https://www.hyundaicard.com/img/com/card/card_HCS_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=HCS,True,,2026-06-04 06:19:03
+MLGTE3,현대,LG U+-현대카드M Edition3(통신할인형2.0),신용,"VISA,AMEX",True,True,20000,0,20000,0,"(기본연회비 10,000원 + 제휴연회비 10,000원)
+가족카드 10,000원(기본연회비 0원 + 제휴연회비 10,000원)",500000,통신 요금 최대 2만 5천원 할인,https://www.hyundaicard.com/img/com/card/card_MLGTE3_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MLGTE3,True,,2026-06-04 06:26:20
+MCJE2,현대,The CJ-현대카드M Edition2,신용,VISA,True,True,15000,0,20000,0,"(기본연회비 5,000원 + 제휴연회비 15,000원)
+가족카드 연회비 없음",0,CJ ONSTYLE 5% 할인 | CJ 외식가맹점 최대 20% 할인,https://www.hyundaicard.com/img/com/card/card_MCJE2_h.png,https://www.hyundaicard.com/cpc/cr/CPCCR0201_01.hc?cardWcd=MCJE2,True,,2026-06-04 06:28:27

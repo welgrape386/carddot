@@ -1,0 +1,100 @@
+name: Card Event Scheduler
+
+on:
+  schedule:
+    # 매일 오전 9시 KST (00:00 UTC)
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+    inputs:
+      company:
+        description: "실행할 카드사 (hd / kb / samsung / all)"
+        required: false
+        default: "all"
+      pipeline:
+        description: "실행할 파이프라인 (a: 카드감지 / b: 이벤트감지 / all)"
+        required: false
+        default: "all"
+
+permissions:
+  contents: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      # ── 체크아웃 ──────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── Python 설치 ───────────────────────────────────────
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # ── 의존성 설치 ───────────────────────────────────────
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install playwright beautifulsoup4 aiohttp anthropic crawl4ai python-dotenv
+          playwright install chromium
+          playwright install-deps chromium
+          crawl4ai-setup
+
+      # ── 스케줄러 실행 ─────────────────────────────────────
+      - name: Run scheduler
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_API_KEY_SAMSUNG: ${{ secrets.ANTHROPIC_API_KEY_SAMSUNG }}
+        run: |
+          COMPANY="${{ github.event.inputs.company || 'all' }}"
+          PIPELINE="${{ github.event.inputs.pipeline || 'all' }}"
+          python main_scheduler.py --company "$COMPANY" --pipeline "$PIPELINE"
+
+      # ── 결과 커밋 ─────────────────────────────────────────
+      - name: Commit results
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config core.quotepath false
+          git add hd/hd_ouput/hd_events.json        2>/dev/null || true
+          git add hd/hd_ouput/hd_cards.json         2>/dev/null || true
+          git add hd/hd_ouput/hd_cards.csv          2>/dev/null || true
+          git add hd/hd_ouput/hyundai_events.csv    2>/dev/null || true
+          git add hd/hd_ouput/hyundai_benefit.csv   2>/dev/null || true
+          git add hd/hd_ouput/hyundai_info.csv      2>/dev/null || true
+          git add hd/hd_ouput/hyundai_notices.csv   2>/dev/null || true
+          git add kb/ouput/kb_events.json           2>/dev/null || true
+          git add kb/ouput/kb_cards.json            2>/dev/null || true
+          git add kb/ouput/kb_cards.csv             2>/dev/null || true
+          git add kb/ouput/kb_events.csv            2>/dev/null || true
+          git add kb/ouput/kb_benefit.csv           2>/dev/null || true
+          git add kb/ouput/kb_info.csv              2>/dev/null || true
+          git add kb/ouput/kb_notices.csv           2>/dev/null || true
+          git add samsung/output/samsung_events.json   2>/dev/null || true
+          git add samsung/output/samsung_cards.json    2>/dev/null || true
+          git add samsung/output/samsung_cards.csv     2>/dev/null || true
+          git add samsung/output/samsung_events.csv    2>/dev/null || true
+          git add samsung/output/samsung_benefit.csv   2>/dev/null || true
+          git add samsung/output/samsung_info.csv      2>/dev/null || true
+          git add samsung/output/samsung_notices.csv   2>/dev/null || true
+          git add hd/hd_ouput/hd_new_cards_*.csv       2>/dev/null || true
+          git add hd/hd_ouput/hd_new_events_*.csv      2>/dev/null || true
+          git add hd/hd_ouput/hd_new_benefit_*.csv     2>/dev/null || true
+          git add hd/hd_ouput/hd_new_info_*.csv        2>/dev/null || true
+          git add hd/hd_ouput/hd_new_notices_*.csv     2>/dev/null || true
+          git add kb/ouput/kb_new_cards_*.csv          2>/dev/null || true
+          git add kb/ouput/kb_new_events_*.csv         2>/dev/null || true
+          git add kb/ouput/kb_new_benefit_*.csv        2>/dev/null || true
+          git add kb/ouput/kb_new_info_*.csv           2>/dev/null || true
+          git add kb/ouput/kb_new_notices_*.csv        2>/dev/null || true
+          git add samsung/output/samsung_new_cards_*.csv   2>/dev/null || true
+          git add samsung/output/samsung_new_events_*.csv  2>/dev/null || true
+          git diff --cached --quiet || git commit -m "chore: daily crawl $(date -u '+%Y-%m-%d')"
+
+      # ── 푸시 ─────────────────────────────────────────────
+      - name: Push
+        run: |
+          git push origin main || echo "Nothing to push"
