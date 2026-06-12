@@ -36,14 +36,21 @@ export const getCards = async (): Promise<CardListItem[]> => {
     : [];
 };
 
-export const getCardDetail = async (cardId: string): Promise<CardDetailItem> => {
-  const response = await api.get(`/api/cards/${encodeURIComponent(cardId)}`);
-  const data = unwrapResponseData<CardDetailItem>(response.data);
+export const getCardDetail = async (cardId: string) => {
+  const token = localStorage.getItem("token");
 
-  return {
-    ...data,
-    imageUrl: normalizeImageUrl(data),
-  };
+  const response = await api.get(
+    `/api/cards/${cardId}`,
+    {
+      headers: token
+        ? {
+            Authorization: token,
+          }
+        : {},
+    }
+  );
+
+  return response.data;
 };
 
 export const getCardScores = async (

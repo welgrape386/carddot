@@ -4,7 +4,12 @@ export interface CardListItem {
   company: string;
   cardName: string;
   cardType: string;
-  annualFee: number;
+
+  annualFeeDomBasic: number;
+  annualFeeDomPremium: number;
+  annualFeeForBasic: number;
+  annualFeeForPremium: number;
+
   minPerformance: number;
   totalMaxBenefit: number | null;
   summary: string;

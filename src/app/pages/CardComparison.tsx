@@ -504,7 +504,7 @@ const sortedSelectedIds = useMemo(() => [...selectedIds].sort(), [selectedIds]);
   } = useQuery({
     queryKey: ["cardCompare", sortedSelectedIds, selectedPersona],
     queryFn: () => compareCards(sortedSelectedIds, selectedPersona as PersonaType),
-    enabled: sortedSelectedIds.length >= 2,
+    enabled: sortedSelectedIds.length >= 2
   });
 
   const selectedCards = compareApiCards;
@@ -655,12 +655,10 @@ const sortedSelectedIds = useMemo(() => [...selectedIds].sort(), [selectedIds]);
         <div className="flex items-center gap-1.5">
           <span className="text-sm font-normal text-gray-800">
             {b.benefitValueText}{" "}
-            <span className="text-[#6667AA]">{getBenefitTypeLabel(b.benefitType)}</span>
+            <span className="text-[#6667AA]">
+              {getBenefitTypeLabel(b.benefitType)}
+            </span>
           </span>
-        </div>
-        <div className="text-[11px] text-gray-400 font-normal">{b.benefitTitle}</div>
-        <div className="text-[10px] text-gray-400 font-normal leading-relaxed">
-          {b.benefitContent}
         </div>
       </div>
     );

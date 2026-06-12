@@ -743,7 +743,7 @@ export function CardList() {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
     {filteredCards.map((card) => {
       const summaryItems = card.summary
-        ? card.summary.split("/").map((item) => item.trim()).filter(Boolean)
+        ? card.summary.split("|").map((item) => item.trim()).filter(Boolean)
         : [];
 
         const isVerticalCard =
@@ -751,56 +751,56 @@ export function CardList() {
           card.company?.includes("현대");
           
           return (
-  <div
-    key={card.cardId}
-    className="group bg-white rounded-2xl border border-[#6667AA]/20 shadow-md hover:shadow-md overflow-hidden flex flex-col"
-  >
-    {/* 1. 카드 이미지 영역 */}
-    <div className="bg-gray-50/70 p-5 flex flex-col items-center">
-      {card.imageUrl ? (
-      <div className="w-36 h-24 flex items-center justify-center overflow-hidden">
-        <img
-          src={card.imageUrl}
-          alt={card.cardName}
-          loading="lazy"
-          style={{
-            transform: isVerticalCard ? "rotate(-90deg)" : "none",
-            height: isVerticalCard ? "120px" : "auto",
-            width: isVerticalCard ? "auto" : "100%",
-            objectFit: "contain",
-          }}
-          className="drop-shadow-md"
-        />
-      </div>
-    ) : (
-      <div className="w-36 h-24 rounded-2xl bg-black shadow-md flex flex-col justify-between p-3 text-white">
-        <div className="text-[10px] opacity-70">{card.company}카드</div>
-        <div className="text-sm font-normal leading-tight line-clamp-2">
-          {card.cardName}
-        </div>
-        <div className="text-[10px] opacity-70">{card.cardType}</div>
-      </div>
-    )}
+            <div
+            key={card.cardId}
+            className="group bg-white rounded-2xl border border-[#6667AA]/20 shadow-md hover:shadow-md overflow-hidden flex flex-col"
+          >
+            {/* 1. 카드 이미지 영역 */}
+            <div className="bg-gray-50/70 p-5 flex flex-col items-center">
+              {card.imageUrl ? (
+              <div className="w-36 h-24 flex items-center justify-center overflow-hidden">
+                <img
+                  src={card.imageUrl}
+                  alt={card.cardName}
+                  loading="lazy"
+                  style={{
+                    transform: isVerticalCard ? "rotate(-90deg)" : "none",
+                    height: isVerticalCard ? "120px" : "auto",
+                    width: isVerticalCard ? "auto" : "100%",
+                    objectFit: "contain",
+                  }}
+                  className="drop-shadow-md"
+                />
+              </div>
+            ) : (
+              <div className="w-36 h-24 rounded-2xl bg-black shadow-md flex flex-col justify-between p-3 text-white">
+                <div className="text-[10px] opacity-70">{card.company}카드</div>
+                <div className="text-sm font-normal leading-tight line-clamp-2">
+                  {card.cardName}
+                </div>
+                <div className="text-[10px] opacity-70">{card.cardType}</div>
+              </div>
+            )}
 
-      {/* 신용/체크 + 교통 표시 */}
-      <div className="flex gap-1 flex-wrap justify-center mt-2">
-        <span
-          className={`text-[9px] font-normal px-1.5 py-0.5 rounded ${
-            card.cardType === "신용"
-              ? "bg-blue-50 text-blue-600"
-              : "bg-purple-50 text-purple-600"
-          }`}
-        >
-          {card.cardType}
-        </span>
+              {/* 신용/체크 + 교통 표시 */}
+              <div className="flex gap-1 flex-wrap justify-center mt-2">
+                <span
+                  className={`text-[9px] font-normal px-1.5 py-0.5 rounded ${
+                    card.cardType === "신용"
+                      ? "bg-blue-50 text-blue-600"
+                      : "bg-purple-50 text-purple-600"
+                  }`}
+                >
+                  {card.cardType}
+                </span>
 
-        {card.hasTransport && (
-          <span className="text-[9px] font-normal px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-600">
-            교통
-          </span>
-        )}
-      </div>
-    </div>
+                {card.hasTransport && (
+                  <span className="text-[9px] font-normal px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-600">
+                    교통
+                  </span>
+                )}
+              </div>
+            </div>
 
     {/* 2. 카드 정보 영역 */}
     <div className="p-3 flex flex-col flex-1">
@@ -818,14 +818,14 @@ export function CardList() {
           <span className="text-gray-400">연회비</span>
           <span
             className={
-              card.annualFee === 0
+              card.annualFeeDomBasic === 0
                 ? "font-normal text-green-600"
                 : "font-normal text-gray-900"
             }
           >
-            {card.annualFee === 0
+            {card.annualFeeDomBasic === 0
               ? "무료"
-              : `${(card.annualFee ?? 0).toLocaleString()}원`}
+              : `${(card.annualFeeDomBasic ?? 0).toLocaleString()}원`}
           </span>
         </div>
 
@@ -835,15 +835,6 @@ export function CardList() {
             {card.minPerformance === 0
               ? "무실적"
               : `${((card.minPerformance ?? 0) / 10000).toLocaleString()}만원`}
-          </span>
-        </div>
-
-        <div className="flex items-center justify-between">
-          <span className="text-gray-400">월 최대 혜택</span>
-          <span className="font-normal text-[#6667AA]">
-            {card.totalMaxBenefit
-              ? `${(card.totalMaxBenefit ?? 0).toLocaleString()}원`
-              : "정보 없음"}
           </span>
         </div>
       </div>
