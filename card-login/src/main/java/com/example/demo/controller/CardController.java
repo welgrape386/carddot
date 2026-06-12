@@ -28,7 +28,6 @@ import java.util.List;
 public class CardController {
 
     private final CardService cardService;
-    private final CardScoreService cardScoreService;
     private final UserService userService;
     private final JwtTokenProvider jwtTokenProvider;
     private final CardFilterService cardFilterService;
@@ -36,12 +35,11 @@ public class CardController {
     private final CardRankingService cardRankingService;
 
  // 생성자
-    public CardController(CardService cardService, CardScoreService cardScoreService,
+    public CardController(CardService cardService,
     		UserService userService, JwtTokenProvider jwtTokenProvider,
     		CardFilterService cardFilterService, CardStatsRepository cardStatsRepository,
     		CardRankingService cardRankingService) {
         this.cardService = cardService;
-        this.cardScoreService = cardScoreService;
         this.userService = userService;
         this.jwtTokenProvider = jwtTokenProvider;
         this.cardFilterService = cardFilterService;
@@ -80,7 +78,7 @@ public class CardController {
             @RequestParam(name = "personaType", defaultValue = "STUDENT") String personaType) {
         
         try {
-            CardScoreResponse response = cardScoreService.getCardScores(id, personaType);
+            CardScoreResponse response = cardService.getCardScores(id, personaType);
             return ResponseEntity.ok(response);
             
         } catch (IllegalArgumentException e) {

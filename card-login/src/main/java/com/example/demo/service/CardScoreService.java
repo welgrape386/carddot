@@ -1,47 +1,64 @@
 package com.example.demo.service;
 
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
 import com.example.demo.common.PersonaWeight;
+import com.example.demo.dto.CalculationResult;
 import com.example.demo.dto.CardScoreResponse;
 import com.example.demo.entity.Benefit;
 import com.example.demo.entity.Card;
+import com.example.demo.entity.Category;
 import com.example.demo.repository.BenefitRepository;
-import com.example.demo.repository.CardRepository;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Map;
 
 @Service
 public class CardScoreService {
 
-    private final CardRepository cardRepository;
     private final BenefitRepository benefitRepository;
+    private final BenefitEngineService benefitEngineService;
+    
+    // BenefitEngineService와 동일한 카테고리 기준 지출액
+    private static final Map<String, Double> CATEGORY_BASE_AMOUNT = Map.ofEntries(
+            Map.entry("슈퍼마켓/생활잡화", 255800.0), Map.entry("편의점", 49200.0),
+            Map.entry("패션/뷰티", 83000.0), Map.entry("온라인쇼핑", 207000.0),
+            Map.entry("백화점/아울렛/면세점", 100000.0), Map.entry("생활비", 420000.0),
+            Map.entry("의료", 134000.0), Map.entry("대중교통/택시", 95000.0),
+            Map.entry("자동차/주유", 226000.0), Map.entry("구독/스트리밍", 32000.0),
+            Map.entry("문화/엔터", 42000.0), Map.entry("레저/스포츠", 32000.0),
+            Map.entry("교육/육아", 28000.0), Map.entry("외식", 224000.0),
+            Map.entry("배달", 122000.0), Map.entry("카페/베이커리", 46000.0),
+            Map.entry("여행/숙박", 96000.0), Map.entry("항공", 165000.0),
+            Map.entry("페이/간편결제", 182000.0), Map.entry("반려동물", 121000.0),
+            Map.entry("해외", 165000.0)
+    );
 
     // 생성자
-    public CardScoreService(CardRepository cardRepository, BenefitRepository benefitRepository) {
-        this.cardRepository = cardRepository;
+    public CardScoreService(BenefitRepository benefitRepository,
+    		BenefitEngineService benefitEngineService) {
         this.benefitRepository = benefitRepository;
+        this.benefitEngineService = benefitEngineService;
     }
 
-    public CardScoreResponse getCardScores(String cardId, String personaType) {
-        Card card = cardRepository.findById(cardId)
-                .orElseThrow(() -> new IllegalArgumentException("카드를 찾을 수 없습니다."));
-        
-        List<Benefit> benefits = benefitRepository.findByCardId(cardId);
+    public CardScoreResponse getCardScores(Card card, String personaType) {
+    	// 이미 카드 객체 받았으니 혜택 목록만 가져오기
+        List<Benefit> benefits = benefitRepository.findByCardId(card.getCardId());
 
-        // 직접 생성자에 값 넣어서 객체 생성
-        return new CardScoreResponse(
-                calculatePracticality(benefits, personaType),
-                calculateAnnualFeeScore(card.getAnnualFeeDomBasic()),
-                calculatePerformanceScore(card.getMinPerformance()),
-                calculateDiversityScore(benefits),
-                calculateLimitScore(benefits)
-        );
+        // 메서드 호출 시 Card 객체 전체 넘겨줌
+        int personaScore = calculatePersonaScore(card, benefits, personaType);
+        int annualFeeScore = calculateAnnualFeeScore(card.getAnnualFeeDomBasic());
+        int performanceScore = calculatePerformanceScore(card.getMinPerformance());
+        int diversityScore = calculateDiversityScore(benefits);
+        int limitScore = calculateLimitScore(card, benefits);
+
+        int totalScore = (personaScore + annualFeeScore + performanceScore + diversityScore + limitScore) / 5;
+
+        return new CardScoreResponse(totalScore, personaScore, annualFeeScore, performanceScore, diversityScore, limitScore);
     }
 
     // 1. 페르소나
-    // 표준화 후 수정 예정
-    private int calculatePracticality(List<Benefit> benefits, String personaType) {
+    private int calculatePersonaScore(Card card, List<Benefit> benefits, String personaType) {
         Map<Long, Double> weights = PersonaWeight.getWeightsByPersona(personaType);
         double totalScore = 0;
 
@@ -51,15 +68,17 @@ public class CardScoreService {
 
             // 하나의 혜택이 여러 카테고리에 속할 수 있으므로, 그 중 가장 높은 가중치를 적용
             double maxWeight = 0.0125;
-            for (com.example.demo.entity.Category cat : b.getCategories()) {
+            for (Category cat : b.getCategories()) {
                 double weight = weights.getOrDefault(cat.getCategoryId(), 0.0125);
                 if (weight > maxWeight) {
                     maxWeight = weight;
                 }
             }
             
-            double benefitRate = b.getBenefitValue().doubleValue();
-            double normalizedValue = Math.min(100.0, (benefitRate / 15.0) * 100);
+            CalculationResult calcResult = benefitEngineService.calculateEffectiveRate(b, card.getCompany());
+            double effectiveRate = calcResult.getRate().doubleValue();
+            
+            double normalizedValue = Math.min(100.0, (effectiveRate / 10.0) * 100); // 15에서 10으로 수정
 
             totalScore += (normalizedValue * maxWeight);
         }
@@ -67,14 +86,14 @@ public class CardScoreService {
     }
 
     // 2. 연회비 역배점 (기준: 국내 기본 연회비 50,000원)
-    private int calculateAnnualFeeScore(int fee) {
-        if (fee == 0) return 100; // 체크카드나 연회비 면제 카드는 100점 만점
+    private int calculateAnnualFeeScore(Integer fee) {
+        if (fee == null || fee == 0) return 100; // 체크카드나 연회비 면제 카드는 100점 만점
         return Math.max(0, 100 - (fee * 100 / 50000));
     }
 
     // 3. 전월 실적 역배점 (기준: 1,000,000원)
-    private int calculatePerformanceScore(int performance) {
-        if (performance == 0) return 100; // 무조건 혜택 카드(실적 조건 없음)는 100점 만점
+    private int calculatePerformanceScore(Integer performance) {
+        if (performance == null || performance == 0) return 100; // 무조건 혜택 카드(실적 조건 없음)는 100점 만점
         return Math.max(0, 100 - (performance * 100 / 1000000));
     }
 
@@ -83,7 +102,7 @@ public class CardScoreService {
         long uniqueCategoryCount = benefits.stream()
         		.filter(b -> b.getCategories() != null)
                 .flatMap(b -> b.getCategories().stream()) // 리스트 안의 카테고리들을 모두 꺼내서 펼침
-                .map(cat -> cat.getCategoryId())
+                .map(Category::getCategoryId)
                 .distinct()
                 .count();
         
@@ -91,18 +110,24 @@ public class CardScoreService {
     }
 
     // 5. 할인 한도 (기준: 월 누적 한도 50,000원)
-    // 표준화 후 수정 예정
-    private int calculateLimitScore(List<Benefit> benefits) {
-        // 한도가 null(제한 없음)이면서, 실제 혜택률이 존재하는 무제한 카드는 100점 처리
-        boolean hasUnlimited = benefits.stream()
-                .anyMatch(b -> b.getMaxLimit() == null && b.getBenefitValue() != null);
-        if (hasUnlimited) return 100;
+    private int calculateLimitScore(Card card, List<Benefit> benefits) {
+    	double totalExpectedBenefit = 0;
+        
+    	for (Benefit b : benefits) {
+            if (b.getCategories() == null || b.getCategories().isEmpty()) continue;
 
-        double totalLimit = benefits.stream()
-                .filter(b -> b.getMaxLimit() != null)
-                .mapToDouble(Benefit::getMaxLimit)
-                .sum();
-                
-        return (int) Math.min(100, Math.round((totalLimit * 100) / 50000));
+            String categoryName = b.getCategories().get(0).getCategoryName();
+            CalculationResult calcResult = benefitEngineService.calculateEffectiveRate(b, card.getCompany());
+            double effectiveRate = calcResult.getRate().doubleValue();
+
+            double baseAmt = CATEGORY_BASE_AMOUNT.getOrDefault(categoryName, 0.0);
+
+            // 해당 혜택으로 한 달에 체감할 수 있는 실제 혜택 금액
+            double expectedBenefit = baseAmt * (effectiveRate / 100.0);
+            totalExpectedBenefit += expectedBenefit;
+        }
+        
+    	// 월 50,000원 이상 실제 혜택을 볼 수 있다면 100점 만점
+        return (int) Math.min(100, Math.round((totalExpectedBenefit / 50000.0) * 100));
     }
 }
