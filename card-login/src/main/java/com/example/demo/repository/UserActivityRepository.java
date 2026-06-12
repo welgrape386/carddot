@@ -8,6 +8,6 @@ import java.util.List;
 
 @Repository
 public interface UserActivityRepository extends JpaRepository<UserActivity, Integer> {
-    // 특정 유저의 특정 타입("VIEW") 활동을 최신순으로 10개만 가져옴
+    // 특정 유저의 최근 본 카드("RECENT") 활동을 최신순으로 10개만 가져옴
     List<UserActivity> findTop10ByUser_IdAndTypeOrderByCreatedAtDesc(Long userId, String type);
 }
