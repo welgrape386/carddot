@@ -1,1395 +1,1399 @@
 ﻿card_id,company,card_name,card_type,image_url,link_url
-AAP0001,,,,,
-AAP0002,,,,,
-AAP0003,,,,,
-AAP0004,,,,,
-AAP0005,,,,,
-AAP0006,,,,,
-AAP0007,,,,,
-AAP0008,,,,,
-AAP0009,,,,,
-AAP0010,,,,,
-AAP0011,,,,,
-AAP0012,,,,,
-AAP0013,,,,,
-AAP0014,,,,,
-AAP0015,,,,,
-AAP0016,,,,,
-AAP0017,,,,,
-AAP0019,,,,,
-AAP0020,,,,,
-AAP0021,,,,,
-AAP0022,,,,,
-AAP0023,,,,,
-AAP0024,,,,,
-AAP0025,,,,,
-AAP0026,,,,,
-AAP0027,,,,,
-AAP0028,,,,,
-AAP0029,,,,,
-AAP0030,,,,,
-AAP0031,,,,,
-AAP0032,,,,,
-AAP0033,,,,,
-AAP0034,,,,,
-AAP0035,,,,,
-AAP0038,,,,,
-AAP0039,,,,,
-AAP0040,,,,,
-AAP0042,,,,,
-AAP0045,,,,,
-AAP0047,,,,,
-AAP0049,,,,,
-AAP0050,,,,,
-AAP0051,,,,,
-AAP0052,,,,,
-AAP0053,,,,,
-AAP0054,,,,,
-AAP0055,,,,,
-AAP0056,,,,,
-AAP0057,,,,,
-AAP0058,,,,,
-AAP0059,,,,,
-AAP0060,,,,,
-AAP0061,,,,,
-AAP0062,,,,,
-AAP0064,,,,,
-AAP0065,,,,,
-AAP0066,,,,,
-AAP0067,,,,,
-AAP0068,,,,,
-AAP0069,,,,,
-AAP0070,,,,,
-AAP0073,,,,,
-AAP0074,,,,,
-AAP0075,,,,,
-AAP0076,,,,,
-AAP0082,,,,,
-AAP0083,,,,,
-AAP0084,,,,,
-AAP0086,,,,,
-AAP0087,,,,,
-AAP0088,,,,,
-AAP0089,,,,,
-AAP0090,,,,,
-AAP0091,,,,,
-AAP0092,,,,,
-AAP0093,,,,,
-AAP0094,,,,,
-AAP0095,,,,,
-AAP0096,,,,,
-AAP0098,,,,,
-AAP0100,,,,,
-AAP0101,,,,,
-AAP0102,,,,,
-AAP0103,,,,,
-AAP0104,,,,,
-AAP0105,,,,,
-AAP0106,,,,,
-AAP0107,,,,,
-AAP0108,,,,,
-AAP0111,,,,,
-AAP0112,,,,,
-AAP0113,,,,,
-AAP0114,,,,,
-AAP0115,,,,,
-AAP0116,,,,,
-AAP0117,,,,,
-AAP0118,,,,,
-AAP0119,,,,,
-AAP0120,,,,,
-AAP0121,,,,,
-AAP0122,,,,,
-AAP0126,,,,,
-AAP0127,,,,,
-AAP0128,,,,,
-AAP0129,,,,,
-AAP0130,,,,,
-AAP0131,,,,,
-AAP0132,,,,,
-AAP0136,,,,,
-AAP0137,,,,,
-AAP0138,,,,,
-AAP0142,,,,,
-AAP0143,,,,,
-AAP0144,,,,,
-AAP0145,,,,,
-AAP0146,,,,,
-AAP0147,,,,,
-AAP0148,,,,,
-AAP0149,,,,,
-AAP0150,,,,,
-AAP0151,,,,,
-AAP0152,,,,,
-AAP0153,,,,,
-AAP0154,,,,,
-AAP0155,,,,,
-AAP0156,,,,,
-AAP0157,,,,,
-AAP0158,,,,,
-AAP0159,,,,,
-AAP0160,,,,,
-AAP0162,,,,,
-AAP0163,,,,,
-AAP0164,,,,,
-AAP0165,,,,,
-AAP0166,,,,,
-AAP0168,,,,,
-AAP0170,,,,,
-AAP0171,,,,,
-AAP0172,,,,,
-AAP0173,,,,,
-AAP0174,,,,,
-AAP0175,,,,,
-AAP0176,,,,,
-AAP0177,,,,,
-AAP0178,,,,,
-AAP0180,,,,,
-AAP0182,,,,,
-AAP0183,,,,,
-AAP0184,,,,,
-AAP0185,,,,,
-AAP0186,,,,,
-AAP0187,,,,,
-AAP0189,,,,,
-AAP0190,,,,,
-AAP0194,,,,,
-AAP0197,,,,,
-AAP0199,,,,,
-AAP0200,,,,,
-AAP0201,,,,,
-AAP0202,,,,,
-AAP0203,,,,,
-AAP0204,,,,,
-AAP0205,,,,,
-AAP0206,,,,,
-AAP0207,,,,,
-AAP0210,,,,,
-AAP0211,,,,,
-AAP0212,,,,,
-AAP0213,,,,,
-AAP0214,,,,,
-AAP0215,,,,,
-AAP0217,,,,,
-AAP0218,,,,,
-AAP0219,,,,,
-AAP0220,,,,,
-AAP0222,,,,,
-AAP0225,,,,,
-AAP0226,,,,,
-AAP0227,,,,,
-AAP0228,,,,,
-AAP0229,,,,,
-AAP0230,,,,,
-AAP0231,,,,,
-AAP0232,,,,,
-AAP0235,,,,,
-AAP0236,,,,,
-AAP0237,,,,,
-AAP0238,,,,,
-AAP0239,,,,,
-AAP0240,,,,,
-AAP0241,,,,,
-AAP0242,,,,,
-AAP0243,,,,,
-AAP0244,,,,,
-AAP0245,,,,,
-AAP0246,,,,,
-AAP0247,,,,,
-AAP0248,,,,,
-AAP0249,,,,,
-AAP0250,,,,,
-AAP0251,,,,,
-AAP0252,,,,,
-AAP0253,,,,,
-AAP0254,,,,,
-AAP0257,,,,,
-AAP0258,,,,,
-AAP0259,,,,,
-AAP0262,,,,,
-AAP0263,,,,,
-AAP0264,,,,,
-AAP0267,,,,,
-AAP0268,,,,,
-AAP0269,,,,,
-AAP0272,,,,,
-AAP0273,,,,,
-AAP0274,,,,,
-AAP0275,,,,,
-AAP0276,,,,,
-AAP0277,,,,,
-AAP0278,,,,,
-AAP0279,,,,,
-AAP0280,,,,,
-AAP0281,,,,,
-AAP0282,,,,,
-AAP0283,,,,,
-AAP0284,,,,,
-AAP0285,,,,,
-AAP0286,,,,,
-AAP0287,,,,,
-AAP0289,,,,,
-AAP0290,,,,,
-AAP0292,,,,,
-AAP0293,,,,,
-AAP0294,,,,,
-AAP0295,,,,,
-AAP0296,,,,,
-AAP0297,,,,,
-AAP0298,,,,,
-AAP0299,,,,,
-AAP0300,,,,,
-AAP0301,,,,,
-AAP0302,,,,,
-AAP0304,,,,,
-AAP0305,,,,,
-AAP0306,,,,,
-AAP0307,,,,,
-AAP0308,,,,,
-AAP0309,,,,,
-AAP0310,,,,,
-AAP0311,,,,,
-AAP0312,,,,,
-AAP0313,,,,,
-AAP0314,,,,,
-AAP0315,,,,,
-AAP0316,,,,,
-AAP0317,,,,,
-AAP0318,,,,,
-AAP0319,,,,,
-AAP0320,,,,,
-AAP0321,,,,,
-AAP0322,,,,,
-AAP0323,,,,,
-AAP0324,,,,,
-AAP0325,,,,,
-AAP0326,,,,,
-AAP0327,,,,,
-AAP0328,,,,,
-AAP0329,,,,,
-AAP0330,,,,,
-AAP0331,,,,,
-AAP0332,,,,,
-AAP0333,,,,,
-AAP0334,,,,,
-AAP0335,,,,,
-AAP0336,,,,,
-AAP0337,,,,,
-AAP0338,,,,,
-AAP0339,,,,,
-AAP0343,,,,,
-AAP0344,,,,,
-AAP0346,,,,,
-AAP0347,,,,,
-AAP0348,,,,,
-AAP0349,,,,,
-AAP0350,,,,,
-AAP0351,,,,,
-AAP0353,,,,,
-AAP0354,,,,,
-AAP0355,,,,,
-AAP0356,,,,,
-AAP0357,,,,,
-AAP0358,,,,,
-AAP0359,,,,,
-AAP0361,,,,,
-AAP0362,,,,,
-AAP0365,,,,,
-AAP0366,,,,,
-AAP0367,,,,,
-AAP0368,,,,,
-AAP0369,,,,,
-AAP0370,,,,,
-AAP0371,,,,,
-AAP0372,,,,,
-AAP0373,,,,,
-AAP0374,,,,,
-AAP0375,,,,,
-AAP0376,,,,,
-AAP0377,,,,,
-AAP0378,,,,,
-AAP0379,,,,,
-AAP0380,,,,,
-AAP0381,,,,,
-AAP0383,,,,,
-AAP0384,,,,,
-AAP0385,,,,,
-AAP0386,,,,,
-AAP0387,,,,,
-AAP0388,,,,,
-AAP0389,,,,,
-AAP0390,,,,,
-AAP0391,,,,,
-AAP0392,,,,,
-AAP0393,,,,,
-AAP0394,,,,,
-AAP0399,,,,,
-AAP0400,,,,,
-AAP0402,,,,,
-AAP0403,,,,,
-AAP0404,,,,,
-AAP0406,,,,,
-AAP0407,,,,,
-AAP0408,,,,,
-AAP0409,,,,,
-AAP0410,,,,,
-AAP0412,,,,,
-AAP0413,,,,,
-AAP0414,,,,,
-AAP0415,,,,,
-AAP0416,,,,,
-AAP0417,,,,,
-AAP0418,,,,,
-AAP0419,,,,,
-AAP0422,,,,,
-AAP0424,,,,,
-AAP0425,,,,,
-AAP0426,,,,,
-AAP0427,,,,,
-AAP0428,,,,,
-AAP0429,,,,,
-AAP0430,,,,,
-AAP0431,,,,,
-AAP0432,,,,,
-AAP0433,,,,,
-AAP0434,,,,,
-AAP0435,,,,,
-AAP0436,,,,,
-AAP0437,,,,,
-AAP0438,,,,,
-AAP0439,,,,,
-AAP0440,,,,,
-AAP0441,,,,,
-AAP0442,,,,,
-AAP0443,,,,,
-AAP0444,,,,,
-AAP0445,,,,,
-AAP0446,,,,,
-AAP0447,,,,,
-AAP0448,,,,,
-AAP0449,,,,,
-AAP0450,,,,,
-AAP0451,,,,,
-AAP0452,,,,,
-AAP0453,,,,,
-AAP0454,,,,,
-AAP0455,,,,,
-AAP0456,,,,,
-AAP0457,,,,,
-AAP0458,,,,,
-AAP0459,,,,,
-AAP0461,,,,,
-AAP0462,,,,,
-AAP0463,,,,,
-AAP0464,,,,,
-AAP0465,,,,,
-AAP0466,,,,,
-AAP0467,,,,,
-AAP0468,,,,,
-AAP0469,,,,,
-AAP0470,,,,,
-AAP0472,,,,,
-AAP0473,,,,,
-AAP0474,,,,,
-AAP0475,,,,,
-AAP0478,,,,,
-AAP0482,,,,,
-AAP0483,,,,,
-AAP0484,,,,,
-AAP0485,,,,,
-AAP0486,,,,,
-AAP0487,,,,,
-AAP0488,,,,,
-AAP0490,,,,,
-AAP0491,,,,,
-AAP0492,,,,,
-AAP0493,,,,,
-AAP0494,,,,,
-AAP0495,,,,,
-AAP0496,,,,,
-AAP0497,,,,,
-AAP0498,,,,,
-AAP0499,,,,,
-AAP0500,,,,,
-AAP0501,,,,,
-AAP0503,,,,,
-AAP0504,,,,,
-AAP0505,,,,,
-AAP0509,,,,,
-AAP0510,,,,,
-AAP0511,,,,,
-AAP0512,,,,,
-AAP0514,,,,,
-AAP0515,,,,,
-AAP0517,,,,,
-AAP0518,,,,,
-AAP0519,,,,,
-AAP0520,,,,,
-AAP0521,,,,,
-AAP0522,,,,,
-AAP0526,,,,,
-AAP0531,,,,,
-AAP0533,,,,,
-AAP0534,,,,,
-AAP0535,,,,,
-AAP0536,,,,,
-AAP0537,,,,,
-AAP0538,,,,,
-AAP0540,,,,,
-AAP0541,,,,,
-AAP0542,,,,,
-AAP0545,,,,,
-AAP0546,,,,,
-AAP0547,,,,,
-AAP0548,,,,,
-AAP0549,,,,,
-AAP0550,,,,,
-AAP0551,,,,,
-AAP0553,,,,,
-AAP0556,,,,,
-AAP0557,,,,,
-AAP0558,,,,,
-AAP0559,,,,,
-AAP0560,,,,,
-AAP0561,,,,,
-AAP0562,,,,,
-AAP0563,,,,,
-AAP0564,,,,,
-AAP0565,,,,,
-AAP0566,,,,,
-AAP0567,,,,,
-AAP0569,,,,,
-AAP0570,,,,,
-AAP0571,,,,,
-AAP0573,,,,,
-AAP0576,,,,,
-AAP0578,,,,,
-AAP0582,,,,,
-AAP0583,,,,,
-AAP0584,,,,,
-AAP0585,,,,,
-AAP0586,,,,,
-AAP0587,,,,,
-AAP0588,,,,,
-AAP0589,,,,,
-AAP0590,,,,,
-AAP0591,,,,,
-AAP0592,,,,,
-AAP0593,,,,,
-AAP0594,,,,,
-AAP0595,,,,,
-AAP0596,,,,,
-AAP0597,,,,,
-AAP0598,,,,,
-AAP0599,,,,,
-AAP0600,,,,,
-AAP0601,,,,,
-AAP0602,,,,,
-AAP0604,,,,,
-AAP0605,,,,,
-AAP0607,,,,,
-AAP0608,,,,,
-AAP0609,,,,,
-AAP0610,,,,,
-AAP0611,,,,,
-AAP0613,,,,,
-AAP0615,,,,,
-AAP0616,,,,,
-AAP0617,,,,,
-AAP0619,,,,,
-AAP0620,,,,,
-AAP0621,,,,,
-AAP0622,,,,,
-AAP0623,,,,,
-AAP0624,,,,,
-AAP0625,,,,,
-AAP0626,,,,,
-AAP0628,,,,,
-AAP0629,,,,,
-AAP0630,,,,,
-AAP0632,,,,,
-AAP0634,,,,,
-AAP0635,,,,,
-AAP0636,,,,,
-AAP0637,,,,,
-AAP0638,,,,,
-AAP0639,,,,,
-AAP0640,,,,,
-AAP0641,,,,,
-AAP0642,,,,,
-AAP0643,,,,,
-AAP0644,,,,,
-AAP0645,,,,,
-AAP0646,,,,,
-AAP0647,,,,,
-AAP0648,,,,,
-AAP0649,,,,,
-AAP0650,,,,,
-AAP0651,,,,,
-AAP0653,,,,,
-AAP0654,,,,,
-AAP0655,,,,,
-AAP0656,,,,,
-AAP0657,,,,,
-AAP0658,,,,,
-AAP0659,,,,,
-AAP0660,,,,,
-AAP0661,,,,,
-AAP0662,,,,,
-AAP0663,,,,,
-AAP0664,,,,,
-AAP0665,,,,,
-AAP0666,,,,,
-AAP0667,,,,,
-AAP0668,,,,,
-AAP0669,,,,,
-AAP0670,,,,,
-AAP0671,,,,,
-AAP0672,,,,,
-AAP0673,,,,,
-AAP0676,,,,,
-AAP0681,,,,,
-AAP0684,,,,,
-AAP0685,,,,,
-AAP0688,,,,,
-AAP0689,,,,,
-AAP0690,,,,,
-AAP0691,,,,,
-AAP0693,,,,,
-AAP0694,,,,,
-AAP0695,,,,,
-AAP0697,,,,,
-AAP0698,,,,,
-AAP0700,,,,,
-AAP0702,,,,,
-AAP0703,,,,,
-AAP0705,,,,,
-AAP0706,,,,,
-AAP0708,,,,,
-AAP0709,,,,,
-AAP0710,,,,,
-AAP0711,,,,,
-AAP0712,,,,,
-AAP0713,,,,,
-AAP0714,,,,,
-AAP0715,,,,,
-AAP0716,,,,,
-AAP0717,,,,,
-AAP0718,,,,,
-AAP0719,,,,,
-AAP0720,,,,,
-AAP0721,,,,,
-AAP0723,,,,,
-AAP0728,,,,,
-AAP0729,,,,,
-AAP0730,,,,,
-AAP0731,,,,,
-AAP0756,,,,,
-AAP0757,,,,,
-AAP0759,,,,,
-AAP0762,,,,,
-AAP0768,,,,,
-AAP0771,,,,,
-AAP0772,,,,,
-AAP0775,,,,,
-AAP0776,,,,,
-AAP0777,,,,,
-AAP0778,,,,,
-AAP0781,,,,,
-AAP0783,,,,,
-AAP0785,,,,,
-AAP0786,,,,,
-AAP0787,,,,,
-AAP0790,,,,,
-AAP1001,,,,,
-AAP1002,,,,,
-AAP1003,,,,,
-AAP1004,,,,,
-AAP1005,,,,,
-AAP1006,,,,,
-AAP1008,,,,,
-AAP1010,,,,,
-AAP1011,,,,,
-AAP1012,,,,,
-AAP1013,,,,,
-AAP1014,,,,,
-AAP1015,,,,,
-AAP1016,,,,,
-AAP1017,,,,,
-AAP1018,,,,,
-AAP1019,,,,,
-AAP1020,,,,,
-AAP1021,,,,,
-AAP1022,,,,,
-AAP1023,,,,,
-AAP1024,,,,,
-AAP1025,,,,,
-AAP1026,,,,,
-AAP1027,,,,,
-AAP1028,,,,,
-AAP1029,,,,,
-AAP1030,,,,,
-AAP1031,,,,,
-AAP1032,,,,,
-AAP1033,,,,,
-AAP1035,,,,,
-AAP1036,,,,,
-AAP1037,,,,,
-AAP1038,,,,,
-AAP1039,,,,,
-AAP1040,,,,,
-AAP1041,,,,,
-AAP1042,,,,,
-AAP1043,,,,,
-AAP1044,,,,,
-AAP1045,,,,,
-AAP1046,,,,,
-AAP1047,,,,,
-AAP1048,,,,,
-AAP1049,,,,,
-AAP1050,,,,,
-AAP1051,,,,,
-AAP1052,,,,,
-AAP1053,,,,,
-AAP1054,,,,,
-AAP1055,,,,,
-AAP1056,,,,,
-AAP1058,,,,,
-AAP1059,,,,,
-AAP1060,,,,,
-AAP1061,,,,,
-AAP1062,,,,,
-AAP1063,,,,,
-AAP1064,,,,,
-AAP1065,,,,,
-AAP1066,,,,,
-AAP1067,,,,,
-AAP1068,,,,,
-AAP1069,,,,,
-AAP1070,,,,,
-AAP1071,,,,,
-AAP1072,,,,,
-AAP1073,,,,,
-AAP1074,,,,,
-AAP1077,,,,,
-AAP1078,,,,,
-AAP1079,,,,,
-AAP1080,,,,,
-AAP1082,,,,,
-AAP1083,,,,,
-AAP1084,,,,,
-AAP1085,,,,,
-AAP1087,,,,,
-AAP1088,,,,,
-AAP1089,,,,,
-AAP1090,,,,,
-AAP1091,,,,,
-AAP1092,,,,,
-AAP1095,,,,,
-AAP1096,,,,,
-AAP1097,,,,,
-AAP1101,,,,,
-AAP1102,,,,,
-AAP1105,,,,,
-AAP1106,,,,,
-AAP1107,,,,,
-AAP1108,,,,,
-AAP1109,,,,,
-AAP1110,,,,,
-AAP1115,,,,,
-AAP1116,,,,,
-AAP1117,,,,,
-AAP1118,,,,,
-AAP1119,,,,,
-AAP1120,,,,,
-AAP1121,,,,,
-AAP1122,,,,,
-AAP1126,,,,,
-AAP1127,,,,,
-AAP1130,,,,,
-AAP1132,,,,,
-AAP1135,,,,,
-AAP1136,,,,,
-AAP1137,,,,,
-AAP1140,,,,,
-AAP1141,,,,,
-AAP1145,,,,,
-AAP1146,,,,,
-AAP1148,,,,,
-AAP1149,,,,,
-AAP1150,,,,,
-AAP1151,,,,,
-AAP1155,,,,,
-AAP1161,,,,,
-AAP1162,,,,,
-AAP1163,,,,,
-AAP1169,,,,,
-AAP1170,,,,,
-AAP1171,,,,,
-AAP1172,,,,,
-AAP1173,,,,,
-AAP1174,,,,,
-AAP1175,,,,,
-AAP1176,,,,,
-AAP1179,,,,,
-AAP1180,,,,,
-AAP1183,,,,,
-AAP1184,,,,,
-AAP1185,,,,,
-AAP1186,,,,,
-AAP1187,,,,,
-AAP1188,,,,,
-AAP1189,,,,,
-AAP1190,,,,,
-AAP1193,,,,,
-AAP1194,,,,,
-AAP1195,,,,,
-AAP1196,,,,,
-AAP1197,,,,,
-AAP1198,,,,,
-AAP1200,,CJ ONE 삼성카드,,,
-AAP1202,,,,,
-AAP1203,,,,,
-AAP1204,,,,,
-AAP1205,,,,,
-AAP1207,,,,,
-AAP1210,,,,,
-AAP1213,,,,,
-AAP1214,,,,,
-AAP1215,,,,,
-AAP1216,,,,,
-AAP1222,,,,,
-AAP1223,,,,,
-AAP1228,,,,,
-AAP1229,,,,,
-AAP1232,,,,,
-AAP1233,,,,,
-AAP1235,,,,,
-AAP1241,,,,,
-AAP1248,,,,,
-AAP1250,,,,,
-AAP1252,,,,,
-AAP1256,,,,,
-AAP1257,,,,,
-AAP1258,,,,,
-AAP1264,,,,,
-AAP1265,,,,,
-AAP1266,,,,,
-AAP1268,,,,,
-AAP1269,,,,,
-AAP1271,,,,,
-AAP1272,,,,,
-AAP1273,,,,,
-AAP1274,,,,,
-AAP1275,,,,,
-AAP1276,,,,,
-AAP1277,,,,,
-AAP1278,,,,,
-AAP1279,,,,,
-AAP1280,,,,,
-AAP1281,,,,,
-AAP1282,,,,,
-AAP1286,,,,,
-AAP1289,,,,,
-AAP1295,,,,,
-AAP1296,,,,,
-AAP1297,,,,,
-AAP1298,,,,,
-AAP1303,,,,,
-AAP1304,,,,,
-AAP1305,,,,,
-AAP1306,,,,,
-AAP1307,,,,,
-AAP1308,,,,,
-AAP1309,,,,,
-AAP1310,,,,,
-AAP1311,,,,,
-AAP1312,,,,,
-AAP1313,,,,,
-AAP1315,,,,,
-AAP1316,,,,,
-AAP1317,,,,,
-AAP1319,,,,,
-AAP1323,,,,,
-AAP1324,,,,,
-AAP1326,,,,,
-AAP1327,,,,,
-AAP1328,,,,,
-AAP1329,,,,,
-AAP1334,,,,,
-AAP1335,,,,,
-AAP1338,,,,,
-AAP1340,,,,,
-AAP1341,,,,,
-AAP1344,,,,,
-AAP1345,,,,,
-AAP1346,,,,,
-AAP1347,,,,,
-AAP1348,,,,,
-AAP1349,,,,,
-AAP1351,,,,,
-AAP1353,,,,,
-AAP1354,,,,,
-AAP1358,,,,,
-AAP1360,,,,,
-AAP1363,,,,,
-AAP1366,,,,,
-AAP1369,,,,,
-AAP1371,,,,,
-AAP1372,,,,,
-AAP1373,,,,,
-AAP1374,,,,,
-AAP1376,,,,,
-AAP1377,,,,,
-AAP1378,,,,,
-AAP1379,,,,,
-AAP1381,,,,,
-AAP1387,,,,,
-AAP1389,,,,,
-AAP1390,,,,,
-AAP1391,,,,,
-AAP1392,,,,,
-AAP1393,,,,,
-AAP1394,,,,,
-AAP1395,,,,,
-AAP1397,,,,,
-AAP1400,,,,,
-AAP1404,,,,,
-AAP1406,,,,,
-AAP1408,,,,,
-AAP1410,,,,,
-AAP1414,,,,,
-AAP1415,,,,,
-AAP1416,,,,,
-AAP1417,,,,,
-AAP1418,,,,,
-AAP1419,,,,,
-AAP1420,,,,,
-AAP1421,,,,,
-AAP1422,,,,,
-AAP1423,,,,,
-AAP1426,,,,,
-AAP1427,,,,,
-AAP1428,,,,,
-AAP1430,,,,,
-AAP1433,,,,,
-AAP1434,,,,,
-AAP1441,,,,,
-AAP1442,,,,,
-AAP1445,,,,,
-AAP1446,,,,,
-AAP1447,,,,,
-AAP1448,,,,,
-AAP1449,,,,,
-AAP1450,,,,,
-AAP1451,,,,,
-AAP1452,,삼성카드 & MILEAGE PLATINUM (스카이패스),,,
-AAP1453,,,,,
-AAP1454,,,,,
-AAP1455,,,,,
-AAP1458,,,,,
-AAP1461,,,,,
-AAP1462,,,,,
-AAP1463,,,,,
-AAP1464,,,,,
-AAP1465,,,,,
-AAP1466,,,,,
-AAP1467,,,,,
-AAP1469,,,,,
-AAP1470,,,,,
-AAP1471,,,,,
-AAP1472,,,,,
-AAP1473,,,,,
-AAP1474,,,,,
-AAP1475,,,,,
-AAP1477,,,,,
-AAP1482,,,,,
-AAP1483,,삼성카드 taptap O,,,
-AAP1484,,,,,
-AAP1485,,,,,
-AAP1489,,,,,
-AAP1490,,,,,
-AAP1491,,,,,
-AAP1492,,,,,
-AAP1493,,,,,
-AAP1494,,,,,
-AAP1495,,,,,
-AAP1496,,,,,
-AAP1497,,,,,
-AAP1498,,,,,
-AAP1499,,,,,
-AAP1500,,,,,
-AAP1501,,CU·배달의민족 삼성카드 taptap,,,
-AAP1503,,,,,
-AAP1504,,,,,
-AAP1505,,,,,
-AAP1507,,,,,
-AAP1511,,,,,
-AAP1512,,,,,
-AAP1513,,,,,
-AAP1514,,,,,
-AAP1515,,,,,
-AAP1520,,,,,
-AAP1521,,,,,
-AAP1524,,,,,
-AAP1526,,,,,
-AAP1527,,,,,
-AAP1528,,,,,
-AAP1531,,,,,
-AAP1532,,,,,
-AAP1533,,,,,
-AAP1535,,,,,
-AAP1536,,,,,
-AAP1538,,,,,
-AAP1539,,,,,
-AAP1540,,,,,
-AAP1541,,,,,
-AAP1543,,,,,
-AAP1544,,,,,
-AAP1546,,,,,
-AAP1547,,,,,
-AAP1548,,,,,
-AAP1549,,,,,
-AAP1550,,,,,
-AAP1551,,,,,
-AAP1552,,,,,
-AAP1553,,,,,
-AAP1555,,,,,
-AAP1557,,,,,
-AAP1558,,,,,
-AAP1559,,,,,
-AAP1560,,,,,
-AAP1562,,,,,
-AAP1563,,,,,
-AAP1564,,,,,
-AAP1565,,,,,
-AAP1566,,,,,
-AAP1567,,,,,
-AAP1568,,,,,
-AAP1569,,,,,
-AAP1573,,,,,
-AAP1574,,,,,
-AAP1575,,,,,
-AAP1576,,,,,
-AAP1580,,,,,
-AAP1581,,,,,
-AAP1582,,,,,
-AAP1583,,,,,
-AAP1584,,,,,
-AAP1585,,,,,
-AAP1586,,,,,
-AAP1587,,,,,
-AAP1588,,,,,
-AAP1594,,,,,
-AAP1595,,,,,
-AAP1597,,,,,
-AAP1599,,,,,
-AAP1600,,,,,
-AAP1601,,,,,
-AAP1602,,,,,
-AAP1604,,,,,
-AAP1605,,,,,
-AAP1606,,,,,
-AAP1607,,,,,
-AAP1608,,,,,
-AAP1609,,,,,
-AAP1610,,,,,
-AAP1611,,,,,
-AAP1612,,,,,
-AAP1613,,,,,
-AAP1614,,,,,
-AAP1615,,,,,
-AAP1617,,,,,
-AAP1618,,,,,
-AAP1619,,,,,
-AAP1621,,,,,
-AAP1622,,,,,
-AAP1623,,,,,
-AAP1625,,,,,
-AAP1626,,,,,
-AAP1627,,,,,
-AAP1628,,,,,
-AAP1630,,,,,
-AAP1631,,,,,
-AAP1632,,,,,
-AAP1633,,,,,
-AAP1634,,,,,
-AAP1636,,,,,
-AAP1638,,,,,
-AAP1639,,,,,
-AAP1640,,,,,
-AAP1641,,,,,
-AAP1642,,,,,
-AAP1643,,,,,
-AAP1644,,,,,
-AAP1645,,,,,
-AAP1646,,,,,
-AAP1648,,,,,
-AAP1649,,,,,
-AAP1650,,,,,
-AAP1651,,,,,
-AAP1652,,,,,
-AAP1653,,다이소 삼성카드,,,
-AAP1654,,,,,
-AAP1655,,,,,
-AAP1656,,,,,
-AAP1657,,,,,
-AAP1658,,,,,
-AAP1659,,,,,
-AAP1663,,,,,
-AAP1664,,,,,
-AAP1665,,,,,
-AAP1666,,taptap DIGITAL,,,
-AAP1667,,,,,
-AAP1668,,,,,
-AAP1670,,,,,
-AAP1671,,,,,
-AAP1672,,,,,
-AAP1673,,,,,
-AAP1674,,,,,
-AAP1675,,,,,
-AAP1676,,,,,
-AAP1677,,,,,
-AAP1678,,,,,
-AAP1679,,,,,
-AAP1680,,,,,
-AAP1681,,,,,
-AAP1682,,,,,
-AAP1683,,,,,
-AAP1684,,,,,
-AAP1685,,,,,
-AAP1686,,,,,
-AAP1687,,,,,
-AAP1688,,,,,
-AAP1690,,,,,
-AAP1691,,,,,
-AAP1692,,,,,
-AAP1693,,,,,
-AAP1694,,,,,
-AAP1695,,,,,
-AAP1696,,,,,
-AAP1697,,,,,
-AAP1698,,,,,
-AAP1699,,,,,
-AAP1700,,,,,
-AAP1701,,,,,
-AAP1702,,,,,
-AAP1703,,,,,
-AAP1704,,,,,
-AAP1705,,,,,
-AAP1706,,,,,
-AAP1707,,,,,
-AAP1708,,,,,
-AAP1709,,,,,
-AAP1710,,,,,
-AAP1711,,,,,
-AAP1712,,,,,
-AAP1713,,,,,
-AAP1716,,,,,
-AAP1717,,,,,
-AAP1719,,,,,
-AAP1724,,,,,
-AAP1727,,,,,
-AAP1728,,,,,
-AAP1729,,,,,
-AAP1730,,,,,
-AAP1731,,삼성 iD ON 카드,,,
-AAP1732,,,,,
-AAP1733,,,,,
-AAP1735,,,,,
-AAP1736,,,,,
-AAP1737,,,,,
-AAP1740,,,,,
-AAP1741,,,,,
-AAP1742,,모니모카드,,,
-AAP1743,,,,,
-AAP1744,,,,,
-AAP1745,,,,,
-AAP1746,,,,,
-AAP1747,,,,,
-AAP1748,,,,,
-AAP1752,,,,,
-AAP1753,,,,,
-AAP1754,,,,,
-AAP1755,,,,,
-AAP1756,,,,,
-AAP1757,,,,,
-AAP1758,,,,,
-AAP1760,,,,,
-AAP1762,,,,,
-AAP1763,,,,,
-AAP1764,,,,,
-AAP1765,,,,,
-AAP1766,,,,,
-AAP1767,,,,,
-AAP1768,,,,,
-AAP1769,,,,,
-AAP1770,,,,,
-AAP1771,,신세계 더 마일리지 삼성카드 (스카이패스),,,
-AAP1773,,,,,
-AAP1774,,,,,
-AAP1775,,,,,
-AAP1777,,,,,
-AAP1778,,,,,
-AAP1779,,,,,
-AAP1780,,,,,
-AAP1781,,,,,
-AAP1782,,,,,
-AAP1783,,,,,
-AAP1784,,,,,
-AAP1785,,,,,
-AAP1786,,,,,
-AAP1787,,,,,
-AAP1788,,,,,
-AAP1790,,,,,
-AAP1791,,,,,
-AAP1792,,,,,
-AAP1794,,,,,
-AAP1795,,,,,
-AAP1797,,,,,
-AAP1798,,,,,
-AAP1799,,,,,
-AAP1801,,,,,
-AAP1802,,,,,
-AAP1805,,,,,
-AAP1806,,,,,
-AAP1807,,,,,
-AAP1812,,,,,
-AAP1813,,,,,
-AAP1815,,,,,
-AAP1816,,,,,
-AAP1817,,,,,
-AAP1818,,,,,
-AAP1819,,,,,
-AAP1820,,,,,
-AAP1821,,,,,
-AAP1822,,,,,
-AAP1823,,,,,
-AAP1824,,,,,
-AAP1825,,,,,
-AAP1826,,,,,
-AAP1830,,,,,
-AAP1831,,,,,
-AAP1832,,SFC THE iD. TITANIUM (아시아나),,,
-AAP1833,,,,,
-AAP1834,,,,,
-AAP1835,,,,,
-AAP1837,,,,,
-AAP1838,,,,,
-AAP1839,,,,,
-AAP1841,,,,,
-AAP1842,,,,,
-AAP1843,,,,,
-AAP1845,,,,,
-AAP1846,,기후동행 삼성카드,,,
-AAP1847,,,,,
-AAP1848,,,,,
-AAP1849,,,,,
-AAP1850,,,,,
-AAP1851,,,,,
-AAP1852,,,,,
-AAP1855,,,,,
-AAP1856,,,,,
-AAP1857,,,,,
-AAP1858,,,,,
-AAP1859,,,,,
-AAP1861,,,,,
-AAP1863,,,,,
-AAP1864,,,,,
-AAP1865,,,,,
-AAP1866,,,,,
-AAP1869,,,,,
-AAP1870,,,,,
-AAP1872,,,,,
-AAP1873,,,,,
-AAP1874,,,,,
-AAP1875,,,,,
-AAP1876,,,,,
-AAP1877,,,,,
-AAP1878,,,,,
-AAP1882,,,,,
-AAP1883,,,,,
-AAP1884,,,,,
-AAP1886,,,,,
-AAP1887,,,,,
-AAP1888,,,,,
-AAP1889,,,,,
-AAP1890,,,,,
-AAP1891,,,,,
-AAP1893,,,,,
-AAP1894,,,,,
-AAP1897,,,,,
-AAP1898,,,,,
-AAP1899,,,,,
-AAP1900,,,,,
-AAP1901,,,,,
-AAP1902,,,,,
-AAP1903,,,,,
-AAP1904,,,,,
-AAP1905,,,,,
-AAP1906,,,,,
-AAP1907,,,,,
-AAP1909,,,,,
-AAP1911,,무신사 삼성카드,,,
-AAP1915,,,,,
-ABP0018,,,,,
-ABP0037,,,,,
-ABP0041,,,,,
-ABP0046,,,,,
-ABP0071,,,,,
-ABP0072,,,,,
-ABP0077,,,,,
-ABP0079,,,,,
-ABP0085,,,,,
-ABP0097,,,,,
-ABP0099,,,,,
-ABP0123,,,,,
-ABP0133,,,,,
-ABP0134,,,,,
-ABP0139,,,,,
-ABP0167,,,,,
-ABP0192,,,,,
-ABP0193,,,,,
-ABP0195,,,,,
-ABP0198,,,,,
-ABP0208,,,,,
-ABP0233,,,,,
-ABP0234,,,,,
-ABP0288,,,,,
-ABP0291,,,,,
-ABP0303,,,,,
-ABP0345,,,,,
-ABP0352,,,,,
-ABP0360,,,,,
-ABP0364,,,,,
-ABP0397,,,,,
-ABP0398,,,,,
-ABP0421,,,,,
-ABP0471,,,,,
-ABP0476,,,,,
-ABP0477,,,,,
-ABP0489,,,,,
-ABP0506,,,,,
-ABP0507,,,,,
-ABP0508,,,,,
-ABP0532,,,,,
-ABP0539,,,,,
-ABP0543,,,,,
-ABP0552,,,,,
-ABP0572,,,,,
-ABP0574,,,,,
-ABP0577,,,,,
-ABP0579,,,,,
-ABP0580,,,,,
-ABP0581,,,,,
-ABP0614,,,,,
-ABP0618,,,,,
-ABP0627,,,,,
-ABP0633,,,,,
-ABP0652,,,,,
-ABP0701,,,,,
-ABP0725,,,,,
-ABP0726,,,,,
-ABP0727,,,,,
-ABP0782,,,,,
-ABP0784,,,,,
-ABP0788,,,,,
-ABP0789,,,,,
-ABP1103,,,,,
-ABP1104,,,,,
-ABP1142,,,,,
-ABP1143,,,,,
-ABP1158,,,,,
-ABP1159,,,,,
-ABP1182,,,,,
-ABP1283,,골목상권우대 삼성체크카드 애니패스포인트,,,
-ABP1285,,새마을금고 삼성체크카드,,,
-ABP1320,,,,,
-ABP1321,,,,,
-ABP1322,,,,,
-ABP1333,,,,,
-ABP1356,,,,,
-ABP1365,,,,,
-ABP1367,,,,,
-ABP1382,,,,,
-ABP1383,,,,,
-ABP1384,,삼성체크카드 & POINT,,,
-ABP1431,,,,,
-ABP1443,,,,,
-ABP1444,,,,,
-ABP1457,,,,,
-ABP1459,,SC제일은행 삼성체크카드 CASHBACK,,,
-ABP1460,,,,,
-ABP1468,,,,,
-ABP1476,,,,,
-ABP1478,,,,,
-ABP1516,,,,,
-ABP1517,,,,,
-ABP1518,,화물복지 삼성법인체크카드,,,
-ABP1519,,,,,
-ABP1522,,,,,
-ABP1542,,,,,
-ABP1556,,SC제일은행 글로벌 삼성체크카드,,,
-ABP1689,,국민행복 삼성체크카드 V2,,,
-ABP1714,,,,,
-ABP1722,,,,,
-ABP1723,,청도사랑상품권 삼성체크카드,,,
-ABP1750,,,,,
-ABP1751,,,,,
-ABP1776,,,,,
-ABP1793,,,,,
-ABP1800,,,,,
-ABP1853,,,,,
-ABP1871,,,,,
-ACP0395,,,,,
-ACP0396,,,,,
-ACP0460,,,,,
-ACP0603,,,,,
-ACP0732,,,,,
-ACP0733,,,,,
-ACP0734,,,,,
-ACP0735,,,,,
-ACP0736,,,,,
-ACP0737,,,,,
-ACP0738,,,,,
-ACP0739,,,,,
-ACP0741,,,,,
-ACP0742,,,,,
-ACP0743,,,,,
-ACP0744,,,,,
-ACP0745,,,,,
-ACP0746,,,,,
-ACP0747,,,,,
-ACP0748,,,,,
-ACP0749,,,,,
-ACP0750,,,,,
-ACP0751,,,,,
-ACP0752,,,,,
-ACP0753,,,,,
-ACP0754,,,,,
-ACP0755,,,,,
-ACP0764,,,,,
-ACP0766,,,,,
-ACP0767,,,,,
-ACP0779,,,,,
-ACP0780,,,,,
-ACP1081,,,,,
-ACP1086,,,,,
-ACP1093,,,,,
-ACP1128,,,,,
-ACP1133,,,,,
-ACP1134,,,,,
-ACP1138,,,,,
-ACP1139,,,,,
-ACP1144,,,,,
-ACP1147,,,,,
-ACP1152,,,,,
-ACP1153,,,,,
-ACP1154,,,,,
-ACP1156,,,,,
-ACP1164,,,,,
-ACP1225,,,,,
-ACP1510,,,,,
-ACP1523,,,,,
-ACP1529,,,,,
-ACP1738,,,,,
+AAP0001,삼성,11번가 삼성오일앤세이브플러스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0001
+AAP0002,삼성,11번가 삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0002
+AAP0003,삼성,42.195 삼성오일앤세이브카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0003
+AAP0004,삼성,가든백화점삼성럭투유카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0004
+AAP0005,삼성,가든백화점삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0005
+AAP0006,삼성,거제사랑 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0006
+AAP0007,삼성,경우회세콤클럽삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0007
+AAP0008,삼성,고속버스보람 삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0008
+AAP0009,삼성,고속버스보람삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0009
+AAP0010,삼성,고속버스보람 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0010
+AAP0011,삼성,골프스카이 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0011
+AAP0012,삼성,코레일멤버십공무원연금 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0012
+AAP0013,삼성,공무원연금 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0013
+AAP0014,삼성,구미강동병원 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0014
+AAP0015,삼성,국세청 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0015
+AAP0016,삼성,국세청 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0016
+AAP0017,삼성,국세청 삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0017
+AAP0019,삼성,군산CC 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0019
+AAP0020,삼성,군산CC 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0020
+AAP0021,삼성,삼성그룹사원증카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0021
+AAP0022,삼성,그린카다이렉트 삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0022
+AAP0023,삼성,김해멀티삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0023
+AAP0024,삼성,김해멀티 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0024
+AAP0025,삼성,김해멀티 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0025
+AAP0026,삼성,김해멀티 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0026
+AAP0027,삼성,꿈돌이동산삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0027
+AAP0028,삼성,삼성꿈사랑멀티카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0028
+AAP0029,삼성,뉴휴먼단월드세콤삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0029
+AAP0030,삼성,뉴휴먼단월드세콤삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0030
+AAP0031,삼성,뉴휴먼단월드세콤삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0031
+AAP0032,삼성,닉스세콤삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0032
+AAP0033,삼성,닉스세콤삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0033
+AAP0034,삼성,다음삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0034
+AAP0035,삼성,다음삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0035
+AAP0038,삼성,대구멀티삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0038
+AAP0039,삼성,대구멀티삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0039
+AAP0040,삼성,대구승용차요일제삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0040
+AAP0042,삼성,대구시청멀티삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0042
+AAP0045,삼성,갤러리아삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0045
+AAP0047,삼성,대한간호협회 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0047
+AAP0049,삼성,대한적십자 삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0049
+AAP0050,삼성,대한적십자 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0050
+AAP0051,삼성,대한적십자 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0051
+AAP0052,삼성,대현상가삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0052
+AAP0053,삼성,더브러삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0053
+AAP0054,삼성,더브러삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0054
+AAP0055,삼성,더브러삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0055
+AAP0056,삼성,더샵 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0056
+AAP0057,삼성,더샵 삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0057
+AAP0058,삼성,더존삼성비즈니스플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0058
+AAP0059,삼성,더존삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0059
+AAP0060,삼성,더존삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0060
+AAP0061,삼성,더존삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0061
+AAP0062,삼성,덴티스트훼미리스카이패스삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0062
+AAP0064,삼성,동대문닷컴삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0064
+AAP0065,삼성,동대문닷컴삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0065
+AAP0066,삼성,동대문닷컴삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0066
+AAP0067,삼성,동방마트삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0067
+AAP0068,삼성,동방마트삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0068
+AAP0069,삼성,동부상호저축은행 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0069
+AAP0070,삼성,동부상호저축은행 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0070
+AAP0073,삼성,동부프로미 삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0073
+AAP0074,삼성,동서백화점삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0074
+AAP0075,삼성,동서백화점삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0075
+AAP0076,삼성,동서백화점삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0076
+AAP0082,삼성,동진레저삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0082
+AAP0083,삼성,두산가족사랑 삼성더아파트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0083
+AAP0084,삼성,두산가족사랑 삼성카앤모아카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0084
+AAP0086,삼성,삼성디지털프라자 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0086
+AAP0087,삼성,삼성경남디지털플라자빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0087
+AAP0088,삼성,삼성경남디지털플라자애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0088
+AAP0089,삼성,삼성경남디지털플라자지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0089
+AAP0090,삼성,삼성울산디지털플라자빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0090
+AAP0091,삼성,삼성울산디지털플라자지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0091
+AAP0092,삼성,디큐브 삼성더아파트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0092
+AAP0093,삼성,RAUME O,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0093
+AAP0094,삼성,RAUME O (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0094
+AAP0095,삼성,삼성라이프앤패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0095
+AAP0096,삼성,삼성럭투유플러스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0096
+AAP0098,삼성,롯데관광 삼성빅앤빅카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0098
+AAP0100,삼성,롯데손해보험삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0100
+AAP0101,삼성,롯데월드삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0101
+AAP0102,삼성,롯데월드삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0102
+AAP0103,삼성,삼성루와드뱅카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0103
+AAP0104,삼성,르네시떼삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0104
+AAP0105,삼성,르네시떼삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0105
+AAP0106,삼성,르네시떼삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0106
+AAP0107,삼성,르노삼성자동차 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0107
+AAP0108,삼성,SFC 신세계르노삼성자동차 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0108
+AAP0111,삼성,리더스 삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0111
+AAP0112,삼성,리더스 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0112
+AAP0113,삼성,리더스 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0113
+AAP0114,삼성,리브로 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0114
+AAP0115,삼성,리브로 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0115
+AAP0116,삼성,리츠칼튼호텔삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0116
+AAP0117,삼성,마루삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0117
+AAP0118,삼성,마루삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0118
+AAP0119,삼성,마루삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0119
+AAP0120,삼성,마린삼성마이키즈플러스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0120
+AAP0121,삼성,마린삼성에스마일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0121
+AAP0122,삼성,마린 삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0122
+AAP0126,삼성,맥켄리삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0126
+AAP0127,삼성,메가티즌 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0127
+AAP0128,삼성,메가티즌 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0128
+AAP0129,삼성,메디칼닥터스카이패스삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0129
+AAP0130,삼성,메디클럽 삼성빅앤빅카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0130
+AAP0131,삼성,무비매니아 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0131
+AAP0132,삼성,무비매니아 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0132
+AAP0136,삼성,밀레니엄삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0136
+AAP0137,삼성,밀레니엄삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0137
+AAP0138,삼성,밀레니엄삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0138
+AAP0142,삼성,범죄예방한마음삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0142
+AAP0143,삼성,베스트화물삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0143
+AAP0144,삼성,베스트개인택시삼성럭투유카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0144
+AAP0145,삼성,베스트개인택시르노삼성자동차카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0145
+AAP0146,삼성,베스트개인택시삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0146
+AAP0147,삼성,베스트용달화물삼성럭투유카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0147
+AAP0148,삼성,베스트용달화물삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0148
+AAP0149,삼성,베스트용달화물삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0149
+AAP0150,삼성,베이비유삼성마이키즈플러스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0150
+AAP0151,삼성,베이비유삼성애니패스e포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0151
+AAP0152,삼성,베이비유삼성지엔미e포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0152
+AAP0153,삼성,부산하나로삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0153
+AAP0154,삼성,불자삼성마이키즈카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0154
+AAP0155,삼성,불자삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0155
+AAP0156,삼성,불자아시아나삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0156
+AAP0157,삼성,불자스카이패스삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0157
+AAP0158,삼성,불자삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0158
+AAP0159,삼성,불자삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0159
+AAP0160,삼성,불자삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0160
+AAP0162,삼성,삼성비즈니스플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0162
+AAP0163,삼성,삼성생명비추미 삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0163
+AAP0164,삼성,삼성생명비추미 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0164
+AAP0165,삼성,삼성생명비추미 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0165
+AAP0166,삼성,삼성생명비추미 삼성플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0166
+AAP0168,삼성,삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0168
+AAP0170,삼성,빛돌이삼성골프카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0170
+AAP0171,삼성,빛돌이삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0171
+AAP0172,삼성,빛돌이삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0172
+AAP0173,삼성,한국산업은행 삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0173
+AAP0174,삼성,한국산업은행 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0174
+AAP0175,삼성,골든골삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0175
+AAP0176,삼성,삼성골프카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0176
+AAP0177,삼성,삼성금융카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0177
+AAP0178,삼성,삼성더아파트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0178
+AAP0180,삼성,삼성디지털멤버십카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0180
+AAP0182,삼성,삼성몰빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0182
+AAP0183,삼성,삼성몰애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0183
+AAP0184,삼성,삼성몰지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0184
+AAP0185,삼성,삼성생명FC 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0185
+AAP0186,삼성,스카이패스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0186
+AAP0187,삼성,삼성아멕스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0187
+AAP0189,삼성,삼성전자 패밀리 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0189
+AAP0190,삼성,삼성전자 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0190
+AAP0194,삼성,삼성철도카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0194
+AAP0197,삼성,삼성패밀리카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0197
+AAP0199,삼성,AK플라자 삼성마이키즈카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0199
+AAP0200,삼성,AK플라자 삼성마이키즈플러스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0200
+AAP0201,삼성,AK플라자 삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0201
+AAP0202,삼성,AK플라자 삼성빅앤빅카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0202
+AAP0203,삼성,AK플라자 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0203
+AAP0204,삼성,AK플라자 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0204
+AAP0205,삼성,AK플라자삼성에스마일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0205
+AAP0206,삼성,AK플라자 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0206
+AAP0207,삼성,AK플라자 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0207
+AAP0210,삼성,새마을금고 삼성럭투유카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0210
+AAP0211,삼성,새마을금고르노삼성자동차 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0211
+AAP0212,삼성,새마을금고 삼성마이키즈카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0212
+AAP0213,삼성,새마을금고삼성마이키즈플러스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0213
+AAP0214,삼성,새마을금고삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0214
+AAP0215,삼성,새마을금고 삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0215
+AAP0217,삼성,새마을금고 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0217
+AAP0218,삼성,새마을금고 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0218
+AAP0219,삼성,새마을금고 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0219
+AAP0220,삼성,새마을금고 삼성에스마일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0220
+AAP0222,삼성,새마을금고 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0222
+AAP0225,삼성,새마을금고 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0225
+AAP0226,삼성,새마을금고 삼성럭투유카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0226
+AAP0227,삼성,새마을금고택시조합 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0227
+AAP0228,삼성,생명사랑수호천사후원삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0228
+AAP0229,삼성,생명사랑수호천사후원삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0229
+AAP0230,삼성,서울랜드삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0230
+AAP0231,삼성,서울랜드삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0231
+AAP0232,삼성,서울시 승용차요일제삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0232
+AAP0235,삼성,세계평화능인성불삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0235
+AAP0236,삼성,세무사 삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0236
+AAP0237,삼성,세이베베삼성온라인쇼핑카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0237
+AAP0238,삼성,세이브존삼성럭투유,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0238
+AAP0239,삼성,세이브존삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0239
+AAP0240,삼성,세이브존삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0240
+AAP0241,삼성,세이브존삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0241
+AAP0242,삼성,삼성쇼핑플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0242
+AAP0243,삼성,수원삼성블루윙즈 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0243
+AAP0244,삼성,숲속의요정삼성애니패스e포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0244
+AAP0245,삼성,숲속의요정삼성지엔미e포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0245
+AAP0246,삼성,스카이패스 삼성아멕스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0246
+AAP0247,삼성,삼성시그니처카드CL,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0247
+AAP0248,삼성,삼성시그니처카드CL (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0248
+AAP0249,삼성,삼성시그니처카드CL (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0249
+AAP0250,삼성,삼성시그니처카드CL (포인트0.5%),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0250
+AAP0251,삼성,삼성시그니처카드CL (포인트1%),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0251
+AAP0252,삼성,삼성시그니처카드FC,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0252
+AAP0253,삼성,삼성시그니처카드FC (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0253
+AAP0254,삼성,삼성시그니처카드FC (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0254
+AAP0257,삼성,삼성시그니처카드FW,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0257
+AAP0258,삼성,삼성시그니처카드FW (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0258
+AAP0259,삼성,삼성시그니처카드FW (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0259
+AAP0262,삼성,삼성시그니처카드GF,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0262
+AAP0263,삼성,삼성시그니처카드GF (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0263
+AAP0264,삼성,삼성시그니처카드GF (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0264
+AAP0267,삼성,삼성시그니처카드HF,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0267
+AAP0268,삼성,삼성시그니처카드HF (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0268
+AAP0269,삼성,삼성시그니처카드HF (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0269
+AAP0272,삼성,삼성시그니처카드TL,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0272
+AAP0273,삼성,삼성시그니처카드TL (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0273
+AAP0274,삼성,삼성시그니처카드TL (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0274
+AAP0275,삼성,삼성시그니처카드TL (포인트0.5%),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0275
+AAP0276,삼성,삼성시그니처카드TL (포인트1%),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0276
+AAP0277,삼성,테크노마트 삼성빅앤빅카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0277
+AAP0278,삼성,신동아건설 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0278
+AAP0279,삼성,신라면세점 삼성빅앤빅카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0279
+AAP0280,삼성,신라면세점아시아나 삼성애니패스플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0280
+AAP0281,삼성,신라면세점아시아나 삼성지엔미플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0281
+AAP0282,삼성,신라피트니스클럽 멤버십 삼성플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0282
+AAP0283,삼성,신라피트니스클럽 스카이패스 삼성플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0283
+AAP0284,삼성,신라피트니스클럽 삼성플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0284
+AAP0285,삼성,신세계 삼성더아파트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0285
+AAP0286,삼성,신세계 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0286
+AAP0287,삼성,신세계 삼성쇼핑플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0287
+AAP0289,삼성,신세계 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0289
+AAP0290,삼성,신세계 삼성에듀플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0290
+AAP0292,삼성,신세계 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0292
+AAP0293,삼성,신세계몰 삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0293
+AAP0294,삼성,신세계스포츠센터삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0294
+AAP0295,삼성,신세화리뷰백화점삼성마이키즈카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0295
+AAP0296,삼성,신세화리뷰백화점삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0296
+AAP0297,삼성,신세화리뷰백화점삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0297
+AAP0298,삼성,신용회복위원회삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0298
+AAP0299,삼성,신용회복위원회삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0299
+AAP0300,삼성,신원삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0300
+AAP0301,삼성,신원삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0301
+AAP0302,삼성,신원삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0302
+AAP0304,삼성,싸이월드삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0304
+AAP0305,삼성,쌍용자동차삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0305
+AAP0306,삼성,쌍용자동차삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0306
+AAP0307,삼성,쌍용자동차삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0307
+AAP0308,삼성,씨너스 삼성오일앤세이브플러스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0308
+AAP0309,삼성,아람마트부산하나로삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0309
+AAP0310,삼성,아람마트삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0310
+AAP0311,삼성,아람마트삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0311
+AAP0312,삼성,아름다운사람들세콤삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0312
+AAP0313,삼성,삼성전자지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0313
+AAP0314,삼성,삼성아멕스골드카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0314
+AAP0315,삼성,삼성아멕스그린카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0315
+AAP0316,삼성,아시아나 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0316
+AAP0317,삼성,아시아나 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0317
+AAP0318,삼성,아시아나 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0318
+AAP0319,삼성,아시아나 삼성애니패스플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0319
+AAP0320,삼성,아시아나 삼성지엔미플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0320
+AAP0321,삼성,아이러브스쿨르노삼성자동차카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0321
+AAP0322,삼성,아이러브스쿨삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0322
+AAP0323,삼성,아이러브스쿨삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0323
+AAP0324,삼성,안내견후원 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0324
+AAP0325,삼성,안내견후원 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0325
+AAP0326,삼성,안내견후원 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0326
+AAP0327,삼성,알라딘 삼성빅앤빅카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0327
+AAP0328,삼성,알라딘 삼성애니패스e포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0328
+AAP0329,삼성,알라딘 삼성지엔미e포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0329
+AAP0330,삼성,애경백화점 삼성마이키즈플러스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0330
+AAP0331,삼성,애경백화점 삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0331
+AAP0332,삼성,애경백화점 삼성빅앤빅카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0332
+AAP0333,삼성,애경백화점 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0333
+AAP0334,삼성,애경백화점 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0334
+AAP0335,삼성,애경백화점 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0335
+AAP0336,삼성,애경백화점 삼성에스마일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0336
+AAP0337,삼성,애경백화점 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0337
+AAP0338,삼성,애경백화점 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0338
+AAP0339,삼성,애경유화삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0339
+AAP0343,삼성,삼성애니카플러스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0343
+AAP0344,삼성,삼성애니카플러스티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0344
+AAP0346,삼성,삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0346
+AAP0347,삼성,삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0347
+AAP0348,삼성,삼성애니패스e포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0348
+AAP0349,삼성,야우리백화점삼성럭투유카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0349
+AAP0350,삼성,야우리백화점삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0350
+AAP0351,삼성,야우리백화점 삼성빅앤빅카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0351
+AAP0353,삼성,야우리백화점삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0353
+AAP0354,삼성,야우리백화점 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0354
+AAP0355,삼성,야우리백화점 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0355
+AAP0356,삼성,야우리백화점삼성오일앤세이브카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0356
+AAP0357,삼성,야우리백화점 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0357
+AAP0358,삼성,야우리백화점 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0358
+AAP0359,삼성,야우리백화점 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0359
+AAP0361,삼성,에버랜드 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0361
+AAP0362,삼성,에버랜드삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0362
+AAP0365,삼성,삼성에스마일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0365
+AAP0366,삼성,에스오일보너스삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0366
+AAP0367,삼성,에스오일보너스삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0367
+AAP0368,삼성,에스오일보너스삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0368
+AAP0369,삼성,에이스디지텍삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0369
+AAP0370,삼성,에이스디지텍삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0370
+AAP0371,삼성,엘마트삼성애니패스포인트,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0371
+AAP0372,삼성,엘마트삼성지엔미포인트,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0372
+AAP0373,삼성,엘마트삼성티클래스,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0373
+AAP0374,삼성,여성협회삼성티클래스,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0374
+AAP0375,삼성,오라클 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0375
+AAP0376,삼성,오라클 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0376
+AAP0377,삼성,삼성오일앤세이브카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0377
+AAP0378,삼성,삼성오일앤세이브플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0378
+AAP0379,삼성,삼성오일앤세이브플러스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0379
+AAP0380,삼성,오토리스삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0380
+AAP0381,삼성,옥토CMA 삼성오일앤세이브플러스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0381
+AAP0383,삼성,올리브백화점 삼성마이키즈카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0383
+AAP0384,삼성,올리브백화점 삼성마이키즈플러스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0384
+AAP0385,삼성,올리브백화점 삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0385
+AAP0386,삼성,올리브백화점 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0386
+AAP0387,삼성,올리브백화점 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0387
+AAP0388,삼성,올리브백화점 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0388
+AAP0389,삼성,올리브백화점 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0389
+AAP0390,삼성,올브랜삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0390
+AAP0391,삼성,올브랜삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0391
+AAP0392,삼성,올브랜삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0392
+AAP0393,삼성,삼성올앳애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0393
+AAP0394,삼성,삼성올앳지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0394
+AAP0399,삼성,우체국삼성마이키즈카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0399
+AAP0400,삼성,우체국삼성마이키즈플러스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0400
+AAP0402,삼성,우체국 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0402
+AAP0403,삼성,우체국 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0403
+AAP0404,삼성,우체국삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0404
+AAP0406,삼성,원주드림삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0406
+AAP0407,삼성,원주사랑 삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0407
+AAP0408,삼성,원주사랑 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0408
+AAP0409,삼성,원주삼보엑써스 삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0409
+AAP0410,삼성,원주삼보엑써스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0410
+AAP0412,삼성,원주원예농협삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0412
+AAP0413,삼성,원주원예농협삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0413
+AAP0414,삼성,웰페어패밀리삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0414
+AAP0415,삼성,웰페어패밀리삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0415
+AAP0416,삼성,유니텔삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0416
+AAP0417,삼성,유니텔삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0417
+AAP0418,삼성,유니텔삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0418
+AAP0419,삼성,유니텔삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0419
+AAP0422,삼성,삼성오일앤세이브플러스카드 (유류환급),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0422
+AAP0424,삼성,삼성티클래스앤오일카드 (유류환급),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0424
+AAP0425,삼성,이마트 삼성마이키즈카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0425
+AAP0426,삼성,이마트 삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0426
+AAP0427,삼성,이마트 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0427
+AAP0428,삼성,이마트 삼성쇼핑앤모아카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0428
+AAP0429,삼성,이마트삼성쇼핑플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0429
+AAP0430,삼성,이마트 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0430
+AAP0431,삼성,이마트 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0431
+AAP0432,삼성,이마트 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0432
+AAP0433,삼성,이마트 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0433
+AAP0434,삼성,이마트 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0434
+AAP0435,삼성,코레일멤버십이마트 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0435
+AAP0436,삼성,코레일멤버십이마트 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0436
+AAP0437,삼성,코레일멤버십이마트 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0437
+AAP0438,삼성,이유다이렉트 삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0438
+AAP0439,삼성,이프유삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0439
+AAP0440,삼성,이프유삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0440
+AAP0441,삼성,인디안NII 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0441
+AAP0442,삼성,인디안NII 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0442
+AAP0443,삼성,인제대부산백병원삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0443
+AAP0444,삼성,인제대부산백병원삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0444
+AAP0445,삼성,인터파크G마켓 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0445
+AAP0446,삼성,인터파크G마켓 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0446
+AAP0447,삼성,자동차동호회삼성애니패스e포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0447
+AAP0448,삼성,삼성자동차카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0448
+AAP0449,삼성,전남드래곤즈삼성럭투유카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0449
+AAP0450,삼성,전남드래곤즈 삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0450
+AAP0451,삼성,전남드래곤즈 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0451
+AAP0452,삼성,전북삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0452
+AAP0453,삼성,전북삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0453
+AAP0454,삼성,전북삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0454
+AAP0455,삼성,전자랜드삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0455
+AAP0456,삼성,전자랜드삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0456
+AAP0457,삼성,전자랜드삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0457
+AAP0458,삼성,전자랜드삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0458
+AAP0459,삼성,전자랜드 삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0459
+AAP0461,삼성,전주코아백화점 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0461
+AAP0462,삼성,전주코아백화점삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0462
+AAP0463,삼성,전주코아백화점삼성오일앤세이브카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0463
+AAP0464,삼성,전주코아백화점 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0464
+AAP0465,삼성,전주코아백화점 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0465
+AAP0466,삼성,제로마켓삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0466
+AAP0467,삼성,AK플라자삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0467
+AAP0468,삼성,제로마켓삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0468
+AAP0469,삼성,한화손해보험 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0469
+AAP0470,삼성,한화손해보험 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0470
+AAP0472,삼성,제주멀티삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0472
+AAP0473,삼성,제주멀티삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0473
+AAP0474,삼성,제주항공 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0474
+AAP0475,삼성,주유소협회삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0475
+AAP0478,삼성,중앙일보삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0478
+AAP0482,삼성,삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0482
+AAP0483,삼성,삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0483
+AAP0484,삼성,삼성지엔미e포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0484
+AAP0485,삼성,삼성대구경북애카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0485
+AAP0486,삼성,삼성부산경남애카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0486
+AAP0487,삼성,삼성충청애카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0487
+AAP0488,삼성,삼성호남애카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0488
+AAP0490,삼성,책사랑삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0490
+AAP0491,삼성,책사랑삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0491
+AAP0492,삼성,청주백화점삼성마이키즈카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0492
+AAP0493,삼성,청주백화점삼성마이키즈플러스,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0493
+AAP0494,삼성,청주백화점삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0494
+AAP0495,삼성,청주백화점삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0495
+AAP0496,삼성,청주백화점삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0496
+AAP0497,삼성,청주백화점삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0497
+AAP0498,삼성,청주백화점삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0498
+AAP0499,삼성,청호나이스 삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0499
+AAP0500,삼성,총무닷컴 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0500
+AAP0501,삼성,춘천시 삼성후불하이패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0501
+AAP0503,삼성,카슨코리아삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0503
+AAP0504,삼성,카슨코리아삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0504
+AAP0505,삼성,삼성카앤모아카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0505
+AAP0509,삼성,코레일멤버십 삼성마이키즈카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0509
+AAP0510,삼성,코레일멤버십 삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0510
+AAP0511,삼성,코레일멤버십 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0511
+AAP0512,삼성,코레일멤버십 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0512
+AAP0514,삼성,코레일멤버십 삼성에스마일플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0514
+AAP0515,삼성,코레일멤버십 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0515
+AAP0517,삼성,코레일멤버십 삼성플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0517
+AAP0518,삼성,코리아홈쇼핑삼성마이키즈카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0518
+AAP0519,삼성,코리아홈쇼핑삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0519
+AAP0520,삼성,마트베이직 삼성카드(구.코스트코 삼성카드),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0520
+AAP0521,삼성,코오롱삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0521
+AAP0522,삼성,크리스찬 삼성마이키즈카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0522
+AAP0526,삼성,크리스찬 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0526
+AAP0531,삼성,큰수레 삼성비즈니스플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0531
+AAP0533,삼성,태평백화점 삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0533
+AAP0534,삼성,태평백화점 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0534
+AAP0535,삼성,태평백화점 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0535
+AAP0536,삼성,태평백화점 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0536
+AAP0537,삼성,태평백화점 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0537
+AAP0538,삼성,태평백화점 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0538
+AAP0540,삼성,티지샵 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0540
+AAP0541,삼성,티지샵 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0541
+AAP0542,삼성,티켓링크 삼성빅앤빅카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0542
+AAP0545,삼성,삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0545
+AAP0546,삼성,파머시스트스카이패스삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0546
+AAP0547,삼성,파머시스트삼성에스마일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0547
+AAP0548,삼성,파머시스트삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0548
+AAP0549,삼성,파크랜드 삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0549
+AAP0550,삼성,파크랜드 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0550
+AAP0551,삼성,파크랜드 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0551
+AAP0553,삼성,팜페이 삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0553
+AAP0556,삼성,i포도리 티클래스앤오일,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0556
+AAP0557,삼성,포항멀티삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0557
+AAP0558,삼성,포항스틸러스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0558
+AAP0559,삼성,폴라렉스삼성부산경남애카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0559
+AAP0560,삼성,프리머스 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0560
+AAP0561,삼성,프리머스 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0561
+AAP0562,삼성,프리머스 삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0562
+AAP0563,삼성,프리챌삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0563
+AAP0564,삼성,프리챌삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0564
+AAP0565,삼성,삼성골프플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0565
+AAP0566,삼성,삼성플래티늄라이프카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0566
+AAP0567,삼성,삼성로즈플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0567
+AAP0569,삼성,삼성에스마일플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0569
+AAP0570,삼성,삼성플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0570
+AAP0571,삼성,삼성플래티늄네오카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0571
+AAP0573,삼성,하우머치 삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0573
+AAP0576,삼성,학생증삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0576
+AAP0578,삼성,한겨레문고삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0578
+AAP0582,삼성,한마음 패밀리 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0582
+AAP0583,삼성,한샘삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0583
+AAP0584,삼성,한화리조트 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0584
+AAP0585,삼성,한화이글스 삼성카앤모아카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0585
+AAP0586,삼성,한화증권CMA 삼성오일앤세이브플러스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0586
+AAP0587,삼성,한화스마트CMA 삼성펀드리워드카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0587
+AAP0588,삼성,해태제과삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0588
+AAP0589,삼성,해태제과세콤삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0589
+AAP0590,삼성,현대홈쇼핑 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0590
+AAP0591,삼성,현대홈쇼핑 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0591
+AAP0592,삼성,홈플러스삼성럭투유카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0592
+AAP0593,삼성,홈플러스부산하나로삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0593
+AAP0594,삼성,홈플러스삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0594
+AAP0595,삼성,홈플러스삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0595
+AAP0596,삼성,홈플러스삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0596
+AAP0597,삼성,홈플러스삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0597
+AAP0598,삼성,삼성후불하이패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0598
+AAP0599,삼성,휘닉스디지탈테크삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0599
+AAP0600,삼성,휘닉스디지탈테크삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0600
+AAP0601,삼성,흥국금융 패밀리 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0601
+AAP0602,삼성,흥국금융 패밀리 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0602
+AAP0604,삼성,CFC삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0604
+AAP0605,삼성,CJ삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0605
+AAP0607,삼성,CJ 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0607
+AAP0608,삼성,CJ 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0608
+AAP0609,삼성,CJ 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0609
+AAP0610,삼성,CJ 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0610
+AAP0611,삼성,한화손해보험카젠 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0611
+AAP0613,삼성,유류환급GM대우슬림삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0613
+AAP0615,삼성,삼성증권CMA+신세계 삼성쇼핑플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0615
+AAP0616,삼성,삼성증권CMA+신세계 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0616
+AAP0617,삼성,삼성CMA플러스지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0617
+AAP0619,삼성,삼성증권CMA+S 쇼핑카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0619
+AAP0620,삼성,삼성증권CMA+S 드라이빙카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0620
+AAP0621,삼성,D&Life 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0621
+AAP0622,삼성,D&Shop 삼성빅앤빅카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0622
+AAP0623,삼성,D&Style 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0623
+AAP0624,삼성,DCSCOUT삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0624
+AAP0625,삼성,DCSCOUT 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0625
+AAP0626,삼성,DCSCOUT 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0626
+AAP0628,삼성,ENVY 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0628
+AAP0629,삼성,ENVY 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0629
+AAP0630,삼성,삼성FB카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0630
+AAP0632,삼성,G마켓 삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0632
+AAP0634,삼성,쉐보레 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0634
+AAP0635,삼성,쉐보레슬림 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0635
+AAP0636,삼성,GS홈쇼핑 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0636
+AAP0637,삼성,GS홈쇼핑 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0637
+AAP0638,삼성,GS홈쇼핑 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0638
+AAP0639,삼성,HSBC삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0639
+AAP0640,삼성,HSP클럽 삼성빅앤빅카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0640
+AAP0641,삼성,HSP클럽 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0641
+AAP0642,삼성,JJANG삼성애니패스포인트,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0642
+AAP0643,삼성,JJANG삼성지엔미포인트,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0643
+AAP0644,삼성,케이디비뱅커스삼성플래티늄라이프카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0644
+AAP0645,삼성,케이디비뱅커스스카이패스삼성플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0645
+AAP0646,삼성,케이디비뱅커스삼성플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0646
+AAP0647,삼성,KFC 삼성마이키즈카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0647
+AAP0648,삼성,KFC 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0648
+AAP0649,삼성,KFC삼성에스마일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0649
+AAP0650,삼성,KFC 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0650
+AAP0651,삼성,KTF멤버스삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0651
+AAP0653,삼성,LIG 삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0653
+AAP0654,삼성,MBC시네마삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0654
+AAP0655,삼성,MBC시네마 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0655
+AAP0656,삼성,PMC 삼성애니패스e포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0656
+AAP0657,삼성,PMC 삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0657
+AAP0658,삼성,SBSi삼성골프카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0658
+AAP0659,삼성,SBSi삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0659
+AAP0660,삼성,SBSi삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0660
+AAP0661,삼성,SFC AK플라자 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0661
+AAP0662,삼성,SFC AK플라자 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0662
+AAP0663,삼성,SFC 신세계 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0663
+AAP0664,삼성,SFC 신세계 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0664
+AAP0665,삼성,SFC 신세계 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0665
+AAP0666,삼성,SFC 애경백화점 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0666
+AAP0667,삼성,SFC 애경백화점 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0667
+AAP0668,삼성,SFC 야우리백화점 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0668
+AAP0669,삼성,SFC 야우리백화점 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0669
+AAP0670,삼성,SFC 야우리백화점 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0670
+AAP0671,삼성,SFC 이마트 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0671
+AAP0672,삼성,SFC 이마트 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0672
+AAP0673,삼성,SFC 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0673
+AAP0676,삼성,SFC 삼성증권CMA+ 삼성에스마일플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0676
+AAP0681,삼성,한화손해보험카젠 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0681
+AAP0684,삼성,SFC 삼성증권CMA+ 스카이패스 삼성플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0684
+AAP0685,삼성,PMC 삼성지엔미e포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0685
+AAP0688,삼성,삼성플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0688
+AAP0689,삼성,SFC 코레일멤버십 삼성마이키즈카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0689
+AAP0690,삼성,SFC 코레일멤버십 삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0690
+AAP0691,삼성,SFC 코레일멤버십 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0691
+AAP0693,삼성,SFC 코레일멤버십 삼성에스마일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0693
+AAP0694,삼성,SFC 코레일멤버십 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0694
+AAP0695,삼성,SFC 코레일멤버십 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0695
+AAP0697,삼성,애경백화점삼성마이키즈카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0697
+AAP0698,삼성,SFC 삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0698
+AAP0700,삼성,SFC 삼성아멕스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0700
+AAP0702,삼성,SFC 스카이패스 삼성아멕스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0702
+AAP0703,삼성,SFC 스카이패스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0703
+AAP0705,삼성,SFC 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0705
+AAP0706,삼성,SFC 삼성에스마일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0706
+AAP0708,삼성,SFC 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0708
+AAP0709,삼성,SFC 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0709
+AAP0710,삼성,SFC 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0710
+AAP0711,삼성,SFC 스카이패스 삼성플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0711
+AAP0712,삼성,SFC 삼성에스마일플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0712
+AAP0713,삼성,SFC 삼성플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0713
+AAP0714,삼성,SFC 아시아나 삼성플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0714
+AAP0715,삼성,SK와이번스 삼성빅앤빅카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0715
+AAP0716,삼성,SLR클럽 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0716
+AAP0717,삼성,SLR클럽삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0717
+AAP0718,삼성,SLR클럽 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0718
+AAP0719,삼성,SMT철도 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0719
+AAP0720,삼성,STM철도 삼성애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0720
+AAP0721,삼성,STM철도 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0721
+AAP0723,삼성,동양WCMA신세계 삼성쇼핑플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0723
+AAP0728,삼성,예스24 삼성마이키즈카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0728
+AAP0729,삼성,예스24 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0729
+AAP0730,삼성,예스24 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0730
+AAP0731,삼성,예스24 삼성티클래스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0731
+AAP0756,삼성,서울시 승용차요일제삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0756
+AAP0757,삼성,대구승용차요일제삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0757
+AAP0759,삼성,삼성생명 삼성시그니처카드 (포인트0.5%),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0759
+AAP0762,삼성,삼성생명 삼성시그니처카드 (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0762
+AAP0768,삼성,T삼성시그니처카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0768
+AAP0771,삼성,T삼성시그니처카드 (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0771
+AAP0772,삼성,T삼성시그니처카드 (아시아나마일리지),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0772
+AAP0775,삼성,에이플러스에셋삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0775
+AAP0776,삼성,삼성비즈니스매니저카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0776
+AAP0777,삼성,더존 삼성비즈니스매니저카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0777
+AAP0778,삼성,마트엔 삼성카드(구.코스트코 삼성아멕스카드),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0778
+AAP0781,삼성,삼성카앤모아카드 (사업자구매전용),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0781
+AAP0783,삼성,홈플러스삼성빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0783
+AAP0785,삼성,KTX이마트 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0785
+AAP0786,삼성,신세계마린 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0786
+AAP0787,삼성,신세계마린 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0787
+AAP0790,삼성,스카이패스 삼성플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP0790
+AAP1001,삼성,삼성골프법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1001
+AAP1002,삼성,RAUME O CORPORATE (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1002
+AAP1003,삼성,삼성럭투유법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1003
+AAP1004,삼성,삼성루와드뱅법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1004
+AAP1005,삼성,삼성반얀트리시그니처법인카드 (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1005
+AAP1006,삼성,삼성반얀트리시그니처법인카드 (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1006
+AAP1008,삼성,우리은행 삼성법인체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1008
+AAP1010,삼성,삼성법인체크카드 (전은행),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1010
+AAP1011,삼성,새마을금고 삼성법인체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1011
+AAP1012,삼성,새마을금고 제주도보조금 삼성법인체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1012
+AAP1013,삼성,우체국 삼성법인체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1013
+AAP1014,삼성,유팜 삼성법인체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1014
+AAP1015,삼성,삼성법인체크카드 (SAS),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1015
+AAP1016,삼성,SC제일은행 삼성법인체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1016
+AAP1017,삼성,삼성자체법인카드(선포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1017
+AAP1018,삼성,삼성스카이패스법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1018
+AAP1019,삼성,삼성스카이패스아멕스법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1019
+AAP1020,삼성,삼성아멕스마일리지법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1020
+AAP1021,삼성,삼성아멕스법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1021
+AAP1022,삼성,삼성아멕스법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1022
+AAP1023,삼성,삼성아시아나법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1023
+AAP1024,삼성,삼성아시아나애니패스법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1024
+AAP1025,삼성,삼성에스마일법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1025
+AAP1026,삼성,삼성연구비법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1026
+AAP1027,삼성,삼성법인카드 우편료전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1027
+AAP1028,삼성,거인바이오칸 삼성법인카드 의약품결제전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1028
+AAP1029,삼성,오스템 삼성법인카드 의약품결제전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1029
+AAP1030,삼성,유비케어 삼성법인카드 의약품결제전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1030
+AAP1031,삼성,삼성법인카드 의약품결제전용 (일반),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1031
+AAP1032,삼성,삼성카드 CORPORATE 특정거래전용 (일반) (전용),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1032
+AAP1033,삼성,삼성카드 CORPORATE 특정거래전용 (일반),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1033
+AAP1035,삼성,르노삼성자동차법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1035
+AAP1036,삼성,삼성자체법인카드 (복지카드),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1036
+AAP1037,삼성,삼성자체법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1037
+AAP1038,삼성,삼성자체법인카드 (OK캐시백),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1038
+AAP1039,삼성,삼성법인카드 전기료전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1039
+AAP1040,삼성,삼성정부구매법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1040
+AAP1041,삼성,삼성법인카드 주유전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1041
+AAP1042,삼성,GS 삼성법인카드 주유전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1042
+AAP1043,삼성,SK 삼성법인카드 주유전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1043
+AAP1044,삼성,S-OIL 삼성법인카드 주유전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1044
+AAP1045,삼성,삼성법인카드 세금전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1045
+AAP1046,삼성,삼성법인카드 통신료전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1046
+AAP1047,삼성,삼성카드 S CORPORATE 티타늄,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1047
+AAP1048,삼성,삼성카드 S CORPORATE 티타늄,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1048
+AAP1049,삼성,삼성스카이패스법인카드 플래티늄네오,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1049
+AAP1050,삼성,삼성스카이패스법인카드 플래티늄프라임,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1050
+AAP1051,삼성,삼성스카이패스법인카드 플래티늄프라임 (마일리지미적립),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1051
+AAP1052,삼성,삼성스카이패스법인카드 플래티늄BASIC,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1052
+AAP1053,삼성,삼성에스마일법인카드 플래티늄네오,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1053
+AAP1054,삼성,삼성에스마일법인카드 플래티늄프라임,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1054
+AAP1055,삼성,삼성에스마일법인카드 플래티늄프라임 (마일리지미적립),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1055
+AAP1056,삼성,삼성에스마일법인카드 플래티늄BASIC,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1056
+AAP1058,삼성,삼성법인카드 플래티늄BASIC,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1058
+AAP1059,삼성,삼성법인카드 항공권전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1059
+AAP1060,삼성,삼성법인카드 후불하이패스전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1060
+AAP1061,삼성,삼성카드 CORPORATE 특정거래전용(SAS),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1061
+AAP1062,삼성,삼성비즈니스법인카드 (SBC),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1062
+AAP1063,삼성,삼성스카이패스법인카드 (SBC),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1063
+AAP1064,삼성,삼성스카이패스아멕스법인카드(SBC),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1064
+AAP1065,삼성,삼성비즈니스법인카드 (SBC),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1065
+AAP1066,삼성,삼성법인카드 고용산재전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1066
+AAP1067,삼성,,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1067
+AAP1068,삼성,,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1068
+AAP1069,삼성,더존 삼성자체법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1069
+AAP1070,삼성,더존 삼성법인카드 플래티늄BASIC,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1070
+AAP1071,삼성,오스템 삼성스카이패스아멕스법인카드 (단품전용),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1071
+AAP1072,삼성,오스템 삼성스카이패스아멕스법인카드 (일시불분납),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1072
+AAP1073,삼성,대한개원의협의회 삼성아멕스법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1073
+AAP1074,삼성,삼성법인카드 의약품결제전용 (제휴),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1074
+AAP1077,삼성,삼성중앙대학교아멕스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1077
+AAP1078,삼성,삼성골든골카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1078
+AAP1079,삼성,삼성신라면세골프카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1079
+AAP1080,삼성,삼성테크윈카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1080
+AAP1082,삼성,삼성네띠앙네티즌카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1082
+AAP1083,삼성,더존 삼성비즈퍼스트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1083
+AAP1084,삼성,더존삼성쇼핑앤모아카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1084
+AAP1085,삼성,더존삼성카앤모아카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1085
+AAP1087,삼성,현대코아럭투유삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1087
+AAP1088,삼성,SFC 삼성로즈플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1088
+AAP1089,삼성,삼성르노자동차카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1089
+AAP1090,삼성,삼성마이골프카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1090
+AAP1091,삼성,삼성마이키즈카드(올리브백화점),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1091
+AAP1092,삼성,올리브백화점삼성마이키즈플러스,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1092
+AAP1095,삼성,삼성폴라렉스아울렛부산&경남애카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1095
+AAP1096,삼성,침례병원임직원하나로빅보너스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1096
+AAP1097,삼성,삼성비즈니스플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1097
+AAP1101,삼성,삼성빅앤빅아멕스후불(복지몰전용),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1101
+AAP1102,삼성,SFCCMA+주유(일반)플래티늄배우자,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1102
+AAP1105,삼성,삼성플래티늄네오,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1105
+AAP1106,삼성,삼성플래티늄네오,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1106
+AAP1107,삼성,삼성플래티늄블루후불교통카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1107
+AAP1108,삼성,삼성플래티늄블루후불교통카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1108
+AAP1109,삼성,삼성패밀리플래티늄KTX에스마일,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1109
+AAP1110,삼성,삼성화재theS 삼성카앤모아카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1110
+AAP1115,삼성,피부미용관리사협회스카이패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1115
+AAP1116,삼성,삼성신그룹IC카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1116
+AAP1117,삼성,신세계애니패스포인트형,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1117
+AAP1118,삼성,신세계지엔미포인트형,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1118
+AAP1119,삼성,SSGEDU,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1119
+AAP1120,삼성,SSGOIL,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1120
+AAP1121,삼성,SSGPoint,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1121
+AAP1122,삼성,한화증권콘체른플래티늄스카이패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1122
+AAP1126,삼성,희망백화점임직원애니패스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1126
+AAP1127,삼성,한겨레문고애니패스포인트삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1127
+AAP1130,삼성,수원-삼성블루윙즈OIL&SAVE플러스카드(후불),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1130
+AAP1132,삼성,이마트삼성OIL&SAVE카드(후불),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1132
+AAP1135,삼성,이마트삼성SME카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1135
+AAP1136,삼성,삼성인피니트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1136
+AAP1137,삼성,삼성한솔그룹카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1137
+AAP1140,삼성,한국피부미용관리사협회지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1140
+AAP1141,삼성,한겨레문고지엔미포인트삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1141
+AAP1145,삼성,삼성패밀리티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1145
+AAP1146,삼성,한화리조트티클래스(비자)후불,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1146
+AAP1148,삼성,Kmerce삼성플래티늄골프모바일칩카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1148
+AAP1149,삼성,케이디비뱅커스플래티늄라이프카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1149
+AAP1150,삼성,신라휘트니스클럽플래티늄멤버스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1150
+AAP1151,삼성,삼성플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1151
+AAP1155,삼성,SBS 삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1155
+AAP1161,삼성,GS샵&디앤샵 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1161
+AAP1162,삼성,GS샵&디앤샵 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1162
+AAP1163,삼성,탑마트 삼성쇼핑앤모아카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1163
+AAP1169,삼성,두산가족사랑 삼성애니스타일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1169
+AAP1170,삼성,두산가족사랑 삼성애니스타일플래티늄카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1170
+AAP1171,삼성,두산가족사랑CJ애니스타일,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1171
+AAP1172,삼성,두산가족사랑CJ애니스타일플래티늄,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1172
+AAP1173,삼성,ERGO다음다이렉트 삼성티클래스앤오일카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1173
+AAP1174,삼성,CJ멤버 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1174
+AAP1175,삼성,CJ멤버 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1175
+AAP1176,삼성,RAUME O (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1176
+AAP1179,삼성,삼성카드 S클래스,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1179
+AAP1180,삼성,새마을금고 삼성카앤모아카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1180
+AAP1183,삼성,삼성 시그니처 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1183
+AAP1184,삼성,삼성법인체크카드 의약품결제전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1184
+AAP1185,삼성,삼성 시그니처 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1185
+AAP1186,삼성,삼성 시그니처 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1186
+AAP1187,삼성,삼성 시그니처 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1187
+AAP1188,삼성,삼성 시그니처 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1188
+AAP1189,삼성,삼성 시그니처 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1189
+AAP1190,삼성,삼성카드 CORPORATE 특정거래전용 (B2B) (특별),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1190
+AAP1193,삼성,KT금호렌터카 삼성카앤모아카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1193
+AAP1194,삼성,SFC 로가디스 삼성카드 S클래스,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1194
+AAP1195,삼성,RAUME O CORPORATE (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1195
+AAP1196,삼성,세이 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1196
+AAP1197,삼성,SFC 삼성카드 S클래스,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1197
+AAP1198,삼성,The Platinum Card,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1198
+AAP1200,삼성,CJ ONE 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1200
+AAP1202,삼성,에어부산신세계 삼성지엔미포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1202
+AAP1203,삼성,에어부산신세계 삼성애니패스포인트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1203
+AAP1204,삼성,모두투어 투어마일리지 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1204
+AAP1205,삼성,팜페이 삼성법인카드 의약품결제전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1205
+AAP1207,삼성,삼성후불하이패스카드 (주유겸용),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1207
+AAP1210,삼성,삼성 멤버십 앤드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1210
+AAP1213,삼성,삼성카드 S CORPORATE 플래티늄 삼성그룹협력사,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1213
+AAP1214,삼성,삼성카드 S CORPORATE 플래티늄 삼성그룹협력사 (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1214
+AAP1215,삼성,삼성카드 S CORPORATE 삼성그룹협력사,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1215
+AAP1216,삼성,삼성카드 2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1216
+AAP1222,삼성,세이 삼성카드 S클래스,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1222
+AAP1223,삼성,르노삼성자동차 멤버십 삼성카드 S클래스,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1223
+AAP1228,삼성,신라면세점 멤버십 삼성카드 S클래스,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1228
+AAP1229,삼성,삼성카드 3,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1229
+AAP1232,삼성,삼성카드 CORPORATE 특정거래전용 (EPS),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1232
+AAP1233,삼성,삼성카드 SFC 2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1233
+AAP1235,삼성,삼성카드 SFC 3,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1235
+AAP1241,삼성,은혜나눔 삼성오일앤세이브플러스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1241
+AAP1248,삼성,삼성카드 4,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1248
+AAP1250,삼성,삼성카드 SFC 4,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1250
+AAP1252,삼성,삼성전자 멤버십 BLUE Y 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1252
+AAP1256,삼성,삼성전자 멤버십 BLUE L 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1256
+AAP1257,삼성,삼성카드5,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1257
+AAP1258,삼성,삼성카드 SFC 5,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1258
+AAP1264,삼성,오스템임플란트 삼성카드 S클래스,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1264
+AAP1265,삼성,KCC 패밀리 삼성카드 S클래스,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1265
+AAP1266,삼성,삼성카드 1 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1266
+AAP1268,삼성,삼성카드 7,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1268
+AAP1269,삼성,삼성카드 SFC 7,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1269
+AAP1271,삼성,SK에너지 삼성카드 4,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1271
+AAP1272,삼성,Gvalley 삼성카드 2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1272
+AAP1273,삼성,Gvalley 삼성카드 3,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1273
+AAP1274,삼성,Gvalley 삼성카드 5,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1274
+AAP1275,삼성,삼성카드 1 (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1275
+AAP1276,삼성,삼성카드 1 (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1276
+AAP1277,삼성,삼성카드 BIZ 1 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1277
+AAP1278,삼성,이마트신세계 삼성카드 7,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1278
+AAP1279,삼성,신세계이마트 삼성카드 7,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1279
+AAP1280,삼성,신세계이마트 삼성카드 SFC 7,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1280
+AAP1281,삼성,신세계이마트 삼성카드 7+,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1281
+AAP1282,삼성,신세계이마트삼성카드SFC7+,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1282
+AAP1286,삼성,SPC 패밀리 삼성카드 7,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1286
+AAP1289,삼성,RAUME O CORPORATE (공용),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1289
+AAP1295,삼성,딸기가좋아 삼성카드 5,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1295
+AAP1296,삼성,홈플러스 삼성카드 7,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1296
+AAP1297,삼성,삼성카드 6,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1297
+AAP1298,삼성,삼성카드 SFC 6,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1298
+AAP1303,삼성,삼성카드 SFC 1 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1303
+AAP1304,삼성,삼성카드 SFC 1 (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1304
+AAP1305,삼성,삼성카드 SFC 1 (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1305
+AAP1306,삼성,북크 삼성카드 5,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1306
+AAP1307,삼성,남양유업 패밀리 삼성카드 4,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1307
+AAP1308,삼성,THE O (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1308
+AAP1309,삼성,THE O (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1309
+AAP1310,삼성,THE O (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1310
+AAP1311,삼성,THE O CORPORATE (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1311
+AAP1312,삼성,THE O CORPORATE (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1312
+AAP1313,삼성,THE O CORPORATE (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1313
+AAP1315,삼성,이마트신세계 삼성카드 5,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1315
+AAP1316,삼성,신세계이마트 삼성카드 5,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1316
+AAP1317,삼성,트레이더스신세계 삼성카드 5,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1317
+AAP1319,삼성,S-OIL 패밀리 삼성카드 7,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1319
+AAP1323,삼성,삼성카드 & YOUNG,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1323
+AAP1324,삼성,오스템임플란트 삼성카드4,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1324
+AAP1326,삼성,S-OIL 삼성카드 4 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1326
+AAP1327,삼성,KDB SAMSUNGCARD 4,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1327
+AAP1328,삼성,삼성카드 4 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1328
+AAP1329,삼성,플러스모바일 삼성카드 2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1329
+AAP1334,삼성,삼성카드 & PARTNER,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1334
+AAP1335,삼성,이마트모바일 삼성카드 2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1335
+AAP1338,삼성,삼성하이브리드체크카드 (청구전용),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1338
+AAP1340,삼성,홈플러스 삼성카드 & PARTNER,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1340
+AAP1341,삼성,헬로모바일 삼성카드 2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1341
+AAP1344,삼성,새마을금고 삼성카드 7,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1344
+AAP1345,삼성,THE O SFC (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1345
+AAP1346,삼성,THE O SFC (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1346
+AAP1347,삼성,THE O SFC (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1347
+AAP1348,삼성,LG U+ 삼성카드 2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1348
+AAP1349,삼성,SKT 삼성카드 2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1349
+AAP1351,삼성,자연드림 삼성카드 5,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1351
+AAP1353,삼성,백년지대계 삼성카드 7,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1353
+AAP1354,삼성,백년지대계 삼성카드 5,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1354
+AAP1358,삼성,외식가족공제회삼성카드BIZ앤포인트,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1358
+AAP1360,삼성,olleh 삼성카드 2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1360
+AAP1363,삼성,삼성카드 5 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1363
+AAP1366,삼성,세이 삼성카드 7,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1366
+AAP1369,삼성,새마을금고 삼성카드 5 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1369
+AAP1371,삼성,삼성법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1371
+AAP1372,삼성,삼성카드 CORPORATE 플래티늄 (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1372
+AAP1373,삼성,삼성법인카드 PREMIER,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1373
+AAP1374,삼성,삼성카드 CORPORATE PRESTIGE (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1374
+AAP1376,삼성,삼성법인카드 MILEAGE+ (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1376
+AAP1377,삼성,삼성법인카드 PREMIER (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1377
+AAP1378,삼성,신세계이마트 삼성카드 2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1378
+AAP1379,삼성,신세계이마트 삼성카드 SFC 2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1379
+AAP1381,삼성,신세계이마트 삼성카드 SFC 3,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1381
+AAP1387,삼성,에너지다이어트 삼성카드 & POINT,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1387
+AAP1389,삼성,삼성전자 멤버십 BLUE U 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1389
+AAP1390,삼성,삼성카드 6 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1390
+AAP1391,삼성,신세계이마트 삼성카드 4 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1391
+AAP1392,삼성,신세계이마트 삼성카드 SFC 4 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1392
+AAP1393,삼성,신세계이마트 삼성카드 SFC 5,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1393
+AAP1394,삼성,삼성카드 SFC 6 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1394
+AAP1395,삼성,삼성카드 BIZ 6 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1395
+AAP1397,삼성,삼성카드SFC6+V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1397
+AAP1400,삼성,정관장 삼성카드 5 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1400
+AAP1404,삼성,신세계이마트 삼성카드 SPM 2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1404
+AAP1406,삼성,신세계이마트 삼성카드 SPM 7,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1406
+AAP1408,삼성,S-OIL 삼성카드 & POINT,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1408
+AAP1410,삼성,큰수레 삼성카드 BIZ 6 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1410
+AAP1414,삼성,THE 1,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1414
+AAP1415,삼성,삼성카드 2 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1415
+AAP1416,삼성,삼성카드 3 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1416
+AAP1417,삼성,삼성카드 3+ V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1417
+AAP1418,삼성,삼성카드 4 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1418
+AAP1419,삼성,삼성카드 4+ V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1419
+AAP1420,삼성,삼성카드 7 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1420
+AAP1421,삼성,삼성카드 7+ V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1421
+AAP1422,삼성,THE 1 SFC,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1422
+AAP1423,삼성,삼성카드 & POINT,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1423
+AAP1426,삼성,HMP 삼성카드 3,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1426
+AAP1427,삼성,삼성화재다이렉트 삼성카드 S클래스,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1427
+AAP1428,삼성,THE 1 (대한한의사협회),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1428
+AAP1430,삼성,국민행복 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1430
+AAP1433,삼성,삼성카드 & BASIC,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1433
+AAP1434,삼성,글로벌쇼핑 삼성카드 5 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1434
+AAP1441,삼성,삼성카드 BIZ 4 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1441
+AAP1442,삼성,THE 1 BIZ,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1442
+AAP1445,삼성,보험 삼성카드 & DISCOUNT,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1445
+AAP1446,삼성,olleh 슈퍼 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1446
+AAP1447,삼성,SKT 삼성카드 2 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1447
+AAP1448,삼성,LG U+ 삼성카드 2 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1448
+AAP1449,삼성,다이소 패밀리 삼성카드 & POINT,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1449
+AAP1450,삼성,THE 1 (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1450
+AAP1451,삼성,THE 1 SFC (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1451
+AAP1452,삼성,삼성카드 & MILEAGE PLATINUM (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1452
+AAP1453,삼성,삼성카드 SFC & MILEAGE PLATINUM (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1453
+AAP1454,삼성,다이소 패밀리 삼성카드 7 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1454
+AAP1455,삼성,삼성카드 CORPORATE 특정거래전용(구매) (상생),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1455
+AAP1458,삼성,S-OIL 패밀리 삼성카드 6 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1458
+AAP1461,삼성,SC제일은행 삼성카드 2 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1461
+AAP1462,삼성,SC제일은행 삼성카드 3 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1462
+AAP1463,삼성,SC제일은행 삼성카드 4 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1463
+AAP1464,삼성,SC제일은행 삼성카드 5 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1464
+AAP1465,삼성,SC제일은행 삼성카드 6 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1465
+AAP1466,삼성,SC제일은행 삼성카드 7 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1466
+AAP1467,삼성,THE 1 (SC제일은행),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1467
+AAP1469,삼성,신세계 대구라이프 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1469
+AAP1470,삼성,T 삼성카드 2 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1470
+AAP1471,삼성,SC제일은행 삼성카드 CORPORATE 플래티늄 (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1471
+AAP1472,삼성,SC제일은행 삼성카드 CORPORATE 플래티늄 (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1472
+AAP1473,삼성,SC제일은행 삼성카드 CORPORATE PRESTIGE (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1473
+AAP1474,삼성,SC제일은행 삼성카드 CORPORATE PRESTIGE (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1474
+AAP1475,삼성,SC제일은행 삼성카드 CORPORATE,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1475
+AAP1477,삼성,WCMS등록_테스트카드1477,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1477
+AAP1482,삼성,삼성카드 taptap S,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1482
+AAP1483,삼성,삼성카드 taptap O,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1483
+AAP1484,삼성,삼성카드 스페셜마일리지 (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1484
+AAP1485,삼성,삼성카드 SFC 스페셜마일리지 (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1485
+AAP1489,삼성,오리온 패밀리 삼성카드 7 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1489
+AAP1490,삼성,SC제일은행 삼성법인카드 우편료전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1490
+AAP1491,삼성,SC제일은행 삼성법인카드 통신료전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1491
+AAP1492,삼성,SC제일은행 삼성법인카드 항공권전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1492
+AAP1493,삼성,SC제일은행 삼성법인카드 세금전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1493
+AAP1494,삼성,SC제일은행 삼성법인카드 후불하이패스전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1494
+AAP1495,삼성,SC제일은행 삼성법인카드 주유전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1495
+AAP1496,삼성,삼성카드 S CORPORATE 티타늄,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1496
+AAP1497,삼성,THE 1 BIZ (SC제일은행),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1497
+AAP1498,삼성,SC제일은행 삼성카드 BIZ 4 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1498
+AAP1499,삼성,THE 1 (스카이패스 · SC제일은행),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1499
+AAP1500,삼성,SC제일은행 삼성카드 스페셜마일리지 (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1500
+AAP1501,삼성,CU·배달의민족 삼성카드 taptap,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1501
+AAP1503,삼성,마트엔 삼성카드(구.코스트코 리워드 삼성카드),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1503
+AAP1504,삼성,삼성카드 지엔미 +,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1504
+AAP1505,삼성,삼성카드 애니패스 +,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1505
+AAP1507,삼성,트레이더스 삼성카드 BIZ DISCOUNT,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1507
+AAP1511,삼성,신세계이마트 SC제일은행 삼성카드 2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1511
+AAP1512,삼성,삼성카드 BIZ DISCOUNT+,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1512
+AAP1513,삼성,삼성카드 CORPORATE DISCOUNT+,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1513
+AAP1514,삼성,화물복지 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1514
+AAP1515,삼성,큰수레 화물복지 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1515
+AAP1520,삼성,카라이프 삼성카드 DISCOUNT+,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1520
+AAP1521,삼성,삼성 페이 삼성카드 taptap,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1521
+AAP1524,삼성,삼성카드 CORPORATE e-나라도움전용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1524
+AAP1526,삼성,삼성 리워즈 삼성카드 taptap,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1526
+AAP1527,삼성,T 삼성카드 (Galaxy S8 Edition),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1527
+AAP1528,삼성,삼성카드 taptap I,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1528
+AAP1531,삼성,화물운송 삼성카드 BIZ,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1531
+AAP1532,삼성,THE O V2 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1532
+AAP1533,삼성,THE O V2 (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1533
+AAP1535,삼성,THE O SFC V2 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1535
+AAP1536,삼성,THE O SFC V2 (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1536
+AAP1538,삼성,SC제일은행 데일리 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1538
+AAP1539,삼성,SC제일은행 라이프 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1539
+AAP1540,삼성,SK에너지 화물복지 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1540
+AAP1541,삼성,SK에너지 큰수레 화물복지 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1541
+AAP1543,삼성,THE 1 (Mercedes-Benz),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1543
+AAP1544,삼성,네이버페이 taptap,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1544
+AAP1546,삼성,삼성카드 CORPORATE GLOBAL,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1546
+AAP1547,삼성,멤버십앤드 (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1547
+AAP1548,삼성,멤버십앤드 (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1548
+AAP1549,삼성,탑마트 삼성카드 DISCOUNT,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1549
+AAP1550,삼성,American Express® Gold,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1550
+AAP1551,삼성,American Express® Green,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1551
+AAP1552,삼성,신세계 멘즈라이프 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1552
+AAP1553,삼성,THE O CORPORATE V2 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1553
+AAP1555,삼성,THE O CORPORATE V2 (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1555
+AAP1557,삼성,삼성스토어 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1557
+AAP1558,삼성,새마을금고 IN 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1558
+AAP1559,삼성,전국24시콜화물 화물복지 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1559
+AAP1560,삼성,SK에너지 전국24시콜화물 화물복지 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1560
+AAP1562,삼성,삼성카드 2 V3,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1562
+AAP1563,삼성,삼성카드 3 V3 (SK에너지),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1563
+AAP1564,삼성,삼성카드 3 V3 (GS칼텍스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1564
+AAP1565,삼성,삼성카드 4 V3,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1565
+AAP1566,삼성,삼성카드 4 V3 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1566
+AAP1567,삼성,삼성카드 5 V3,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1567
+AAP1568,삼성,삼성카드 6 V3,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1568
+AAP1569,삼성,Toss taptap S,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1569
+AAP1573,삼성,삼성카드 2 V3 (아지냥이 Edition),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1573
+AAP1574,삼성,PAYCO taptap,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1574
+AAP1575,삼성,삼성카드 7 V2 (Partner),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1575
+AAP1576,삼성,딜로이트 패밀리 삼성카드 7 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1576
+AAP1580,삼성,한미 패밀리 삼성카드 7 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1580
+AAP1581,삼성,전우사랑 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1581
+AAP1582,삼성,삼성카드 SFC 2 V3,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1582
+AAP1583,삼성,삼성카드 SFC 3 V3 (SK에너지),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1583
+AAP1584,삼성,삼성카드 SFC 3 V3 (GS칼텍스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1584
+AAP1585,삼성,삼성카드 SFC 4 V3,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1585
+AAP1586,삼성,삼성카드 SFC 4 V3 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1586
+AAP1587,삼성,삼성카드 SFC 5 V3,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1587
+AAP1588,삼성,삼성카드 SFC 6 V3,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1588
+AAP1594,삼성,전우사랑 패밀리 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1594
+AAP1595,삼성,하이원 패밀리 삼성카드 4 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1595
+AAP1597,삼성,서비스에이스 패밀리 삼성카드 (데일리형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1597
+AAP1599,삼성,전자랜드 삼성카드 3 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1599
+AAP1600,삼성,인천교통공사 패밀리 삼성카드 4 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1600
+AAP1601,삼성,AIA생명 패밀리 삼성카드 4 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1601
+AAP1602,삼성,트레이더스신세계 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1602
+AAP1604,삼성,SC제일은행 아시아나 삼성지엔미카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1604
+AAP1605,삼성,패밀리 삼성카드 (데일리형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1605
+AAP1606,삼성,패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1606
+AAP1607,삼성,패밀리 삼성카드 (할인형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1607
+AAP1608,삼성,라이프파트너 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1608
+AAP1609,삼성,경기도청 패밀리 삼성카드 4 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1609
+AAP1610,삼성,서한 패밀리 삼성카드 (할인형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1610
+AAP1611,삼성,한국SMC 패밀리 삼성카드 4 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1611
+AAP1612,삼성,홈플러스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1612
+AAP1613,삼성,T 라이트 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1613
+AAP1614,삼성,평화홀딩스 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1614
+AAP1615,삼성,원익큐엔씨 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1615
+AAP1617,삼성,신세계사이먼 프리미엄 아울렛 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1617
+AAP1618,삼성,사회복지사 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1618
+AAP1619,삼성,에프앤유 패밀리 삼성카드 (데일리형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1619
+AAP1621,삼성,안동병원 패밀리 삼성카드 (데일리형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1621
+AAP1622,삼성,굿포인트 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1622
+AAP1623,삼성,부릉 삼성카드 BIZ,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1623
+AAP1625,삼성,오렌지원 패밀리 삼성카드 (할인형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1625
+AAP1626,삼성,TSK 패밀리 삼성카드 (할인형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1626
+AAP1627,삼성,피에스앤마케팅 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1627
+AAP1628,삼성,피에스앤마케팅 패밀리 삼성카드 (데일리형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1628
+AAP1630,삼성,이스타항공 패밀리 삼성카드 (데일리형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1630
+AAP1631,삼성,제주항공 Refresh Point 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1631
+AAP1632,삼성,K Car 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1632
+AAP1633,삼성,에스텍 패밀리 삼성카드 (할인형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1633
+AAP1634,삼성,삼성카드 & BASIC,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1634
+AAP1636,삼성,성남시의료원 패밀리 삼성카드 (데일리형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1636
+AAP1638,삼성,카카오뱅크 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1638
+AAP1639,삼성,한화투자증권 패밀리 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1639
+AAP1640,삼성,삼성카드 2 V4,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1640
+AAP1641,삼성,삼성카드 3 V4,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1641
+AAP1642,삼성,삼성카드 4 V4,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1642
+AAP1643,삼성,삼성카드 4 V4 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1643
+AAP1644,삼성,삼성카드 5 V4,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1644
+AAP1645,삼성,삼성카드 6 V4,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1645
+AAP1646,삼성,삼성카드 SFC 2 V4,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1646
+AAP1648,삼성,삼성카드 SFC 4 V4,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1648
+AAP1649,삼성,삼성카드 SFC 4 V4 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1649
+AAP1650,삼성,인바디 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1650
+AAP1651,삼성,신세계 THE S VIP,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1651
+AAP1652,삼성,가천대학교 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1652
+AAP1653,삼성,다이소 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1653
+AAP1654,삼성,금양인터내셔날 패밀리 삼성카드 (데일리형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1654
+AAP1655,삼성,와이즈케어 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1655
+AAP1656,삼성,트레이더스 삼성카드 BIZ,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1656
+AAP1657,삼성,에스원 안심 삼성카드 BIZ,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1657
+AAP1658,삼성,(사)한국가요강사협회 패밀리 삼성카드 (할인형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1658
+AAP1659,삼성,삼성페이카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1659
+AAP1663,삼성,LG U+ 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1663
+AAP1664,삼성,우미건설 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1664
+AAP1665,삼성,KT 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1665
+AAP1666,삼성,taptap DIGITAL,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1666
+AAP1667,삼성,taptap DRIVE,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1667
+AAP1668,삼성,taptap SHOPPING,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1668
+AAP1670,삼성,건국대학교 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1670
+AAP1671,삼성,American Express Blue,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1671
+AAP1672,삼성,부산대학교병원 패밀리 삼성카드 (데일리형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1672
+AAP1673,삼성,한화큐셀 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1673
+AAP1674,삼성,아시아나 삼성카드 SFC,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1674
+AAP1675,삼성,신세계까사미아 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1675
+AAP1676,삼성,삼성카드 CORPORATE #1,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1676
+AAP1677,삼성,삼성카드 CORPORATE #2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1677
+AAP1678,삼성,삼성카드 CORPORATE #3,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1678
+AAP1679,삼성,삼성카드 CORPORATE #4,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1679
+AAP1680,삼성,삼성카드 CORPORATE #5,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1680
+AAP1681,삼성,삼성카드 CORPORATE #10,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1681
+AAP1682,삼성,신세계인터내셔날 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1682
+AAP1683,삼성,SSG.COM 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1683
+AAP1684,삼성,새마을금고 데일리 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1684
+AAP1685,삼성,kt m&s 패밀리 삼성카드 (할인형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1685
+AAP1686,삼성,SK인텔릭스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1686
+AAP1687,삼성,SK인텔릭스 삼성카드 (할부),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1687
+AAP1688,삼성,국민행복 삼성카드 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1688
+AAP1690,삼성,요기요 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1690
+AAP1691,삼성,American Express Platinum,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1691
+AAP1692,삼성,American Express® Reserve,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1692
+AAP1693,삼성,삼성후불하이패스카드 (SIM형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1693
+AAP1694,삼성,신세계 Art & Science 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1694
+AAP1695,삼성,대구도시철도공사 패밀리 삼성카드 (데일리형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1695
+AAP1696,삼성,대구도시철도공사 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1696
+AAP1697,삼성,SGI서울보증 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1697
+AAP1698,삼성,부산교통공사 패밀리 삼성카드 (데일리형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1698
+AAP1699,삼성,부산교통공사 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1699
+AAP1700,삼성,사노피 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1700
+AAP1701,삼성,삼성카드 5 SE,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1701
+AAP1702,삼성,삼성카드 SFC 5 SE,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1702
+AAP1703,삼성,삼성카드 5 V2 SE,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1703
+AAP1704,삼성,서울시설공단 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1704
+AAP1705,삼성,삼성스토어 BENEFIT 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1705
+AAP1706,삼성,신세계 THE S PRESTIGE 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1706
+AAP1707,삼성,한솔이엠이 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1707
+AAP1708,삼성,웰스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1708
+AAP1709,삼성,웰스 삼성카드 (할부),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1709
+AAP1710,삼성,SC제일은행 디지털 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1710
+AAP1711,삼성,SC제일은행 드라이브 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1711
+AAP1712,삼성,카카오페이신용카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1712
+AAP1713,삼성,삼성카드 더블포인트,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1713
+AAP1716,삼성,삼성카드 BIZ LEADERS,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1716
+AAP1717,삼성,롯데월드카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1717
+AAP1719,삼성,삼성 iD 달달할인 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1719
+AAP1724,삼성,삼성 모바일플러스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1724
+AAP1727,삼성,삼성 iD ALL 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1727
+AAP1728,삼성,삼성 SFC iD ALL 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1728
+AAP1729,삼성,삼성 iD ALL 카드 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1729
+AAP1730,삼성,삼성 SFC iD ALL 카드 (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1730
+AAP1731,삼성,삼성 iD ON 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1731
+AAP1732,삼성,삼성 SFC iD ON 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1732
+AAP1733,삼성,U+알뜰폰 파트너스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1733
+AAP1735,삼성,AIA 바이탈리티 ME 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1735
+AAP1736,삼성,AIA 바이탈리티 WE 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1736
+AAP1737,삼성,삼성 햇살론카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1737
+AAP1740,삼성,SK렌터카 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1740
+AAP1741,삼성,신세계 아울렛 BENEFIT 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1741
+AAP1742,삼성,모니모카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1742
+AAP1743,삼성,삼성카드 CORPORATE #7 MORE (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1743
+AAP1744,삼성,휠라 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1744
+AAP1745,삼성,국가철도공단 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1745
+AAP1746,삼성,삼성 iD POCKET 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1746
+AAP1747,삼성,삼성 iD EV 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1747
+AAP1748,삼성,NS홈쇼핑 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1748
+AAP1752,삼성,T나는혜택 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1752
+AAP1753,삼성,삼성 iD ENERGY 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1753
+AAP1754,삼성,부산도시철도 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1754
+AAP1755,삼성,라이나생명 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1755
+AAP1756,삼성,삼성 iD EDU 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1756
+AAP1757,삼성,삼성 BIZ iD DISCOUNT 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1757
+AAP1758,삼성,삼성 BIZ iD BENEFIT 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1758
+AAP1760,삼성,우리동네GS 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1760
+AAP1762,삼성,삼성 iD MOVE 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1762
+AAP1763,삼성,카카오뱅크 개인사업자 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1763
+AAP1764,삼성,CJ 삼성 iD 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1764
+AAP1765,삼성,삼성 iD CARE 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1765
+AAP1766,삼성,삼성 iD AUTO 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1766
+AAP1767,삼성,삼성 iD SIMPLE 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1767
+AAP1768,삼성,아파트아이 삼성 iD 달달할인 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1768
+AAP1769,삼성,케이뱅크 삼성 iD 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1769
+AAP1770,삼성,LINE 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1770
+AAP1771,삼성,신세계 더 마일리지 삼성카드 (스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1771
+AAP1773,삼성,삼성 iD PET 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1773
+AAP1774,삼성,배차장 삼성 BIZ iD BENEFIT 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1774
+AAP1775,삼성,서울지방변호사회 로이어스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1775
+AAP1777,삼성,THE iD. TITANIUM (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1777
+AAP1778,삼성,SFC THE iD. TITANIUM (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1778
+AAP1779,삼성,THE iD. PLATINUM (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1779
+AAP1780,삼성,SFC THE iD. PLATINUM (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1780
+AAP1781,삼성,TRADERS CLUB 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1781
+AAP1782,삼성,서울교통공사 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1782
+AAP1783,삼성,서울교통공사 패밀리 삼성카드 (할인형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1783
+AAP1784,삼성,서울교통공사 패밀리 삼성카드 (데일리형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1784
+AAP1785,삼성,네이버웹툰 삼성 iD 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1785
+AAP1786,삼성,삼성 iD NOMAD 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1786
+AAP1787,삼성,삼성 iD CLASSY 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1787
+AAP1788,삼성,아이티센그룹 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1788
+AAP1790,삼성,삼성 iD VITA 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1790
+AAP1791,삼성,삼성 iD e hi-pass 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1791
+AAP1792,삼성,MY S-OIL 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1792
+AAP1794,삼성,코웨이 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1794
+AAP1795,삼성,쿠쿠 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1795
+AAP1797,삼성,ABL생명보험 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1797
+AAP1798,삼성,엠베스트 엘리하이 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1798
+AAP1799,삼성,알뜰교통플러스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1799
+AAP1801,삼성,에버랜드 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1801
+AAP1802,삼성,BIZ THE iD. PLATINUM (포인트),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1802
+AAP1805,삼성,원베일리 홈닉 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1805
+AAP1806,삼성,원베일리 신세계 홈닉 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1806
+AAP1807,삼성,경기도청 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1807
+AAP1812,삼성,W컨셉 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1812
+AAP1813,삼성,변호사회 로이어스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1813
+AAP1815,삼성,신세계 신백리워드 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1815
+AAP1816,삼성,신세계 신백리워드 SFC 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1816
+AAP1817,삼성,모니모A 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1817
+AAP1818,삼성,청호나이스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1818
+AAP1819,삼성,이마트신세계 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1819
+AAP1820,삼성,삼성카드 CORPORATE 마일리지(스카이패스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1820
+AAP1821,삼성,안전보건공단 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1821
+AAP1822,삼성,연금누리 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1822
+AAP1823,삼성,KoELSA 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1823
+AAP1824,삼성,삼성 iD GLOBAL 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1824
+AAP1825,삼성,삼성 iD PLUG-IN 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1825
+AAP1826,삼성,종근당 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1826
+AAP1830,삼성,K-패스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1830
+AAP1831,삼성,THE iD. TITANIUM (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1831
+AAP1832,삼성,SFC THE iD. TITANIUM (아시아나),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1832
+AAP1833,삼성,세스코 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1833
+AAP1834,삼성,하나투어 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1834
+AAP1835,삼성,CFA 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1835
+AAP1837,삼성,삼성 iD ONE 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1837
+AAP1838,삼성,삼성법인카드 PLUS,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1838
+AAP1839,삼성,KT 할부 S 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1839
+AAP1841,삼성,삼성전자 AI 구독 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1841
+AAP1842,삼성,전자랜드 라이트 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1842
+AAP1843,삼성,단비교육 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1843
+AAP1845,삼성,AI 구독 클럽 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1845
+AAP1846,삼성,기후동행 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1846
+AAP1847,삼성,BIZ THE iD. GOLD,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1847
+AAP1848,삼성,한국전력공사 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1848
+AAP1849,삼성,오토빌 삼성법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1849
+AAP1850,삼성,알라딘 만권당 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1850
+AAP1851,삼성,보훈공단 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1851
+AAP1852,삼성,NAMSAN CLUB 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1852
+AAP1855,삼성,삼성 iD STATION 카드 (SK에너지),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1855
+AAP1856,삼성,삼성 iD STATION 카드 (GS칼텍스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1856
+AAP1857,삼성,삼성 iD ROAD 카드 (SK에너지),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1857
+AAP1858,삼성,삼성 iD ROAD 카드 (GS칼텍스),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1858
+AAP1859,삼성,한미 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1859
+AAP1861,삼성,삼성법인카드 WITH (티상),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1861
+AAP1863,삼성,KTX 삼성법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1863
+AAP1864,삼성,KTX 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1864
+AAP1865,삼성,삼성라이온즈카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1865
+AAP1866,삼성,미래에셋증권 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1866
+AAP1869,삼성,T PREMIUM 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1869
+AAP1870,삼성,스타벅스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1870
+AAP1872,삼성,정림 패밀리 삼성카드 (포인트형),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1872
+AAP1873,삼성,번개장터 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1873
+AAP1874,삼성,삼성 iD SELECT+ 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1874
+AAP1875,삼성,삼성 iD SELECT ALL 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1875
+AAP1876,삼성,삼성 SFC iD SELECT ALL 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1876
+AAP1877,삼성,삼성 iD SELECT ON 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1877
+AAP1878,삼성,삼성 SFC iD SELECT ON 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1878
+AAP1882,삼성,토스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1882
+AAP1883,삼성,하이마트 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1883
+AAP1884,삼성,고위드 삼성법인카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1884
+AAP1886,삼성,THE iD. 1st,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1886
+AAP1887,삼성,SFC THE iD. 1st,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1887
+AAP1888,삼성,SHILLA REWARDS 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1888
+AAP1889,삼성,G마켓 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1889
+AAP1890,삼성,삼성 소상공인 특례 햇살론카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1890
+AAP1891,삼성,오아시스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1891
+AAP1893,삼성,U+ 라이트 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1893
+AAP1894,삼성,롯데마트 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1894
+AAP1897,삼성,삼성 iD STATION 카드 (HD현대오일뱅크),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1897
+AAP1898,삼성,삼성 iD ROAD 카드 (HD현대오일뱅크),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1898
+AAP1899,삼성,삼성생명 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1899
+AAP1900,삼성,삼성화재 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1900
+AAP1901,삼성,플러스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1901
+AAP1902,삼성,우리은행 SAVE 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1902
+AAP1903,삼성,우리은행 DRIVE 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1903
+AAP1904,삼성,우리은행 LIVE 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1904
+AAP1905,삼성,우리은행 WAVE 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1905
+AAP1906,삼성,우리은행 WIDE 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1906
+AAP1907,삼성,넥센타이어 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1907
+AAP1909,삼성,한화이글스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1909
+AAP1911,삼성,무신사 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1911
+AAP1915,삼성,캠코 플러스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1915
+ABP0018,삼성,군산CC삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0018
+ABP0037,삼성,대교에듀아이업삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0037
+ABP0041,삼성,대구승용차요일제삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0041
+ABP0046,삼성,대한간호협회 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0046
+ABP0071,삼성,동부증권해피플러스CMA 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0071
+ABP0072,삼성,동부저축은행 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0072
+ABP0077,삼성,동양증권CMA삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0077
+ABP0079,삼성,동양증권CMA삼성플래티늄체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0079
+ABP0085,삼성,두산가족사랑 삼성캐시백체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0085
+ABP0097,삼성,삼성론카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0097
+ABP0099,삼성,롯데관광 삼성쇼핑캐시백체크카드 즉불,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0099
+ABP0123,삼성,삼성마이너스론카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0123
+ABP0133,삼성,미래에셋아내펀드CMA 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0133
+ABP0134,삼성,미래에셋자산관리CMA삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0134
+ABP0139,삼성,삼성바로론카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0139
+ABP0167,삼성,삼성빅보너스즉불카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0167
+ABP0192,삼성,삼성증권CMA 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0192
+ABP0193,삼성,삼성CMA 애니패스체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0193
+ABP0195,삼성,삼성빅보너스체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0195
+ABP0198,삼성,삼성포인트체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0198
+ABP0208,삼성,삼성플래티늄체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0208
+ABP0233,삼성,서울승용차요일제 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0233
+ABP0234,삼성,성신여대학생증삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0234
+ABP0288,삼성,신세계 삼성애니패스포인트 체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0288
+ABP0291,삼성,신세계 삼성지엔미포인트 체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0291
+ABP0303,삼성,신한금융투자명품CMA 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0303
+ABP0345,삼성,삼성애니패스즉불카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0345
+ABP0352,삼성,야우리백화점 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0352
+ABP0360,삼성,약정론관리번호,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0360
+ABP0364,삼성,에버리치 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0364
+ABP0397,삼성,삼성와인애체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0397
+ABP0398,삼성,우리투자증권CMA삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0398
+ABP0421,삼성,삼성티클래스앤오일 체크카드(유류환급),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0421
+ABP0471,삼성,제주도 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0471
+ABP0476,삼성,중국유학생삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0476
+ABP0477,삼성,중앙일보삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0477
+ABP0489,삼성,직능연합삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0489
+ABP0506,삼성,삼성다이닝캐시백체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0506
+ABP0507,삼성,삼성쇼핑캐시백체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0507
+ABP0508,삼성,삼성오토캐시백체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0508
+ABP0532,삼성,큰수레TAX 삼성플래티늄체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0532
+ABP0539,삼성,삼성오일앤세이브체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0539
+ABP0543,삼성,삼성티클래스앤오일체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0543
+ABP0552,삼성,팜페이 삼성쇼핑캐시백체크카드 즉불,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0552
+ABP0572,삼성,TAX 삼성플래티늄체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0572
+ABP0574,삼성,하이증권CMA 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0574
+ABP0577,삼성,삼성학자금카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0577
+ABP0579,삼성,한국청소년보호육성회 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0579
+ABP0580,삼성,한국청소년보호육성회 삼성체크카드 즉불,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0580
+ABP0581,삼성,한국투자증권CMA 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0581
+ABP0614,삼성,삼성CMA플러스체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0614
+ABP0618,삼성,삼성증권CMA+ 삼성애니패스체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0618
+ABP0627,삼성,ENVY 삼성포인트체크카드 즉불,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0627
+ABP0633,삼성,쉐보레 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0633
+ABP0652,삼성,코레일멤버십 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0652
+ABP0701,삼성,SFC 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0701
+ABP0725,삼성,유안타WCMA 신세계삼성애니패스P 체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0725
+ABP0726,삼성,유안타WCMA 신세계삼성지엔미P 체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0726
+ABP0727,삼성,유안타WCMA 삼성플래티늄체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0727
+ABP0782,삼성,직능연합 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0782
+ABP0784,삼성,삼성증권 CMA+S 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0784
+ABP0788,삼성,SFC 삼성증권 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0788
+ABP0789,삼성,유류환급에버리치 삼성티클래스앤오일 체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP0789
+ABP1103,삼성,유류환급삼성티클래스앤오일체크카드_후연결_제일은행,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1103
+ABP1104,삼성,싸이월드삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1104
+ABP1142,삼성,신세계이마트포인트형(리얼타임카드)_신세계임직원용,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1142
+ABP1143,삼성,삼성애니패스체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1143
+ABP1158,삼성,삼성스마트오토 캐시백체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1158
+ABP1159,삼성,새마을금고 삼성애니패스포인트체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1159
+ABP1182,삼성,에버리치 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1182
+ABP1283,삼성,골목상권우대 삼성체크카드 애니패스포인트,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1283
+ABP1285,삼성,새마을금고 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1285
+ABP1320,삼성,신한은행 삼성애니패스포인트 체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1320
+ABP1321,삼성,우리은행 삼성애니패스포인트 체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1321
+ABP1322,삼성,SC은행 삼성애니패스포인트 체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1322
+ABP1333,삼성,신세계KB국민은행 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1333
+ABP1356,삼성,홈플러스 임직원전용 체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1356
+ABP1365,삼성,SN KB국민은행 삼성애니패스포인트 체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1365
+ABP1367,삼성,삼성생명멤버십삼성체크애니패스P,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1367
+ABP1382,삼성,삼성체크카드 & YOUNG,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1382
+ABP1383,삼성,삼성체크카드 & CASHBACK,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1383
+ABP1384,삼성,삼성체크카드 & POINT,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1384
+ABP1431,삼성,국민행복 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1431
+ABP1443,삼성,중국공상은행 삼성체크카드 & CASHBACK,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1443
+ABP1444,삼성,국민행복전용 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1444
+ABP1457,삼성,SC제일은행 삼성체크카드 YOUNG,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1457
+ABP1459,삼성,SC제일은행 삼성체크카드 CASHBACK,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1459
+ABP1460,삼성,SC제일은행 삼성체크카드 POINT,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1460
+ABP1468,삼성,다이소 패밀리 삼성체크카드 & POINT,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1468
+ABP1476,삼성,WCMS등록_테스트카드1476,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1476
+ABP1478,삼성,삼성 페이 삼성체크카드 & POINT,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1478
+ABP1516,삼성,화물복지거래 삼성카드(주유량확인용),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1516
+ABP1517,삼성,화물복지 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1517
+ABP1518,삼성,화물복지 삼성법인체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1518
+ABP1519,삼성,화물복지거래 삼성법인체크카드(주유량 확인용),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1519
+ABP1522,삼성,삼성 리워즈 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1522
+ABP1542,삼성,SK에너지 화물복지 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1542
+ABP1556,삼성,SC제일은행 글로벌 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1556
+ABP1689,삼성,국민행복 삼성체크카드 V2,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1689
+ABP1714,삼성,지역사랑상품권(지역화폐) 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1714
+ABP1722,삼성,충주사랑상품권 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1722
+ABP1723,삼성,청도사랑상품권 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1723
+ABP1750,삼성,고창사랑상품권 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1750
+ABP1751,삼성,NICE 패밀리 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1751
+ABP1776,삼성,부안사랑상품권 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1776
+ABP1793,삼성,김제사랑상품권 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1793
+ABP1800,삼성,K-패스 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1800
+ABP1853,삼성,KB국민은행 모니모 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1853
+ABP1871,삼성,스타벅스 삼성체크카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ABP1871
+ACP0395,삼성,삼성올앳전자화폐카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0395
+ACP0396,삼성,삼성올앳카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0396
+ACP0460,삼성,삼성전자화폐,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0460
+ACP0603,삼성,삼성애니핏헬스멤버십카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0603
+ACP0732,삼성,과천시삼성기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0732
+ACP0733,삼성,교보문고삼성모바일기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0733
+ACP0734,삼성,꿈장학삼성기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0734
+ACP0735,삼성,도시락삼성모바일기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0735
+ACP0736,삼성,롯데시네마삼성모바일기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0736
+ACP0737,삼성,메가박스삼성모바일기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0737
+ACP0738,삼성,미스터피자삼성모바일기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0738
+ACP0739,삼성,배스킨라빈스삼성모바일기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0739
+ACP0741,삼성,삼성기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0741
+ACP0742,삼성,삼성모바일기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0742
+ACP0743,삼성,삼성전자기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0743
+ACP0744,삼성,삼성기프트(충전식),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0744
+ACP0745,삼성,삼성기프트카드(해외),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0745
+ACP0746,삼성,스타벅스삼성모바일기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0746
+ACP0747,삼성,신라면세점삼성기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0747
+ACP0748,삼성,신세계삼성모바일기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0748
+ACP0749,삼성,아리따움삼성모바일기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0749
+ACP0750,삼성,아웃백삼성모바일기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0750
+ACP0751,삼성,에스오일삼성기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0751
+ACP0752,삼성,정관장삼성기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0752
+ACP0753,삼성,제시카콜렉션삼성기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0753
+ACP0754,삼성,휘닉스파크삼성ⓜ기프트카드(롱주간권),,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0754
+ACP0755,삼성,G마켓&옥션삼성모바일기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0755
+ACP0764,삼성,웅진코웨이삼성기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0764
+ACP0766,삼성,오토캐시백삼성기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0766
+ACP0767,삼성,신라면세점삼성기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0767
+ACP0779,삼성,훼미리마트삼성기프트카드플러스,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0779
+ACP0780,삼성,바우처삼성기프트카드플러스,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP0780
+ACP1081,삼성,삼성Gift카드40만원권,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1081
+ACP1086,삼성,도미노피자삼성기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1086
+ACP1093,삼성,삼성모바일기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1093
+ACP1128,삼성,EverlandGift카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1128
+ACP1133,삼성,삼성총무닷컴세콤카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1133
+ACP1134,삼성,웰빙삼성기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1134
+ACP1138,삼성,삼성전자화폐,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1138
+ACP1139,삼성,조선호텔삼성기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1139
+ACP1144,삼성,삼성트래블기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1144
+ACP1147,삼성,삼성프리미엄리워드카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1147
+ACP1152,삼성,훼미리마트삼성기프트플러스카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1152
+ACP1153,삼성,휘닉스파크삼성기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1153
+ACP1154,삼성,KT애니카랜드삼성기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1154
+ACP1156,삼성,TC멤버십삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1156
+ACP1164,삼성,CJ오쇼핑삼성ⓜ기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1164
+ACP1225,삼성,르노삼성자동차멤버십선불카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1225
+ACP1510,삼성,삼성충전카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1510
+ACP1523,삼성,삼성 리워즈 삼성기프트카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1523
+ACP1529,삼성,삼성스토어 삼성충전카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1529
+ACP1738,삼성,monimo,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=ACP1738
+AAP1914,삼성,삼성 SFC iD SELECT UP 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1914
+AAP1913,삼성,삼성 iD SELECT UP 카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1913
+AAP1895,삼성,트라이플러스 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1895
+AAP1896,삼성,롯데홈쇼핑 삼성카드,,,https://www.samsungcard.com/home/card/cardinfo/PGHPPCCCardCardinfoDetails001?code=AAP1896
