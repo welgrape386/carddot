@@ -212,29 +212,29 @@ async def pipeline_a_samsung():
         if new_cards:
             save_new_csv(SS_NEW_CARDS_CSV.format(date=TODAY), new_cards, SS_CARD_FIELDS)
 
-            import aiohttp
-            from playwright.async_api import async_playwright
-            from main import crawl_card, parse_and_save, init_csv, USER_AGENT, SAMSUNG, DETAIL_URL
-
-            init_csv()
-            async with aiohttp.ClientSession(headers={"User-Agent": USER_AGENT, "Referer": SAMSUNG}) as session:
-                async with async_playwright() as p:
-                    browser = await p.chromium.launch(headless=True)
-                    ctx  = await browser.new_context(user_agent=USER_AGENT, locale="ko-KR")
-                    page = await ctx.new_page()
-                    try:
-                        for card in new_cards:
-                            cid = card["card_id"]
-                            card["page_url"] = card.get("link_url", f"{DETAIL_URL}?code={cid}")
-                            print(f"  [{cid}] 크롤링+파싱 중...")
-                            card_data = await crawl_card(page, card, session)
-                            if not card_data:
-                                print(f"  [{cid}] 크롤링 실패 - 스킵")
-                                continue
-                            await parse_and_save(card_data, session)
-                            print(f"  [{cid}] 파싱 완료")
-                    finally:
-                        await browser.close()
+            # TODO: 탐지 검증 후 파싱 활성화
+            # import aiohttp
+            # from playwright.async_api import async_playwright
+            # from main import crawl_card, parse_and_save, init_csv, USER_AGENT, SAMSUNG, DETAIL_URL
+            # init_csv()
+            # async with aiohttp.ClientSession(headers={"User-Agent": USER_AGENT, "Referer": SAMSUNG}) as session:
+            #     async with async_playwright() as p:
+            #         browser = await p.chromium.launch(headless=True)
+            #         ctx  = await browser.new_context(user_agent=USER_AGENT, locale="ko-KR")
+            #         page = await ctx.new_page()
+            #         try:
+            #             for card in new_cards:
+            #                 cid = card["card_id"]
+            #                 card["page_url"] = card.get("link_url", f"{DETAIL_URL}?code={cid}")
+            #                 print(f"  [{cid}] 크롤링+파싱 중...")
+            #                 card_data = await crawl_card(page, card, session)
+            #                 if not card_data:
+            #                     print(f"  [{cid}] 크롤링 실패 - 스킵")
+            #                     continue
+            #                 await parse_and_save(card_data, session)
+            #                 print(f"  [{cid}] 파싱 완료")
+            #         finally:
+            #             await browser.close()
 
         return new_cards
     finally:

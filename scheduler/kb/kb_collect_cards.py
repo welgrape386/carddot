@@ -24,6 +24,7 @@ if sys.platform == "win32":
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8")
 
 from playwright.async_api import async_playwright
+from playwright_stealth import Stealth
 
 BASE_URL   = "https://card.kbcard.com"
 CARD_URLS  = [
@@ -118,6 +119,7 @@ async def collect_cards() -> list[dict]:
         )
         ctx = await browser.new_context(user_agent=USER_AGENT)
         page = await ctx.new_page()
+        await Stealth().apply_stealth_async(page)
 
         try:
             for card_type, url in CARD_URLS:

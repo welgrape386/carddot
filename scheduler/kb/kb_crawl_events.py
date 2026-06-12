@@ -17,6 +17,7 @@ import re
 from datetime import datetime, timezone
 
 from playwright.async_api import async_playwright
+from playwright_stealth import Stealth
 from bs4 import BeautifulSoup
 
 BASE_DIR      = os.path.dirname(os.path.abspath(__file__))
@@ -299,6 +300,7 @@ async def crawl_retry():
         )
         ctx  = await browser.new_context(user_agent=USER_AGENT)
         page = await ctx.new_page()
+        await Stealth().apply_stealth_async(page)
 
         try:
             for i, event in enumerate(target_events, 1):
@@ -464,6 +466,7 @@ async def crawl_events(events: list, card_meta: dict = None) -> list:
         )
         ctx  = await browser.new_context(user_agent=USER_AGENT)
         page = await ctx.new_page()
+        await Stealth().apply_stealth_async(page)
 
         try:
             for i, event in enumerate(events, 1):
