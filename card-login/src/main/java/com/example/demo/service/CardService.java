@@ -60,14 +60,25 @@ public class CardService {
     public List<CardListResponse> getAllCards() {
         List<Card> cards = cardRepository.findAll();
         return cards.stream()
-                .map(card -> new CardListResponse(
-                        card.getCardId(), card.getCardName(),card.getCompany(),
-                        card.getCardType(), card.isHasTransport(),
-                        card.getAnnualFeeDomBasic(), card.getAnnualFeeDomPremium(),
-                        card.getAnnualFeeForBasic(), card.getAnnualFeeForPremium(),
-                        card.getMinPerformance(),
-                        card.getSummary(), card.getImageUrl()
-                ))
+                .map(card -> {
+                	List<Benefit> benefits = benefitRepository.findByCardId(card.getCardId());
+                    List<String> categoryNames = benefits.stream()
+                            .filter(b -> b.getCategories() != null)
+                            .flatMap(b -> b.getCategories().stream())
+                            .map(cat -> cat.getCategoryName()) // 이름만
+                            .distinct() // 중복 제거
+                            .toList();
+                    
+                	return new CardListResponse(
+                            card.getCardId(), card.getCardName(),card.getCompany(),
+                            card.getCardType(), card.isHasTransport(),
+                            card.getAnnualFeeDomBasic(), card.getAnnualFeeDomPremium(),
+                            card.getAnnualFeeForBasic(), card.getAnnualFeeForPremium(),
+                            card.getMinPerformance(),
+                            card.getSummary(), card.getImageUrl(),
+                            categoryNames
+                    );
+                })
                 .collect(Collectors.toList());
     }
 
@@ -187,7 +198,7 @@ public class CardService {
                     .orElseThrow(() -> new IllegalArgumentException("해당 카드를 찾을 수 없습니다: " + cardId));
             
             // 카드 점수 가져오기
-            CardScoreResponse scores = cardScoreService.getCardScores(cardId, personaType);
+            CardScoreResponse scores = cardScoreService.getCardScores(card, personaType);
             
             // 혜택 가져오기
             List<Benefit> benefits = benefitRepository.findByCardId(cardId);
@@ -232,5 +243,16 @@ public class CardService {
                 card.getCardId(), card.getImageUrl(), card.getCardType(),
                 card.getCompany(), card.getCardName(), card.getAnnualFeeDomBasic()
         )).collect(Collectors.toList());
+    }
+    
+    // 5. 카드 종합 점수
+    @Transactional(readOnly = true)
+    public CardScoreResponse getCardScores(String cardId, String personaType) {
+        // DB에서 카드를 찾아옴
+        Card card = cardRepository.findById(cardId)
+                .orElseThrow(() -> new IllegalArgumentException("해당 카드를 찾을 수 없습니다: " + cardId));
+        
+        // 찾은 Card 객체를 CardScoreService로 넘겨서 결과를 받아옴
+        return cardScoreService.getCardScores(card, personaType);
     }
 }
