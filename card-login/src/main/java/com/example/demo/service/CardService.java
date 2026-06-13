@@ -21,6 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.ArrayList;
+import java.util.Map;
 
 @Service
 public class CardService {
@@ -59,15 +60,25 @@ public class CardService {
     @Transactional(readOnly = true)
     public List<CardListResponse> getAllCards() {
         List<Card> cards = cardRepository.findAll();
+        
+        List<String> cardIds = cards.stream()
+        		.map(Card::getCardId)
+        		.collect(Collectors.toList());
+        
+        List<Benefit> allBenefits = benefitRepository.findByCardIdInWithCategories(cardIds);
+        
+        Map<String, List<Benefit>> benefitsByCardId = allBenefits.stream()
+                .collect(Collectors.groupingBy(Benefit::getCardId));
+        
         return cards.stream()
                 .map(card -> {
-                	List<Benefit> benefits = benefitRepository.findByCardId(card.getCardId());
+                	List<Benefit> benefits = benefitsByCardId.getOrDefault(card.getCardId(), new ArrayList<>());
                     List<String> categoryNames = benefits.stream()
                             .filter(b -> b.getCategories() != null)
                             .flatMap(b -> b.getCategories().stream())
                             .map(cat -> cat.getCategoryName()) // 이름만
                             .distinct() // 중복 제거
-                            .toList();
+                            .collect(Collectors.toList());
                     
                 	return new CardListResponse(
                             card.getCardId(), card.getCardName(),card.getCompany(),
