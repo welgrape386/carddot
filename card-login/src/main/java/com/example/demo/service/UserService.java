@@ -20,6 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 public class UserService {
@@ -107,9 +109,45 @@ public class UserService {
         User user = userRepository.findByEmail(email).orElse(null);
         if (user == null) return;
         
-        List<String> sortedInputIds = new ArrayList<>(cardIds);
-        Collections.sort(sortedInputIds);
+        Set<String> inputSet = new HashSet<>(cardIds);
         
+        List<UserCompareHistory> histories = userCompareHistoryRepository.findByUser_Id(user.getId());
+
+        boolean isSubsetOfExisting = false;
+        UserCompareHistory supersetToBump = null;
+
+        // 포함 관계 검사
+        for (UserCompareHistory h : histories) {
+            Set<String> historySet = new HashSet<>();
+            if (h.getCard1() != null) historySet.add(h.getCard1().getCardId());
+            if (h.getCard2() != null) historySet.add(h.getCard2().getCardId());
+            if (h.getCard3() != null) historySet.add(h.getCard3().getCardId());
+
+            if (historySet.containsAll(inputSet)) {
+                // Case A: 기존 [A, B, C]가 새 요청 [A, B]를 완전히 포함
+                isSubsetOfExisting = true;
+                supersetToBump = h; // 최상단으로 끌어올릴 타겟 지정
+                
+            } else if (inputSet.containsAll(historySet)) {
+                // Case B: 새 요청 [A, B, C]가 기존 기록 [A, B]를 포함
+                // 기존 작은 집합은 삭제
+                userCompareHistoryRepository.delete(h);
+            }
+        }
+        
+        // 최종 저장 판별
+        if (isSubsetOfExisting && supersetToBump != null) {
+            // [A, B] 저장은 무시, 기존에 있던 [A, B, C]를 지웠다가 다시 저장해서 목록 최상단으로 끌어올림
+            userCompareHistoryRepository.delete(supersetToBump);
+            UserCompareHistory bumpedHistory = new UserCompareHistory(
+                    user, 
+                    supersetToBump.getCard1(), 
+                    supersetToBump.getCard2(), 
+                    supersetToBump.getCard3()
+            );
+            userCompareHistoryRepository.save(bumpedHistory);
+            
+        } else {
         String c1Id = cardIds.get(0);
         String c2Id = cardIds.get(1);
         String c3Id = cardIds.size() > 2 ? cardIds.get(2) : null;
@@ -119,25 +157,9 @@ public class UserService {
         Card card3 = c3Id != null ? cardRepository.findById(c3Id).orElse(null) : null;
 
         if (card1 != null && card2 != null) {
-        	List<UserCompareHistory> histories = userCompareHistoryRepository.findByUser_Id(user.getId());
-
-            // 중복 검사
-            for (UserCompareHistory h : histories) {
-            	List<String> historyIds = new ArrayList<>();
-            	if (h.getCard1() != null) historyIds.add(h.getCard1().getCardId());
-                if (h.getCard2() != null) historyIds.add(h.getCard2().getCardId());
-                if (h.getCard3() != null) historyIds.add(h.getCard3().getCardId());
-                
-                Collections.sort(historyIds);
-
-             // 정렬된 리스트끼리 비교 - 순서 달라도 카드가 같으면 true
-                if (sortedInputIds.equals(historyIds)) {
-                    userCompareHistoryRepository.delete(h);
-                }
-            }
-            
             UserCompareHistory newHistory = new UserCompareHistory(user, card1, card2, card3);
             userCompareHistoryRepository.save(newHistory);
+            }
         }
     }
     
