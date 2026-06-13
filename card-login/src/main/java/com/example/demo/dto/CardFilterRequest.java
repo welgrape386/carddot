@@ -1,8 +1,10 @@
 package com.example.demo.dto;
 
+import java.util.List;
+
 public class CardFilterRequest {
     private String cardType;       // 전체, 신용카드, 체크카드
-    private String company;        // 전체, 신한, 삼성 ...
+    private List<String> company;  // 전체, 신한, 삼성 ...
     private String annualFee;      // 전체, ~1만원, ~3만원, ~10만원, 10만원~
     private String minPerformance; // 전체, ~30만원, ~50만원, 50만원~
     private boolean hasEvent;      // true/false
@@ -12,8 +14,8 @@ public class CardFilterRequest {
     public String getCardType() { return cardType; }
     public void setCardType(String cardType) { this.cardType = cardType; }
 
-    public String getCompany() { return company; }
-    public void setCompany(String company) { this.company = company; }
+    public List<String> getCompany() { return company; }
+    public void setCompany(List<String> company) { this.company = company; }
 
     public String getAnnualFee() { return annualFee; }
     public void setAnnualFee(String annualFee) { this.annualFee = annualFee; }

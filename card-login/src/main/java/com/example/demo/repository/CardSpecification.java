@@ -21,8 +21,11 @@ public class CardSpecification {
             }
 
             // 2. 카드사
-            if (req.getCompany() != null && !req.getCompany().equals("전체")) {
-                predicates.add(cb.equal(root.get("company"), req.getCompany()));
+            if (req.getCompany() != null && !req.getCompany().isEmpty()) {
+            	if (!req.getCompany().contains("전체")) {
+                    // JPA IN 쿼리
+                    predicates.add(root.get("company").in(req.getCompany()));
+                }
             }
 
             // 3. 연회비
