@@ -491,17 +491,24 @@ export function CardDetail() {
             <div className="bg-white rounded-2xl border border-gray-300 p-8">
               <div className="flex gap-8 items-start">
                 <div className="flex flex-col items-center gap-4">
-                  <div
-                    className="w-[230px] h-[145px] rounded-2xl bg-gray-100 border border-gray-300 overflow-hidden flex items-center justify-center shadow-sm">
-                    {card.imageUrl ? (
-                      <img
-                        src={card.imageUrl}
-                        alt={card.cardName}
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <div className="text-sm text-gray-400">카드 이미지 없음</div>
-                    )}
+                  <div className="w-[230px] h-[145px] rounded-2xl bg-gray-100 border border-gray-300 overflow-hidden flex items-center justify-center shadow-sm">
+                    <img
+                      src={card.imageUrl}
+                      alt={card.cardName}
+                      className={
+                        isVerticalCard
+                          ? "object-contain -rotate-90"
+                          : "w-full h-full object-cover"
+                      }
+                      style={
+                        isVerticalCard
+                          ? {
+                              width: "155px",
+                              height: "240px",
+                            }
+                          : undefined
+                      }
+                    />
                   </div>
 
                   <div className="flex gap-2">
@@ -615,8 +622,8 @@ export function CardDetail() {
                 ].map((tab) => (
                   <button key={tab.key} onClick={() => setActiveSection(tab.key as typeof activeSection)}
                     className={`flex-1 py-4 text-sm font-normal transition-all ${activeSection === tab.key
-                        ? "text-[#1B3D7B] border-b-2 border-[#1B3D7B]"
-                        : "text-gray-400"
+                      ? "text-[#1B3D7B] border-b-2 border-[#1B3D7B]"
+                      : "text-gray-400"
                       }`}
                   >
                     {tab.label}
@@ -695,8 +702,8 @@ export function CardDetail() {
                                 <tr key={`${group.categoryName}-summary`} onClick={() =>
                                   toggleBenefitCategory(group.categoryName)}
                                   className={`border-t cursor-pointer transition-colors ${highlighted
-                                      ? "bg-[#6667AA]/3 border-[#6667AA]/25"
-                                      : "border-gray-300 hover:bg-gray-100/60"
+                                    ? "bg-[#6667AA]/3 border-[#6667AA]/25"
+                                    : "border-gray-300 hover:bg-gray-100/60"
                                     }`}
                                 >
                                   <td className="px-4 py-4 align-top">
@@ -737,10 +744,10 @@ export function CardDetail() {
                                   <td className="px-4 py-4 text-center align-top">
                                     <span
                                       className={`text-sm font-normal ${representative?.benefitUnit === "%"
-                                          ? "text-[#1B3D7B]"
-                                          : representative?.benefitUnit === "원"
-                                            ? "text-green-600"
-                                            : "text-gray-400"
+                                        ? "text-[#1B3D7B]"
+                                        : representative?.benefitUnit === "원"
+                                          ? "text-green-600"
+                                          : "text-gray-400"
                                         }`}
                                     >
                                       {representative?.benefitUnit === "원"
@@ -797,10 +804,10 @@ export function CardDetail() {
                                         <td className="px-4 py-4 text-center align-top">
                                           <span
                                             className={`text-sm font-normal ${title.benefitUnit === "%"
-                                                ? "text-[#1B3D7B]"
-                                                : title.benefitUnit === "원"
-                                                  ? "text-green-600"
-                                                  : "text-gray-400"
+                                              ? "text-[#1B3D7B]"
+                                              : title.benefitUnit === "원"
+                                                ? "text-green-600"
+                                                : "text-gray-400"
                                               }`}
                                           >
                                             {title.benefitUnit === "원"
@@ -966,8 +973,8 @@ export function CardDetail() {
                 onClick={handleApplyClick}
                 disabled={!card?.linkUrl}
                 className={`w-full py-2.5 rounded-xl text-sm font-normal transition-all flex items-center justify-center gap-2 ${card?.linkUrl
-                    ? "bg-[#0ABFA3] text-white hover:bg-[#099d86]"
-                    : "bg-white/20 text-white/50 cursor-not-allowed"
+                  ? "bg-[#0ABFA3] text-white hover:bg-[#099d86]"
+                  : "bg-white/20 text-white/50 cursor-not-allowed"
                   }`}
               >
                 발급 신청하기
