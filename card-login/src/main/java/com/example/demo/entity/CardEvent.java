@@ -7,6 +7,9 @@ import jakarta.persistence.*;
 public class CardEvent {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
     @Column(name = "event_id")
     private String eventId;
 
