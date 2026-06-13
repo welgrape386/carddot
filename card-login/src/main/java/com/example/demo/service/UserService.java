@@ -19,6 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.Collections;
 
 @Service
 public class UserService {
@@ -105,14 +106,38 @@ public class UserService {
 
         User user = userRepository.findByEmail(email).orElse(null);
         if (user == null) return;
+        
+        List<String> sortedInputIds = new ArrayList<>(cardIds);
+        Collections.sort(sortedInputIds);
+        
+        String c1Id = cardIds.get(0);
+        String c2Id = cardIds.get(1);
+        String c3Id = cardIds.size() > 2 ? cardIds.get(2) : null;
 
-        Card card1 = cardRepository.findById(cardIds.get(0)).orElse(null);
-        Card card2 = cardRepository.findById(cardIds.get(1)).orElse(null);
-        Card card3 = cardIds.size() > 2 ? cardRepository.findById(cardIds.get(2)).orElse(null) : null;
+        Card card1 = cardRepository.findById(c1Id).orElse(null);
+        Card card2 = cardRepository.findById(c2Id).orElse(null);
+        Card card3 = c3Id != null ? cardRepository.findById(c3Id).orElse(null) : null;
 
         if (card1 != null && card2 != null) {
-            UserCompareHistory history = new UserCompareHistory(user, card1, card2, card3);
-            userCompareHistoryRepository.save(history);
+        	List<UserCompareHistory> histories = userCompareHistoryRepository.findByUser_Id(user.getId());
+
+            // 중복 검사
+            for (UserCompareHistory h : histories) {
+            	List<String> historyIds = new ArrayList<>();
+            	if (h.getCard1() != null) historyIds.add(h.getCard1().getCardId());
+                if (h.getCard2() != null) historyIds.add(h.getCard2().getCardId());
+                if (h.getCard3() != null) historyIds.add(h.getCard3().getCardId());
+                
+                Collections.sort(historyIds);
+
+             // 정렬된 리스트끼리 비교 - 순서 달라도 카드가 같으면 true
+                if (sortedInputIds.equals(historyIds)) {
+                    userCompareHistoryRepository.delete(h);
+                }
+            }
+            
+            UserCompareHistory newHistory = new UserCompareHistory(user, card1, card2, card3);
+            userCompareHistoryRepository.save(newHistory);
         }
     }
     

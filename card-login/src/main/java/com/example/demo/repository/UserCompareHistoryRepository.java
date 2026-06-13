@@ -10,4 +10,5 @@ import java.util.List;
 public interface UserCompareHistoryRepository extends JpaRepository<UserCompareHistory, Integer> {
     // 특정 유저의 최근 비교 기록 10개를 최신순으로 가져옴
     List<UserCompareHistory> findTop10ByUser_IdOrderByCreatedAtDesc(Long userId);
+    List<UserCompareHistory> findByUser_Id(Long userId);
 }
