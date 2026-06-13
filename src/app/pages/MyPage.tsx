@@ -66,9 +66,8 @@ function SideNav({
               <button
                 key={item.key}
                 onClick={() => onChange(item.key)}
-                className={`w-full flex items-center gap-3 px-4 py-3 text-sm font-normal transition-all ${
-                  isActive ? "text-[#6667AA]" : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                }`}
+                className={`w-full flex items-center gap-3 px-4 py-3 text-sm font-normal transition-all ${isActive ? "text-[#6667AA]" : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                  }`}
                 style={isActive ? { backgroundColor: "rgba(102,103,170,0.08)" } : {}}
               >
                 <Icon
@@ -311,7 +310,7 @@ function RecentlyViewed() {
         </div>
       ) : (
         <div className="space-y-4">
-          {viewedCards.map((card: any) => (
+          {viewedCards.slice(0, 10).map((card: any) => (
             <Link
               key={card.cardId}
               to={`/cards/${card.cardId}`}
@@ -376,7 +375,7 @@ function RecentlyCompared() {
           }
         );
 
-        setRecentCompares(response.data);
+        setRecentCompares(response.data.slice(0, 5));
       } catch (error) {
         console.error(error);
       } finally {
@@ -417,7 +416,7 @@ function RecentlyCompared() {
         </div>
       ) : (
         <div className="space-y-4">
-          {recentCompares.map((compare) => {
+          {recentCompares.slice(0, 5).map((compare) => {
             const compareUrl = `/compare?cards=${compare.cards
               .map((card) => card.cardId)
               .join(",")}`;

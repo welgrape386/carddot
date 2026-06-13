@@ -9,6 +9,9 @@ const AVAILABLE_ISSUERS = ["삼성카드", "신한카드", "현대카드", "KB�
 const issuers = AVAILABLE_ISSUERS;
 
 export function IssuerRanking() {
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  const currentMonth = now.getMonth() + 1;
   const [searchParams] = useSearchParams();
   const initialIssuer = decodeURIComponent(searchParams.get("issuer") || "");
 
@@ -16,7 +19,7 @@ export function IssuerRanking() {
   const [selectedIssuer, setSelectedIssuer] = useState<string>(
     issuers.includes(initialIssuer) ? initialIssuer : "전체",
   );
-  
+
   const [rankedCards, setRankedCards] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -39,15 +42,15 @@ export function IssuerRanking() {
               cardType === "all"
                 ? "전체"
                 : cardType === "credit"
-                ? "신용"
-                : "체크",
+                  ? "신용"
+                  : "체크",
 
             company:
               selectedIssuer === "전체"
                 ? "전체"
                 : selectedIssuer === "KB국민카드"
-                ? "국민"
-                : selectedIssuer.replace("카드", ""),
+                  ? "국민"
+                  : selectedIssuer.replace("카드", ""),
           }
         );
 
@@ -108,11 +111,10 @@ export function IssuerRanking() {
                 <button
                   key={t}
                   onClick={() => setCardType(t)}
-                  className={`px-4 py-1.5 text-sm font-normal transition-all ${
-                    cardType === t
-                      ? "bg-[#6667AA] text-white"
-                      : "text-gray-500 hover:bg-gray-50"
-                  }`}
+                  className={`px-4 py-1.5 text-sm font-normal transition-all ${cardType === t
+                    ? "bg-[#6667AA] text-white"
+                    : "text-gray-500 hover:bg-gray-50"
+                    }`}
                 >
                   {typeTabLabel[t]}{" "}
                   {cardType === t && (
@@ -132,11 +134,10 @@ export function IssuerRanking() {
           <div className="flex items-center gap-1.5 flex-wrap">
             <button
               onClick={() => setSelectedIssuer("전체")}
-              className={`px-3 py-1.5 rounded-lg text-sm font-normal transition-all ${
-                selectedIssuer === "전체"
-                  ? "bg-[#6667AA] text-white"
-                  : "text-gray-600 hover:bg-gray-100 border border-gray-200"
-              }`}
+              className={`px-3 py-1.5 rounded-lg text-sm font-normal transition-all ${selectedIssuer === "전체"
+                ? "bg-[#6667AA] text-white"
+                : "text-gray-600 hover:bg-gray-100 border border-gray-200"
+                }`}
             >
               전체
             </button>
@@ -146,11 +147,10 @@ export function IssuerRanking() {
                 <button
                   key={issuer}
                   onClick={() => setSelectedIssuer(issuer)}
-                  className={`px-3 py-1.5 rounded-lg text-sm font-normal transition-all flex items-center gap-1.5 border ${
-                    selectedIssuer === issuer
-                      ? "text-white border-transparent"
-                      : "text-gray-600 hover:bg-gray-100 border-gray-200"
-                  }`}
+                  className={`px-3 py-1.5 rounded-lg text-sm font-normal transition-all flex items-center gap-1.5 border ${selectedIssuer === issuer
+                    ? "text-white border-transparent"
+                    : "text-gray-600 hover:bg-gray-100 border-gray-200"
+                    }`}
                   style={
                     selectedIssuer === issuer
                       ? { backgroundColor: meta.color }
@@ -191,18 +191,18 @@ export function IssuerRanking() {
                 {" "}· 조회수+클릭수 기준
               </span>
               <span className="ml-auto text-xs text-gray-400 font-normal">
-                2026년 4월 기준
+                {currentYear}년 {currentMonth}월 기준
               </span>
             </div>
 
             <div className="divide-y divide-gray-50">
               {rankedCards.map((card, idx) => {
                 const meta =
-                issuerMeta[card.company] ??
-                {
-                  color: "#6667AA",
-                  logo: card.company,
-                };
+                  issuerMeta[card.company] ??
+                  {
+                    color: "#6667AA",
+                    logo: card.company,
+                  };
                 const score = totalScore(card);
                 const topScore = totalScore(rankedCards[0]) || 1;
                 const barWidth = Math.round((score / topScore) * 100);
@@ -212,9 +212,8 @@ export function IssuerRanking() {
                     <div className="px-6 py-5 flex items-center gap-5 hover:bg-gray-50/70 transition-all group">
                       {/* 순위 */}
                       <div
-                        className={`flex-shrink-0 w-10 h-10 rounded-xl border-2 flex items-center justify-center ${
-                          idx < 3 ? medalBg[idx] : "bg-white border-gray-200"
-                        }`}
+                        className={`flex-shrink-0 w-10 h-10 rounded-xl border-2 flex items-center justify-center ${idx < 3 ? medalBg[idx] : "bg-white border-gray-200"
+                          }`}
                       >
                         {idx < 3 ? (
                           <span className="text-lg">{medals[idx]}</span>
@@ -245,11 +244,10 @@ export function IssuerRanking() {
                             {meta?.logo}
                           </span>
                           <span
-                            className={`text-[10px] font-normal px-1.5 py-0.5 rounded ${
-                              card.cardType === "신용"
-                                ? "bg-blue-50 text-blue-600"
-                                : "bg-purple-50 text-purple-600"
-                            }`}
+                            className={`text-[10px] font-normal px-1.5 py-0.5 rounded ${card.cardType === "신용"
+                              ? "bg-blue-50 text-blue-600"
+                              : "bg-purple-50 text-purple-600"
+                              }`}
                           >
                             {card.cardType}
                           </span>
@@ -282,9 +280,9 @@ export function IssuerRanking() {
                                 : `${(card.minPerformance / 10000).toFixed(0)}만원`}
                             </span>
                           </span>
-                        <span className="text-[#6667AA] truncate">
-                          {card.summary}
-                        </span>
+                          <span className="text-[#6667AA] truncate">
+                            {card.summary}
+                          </span>
                         </div>
 
                         {/* 조회 지표 바 */}
@@ -307,7 +305,7 @@ export function IssuerRanking() {
                           </div>
                         </div>
                       </div>
-                      </div>
+                    </div>
                   </Link>
                 );
               })}
@@ -318,7 +316,7 @@ export function IssuerRanking() {
         {/* 하단 안내 */}
         <div className="mt-8 flex items-center gap-2 text-xs text-gray-400 font-normal justify-center">
           <CreditCard className="w-3.5 h-3.5" />
-          랭킹은 2026년 4월 기준 조회수 + 카드사 바로가기 클릭 수 총합으로 집계되며, 매월 1일 갱신됩니다.
+          랭킹은 {new Date().getFullYear()}년 {new Date().getMonth() + 1}월 기준 조회수 + 카드사 바로가기 클릭 수 총합으로 집계되며, 매월 1일 갱신됩니다.
         </div>
       </div>
     </div>

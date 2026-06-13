@@ -24,8 +24,15 @@ const normalizeImageUrl = (data: any): string | null => {
   );
 };
 
-export const getCards = async (): Promise<CardListItem[]> => {
-  const response = await api.get("/api/cards");
+export const getCards = async (
+  keyword?: string
+): Promise<CardListItem[]> => {
+  const response = await api.get("/api/cards", {
+    params: keyword
+      ? { keyword }
+      : {},
+  });
+
   const data = unwrapResponseData<CardListItem[]>(response.data);
 
   return Array.isArray(data)
@@ -36,7 +43,9 @@ export const getCards = async (): Promise<CardListItem[]> => {
     : [];
 };
 
-export const getCardDetail = async (cardId: string) => {
+export const getCardDetail = async (
+  cardId: string
+) => {
   const token = localStorage.getItem("token");
 
   const response = await api.get(

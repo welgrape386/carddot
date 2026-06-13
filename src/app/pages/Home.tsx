@@ -63,9 +63,9 @@ function hexToSoftTint(hex: string, mix = 0.88) {
   const normalized =
     cleaned.length === 3
       ? cleaned
-          .split("")
-          .map((char) => char + char)
-          .join("")
+        .split("")
+        .map((char) => char + char)
+        .join("")
       : cleaned;
 
   const r = parseInt(normalized.slice(0, 2), 16);
@@ -88,16 +88,16 @@ export function Home() {
   const updateText = `${currentYear}년 ${currentMonth}월 최신 카드 정보 업데이트`;
 
   const [activeIssuer, setActiveIssuer] = useState(HOME_ISSUERS[0]);
-  const [isSpread, setIsSpread] = useState(false);
+  const [isSpread] = useState(true);
   const heroCardRef = useRef<HTMLDivElement>(null);
 
   const { data: apiCards = [] } = useQuery({
     queryKey: ["homeTopCards"],
-    queryFn: getCards,
+    queryFn: () => getCards(),
     staleTime: 1000 * 60 * 5,
   });
 
-  const { data: rankingCards = [] } = useQuery({
+  const { data: rankingCards = [] } = useQuery<any[]>({
     queryKey: ["homeRanking", activeIssuer],
     queryFn: async () => {
       const response = await api.post("/api/cards/ranking", {
@@ -112,35 +112,19 @@ export function Home() {
     },
   });
 
-  const heroTopCards = apiCards
-    .filter((card) => card.imageUrl)
-    .slice(0, 3);
+  const { data: heroCards = [] } = useQuery({
+    queryKey: ["heroCards"],
+    queryFn: async () => {
+      const response = await api.post("/api/cards/ranking", {
+        company: "국민",
+        cardType: "전체",
+      });
 
-  useEffect(() => {
-    const el = heroCardRef.current;
-    if (!el) return;
+      return response.data;
+    },
+  });
 
-    let timer: ReturnType<typeof setTimeout>;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          timer = setTimeout(() => setIsSpread(true), 350);
-        } else {
-          clearTimeout(timer);
-          setIsSpread(false);
-        }
-      },
-      { threshold: 0.4 },
-    );
-
-    observer.observe(el);
-
-    return () => {
-      observer.disconnect();
-      clearTimeout(timer);
-    };
-  }, []);
+  const heroTopCards = heroCards.slice(0, 3);
 
   const rankedCards = rankingCards.slice(0, 5);
 
@@ -193,66 +177,66 @@ export function Home() {
             >
               {heroTopCards.length > 0 &&
                 heroTopCards.map((card, i) => {
-                const spreadPos = [
-                  { top: 60, left: 80, rotate: 90 },
-                  { top: 85, left: 135, rotate: 105 },
-                  { top: 125, left: 205, rotate: 125 },
-                ][i];
+                  const spreadPos = [
+                    { top: 60, left: 80, rotate: 90 },
+                    { top: 85, left: 135, rotate: 105 },
+                    { top: 125, left: 205, rotate: 125 },
+                  ][i];
 
-                const stackedPos = {
-                  top: 60,
-                  left: 80,
-                  rotate: 90,
-                };
+                  const stackedPos = {
+                    top: 60,
+                    left: 80,
+                    rotate: 90,
+                  };
 
-                return (
-                  <motion.div
-                    key={card.cardId}
-                    className="absolute"
-                    style={{ zIndex: 3 - i }}
-                    animate={
-                      isSpread
-                        ? {
+                  return (
+                    <motion.div
+                      key={card.cardId}
+                      className="absolute"
+                      style={{ zIndex: 3 - i }}
+                      animate={
+                        isSpread
+                          ? {
                             top: spreadPos.top,
                             left: spreadPos.left,
                             rotate: spreadPos.rotate,
                             opacity: 1,
                           }
-                        : {
+                          : {
                             top: stackedPos.top,
                             left: stackedPos.left,
                             rotate: stackedPos.rotate,
                             opacity: 1,
                           }
-                    }
-                    initial={{
-                      top: stackedPos.top,
-                      left: stackedPos.left,
-                      rotate: 90,
-                      opacity: 0,
-                    }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 95,
-                      damping: 15,
-                      delay: isSpread ? i * 0.1 : (2 - i) * 0.06,
-                      opacity: { duration: 0.25, delay: 0.1 },
-                    }}
-                  >
-                    <Link
-                      to={`/cards/${encodeURIComponent(card.cardId)}`}
-                      className="block hover:-translate-y-1 transition-transform"
+                      }
+                      initial={{
+                        top: stackedPos.top,
+                        left: stackedPos.left,
+                        rotate: 90,
+                        opacity: 0,
+                      }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 95,
+                        damping: 15,
+                        delay: isSpread ? i * 0.1 : (2 - i) * 0.06,
+                        opacity: { duration: 0.25, delay: 0.1 },
+                      }}
                     >
-                      <img
-                        src={card.imageUrl ?? ""}
-                        alt={card.cardName}
-                        className="w-72 h-auto object-contain drop-shadow-xl"
-                        loading="eager"
-                      />
-                    </Link>
-                  </motion.div>
-                );
-              })}
+                      <Link
+                        to={`/cards/${encodeURIComponent(card.cardId)}`}
+                        className="block hover:-translate-y-1 transition-transform"
+                      >
+                        <img
+                          src={card.imageUrl ?? ""}
+                          alt={card.cardName}
+                          className="w-72 h-auto object-contain drop-shadow-xl"
+                          loading="eager"
+                        />
+                      </Link>
+                    </motion.div>
+                  );
+                })}
             </div>
           </div>
         </div>
@@ -319,11 +303,10 @@ export function Home() {
               <button
                 key={issuer}
                 onClick={() => setActiveIssuer(issuer)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-xl border-2 text-sm font-normal transition-all ${
-                  activeIssuer === issuer
-                    ? "text-white border-transparent shadow-md"
-                    : "border-gray-200 text-gray-600 bg-white hover:border-gray-300"
-                }`}
+                className={`flex items-center gap-2 px-4 py-2 rounded-xl border-2 text-sm font-normal transition-all ${activeIssuer === issuer
+                  ? "text-white border-transparent shadow-md"
+                  : "border-gray-200 text-gray-600 bg-white hover:border-gray-300"
+                  }`}
                 style={
                   activeIssuer === issuer
                     ? { backgroundColor: issuerMeta[issuer].color }
@@ -395,22 +378,20 @@ export function Home() {
                       <img
                         src={card.imageUrl}
                         alt={card.cardName}
-                        className={`object-contain ${
-                          activeIssuer === "KB국민카드"
-                            ? "w-[40px] h-[64px] rotate-90"
-                            : "w-[40px] h-[64px]"
-                        }`}
+                        className={`object-contain ${activeIssuer === "KB국민카드"
+                          ? "w-[40px] h-[64px] rotate-90"
+                          : "w-[40px] h-[64px]"
+                          }`}
                       />
                     </div>
 
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
                         <span
-                          className={`text-[10px] font-normal px-1.5 py-0.5 rounded ${
-                            card.cardType === "credit"
-                              ? "bg-blue-50 text-blue-600"
-                              : "bg-purple-50 text-purple-600"
-                          }`}
+                          className={`text-[10px] font-normal px-1.5 py-0.5 rounded ${card.cardType === "credit"
+                            ? "bg-blue-50 text-blue-600"
+                            : "bg-purple-50 text-purple-600"
+                            }`}
                         >
                           {card.cardType === "credit" ? "신용" : "체크"}
                         </span>
