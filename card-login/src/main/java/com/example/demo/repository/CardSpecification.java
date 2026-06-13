@@ -54,6 +54,18 @@ public class CardSpecification {
             if (req.isHasTransport()) {
                 predicates.add(cb.isTrue(root.get("hasTransport")));
             }
+            
+            // 6. 카테고리 필터링
+            if (req.getCategoryNames() != null && !req.getCategoryNames().isEmpty()) {
+                List<Predicate> categoryPredicates = new ArrayList<>();
+                
+                for (String category : req.getCategoryNames()) {
+                    categoryPredicates.add(cb.like(root.get("categoryNames"), "%" + category + "%"));
+                }
+                
+                // 배열 안의 카테고리 중 하나라도 포함되면 조회
+                predicates.add(cb.or(categoryPredicates.toArray(new Predicate[0])));
+            }
 
             return cb.and(predicates.toArray(new Predicate[0]));
         };

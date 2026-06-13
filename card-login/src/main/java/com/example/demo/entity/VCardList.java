@@ -61,6 +61,9 @@ public class VCardList {
 
     @Column(name = "url_click")
     private int urlClick;
+    
+    @Column(name = "category_names")
+    private String categoryNames;
 
     // Getters
     public String getCardId() { return cardId; }
@@ -80,4 +83,5 @@ public class VCardList {
     public String getSummary() { return summary; }
     public int getDetailClick() { return detailClick; }
     public int getUrlClick() { return urlClick; }
+    public String getCategoryNames() { return categoryNames; }
 }
