@@ -301,15 +301,15 @@ function groupBenefits(benefits: Benefit[]): BenefitGroup[] {
     }
   });
 
-  return Array.from(categoryMap.entries())
-    .map(([categoryName, titleMap]) => ({
+  return Array.from(categoryMap.entries()).map(
+    ([categoryName, titleMap]) => ({
       categoryName,
       titles: Array.from(titleMap.values()).map((title) => ({
         ...title,
         contents: uniqueTexts(title.contents),
       })),
-    }))
-    .sort((a, b) => a.categoryName.localeCompare(b.categoryName, "ko-KR"));
+    }),
+  );
 }
 
 export function CardDetail() {
@@ -418,10 +418,33 @@ export function CardDetail() {
       .slice(0, 3);
   }, [orderedBenefits]);
 
-  const benefitGroups = useMemo(
-    () => groupBenefits(orderedBenefits),
-    [orderedBenefits],
-  );
+  const benefitGroups = useMemo(() => {
+    const groups = groupBenefits(orderedBenefits);
+
+    if (selectedCategories.length === 0) {
+      return groups.sort((a, b) =>
+        a.categoryName.localeCompare(b.categoryName, "ko-KR")
+      );
+    }
+
+    return [...groups].sort((a, b) => {
+      const aMatched = selectedCategories.some((cat) =>
+        isBenefitMatched(a.categoryName, cat)
+      );
+
+      const bMatched = selectedCategories.some((cat) =>
+        isBenefitMatched(b.categoryName, cat)
+      );
+
+      if (aMatched && !bMatched) return -1;
+      if (!aMatched && bMatched) return 1;
+
+      return a.categoryName.localeCompare(
+        b.categoryName,
+        "ko-KR"
+      );
+    });
+  }, [orderedBenefits, selectedCategories]);
 
   useEffect(() => {
     setOpenBenefitCategories((prev) => {
@@ -503,9 +526,9 @@ export function CardDetail() {
                       style={
                         isVerticalCard
                           ? {
-                              width: "155px",
-                              height: "240px",
-                            }
+                            width: "155px",
+                            height: "240px",
+                          }
                           : undefined
                       }
                     />
@@ -713,11 +736,6 @@ export function CardDetail() {
                                         <div className="text-gray-900 font-normal">
                                           {group.categoryName}
                                         </div>
-                                        {highlighted && (
-                                          <div className="text-[10px] text-[#6667AA] mt-1">
-                                            선택 혜택 우선 노출
-                                          </div>
-                                        )}
                                       </div>
                                     </div>
                                   </td>

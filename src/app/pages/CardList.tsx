@@ -850,7 +850,15 @@ export function CardList() {
                   {/* 버튼 영역 */}
                   <div className="mt-auto pt-3 border-t border-gray-50 flex items-center justify-between">
                     <Link
-                      to={`/cards/${encodeURIComponent(card.cardId)}`}
+                      to={
+                        selectedCategories.length > 0
+                          ? `/cards/${encodeURIComponent(
+                            card.cardId,
+                          )}?benefits=${encodeURIComponent(
+                            selectedCategories.join(","),
+                          )}`
+                          : `/cards/${encodeURIComponent(card.cardId)}`
+                      }
                       onMouseEnter={() => prefetchCardDetail(card.cardId)}
                       onFocus={() => prefetchCardDetail(card.cardId)}
                       className="text-xs font-normal bg-[#6667AA] text-white px-3 py-1.5 rounded-lg hover:opacity-90"
