@@ -84,11 +84,12 @@ export type PersonaType =
   | "SENIOR";
 
 export interface CompareCardScore {
-  practicality: number;
-  annualFee: number;
-  performance: number;
-  diversity: number;
-  limit: number;
+  totalScore: number;
+  personaScore: number;
+  annualFeeScore: number;
+  performanceScore: number;
+  diversityScore: number;
+  limitScore: number;
 }
 
 export interface CompareBenefit {
