@@ -191,27 +191,14 @@ export function CardList() {
     sort,
   ]);
 
-  const filteredCards = cards.filter((card) => {
-    if (
-      selectedIssuers.length > 0 &&
-      !selectedIssuers.includes(card.company)
-    ) {
-      return false;
-    }
-  
-    const normalizedCardNameQuery = cardNameQuery
-      .trim()
-      .toLowerCase();
-
-    if (
-      normalizedCardNameQuery &&
-      !card.cardName.toLowerCase().includes(normalizedCardNameQuery)
-    ) {
-      return false;
-    }
-
-    return true;
-  });
+  const filteredCards =
+    selectedCategories.length === 0
+      ? cards
+      : cards.filter((card) =>
+          selectedCategories.some((category) =>
+            card.categoryNames?.includes(category)
+          )
+        );
 
   useEffect(() => {
     const el = topBarRef.current;
@@ -840,21 +827,13 @@ export function CardList() {
       </div>
 
       {/* 대표 혜택 - 금액 정보 아래 */}
-      <div className="mb-3 pb-3 border-b border-gray-50">
+      <div className="mb-3 border-b border-gray-50">
         <div className="text-[10px] font-normal text-gray-400 mb-1.5">
           대표 혜택
         </div>
 
-        <div className="space-y-1">
-          {summaryItems.slice(0, 2).map((benefit, index) => (
-            <div
-              key={index}
-              className="flex items-start gap-1.5 text-xs font-normal text-gray-600"
-            >
-              <span className="text-[#6667AA]">•</span>
-              <span className="line-clamp-1">{benefit}</span>
-            </div>
-          ))}
+        <div className="text-xs font-normal text-gray-600 leading-5 line-clamp-3 mb-3">
+          {card.summary}
         </div>
       </div>
 

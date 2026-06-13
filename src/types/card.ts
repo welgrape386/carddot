@@ -4,6 +4,7 @@ export interface CardListItem {
   company: string;
   cardName: string;
   cardType: string;
+  categoryNames?: string[];
 
   annualFeeDomBasic: number;
   annualFeeDomPremium: number;
