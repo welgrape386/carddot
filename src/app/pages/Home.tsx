@@ -41,7 +41,7 @@ const quickCategories = [
   { key: "구독/스트리밍", icon: "📺" },
   { key: "페이/간편결제", icon: "📲" },
   { key: "편의점", icon: "🏪" },
-  { key: "커피/카페/베이커리", icon: "☕" },
+  { key: "카페/베이커리", icon: "☕" },
   { key: "배달", icon: "🍕" },
   { key: "외식", icon: "🍽️" },
   { key: "여행/숙박", icon: "🏨" },
@@ -423,13 +423,6 @@ export function Home() {
                             {card.minPerformance === 0
                               ? "무실적"
                               : `${(card.minPerformance / 10000).toFixed(0)}만원`}
-                          </span>
-                        </span>
-
-                        <span>
-                          월최대{" "}
-                          <span className="text-[#1B3D7B] font-normal">
-                            {(card.maxBenefit / 10000).toFixed(0)}만원 혜택
                           </span>
                         </span>
                       </div>

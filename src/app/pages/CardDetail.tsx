@@ -51,7 +51,7 @@ const categoryBenefitMap: Record<string, string[]> = {
   "문화/엔터": ["영화", "문화", "엔터"],
   생활비: ["통신", "생활비"],
   편의점: ["편의점"],
-  "커피/카페/베이커리": ["카페", "커피", "베이커리"],
+  "카페/베이커리": ["카페", "커피", "베이커리"],
   배달: ["배달"],
   외식: ["외식"],
   "여행/숙박": ["여행", "숙박"],
@@ -75,7 +75,7 @@ const categoryIconMap: Record<string, React.ElementType> = {
   "문화/엔터": Film,
   생활비: Zap,
   편의점: Store,
-  "커피/카페/베이커리": Coffee,
+  "카페/베이커리": Coffee,
   배달: Package,
   외식: Utensils,
   "여행/숙박": Globe,
@@ -301,20 +301,23 @@ function groupBenefits(benefits: Benefit[]): BenefitGroup[] {
     }
   });
 
-  return Array.from(categoryMap.entries())
-    .map(([categoryName, titleMap]) => ({
+  return Array.from(categoryMap.entries()).map(
+    ([categoryName, titleMap]) => ({
       categoryName,
       titles: Array.from(titleMap.values()).map((title) => ({
         ...title,
         contents: uniqueTexts(title.contents),
       })),
-    }))
-    .sort((a, b) => a.categoryName.localeCompare(b.categoryName, "ko-KR"));
+    }),
+  );
 }
 
 export function CardDetail() {
+  console.count("CardDetail Render");
+
   const { id } = useParams();
   const cardId = id;
+
   const [searchParams] = useSearchParams();
 
   const handleApplyClick = async () => {
@@ -418,22 +421,50 @@ export function CardDetail() {
       .slice(0, 3);
   }, [orderedBenefits]);
 
-  const benefitGroups = useMemo(
-    () => groupBenefits(orderedBenefits),
-    [orderedBenefits],
-  );
+  const benefitGroups = useMemo(() => {
+    const groups = groupBenefits(orderedBenefits);
+
+    if (selectedCategories.length === 0) {
+      return groups.sort((a, b) =>
+        a.categoryName.localeCompare(b.categoryName, "ko-KR")
+      );
+    }
+
+    return [...groups].sort((a, b) => {
+      const aMatched = selectedCategories.some((cat) =>
+        isBenefitMatched(a.categoryName, cat)
+      );
+
+      const bMatched = selectedCategories.some((cat) =>
+        isBenefitMatched(b.categoryName, cat)
+      );
+
+      if (aMatched && !bMatched) return -1;
+      if (!aMatched && bMatched) return 1;
+
+      return a.categoryName.localeCompare(
+        b.categoryName,
+        "ko-KR"
+      );
+    });
+  }, [orderedBenefits, selectedCategories]);
 
   useEffect(() => {
-    setOpenBenefitCategories((prev) => {
-      const next = { ...prev };
-      benefitGroups.forEach((group) => {
-        if (next[group.categoryName] === undefined) {
-          next[group.categoryName] = false;
-        }
-      });
-      return next;
+  setOpenBenefitCategories((prev) => {
+    let changed = false;
+
+    const next = { ...prev };
+
+    benefitGroups.forEach((group) => {
+      if (next[group.categoryName] === undefined) {
+        next[group.categoryName] = false;
+        changed = true;
+      }
     });
-  }, [benefitGroups]);
+
+    return changed ? next : prev;
+  });
+}, [benefitGroups]);
 
   const toggleBenefitCategory = (categoryName: string) => {
     setOpenBenefitCategories((prev) => ({
@@ -503,9 +534,9 @@ export function CardDetail() {
                       style={
                         isVerticalCard
                           ? {
-                              width: "155px",
-                              height: "240px",
-                            }
+                            width: "155px",
+                            height: "240px",
+                          }
                           : undefined
                       }
                     />
@@ -713,11 +744,6 @@ export function CardDetail() {
                                         <div className="text-gray-900 font-normal">
                                           {group.categoryName}
                                         </div>
-                                        {highlighted && (
-                                          <div className="text-[10px] text-[#6667AA] mt-1">
-                                            선택 혜택 우선 노출
-                                          </div>
-                                        )}
                                       </div>
                                     </div>
                                   </td>

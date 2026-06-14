@@ -29,7 +29,7 @@ const DEFAULT_USER: UserInfo = {
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
-    return localStorage.getItem("isLoggedIn") === "true";
+    return sessionStorage.getItem("isLoggedIn") === "true";
   });
 
   const [userInfo, setUserInfo] = useState<UserInfo>(() => {
@@ -48,7 +48,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   });
 
   useEffect(() => {
-    localStorage.setItem("isLoggedIn", String(isLoggedIn));
+    sessionStorage.setItem("isLoggedIn", String(isLoggedIn));
   }, [isLoggedIn]);
 
   useEffect(() => {
@@ -69,7 +69,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const logout = () => {
+    sessionStorage.removeItem("token");
+    sessionStorage.removeItem("isLoggedIn");
+
     setIsLoggedIn(false);
+
+    setUserInfo({
+      name: "",
+      email: "",
+      phone: "",
+    });
   };
 
   const updateUserInfo = (info: Partial<UserInfo>) => {

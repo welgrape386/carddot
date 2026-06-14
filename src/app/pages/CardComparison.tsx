@@ -21,8 +21,9 @@ import {
   PolarGrid,
   PolarAngleAxis,
   ResponsiveContainer,
-  BarChart,
   Bar,
+  BarChart,
+  CartesianGrid,
   XAxis,
   YAxis,
   Tooltip,
@@ -73,12 +74,12 @@ const PERSONAS: {
   name: string;
   tags: string;
 }[] = [
-  { id: "STUDENT", emoji: "🎓", name: "실속파 대학생", tags: "#20대 #공부 #알바 #뚜벅이" },
-  { id: "SINGLE", emoji: "🍜", name: "1인 가구 자취족", tags: "#나혼자산다 #배달 #편의점 #쿠팡" },
-  { id: "WORKER", emoji: "💼", name: "스마트 직장인", tags: "#3040 #출퇴근 #온라인쇼핑 #취미" },
-  { id: "FAMILY", emoji: "👨‍👩‍👧", name: "아이 있는 가족", tags: "#다인가구 #학원비 #장보기 #병원" },
-  { id: "SENIOR", emoji: "🌿", name: "액티브 시니어", tags: "#5060+ #건강 #안정적 #마트" },
-];
+    { id: "STUDENT", emoji: "🎓", name: "실속파 대학생", tags: "#20대 #공부 #알바 #뚜벅이" },
+    { id: "SINGLE", emoji: "🍜", name: "1인 가구 자취족", tags: "#나혼자산다 #배달 #편의점 #쿠팡" },
+    { id: "WORKER", emoji: "💼", name: "스마트 직장인", tags: "#3040 #출퇴근 #온라인쇼핑 #취미" },
+    { id: "FAMILY", emoji: "👨‍👩‍👧", name: "아이 있는 가족", tags: "#다인가구 #학원비 #장보기 #병원" },
+    { id: "SENIOR", emoji: "🌿", name: "액티브 시니어", tags: "#5060+ #건강 #안정적 #마트" },
+  ];
 
 
 
@@ -118,18 +119,6 @@ function formatWon(value?: number | null) {
 function formatManWon(value?: number | null) {
   if (!value) return "없음";
   return `${Math.round(value / 10000)}만원`;
-}
-
-function pctDiff(a: number, b: number) {
-  if (b === 0 && a === 0) return 0;
-  if (b === 0) return 100;
-  return Math.round(((a - b) / b) * 100);
-}
-
-function getBenefitNumber(valueText?: string) {
-  if (!valueText) return 0;
-  const matched = valueText.match(/\d+/);
-  return matched ? Number(matched[0]) : 0;
 }
 
 function getBenefitTypeLabel(type?: string) {
@@ -304,21 +293,14 @@ function ScoreSummaryCard({
 }) {
   const rankEmoji = ["🥇", "🥈", "🥉"][rank] ?? "";
   const color = getCardColor(idx);
-  const total = Math.round(
-    (card.scores.practicality +
-      card.scores.annualFee +
-      card.scores.performance +
-      card.scores.diversity +
-      card.scores.limit) /
-      5,
-  );
+  const total = card.scores.totalScore;
 
   const scoreRows = [
-    { label: "실용성", value: card.scores.practicality },
-    { label: "연회비 효율", value: card.scores.annualFee },
-    { label: "실적 부담↓", value: card.scores.performance },
-    { label: "혜택 다양성", value: card.scores.diversity },
-    { label: "한도", value: card.scores.limit },
+    { label: "페르소나 적합도", value: card.scores.personaScore },
+    { label: "연회비 효율", value: card.scores.annualFeeScore },
+    { label: "실적 부담↓", value: card.scores.performanceScore },
+    { label: "혜택 다양성", value: card.scores.diversityScore },
+    { label: "한도", value: card.scores.limitScore },
   ];
 
   return (
@@ -364,114 +346,90 @@ function ScoreSummaryCard({
   );
 }
 
-function DetailedPctComparison({
+function DetailedBenefitComparison({
   selectedCards,
   allCategories,
 }: {
   selectedCards: CompareCardItem[];
   allCategories: string[];
 }) {
-  if (selectedCards.length < 2) return null;
-
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
-      <div className="px-5 py-4 border-b border-gray-100 flex items-center gap-2">
-        <BarChart3 className="w-4 h-4 text-[#6667AA]" />
-        <h3 className="text-sm font-normal text-gray-900">상세 퍼센트 비교</h3>
-      </div>
+    <div className="space-y-8">
+      {allCategories.map((cat) => (
+        <div
+          key={cat}
+          className="bg-white rounded-2xl border border-gray-200 p-6"
+        >
+          <h3 className="font-semibold text-gray-900 mb-5">
+            {cat}
+          </h3>
 
-      <div className="p-5 space-y-5">
-        {allCategories.map((cat) => {
-          const catValues = selectedCards.map((card) => {
-            const b = card.benefits.find((benefit) => benefit.categoryName === cat);
-            return getBenefitNumber(b?.benefitValueText);
-          });
-          const maxRate = Math.max(...catValues, 1);
+          <div className="space-y-4">
+            {selectedCards.map((card, idx) => {
+              const benefits = card.benefits.filter(
+                (b) => b.categoryName === cat
+              );
 
-          return (
-            <div key={cat} className="border border-gray-100 rounded-xl p-4">
-              <div className="flex items-center gap-2 mb-3">
-                <span>{categoryIconMap[cat] ?? "✨"}</span>
-                <span className="text-sm font-normal text-gray-800">{cat}</span>
-              </div>
+              return (
+                <div key={card.cardId}>
+                  <div className="mb-2">
+                    <span
+                      className="font-semibold"
+                      style={{
+                        color: CHART_COLORS[idx],
+                      }}
+                    >
+                      {card.cardName}
+                    </span>
+                  </div>
 
-              <div className="space-y-3">
-                {selectedCards.map((card, idx) => {
-                  const b = card.benefits.find((benefit) => benefit.categoryName === cat);
-                  const rate = getBenefitNumber(b?.benefitValueText);
-                  const barPct = Math.round((rate / maxRate) * 100);
-                  const isBest = rate === Math.max(...catValues) && rate > 0;
-                  const others = catValues.filter((_, i) => i !== idx);
-                  const avgOther =
-                    others.length > 0 ? others.reduce((a, x) => a + x, 0) / others.length : rate;
-                  const diff = pctDiff(rate, avgOther);
-                  const isNeutral = diff === 0;
-                  const color = getCardColor(idx);
+                  {benefits.length > 0 ? (
+                    <div className="space-y-2">
+                      {benefits.map((b, benefitIdx) => {
+                        const label =
+                          b.targetMerchants?.includes("충전")
+                            ? "전기차 충전"
+                            : b.targetMerchants?.includes("주차")
+                              ? "주차/세차"
+                              : b.targetMerchants?.includes("보험")
+                                ? "자동차보험"
+                                : b.targetMerchants ??
+                                b.benefitTitle;
 
-                  return (
-                    <div key={card.cardId} className="flex items-center gap-3">
-                      <div className="w-40 flex-shrink-0">
-                        <div className="text-[10px] text-gray-400 font-normal truncate">
-                          {card.company}
-                        </div>
-                        <div className="text-xs font-normal text-gray-700 truncate">
-                          {card.cardName}
-                        </div>
-                      </div>
-
-                      <div className="flex-1 flex items-center gap-2">
-                        <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
+                        return (
                           <div
-                            className="h-full rounded-full transition-all duration-700"
-                            style={{
-                              width: `${barPct}%`,
-                              backgroundColor: color,
-                              opacity: isBest ? 1 : 0.45,
-                            }}
-                          />
-                        </div>
-                        <span
-                          className="text-xs font-normal w-20 text-right flex-shrink-0"
-                          style={isBest ? { color } : { color: "#6b7280" }}
-                        >
-                          {b?.benefitValueText ?? "—"}{" "}
-                          <span className="text-[10px] text-gray-400">
-                            {getBenefitTypeLabel(b?.benefitType)}
-                          </span>
-                        </span>
-                      </div>
-
-                      <div className="w-20 flex-shrink-0 flex justify-end">
-                        {isNeutral ? (
-                          <span className="inline-flex items-center gap-0.5 text-[10px] text-gray-400 bg-gray-50 border border-gray-200 px-2 py-0.5 rounded-full font-normal">
-                            <Minus className="w-2.5 h-2.5" />
-                            동일
-                          </span>
-                        ) : (
-                          <span
-                            className={`inline-flex items-center gap-0.5 text-[10px] px-2 py-0.5 rounded-full font-normal border ${
-                              diff > 0
-                                ? "text-emerald-600 bg-emerald-50 border-emerald-200"
-                                : "text-red-500 bg-red-50 border-red-200"
-                            }`}
+                            key={benefitIdx}
+                            className="flex justify-between items-center text-sm"
                           >
-                            {diff > 0 ? (
-                              <ArrowUp className="w-2.5 h-2.5" />
-                            ) : (
-                              <ArrowDown className="w-2.5 h-2.5" />
-                            )}
-                            {Math.abs(diff)}%
-                          </span>
-                        )}
-                      </div>
+                            <span className="text-gray-700">
+                              {label}
+                            </span>
+
+                            <span
+                              className="font-medium"
+                              style={{
+                                color: CHART_COLORS[idx],
+                              }}
+                            >
+                              {b.effectiveRateText ??
+                                b.benefitValueText ??
+                                "-"}
+                            </span>
+                          </div>
+                        );
+                      })}
                     </div>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
-      </div>
+                  ) : (
+                    <div className="text-sm text-gray-400">
+                      혜택 없음
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
@@ -494,8 +452,10 @@ export function CardComparison() {
   const [pickerSlot, setPickerSlot] = useState<number | null>(null);
   const [activeTab, setActiveTab] = useState<"visual" | "table">("visual");
   const [selectedPersona, setSelectedPersona] = useState<PersonaType>("STUDENT");
+  const personaDescription =
+    PERSONA_DETAILS[selectedPersona];
 
-const sortedSelectedIds = useMemo(() => [...selectedIds].sort(), [selectedIds]);
+  const sortedSelectedIds = useMemo(() => [...selectedIds].sort(), [selectedIds]);
 
   const {
     data: compareApiCards = [],
@@ -509,39 +469,12 @@ const sortedSelectedIds = useMemo(() => [...selectedIds].sort(), [selectedIds]);
 
   const selectedCards = compareApiCards;
 
-
-  
-  const personaDescription = PERSONA_DETAILS[selectedPersona];
-
-  const personaScores = useMemo(() => {
-    return selectedCards.map((card) => {
-      const weights = personaDescription?.weights || {};
-      let categoryScore = 0;
-
-      card.benefits?.forEach((benefit) => {
-        const weight = (weights as any)[benefit.categoryName];
-        if (weight) categoryScore += weight;
-      });
-
-      const finalScore = Math.min(
-        100,
-        Math.round(
-          categoryScore * 0.7 +
-          (card.scores?.practicality || 0) * 0.2 +
-          (card.scores?.diversity || 0) * 0.1
-        )
-      );
-
-      return {
-        cardId: card.cardId,
-        cardName: card.cardName,
-        score: finalScore,
-      };
-    }).sort((a,b)=>b.score-a.score);
-  }, [selectedCards, selectedPersona]);
-
-  const recommendedCard = personaScores[0];
-
+  const recommendedCard = [...selectedCards]
+    .sort(
+      (a, b) =>
+        b.scores.totalScore -
+        a.scores.totalScore
+    )[0];
 
   const removeCard = (id: string) => {
     setSelectedIds((prev) => prev.filter((i) => i !== id));
@@ -590,22 +523,15 @@ const sortedSelectedIds = useMemo(() => [...selectedIds].sort(), [selectedIds]);
 
   const allScores = useMemo(() => {
     return selectedCards.map((card) => {
-      const total = Math.round(
-        (card.scores.practicality +
-          card.scores.annualFee +
-          card.scores.performance +
-          card.scores.diversity +
-          card.scores.limit) /
-          5,
-      );
+      const total = card.scores.totalScore;
 
       return {
         total,
-        practicality: card.scores.practicality,
-        annualFee: card.scores.annualFee,
-        performance: card.scores.performance,
-        diversity: card.scores.diversity,
-        limit: card.scores.limit,
+        persona: card.scores.personaScore,
+        annualFee: card.scores.annualFeeScore,
+        performance: card.scores.performanceScore,
+        diversity: card.scores.diversityScore,
+        limit: card.scores.limitScore,
       };
     });
   }, [selectedCards]);
@@ -620,8 +546,20 @@ const sortedSelectedIds = useMemo(() => [...selectedIds].sort(), [selectedIds]);
   const getRank = (idx: number) => rankOrder.indexOf(idx);
 
   const radarData = useMemo(() => {
-    const keys = ["practicality", "annualFee", "performance", "diversity", "limit"] as const;
-    return ["실용성", "연회비효율", "실적부담↓", "혜택다양성", "한도"].map(
+    const keys = [
+      "personaScore",
+      "annualFeeScore",
+      "performanceScore",
+      "diversityScore",
+      "limitScore",
+    ] as const;
+    return [
+      "페르소나",
+      "연회비효율",
+      "실적부담↓",
+      "혜택다양성",
+      "한도"
+    ].map(
       (subject, i) => {
         const entry: Record<string, string | number> = { subject, fullMark: 100 };
         selectedCards.forEach((card) => {
@@ -631,17 +569,6 @@ const sortedSelectedIds = useMemo(() => [...selectedIds].sort(), [selectedIds]);
       },
     );
   }, [selectedCards]);
-
-  const benefitChartData = useMemo(() => {
-    return allCategories.map((cat) => {
-      const entry: Record<string, string | number> = { category: cat };
-      selectedCards.forEach((card) => {
-        const b = card.benefits.find((benefit) => benefit.categoryName === cat);
-        entry[card.cardName] = getBenefitNumber(b?.benefitValueText);
-      });
-      return entry;
-    });
-  }, [selectedCards, allCategories]);
 
   const getBenefitCell = (card: CompareCardItem, category: string) => {
     const b = card.benefits.find((benefit) => benefit.categoryName === category) ?? null;
@@ -654,10 +581,7 @@ const sortedSelectedIds = useMemo(() => [...selectedIds].sort(), [selectedIds]);
       <div className="space-y-0.5">
         <div className="flex items-center gap-1.5">
           <span className="text-sm font-normal text-gray-800">
-            {b.benefitValueText}{" "}
-            <span className="text-[#6667AA]">
-              {getBenefitTypeLabel(b.benefitType)}
-            </span>
+            {b.effectiveRateText ?? "-"}
           </span>
         </div>
       </div>
@@ -933,26 +857,24 @@ const sortedSelectedIds = useMemo(() => [...selectedIds].sort(), [selectedIds]);
             <div className="flex items-center gap-2 mb-5">
               <button
                 onClick={() => setActiveTab("visual")}
-                className={`px-4 py-2 rounded-xl text-sm font-normal transition-all ${
-                  activeTab === "visual"
-                    ? "bg-[#6667AA] text-white"
-                    : "bg-white text-gray-500 border border-gray-200"
-                }`}
+                className={`px-4 py-2 rounded-xl text-sm font-normal transition-all ${activeTab === "visual"
+                  ? "bg-[#6667AA] text-white"
+                  : "bg-white text-gray-500 border border-gray-200"
+                  }`}
               >
                 페르소나
               </button>
               <button
                 onClick={() => setActiveTab("table")}
-                className={`px-4 py-2 rounded-xl text-sm font-normal transition-all ${
-                  activeTab === "table"
-                    ? "bg-[#6667AA] text-white"
-                    : "bg-white text-gray-500 border border-gray-200"
-                }`}
+                className={`px-4 py-2 rounded-xl text-sm font-normal transition-all ${activeTab === "table"
+                  ? "bg-[#6667AA] text-white"
+                  : "bg-white text-gray-500 border border-gray-200"
+                  }`}
               >
-                상세 퍼센트 비교
+                상세 혜택 비교
               </button>
-            
-</div>
+
+            </div>
 
             <div className="bg-white border border-gray-200 rounded-2xl p-4 mb-5">
               <div className="grid grid-cols-5 gap-3">
@@ -960,11 +882,10 @@ const sortedSelectedIds = useMemo(() => [...selectedIds].sort(), [selectedIds]);
                   <button
                     key={persona.id}
                     onClick={() => setSelectedPersona(persona.id)}
-                    className={`rounded-xl border p-3 transition-all text-center ${
-                      selectedPersona === persona.id
-                        ? "bg-[#6667AA] text-white border-[#6667AA]"
-                        : "bg-white text-gray-700 border-gray-200"
-                    }`}
+                    className={`rounded-xl border p-3 transition-all text-center ${selectedPersona === persona.id
+                      ? "bg-[#6667AA] text-white border-[#6667AA]"
+                      : "bg-white text-gray-700 border-gray-200"
+                      }`}
                   >
                     <div className="text-2xl mb-1">{persona.emoji}</div>
                     <div className="text-xs font-medium">{persona.name}</div>
@@ -988,7 +909,9 @@ const sortedSelectedIds = useMemo(() => [...selectedIds].sort(), [selectedIds]);
                 <div className="mt-4 p-4 rounded-xl bg-gradient-to-r from-[#6667AA] to-[#7C7DD8] text-white">
                   <div className="text-sm opacity-90">🏆 추천 카드</div>
                   <div className="font-bold text-lg">{recommendedCard.cardName}</div>
-                  <div className="text-sm mt-1">적합도 {recommendedCard.score}점</div>
+                  <div className="text-sm mt-1">
+                    종합점수 {recommendedCard.scores.totalScore}점
+                  </div>
                 </div>
               )}
             </div>
@@ -1011,59 +934,56 @@ const sortedSelectedIds = useMemo(() => [...selectedIds].sort(), [selectedIds]);
                   ))}
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
-                    <div className="flex items-center gap-2 mb-4">
-                      <Trophy className="w-4 h-4 text-[#6667AA]" />
-                      <h3 className="text-sm font-normal text-gray-900">점수 비교</h3>
-                    </div>
-
-                    <div className="h-[300px]">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <RadarChart data={radarData}>
-                          <PolarGrid stroke="#e5e7eb" />
-                          <PolarAngleAxis dataKey="subject" tick={{ fontSize: 11 }} />
-                          {selectedCards.map((card, idx) => (
-                            <Radar
-                              key={card.cardId}
-                              name={card.cardName}
-                              dataKey={card.cardName}
-                              stroke={getCardColor(idx)}
-                              fill={getCardColor(idx)}
-                              fillOpacity={0.18}
-                            />
-                          ))}
-                          <Legend />
-                        </RadarChart>
-                      </ResponsiveContainer>
-                    </div>
+                <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Trophy className="w-4 h-4 text-[#6667AA]" />
+                    <h3 className="text-sm font-normal text-gray-900">
+                      점수 비교
+                    </h3>
                   </div>
 
-                  <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
-                    <div className="flex items-center gap-2 mb-4">
-                      <Zap className="w-4 h-4 text-[#6667AA]" />
-                      <h3 className="text-sm font-normal text-gray-900">
-                        카테고리별 혜택률
-                      </h3>
-                    </div>
+                  <div className="relative h-[380px]">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <RadarChart data={radarData}>
+                        <PolarGrid stroke="#e5e7eb" />
 
-                    <div className="h-[300px]">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <BarChart data={benefitChartData}>
-                          <XAxis dataKey="category" tick={{ fontSize: 10 }} />
-                          <YAxis tick={{ fontSize: 10 }} />
-                          <Tooltip />
-                          <Legend />
-                          {selectedCards.map((card, idx) => (
-                            <Bar
-                              key={card.cardId}
-                              dataKey={card.cardName}
-                              fill={getCardColor(idx)}
-                              radius={[4, 4, 0, 0]}
-                            />
-                          ))}
-                        </BarChart>
-                      </ResponsiveContainer>
+                        <PolarAngleAxis
+                          dataKey="subject"
+                          tick={{ fontSize: 11 }}
+                        />
+
+                        {selectedCards.map((card, idx) => (
+                          <Radar
+                            key={card.cardId}
+                            name={card.cardName}
+                            dataKey={card.cardName}
+                            stroke={getCardColor(idx)}
+                            fill={getCardColor(idx)}
+                            fillOpacity={0.18}
+                          />
+                        ))}
+                      </RadarChart>
+                    </ResponsiveContainer>
+
+                    {/* 카드명 */}
+                    <div className="absolute right-4 top-4 space-y-3">
+                      {selectedCards.map((card, idx) => (
+                        <div
+                          key={card.cardId}
+                          className="flex items-center gap-2"
+                        >
+                          <div
+                            className="w-3 h-3 rounded-full"
+                            style={{
+                              backgroundColor: getCardColor(idx),
+                            }}
+                          />
+
+                          <span className="text-sm text-gray-700">
+                            {card.cardName}
+                          </span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -1073,10 +993,12 @@ const sortedSelectedIds = useMemo(() => [...selectedIds].sort(), [selectedIds]);
             )}
 
             {activeTab === "table" && (
-              <DetailedPctComparison
-                selectedCards={selectedCards}
-                allCategories={allCategories}
-              />
+              <div className="space-y-6">
+                <DetailedBenefitComparison
+                  selectedCards={selectedCards}
+                  allCategories={allCategories}
+                />
+              </div>
             )}
           </>
         )}

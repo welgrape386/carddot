@@ -46,7 +46,7 @@ export const getCards = async (
 export const getCardDetail = async (
   cardId: string
 ) => {
-  const token = localStorage.getItem("token");
+  const token = sessionStorage.getItem("token");
 
   const response = await api.get(
     `/api/cards/${cardId}`,
@@ -77,7 +77,7 @@ export const compareCards = async (
   cardIds: string[],
   personaType: PersonaType = "STUDENT",
 ): Promise<CardCompareResponse> => {
-  const token = localStorage.getItem("token");
+  const token = sessionStorage.getItem("token");
 
   const response = await api.get<CardCompareResponse>(
     "/api/cards/compare",

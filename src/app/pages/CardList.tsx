@@ -44,7 +44,7 @@ const benefitCategories = [
   { key: "문화/엔터", icon: "🎬", group: "라이프", desc: "영화, 놀이공원, 공연" },
   { key: "생활비", icon: "📱", group: "생활비", desc: "통신, 보험, 공과금, 금융수수료, 렌탈/자동납부" },
   { key: "편의점", icon: "🏪", group: "음식", desc: "" },
-  { key: "커피/카페/베이커리", icon: "☕", group: "음식", desc: "" },
+  { key: "카페/베이커리", icon: "☕", group: "음식", desc: "" },
   { key: "배달", icon: "🍕", group: "음식", desc: "배민, 요기요, 쿠팡이츠, 땡겨요" },
   { key: "외식", icon: "🍽️", group: "음식", desc: "아웃백, 레스토랑 등" },
   { key: "여행/숙박", icon: "🏨", group: "여행", desc: "렌터카 포함" },
@@ -850,7 +850,15 @@ export function CardList() {
                   {/* 버튼 영역 */}
                   <div className="mt-auto pt-3 border-t border-gray-50 flex items-center justify-between">
                     <Link
-                      to={`/cards/${encodeURIComponent(card.cardId)}`}
+                      to={
+                        selectedCategories.length > 0
+                          ? `/cards/${encodeURIComponent(
+                            card.cardId,
+                          )}?benefits=${encodeURIComponent(
+                            selectedCategories.join(","),
+                          )}`
+                          : `/cards/${encodeURIComponent(card.cardId)}`
+                      }
                       onMouseEnter={() => prefetchCardDetail(card.cardId)}
                       onFocus={() => prefetchCardDetail(card.cardId)}
                       className="text-xs font-normal bg-[#6667AA] text-white px-3 py-1.5 rounded-lg hover:opacity-90"
