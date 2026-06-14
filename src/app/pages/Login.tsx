@@ -49,7 +49,7 @@ export function Login() {
   const token = response.headers.authorization;
 
   if (token) {
-    localStorage.setItem("token", token);
+    sessionStorage.setItem("token", token);
   }
 
   login(email);

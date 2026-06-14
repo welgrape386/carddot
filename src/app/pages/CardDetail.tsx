@@ -313,8 +313,11 @@ function groupBenefits(benefits: Benefit[]): BenefitGroup[] {
 }
 
 export function CardDetail() {
+  console.count("CardDetail Render");
+
   const { id } = useParams();
   const cardId = id;
+
   const [searchParams] = useSearchParams();
 
   const handleApplyClick = async () => {
@@ -447,16 +450,21 @@ export function CardDetail() {
   }, [orderedBenefits, selectedCategories]);
 
   useEffect(() => {
-    setOpenBenefitCategories((prev) => {
-      const next = { ...prev };
-      benefitGroups.forEach((group) => {
-        if (next[group.categoryName] === undefined) {
-          next[group.categoryName] = false;
-        }
-      });
-      return next;
+  setOpenBenefitCategories((prev) => {
+    let changed = false;
+
+    const next = { ...prev };
+
+    benefitGroups.forEach((group) => {
+      if (next[group.categoryName] === undefined) {
+        next[group.categoryName] = false;
+        changed = true;
+      }
     });
-  }, [benefitGroups]);
+
+    return changed ? next : prev;
+  });
+}, [benefitGroups]);
 
   const toggleBenefitCategory = (categoryName: string) => {
     setOpenBenefitCategories((prev) => ({

@@ -425,13 +425,6 @@ export function Home() {
                               : `${(card.minPerformance / 10000).toFixed(0)}만원`}
                           </span>
                         </span>
-
-                        <span>
-                          월최대{" "}
-                          <span className="text-[#1B3D7B] font-normal">
-                            {(card.maxBenefit / 10000).toFixed(0)}만원 혜택
-                          </span>
-                        </span>
                       </div>
                     </div>
                     <ChevronRight className="w-4 h-4 text-gray-300 group-hover:text-[#1B3D7B] transition-colors flex-shrink-0" />

@@ -94,10 +94,20 @@ export interface CompareCardScore {
 
 export interface CompareBenefit {
   categoryName: string;
+
   benefitType?: string | null;
-  benefitValueText: string;
+
+  benefitValueText?: string | null;
+
   benefitTitle: string;
   benefitContent: string;
+
+  effectiveRateText?: string | null;
+  effectiveBasis?: string | null;
+
+  benefitValue?: number | null;
+  benefitUnit?: string | null;
+  targetMerchants?: string | null;
 }
 
 export interface CompareCardItem {

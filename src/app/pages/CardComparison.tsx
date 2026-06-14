@@ -22,6 +22,8 @@ import {
   PolarAngleAxis,
   ResponsiveContainer,
   Bar,
+  BarChart,
+  CartesianGrid,
   XAxis,
   YAxis,
   Tooltip,
@@ -344,7 +346,7 @@ function ScoreSummaryCard({
   );
 }
 
-function DetailedPctComparison({
+function DetailedBenefitComparison({
   selectedCards,
   allCategories,
 }: {
@@ -352,10 +354,82 @@ function DetailedPctComparison({
   allCategories: string[];
 }) {
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 p-5">
-      <div className="text-sm text-gray-500">
-        상세 비교표 준비중
-      </div>
+    <div className="space-y-8">
+      {allCategories.map((cat) => (
+        <div
+          key={cat}
+          className="bg-white rounded-2xl border border-gray-200 p-6"
+        >
+          <h3 className="font-semibold text-gray-900 mb-5">
+            {cat}
+          </h3>
+
+          <div className="space-y-4">
+            {selectedCards.map((card, idx) => {
+              const benefits = card.benefits.filter(
+                (b) => b.categoryName === cat
+              );
+
+              return (
+                <div key={card.cardId}>
+                  <div className="mb-2">
+                    <span
+                      className="font-semibold"
+                      style={{
+                        color: CHART_COLORS[idx],
+                      }}
+                    >
+                      {card.cardName}
+                    </span>
+                  </div>
+
+                  {benefits.length > 0 ? (
+                    <div className="space-y-2">
+                      {benefits.map((b, benefitIdx) => {
+                        const label =
+                          b.targetMerchants?.includes("충전")
+                            ? "전기차 충전"
+                            : b.targetMerchants?.includes("주차")
+                              ? "주차/세차"
+                              : b.targetMerchants?.includes("보험")
+                                ? "자동차보험"
+                                : b.targetMerchants ??
+                                b.benefitTitle;
+
+                        return (
+                          <div
+                            key={benefitIdx}
+                            className="flex justify-between items-center text-sm"
+                          >
+                            <span className="text-gray-700">
+                              {label}
+                            </span>
+
+                            <span
+                              className="font-medium"
+                              style={{
+                                color: CHART_COLORS[idx],
+                              }}
+                            >
+                              {b.effectiveRateText ??
+                                b.benefitValueText ??
+                                "-"}
+                            </span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <div className="text-sm text-gray-400">
+                      혜택 없음
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
@@ -379,7 +453,7 @@ export function CardComparison() {
   const [activeTab, setActiveTab] = useState<"visual" | "table">("visual");
   const [selectedPersona, setSelectedPersona] = useState<PersonaType>("STUDENT");
   const personaDescription =
-  PERSONA_DETAILS[selectedPersona];
+    PERSONA_DETAILS[selectedPersona];
 
   const sortedSelectedIds = useMemo(() => [...selectedIds].sort(), [selectedIds]);
 
@@ -507,10 +581,7 @@ export function CardComparison() {
       <div className="space-y-0.5">
         <div className="flex items-center gap-1.5">
           <span className="text-sm font-normal text-gray-800">
-            {b.benefitValueText}{" "}
-            <span className="text-[#6667AA]">
-              {getBenefitTypeLabel(b.benefitType)}
-            </span>
+            {b.effectiveRateText ?? "-"}
           </span>
         </div>
       </div>
@@ -800,7 +871,7 @@ export function CardComparison() {
                   : "bg-white text-gray-500 border border-gray-200"
                   }`}
               >
-                상세 퍼센트 비교
+                상세 혜택 비교
               </button>
 
             </div>
@@ -863,48 +934,56 @@ export function CardComparison() {
                   ))}
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
-                    <div className="flex items-center gap-2 mb-4">
-                      <Trophy className="w-4 h-4 text-[#6667AA]" />
-                      <h3 className="text-sm font-normal text-gray-900">점수 비교</h3>
-                    </div>
-
-                    <div className="h-[300px]">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <RadarChart data={radarData}>
-                          <PolarGrid stroke="#e5e7eb" />
-                          <PolarAngleAxis dataKey="subject" tick={{ fontSize: 11 }} />
-                          {selectedCards.map((card, idx) => (
-                            <Radar
-                              key={card.cardId}
-                              name={card.cardName}
-                              dataKey={card.cardName}
-                              stroke={getCardColor(idx)}
-                              fill={getCardColor(idx)}
-                              fillOpacity={0.18}
-                            />
-                          ))}
-                          <Legend />
-                        </RadarChart>
-                      </ResponsiveContainer>
-                    </div>
+                <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Trophy className="w-4 h-4 text-[#6667AA]" />
+                    <h3 className="text-sm font-normal text-gray-900">
+                      점수 비교
+                    </h3>
                   </div>
 
-                  <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
-                    <div className="flex items-center gap-2 mb-4">
-                      <Zap className="w-4 h-4 text-[#6667AA]" />
-                      <h3 className="text-sm font-normal text-gray-900">
-                        카테고리별 혜택률
-                      </h3>
-                    </div>
+                  <div className="relative h-[380px]">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <RadarChart data={radarData}>
+                        <PolarGrid stroke="#e5e7eb" />
 
-                    <div className="h-[300px]">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <h3>
-                          카테고리별 혜택률
-                        </h3>
-                      </ResponsiveContainer>
+                        <PolarAngleAxis
+                          dataKey="subject"
+                          tick={{ fontSize: 11 }}
+                        />
+
+                        {selectedCards.map((card, idx) => (
+                          <Radar
+                            key={card.cardId}
+                            name={card.cardName}
+                            dataKey={card.cardName}
+                            stroke={getCardColor(idx)}
+                            fill={getCardColor(idx)}
+                            fillOpacity={0.18}
+                          />
+                        ))}
+                      </RadarChart>
+                    </ResponsiveContainer>
+
+                    {/* 카드명 */}
+                    <div className="absolute right-4 top-4 space-y-3">
+                      {selectedCards.map((card, idx) => (
+                        <div
+                          key={card.cardId}
+                          className="flex items-center gap-2"
+                        >
+                          <div
+                            className="w-3 h-3 rounded-full"
+                            style={{
+                              backgroundColor: getCardColor(idx),
+                            }}
+                          />
+
+                          <span className="text-sm text-gray-700">
+                            {card.cardName}
+                          </span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -914,10 +993,12 @@ export function CardComparison() {
             )}
 
             {activeTab === "table" && (
-              <DetailedPctComparison
-                selectedCards={selectedCards}
-                allCategories={allCategories}
-              />
+              <div className="space-y-6">
+                <DetailedBenefitComparison
+                  selectedCards={selectedCards}
+                  allCategories={allCategories}
+                />
+              </div>
             )}
           </>
         )}
